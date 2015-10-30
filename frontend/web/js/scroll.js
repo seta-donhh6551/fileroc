@@ -77,19 +77,23 @@ scrolltotop.init()
 
 //right scroll
 $(window).scroll(function () {
-    var window_top = $(window).scrollTop();
-	var adsHeight = $("#ads-two").offset().top + $("#ads-two").height();
-    if (window_top >= adsHeight/2) {
-        $("#scroll-right").removeClass("fixed-bot");
-        $("#scroll-right").addClass("fixed-top");
-    } else {
-        $("#scroll-right").removeClass("fixed-top");
-    }
-    if (window_top + $("#scroll-right").height() > $("#footer").offset().top) {
-        $("#scroll-right").removeClass("fixed-top");
-        $("#scroll-right").addClass("fixed-bot");
-    }
+	scrollWindows('#scroll-right', '#ads-two');
 });
+
+function scrollWindows(Object, elementTo){
+	var window_top = $(window).scrollTop();
+	var adsHeight = $(elementTo).offset().top + $(elementTo).height();
+	if (window_top >= adsHeight/2) {
+		$(Object).removeClass("fixed-bot");
+		$(Object).addClass("fixed-top");
+	} else {
+		$(Object).removeClass("fixed-top");
+	}
+	if (window_top + $(Object).height() > $("#footer").offset().top) {
+		$(Object).removeClass("fixed-top");
+		$(Object).addClass("fixed-bot");
+	}
+}
 
 //scroll to element
 $(document).ready(function(){

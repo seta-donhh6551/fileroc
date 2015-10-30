@@ -7,11 +7,11 @@
             <div id="hdr-right">
                 <div class="top">
                     <div id="hdr-top-link" class="toplink">
-                        <table cellpadding="0" cellspacing="0" border="0">
+                        <table border="0">
                             <tbody>
                                 <tr>
                                     <td id="td_cheap_label">
-                                        <img src="<?= Yii::$app->request->baseUrl; ?>img/all-free-download.jpg" alt="Free download" border="0" title="Free download">
+                                        <img src="<?= Yii::$app->request->baseUrl; ?>img/all-free-download.jpg" alt="Free download" title="Free download">
                                     </td>
                                     <td id="td_fb_like" valign="top" style="padding-top:3px">
                                         <div id="hdr_fb_like">
@@ -40,7 +40,7 @@
                     </div>
                     <div id="hdr-login" class="not-logged">
                         <span class="avatar">
-                            <img src="<?= Yii::$app->request->baseUrl; ?>img/icon_user.png" />
+                            <img src="<?= Yii::$app->request->baseUrl; ?>img/icon_user.png" alt="User login" />
                         </span>
                         <span class="info"><span class="name">Login</span></span>
                         <span class="caret"></span>
@@ -57,13 +57,13 @@
                     <li id="all_tab"><a href="<?= Yii::$app->request->baseUrl; ?>" class="x" title="Home"><i class="icon"></i><span class="t">Home</span></a></li>
                     <?php if (Yii::$app->controller->listMenu) { ?>
                         <?php foreach (Yii::$app->controller->listMenu as $key => $menuTop) { ?>
-                            <li><a href="<?= Yii::$app->request->baseUrl . $menuTop['rewrite']; ?>.html" title="<?= $menuTop['name']; ?>" class="x"><?php if ($menuTop['icon']) { ?><img src="<?= Yii::$app->request->baseUrl . 'uploads/icons/' . $menuTop['icon']; ?>" /><?php } ?><span class="t"><?= $menuTop['name']; ?></span></a>
+					<li><a href="<?= Yii::$app->request->baseUrl . $menuTop['rewrite']; ?>.html" title="<?= $menuTop['name']; ?>" class="x"><?php if ($menuTop['icon']) { ?><img src="<?= Yii::$app->request->baseUrl . 'uploads/icons/' . $menuTop['icon']; ?>" alt="<?= $menuTop['name']; ?>" /><?php } ?><span class="t"><?= $menuTop['name']; ?></span></a>
                                 <?php if (Yii::$app->controller->listMenu[$key]['listSubMenu']) { ?>
                                     <ul class="clearfix">
                                         <?php foreach (Yii::$app->controller->listMenu[$key]['listSubMenu'] as $subMenu) { ?>
                                             <li>
                                                 <a href="<?= Yii::$app->request->baseUrl . $menuTop['rewrite'] . '/' . $subMenu['rewrite']; ?>.html" title="<?= $subMenu['name']; ?>">
-                                                    <?php if ($subMenu['icon']) { ?><img src="<?= Yii::$app->request->baseUrl . 'uploads/icons/' . $subMenu['icon']; ?>" /><?php } ?>
+                                                    <?php if ($subMenu['icon']) { ?><img src="<?= Yii::$app->request->baseUrl . 'uploads/icons/' . $subMenu['icon']; ?>" alt="<?= $subMenu['name']; ?>" /><?php } ?>
                                                     <span><?= $subMenu['name']; ?></span>
                                                 </a>
                                             </li>

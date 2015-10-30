@@ -125,6 +125,11 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 			$listRating[] = $val->star;
 		}
 		$totalRating = array_count_values($listRating);
+		$excellent = isset($totalRating[5]) ? $totalRating[5] : 0;
+		$veryGood  = isset($totalRating[4]) ? $totalRating[4] : 0;
+		$average   = isset($totalRating[3]) ? $totalRating[3] : 0;
+		$poor      = isset($totalRating[2]) ? $totalRating[2] : 0;
+		$terrible  = isset($totalRating[1]) ? $totalRating[1] : 0;
 		?>
 		</div>
 		<div class="user-rating">
@@ -141,45 +146,45 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 					</div>
 					<div style="float:left;width:75%;">
 						<div class="barview">
-							<div class="active" style="width:34.2857142857px"></div>
+							<div class="active" style="width:<?= ($excellent*120)/100 ?>px"></div>
 						</div>
-						<span style="margin-left:5px;line-height:30px;"><?= isset($totalRating[5]) ? $totalRating[5] : 0; ?></span>
+						<span style="margin-left:5px;line-height:30px;"><?= $excellent ?></span>
 					</div>
 					<div style="width:25%;float:left;">
 						<span style="margin-left:10px;float: left;color: #218592;line-height:30px;">Very good</span>
 					</div>
 					<div style="float:left;width:75%;">
 						<div class="barview">
-							<div class="active" style="width:25.7142857143px"></div>
+							<div class="active" style="width:<?= ($veryGood*120)/100 ?>px"></div>
 						</div>
-						<span style="margin-left:5px;line-height:30px;"><?= isset($totalRating[4]) ? $totalRating[4] : 0; ?></span>
+						<span style="margin-left:5px;line-height:30px;"><?= $veryGood ?></span>
 					</div>
 					<div style="width:25%;float:left;">
 						<span style="margin-left:10px;float: left;color: #218592;line-height:30px;">Average</span>
 					</div>
 					<div style="float:left;width:75%;">
 						<div class="barview">
-							<div class="active" style="width:60px"></div>
+							<div class="active" style="width:<?= ($average*120)/100 ?>px"></div>
 						</div>
-						<span style="margin-left:5px;line-height:30px;"><?= isset($totalRating[3]) ? $totalRating[3] : 0; ?></span>
+						<span style="margin-left:5px;line-height:30px;"><?= $average ?></span>
 					</div>
 					<div style="width:25%;float:left;">
 						<span style="margin-left:10px;float: left;color: #218592;line-height:30px;">Poor</span>
 					</div>
 					<div style="float:left;width:75%;">
 						<div class="barview">
-							<div class="active" style="width:0px"></div>
+							<div class="active" style="width:<?= ($poor*120)/100 ?>px"></div>
 						</div>
-						<span style="margin-left:5px;line-height:30px;"><?= isset($totalRating[2]) ? $totalRating[2] : 0; ?></span>
+						<span style="margin-left:5px;line-height:30px;"><?= $poor ?></span>
 					</div>
 					<div style="width:25%;float:left;">
 						<span style="margin-left:10px;float: left;color: #218592;line-height:30px;">Terrible</span>
 					</div>
 					<div style="float:left;width:75%;">
 						<div class="barview">
-							<div class="active" style="width:0px"></div>
+							<div class="active" style="width:<?= ($terrible*120)/100 ?>px"></div>
 						</div>
-						<span style="margin-left:5px;line-height:30px;"><?= isset($totalRating[1]) ? $totalRating[1] : 0; ?></span>
+						<span style="margin-left:5px;line-height:30px;"><?= $terrible ?></span>
 					</div>
 				</div>
 			</div>
