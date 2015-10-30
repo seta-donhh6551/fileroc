@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.11
+-- version 4.0.10.7
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 20, 2015 at 12:43 PM
--- Server version: 5.6.21
--- PHP Version: 5.6.3
+-- Host: localhost:3306
+-- Generation Time: Oct 30, 2015 at 01:54 AM
+-- Server version: 5.5.45-cll-lve
+-- PHP Version: 5.4.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `download`
+-- Database: `worldgad_download`
 --
 
 -- --------------------------------------------------------
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_category` (
-`id` int(11) unsigned NOT NULL,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(150) NOT NULL,
   `rewrite` varchar(150) NOT NULL,
   `keywords` text NOT NULL,
@@ -38,8 +38,9 @@ CREATE TABLE IF NOT EXISTS `tbl_category` (
   `type` int(11) NOT NULL DEFAULT '0',
   `child_id` int(11) DEFAULT '0',
   `parent_id` int(11) NOT NULL DEFAULT '0',
-  `status` int(1) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8;
+  `status` int(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=54 ;
 
 --
 -- Dumping data for table `tbl_category`
@@ -53,8 +54,8 @@ INSERT INTO `tbl_category` (`id`, `name`, `rewrite`, `keywords`, `description`, 
 (8, 'Website', 'website', 'Software for website', 'Software for website', 'Software for website', 5, 'globe.png', 0, 0, 0, 1),
 (9, 'Games', 'games', 'Free games download', 'Free games download', 'Free games download', 6, 'games.png', 0, 0, 0, 1),
 (10, 'Other', 'other', 'Other', 'Other', 'Other', 7, '', 0, 0, 0, 1),
-(11, 'Security software', 'security-software', 'Window Security Software, Window Security, Security Software, Security Software For Window', 'Download security software for Windows at fileroc.com with the latest security software packages include Internet Security applications comprehensive computer protection. Computer security is not just applications protect your computer, but also includes application data encryption, hard disk encryption and strong password generation application ', 'Download security software for Windows at fileroc.com with the latest security software packages include Internet Security applications comprehensive computer protection. Computer security is not just applications protect your computer, but also includes application data encryption, hard disk encryption and strong password generation application ...', 1, 'security.png', 1, NULL, 4, 1),
-(12, 'Antivirus, spyware', 'antivirus-spyware', 'Antivirus soft, Antivirus for window, Antivirus free', 'With thousands of anti-virus software, anti-spyware, prevent malware and other malicious programs ... fileroc.com warehouse software is that you will need to remember when computer problems virus, spyware or adware', 'With thousands of anti-virus software, anti-spyware, prevent malware and other malicious programs ... fileroc.com warehouse software is that you will need to remember when computer problems virus, spyware or adware', 2, 'antivirus.png', 1, NULL, 4, 1),
+(11, 'Security software', 'security-software', 'Window Security Software, Window Security, Security Software, Security Software For Window', 'Download is a security software for Window at Fileroc.com with the latest version including Internet Security application packages, which protects computers completely. Computer Security not only protects your computer but also includes applications encoding data, hard disk and some application with strong password…', 'Download is a security software for Window at Fileroc.com with the latest version including Internet Security application packages, which protects computers completely. Computer Security not only protects your computer but also includes applications encoding data, hard disk and some application with strong password…', 1, 'security.png', 1, NULL, 4, 1),
+(12, 'Antivirus, spyware', 'antivirus-spyware', 'Antivirus soft, Antivirus for window, Antivirus free', 'With thousands of antivirus software, spyware helps to prevent malware and other dangerous programs. Fileroc.com is the stock of software that you need to remember whenever your computer faces virus, spyware or adware.', 'With thousands of antivirus software, spyware helps to prevent malware and other dangerous programs. Fileroc.com is the stock of software that you need to remember whenever your computer faces virus, spyware or adware.', 2, 'antivirus.png', 1, NULL, 4, 1),
 (13, 'Chat, Video call, Sms', 'chat-video-call-sms', 'Video call, Sms software, Video call software', 'Sms and calling now not only limited to on the phone or handheld device, you can chat, messaging and phone calls from their PCs. fileroc.com synthesis software application supports chat, free messaging, free video calls in the list below.', 'Sms and calling now not only limited to on the phone or handheld device, you can chat, messaging and phone calls from their PCs. fileroc.com synthesis software application supports chat, free messaging, free video calls in the list below.', 3, 'video-call-sms.png', 1, NULL, 4, 1),
 (14, 'Security software', 'security-software', 'Mac security software', 'Mac security software', 'Mac security software', 1, 'security-shield.png', 1, NULL, 5, 1),
 (15, 'Web browser', 'web-browser', 'Window web browser, Web browser, Browser free', 'Free download Chrome, Firefox, Opera, download acceleration IDM, FlashGet ... and other supported applications', 'Free download Chrome, Firefox, Opera, download acceleration IDM, FlashGet ... and other supported applications', 4, 'web-browser.png', 1, NULL, 4, 1),
@@ -104,7 +105,7 @@ INSERT INTO `tbl_category` (`id`, `name`, `rewrite`, `keywords`, `description`, 
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_posts` (
-`id` int(11) unsigned NOT NULL,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `rewrite` varchar(255) NOT NULL,
   `author` varchar(50) NOT NULL,
@@ -135,8 +136,9 @@ CREATE TABLE IF NOT EXISTS `tbl_posts` (
   `sub_id` int(11) NOT NULL DEFAULT '0',
   `cate_id` int(10) NOT NULL DEFAULT '0',
   `creat_date` datetime NOT NULL,
-  `update_date` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+  `update_date` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `tbl_posts`
@@ -156,7 +158,7 @@ INSERT INTO `tbl_posts` (`id`, `title`, `rewrite`, `author`, `author_url`, `keyw
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_reviews` (
-`id` int(11) unsigned NOT NULL,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `title` varchar(255) NOT NULL,
@@ -164,8 +166,9 @@ CREATE TABLE IF NOT EXISTS `tbl_reviews` (
   `star` tinyint(1) NOT NULL,
   `user_ip` varchar(50) NOT NULL,
   `post_id` int(11) NOT NULL,
-  `created_date` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+  `created_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 --
 -- Dumping data for table `tbl_reviews`
@@ -177,7 +180,8 @@ INSERT INTO `tbl_reviews` (`id`, `name`, `email`, `title`, `review`, `star`, `us
 (9, 'haanhdon', 'haanhdon@gmail.com', 'Title 10 characters minimum', 'Title 10 characters minimum', 5, '127.0.0.4', 1, '2015-10-20 17:01:07'),
 (10, 'haanhdon', 'haanhdon@gmail.com', 'Test thử comment', 'Test thử commentTest thử commentTest thử commentTest thử comment', 5, '127.0.0.5', 1, '2015-10-20 17:02:23'),
 (12, 'haanhdon', 'haanhdon@gmail.com', 'Title 10 characters minimum', 'Title 10 characters minimumTitle 10 characters minimumTitle 10 characters minimum', 5, '127.0.0.6', 5, '2015-10-20 17:18:52'),
-(13, 'haanhdon', 'haanhdon@gmail.com', 'Title 10 characters minimum', '&lt;script&gt;alert(''111'');&lt;/script&gt;', 2, '127.0.0.1', 5, '2015-10-20 17:19:45');
+(13, 'haanhdon', 'haanhdon@gmail.com', 'Title 10 characters minimum', '&lt;script&gt;alert(''111'');&lt;/script&gt;', 2, '127.0.0.1', 5, '2015-10-20 17:19:45'),
+(14, 'haanhdon', 'haanhdon@gmail.com', 'Folder lock very good', 'Folder lock very good Folder lock very good', 5, '1.55.69.190', 2, '2015-10-23 18:09:59');
 
 -- --------------------------------------------------------
 
@@ -186,7 +190,7 @@ INSERT INTO `tbl_reviews` (`id`, `name`, `email`, `title`, `review`, `star`, `us
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_user` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `name` varchar(100) NOT NULL,
@@ -195,8 +199,9 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `adress` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `level` int(10) unsigned NOT NULL DEFAULT '2',
-  `status` int(1) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+  `status` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `tbl_user`
@@ -204,60 +209,8 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
 
 INSERT INTO `tbl_user` (`id`, `username`, `password`, `name`, `gender`, `phone`, `adress`, `email`, `level`, `status`) VALUES
 (1, 'haanhdon', '$2y$13$3ESB7qmG6dffF2/J4.zWZeA32g9jgRDVFDch4mdu1nwACz7WiXQwK', 'ha anh don', 1, '0974136509', 'Cầu Giấy - Hà Nội', 'haanhdon@gmail.com', 1, 1),
-(4, 'xicalo14', '$2y$13$3ESB7qmG6dffF2/J4.zWZeA32g9jgRDVFDch4mdu1nwACz7WiXQwK', 'Phạm Bảo Việt', 1, '0903123456', 'Cầu Giấy - Hà Nội', 'viethl@gmail.com', 1, 1);
+(4, 'thuhang', '$2y$13$3ESB7qmG6dffF2/J4.zWZeA32g9jgRDVFDch4mdu1nwACz7WiXQwK', 'Vân Hằng', 0, '0903123456', 'Cầu Giấy - Hà Nội', 'thuhang@gmail.com', 1, 1);
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `tbl_category`
---
-ALTER TABLE `tbl_category`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_posts`
---
-ALTER TABLE `tbl_posts`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_reviews`
---
-ALTER TABLE `tbl_reviews`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_user`
---
-ALTER TABLE `tbl_user`
- ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `tbl_category`
---
-ALTER TABLE `tbl_category`
-MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=54;
---
--- AUTO_INCREMENT for table `tbl_posts`
---
-ALTER TABLE `tbl_posts`
-MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT for table `tbl_reviews`
---
-ALTER TABLE `tbl_reviews`
-MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
---
--- AUTO_INCREMENT for table `tbl_user`
---
-ALTER TABLE `tbl_user`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

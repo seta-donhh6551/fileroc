@@ -840,9 +840,9 @@ p.brand b{
     color: #fff;
     width: 90%;
     background: #64991e;
-    background: -webkit-gradient(linear,left top,left bottom,from(#F60),to(#F60));
+    background: -webkit-gradient(linear,left top,left bottom,from(#7db72f),to(#4e7d0e));
     background: -moz-linear-gradient(top,#7db72f,#4e7d0e);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F60',endColorstr='#F60');
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db72f',endColorstr='#4e7d0e');
 }
 .down-left{
 	width: 325px;
