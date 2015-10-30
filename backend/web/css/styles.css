@@ -1,0 +1,30 @@
+.form_user{
+	width:600px;
+	height:80px;
+	padding:30px 0px;
+	margin:0px auto;
+}
+.form_user .form_items{
+	width:600px;
+	height:auto;
+	float:left;
+	margin-bottom:3px;
+}
+.form_user .form_item_left{
+	width:150px;
+	padding-top:5px;
+	height:auto;
+	float:left;
+}
+.form_user .form_item_right{
+	width:450px;
+	height:auto;
+	float:left;
+}
+.form_user .padding{
+	padding:2px 3px;
+}
+#user_show{
+	padding-left:20px;
+	margin:0px auto;
+}

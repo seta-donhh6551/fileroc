@@ -1,0 +1,143 @@
+#slider {
+    position: relative;
+	width: 100%;
+}
+#wrapper {
+	width: 960px;
+	padding: 0;
+	margin: 0 auto;
+}
+
+#header {
+	width: 960px;
+	height: 101px;
+	background-image: url(../images/header.png);
+	background-repeat: no-repeat;
+}
+
+#header h1 { margin: 0; padding: 0 }
+
+#header h1 a {
+	display: block;
+	float: left;
+	margin: 20px 0 0 140px;
+	width: 320px;
+	font-size: 30px;
+	font-family: "Times New Roman", Times, serif;
+	color: #FFCC00;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#header h1 a span {
+	display: block;
+	font-size: 15px;
+	color: #CCCCCC;
+}
+
+#menu {
+	width: 780px;
+	height: 40px;
+	padding: 0 90px;
+	font-family: tahoma;
+	font-size: 16px;
+	font-weight: bold;
+	color: #0000FF;
+	text-decoration: none;
+	text-align: left;
+	background-image: url(../images/menu.png);
+	background-repeat: no-repeat;
+}
+.menu_text {
+	padding-top: 10px;
+}
+
+
+
+#content {
+	clear: both;
+	width: 700px;
+	height: 360px;
+	padding: 80px 130px 52px 130px;
+	background-repeat: no-repeat;
+	background-image: url(../images/frame_body.png);
+}
+.form {
+	height: 380px;
+	width: 680px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-color: #FF6633;
+	border-right-color: #FF6633;
+	border-bottom-color: #FF6633;
+	border-left-color: #FF6633;
+}
+.form table {
+	margin-top: 50px;
+	margin-left: 100px;
+	border: 1px solid #666666;
+}
+
+
+#footer {
+	width: 700px;
+	color: #c4af9e;
+	padding: 20px 130px;
+	text-align: center;
+}
+
+#footer a {
+	color: #c4af9e;
+}
+
+#footer a:hover {
+	color: #ec800b;
+}
+
+.scroll {
+    height: 360px;
+    width: 700px;
+    overflow: auto;
+    overflow-x: hidden;
+    position: relative;
+    clear: left;
+}
+
+.scrollContainer div.panel {
+    height: 360px;
+    width: 700px;
+	padding: 0;
+	overflow: hidden;
+}
+
+ul.navigation {
+	width: 960px;
+	height: 40px;
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	font-size: 18px;
+	font-weight: bold;
+	color: #0000FF;
+	text-align: center;
+}
+
+.scrollButtons {
+    position: absolute;
+    top: 300px;
+    cursor: pointer;
+}
+
+.scrollButtons.left {
+    left: -50px;
+}
+
+.scrollButtons.right {
+    right: -50px;
+}
+
+.hide {
+    display: none;
+}

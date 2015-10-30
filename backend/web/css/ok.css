@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+.user_border {
+	border: 1px solid #000;
+}
+.user_title {
+	color:#F00;
+	background:#FFCC99;
+}
+.hihi {
+	border:1px dashed #CCC;
+	color:#03F;
+	font-size:13px;
+	font-family:Tahoma, Geneva, sans-serif;
+	text-align:center;
+	text-decoration:none;
+}
+.add {
+	margin-left:25px;
+	text-decoration:none;
+	font-size:13px;
+	color:#F60;
+}
+a {
+	text-decoration:none;
+	color:#00F;
+}
+a:hover {
+	color:#F00;
+}
+.none {
+	font-family:tahoma;
+	font-size:13px;
+	font-weight:bold;
+}
