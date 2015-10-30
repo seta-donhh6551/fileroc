@@ -118,7 +118,14 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 	<div id="reviews">
 		<h2>Reviews</h2>
 		<div class="rating-title martop">
-			<?= count($listComment); ?> review(s) from our community
+		<?= count($listComment); ?> review(s) from our community
+		<?php
+		$listRating = [];
+		foreach($listComment as $key => $val){
+			$listRating[] = $val->star;
+		}
+		$totalRating = array_count_values($listRating);
+		?>
 		</div>
 		<div class="user-rating">
 			<div class="rating-left">
@@ -136,7 +143,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 						<div class="barview">
 							<div class="active" style="width:34.2857142857px"></div>
 						</div>
-						<span style="margin-left:5px;line-height:30px;">4</span>
+						<span style="margin-left:5px;line-height:30px;"><?= isset($totalRating[5]) ? $totalRating[5] : 0; ?></span>
 					</div>
 					<div style="width:25%;float:left;">
 						<span style="margin-left:10px;float: left;color: #218592;line-height:30px;">Very good</span>
@@ -145,7 +152,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 						<div class="barview">
 							<div class="active" style="width:25.7142857143px"></div>
 						</div>
-						<span style="margin-left:5px;line-height:30px;">3</span>
+						<span style="margin-left:5px;line-height:30px;"><?= isset($totalRating[4]) ? $totalRating[4] : 0; ?></span>
 					</div>
 					<div style="width:25%;float:left;">
 						<span style="margin-left:10px;float: left;color: #218592;line-height:30px;">Average</span>
@@ -154,7 +161,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 						<div class="barview">
 							<div class="active" style="width:60px"></div>
 						</div>
-						<span style="margin-left:5px;line-height:30px;">7</span>
+						<span style="margin-left:5px;line-height:30px;"><?= isset($totalRating[3]) ? $totalRating[3] : 0; ?></span>
 					</div>
 					<div style="width:25%;float:left;">
 						<span style="margin-left:10px;float: left;color: #218592;line-height:30px;">Poor</span>
@@ -163,7 +170,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 						<div class="barview">
 							<div class="active" style="width:0px"></div>
 						</div>
-						<span style="margin-left:5px;line-height:30px;">0</span>
+						<span style="margin-left:5px;line-height:30px;"><?= isset($totalRating[2]) ? $totalRating[2] : 0; ?></span>
 					</div>
 					<div style="width:25%;float:left;">
 						<span style="margin-left:10px;float: left;color: #218592;line-height:30px;">Terrible</span>
@@ -172,7 +179,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 						<div class="barview">
 							<div class="active" style="width:0px"></div>
 						</div>
-						<span style="margin-left:5px;line-height:30px;">0</span>
+						<span style="margin-left:5px;line-height:30px;"><?= isset($totalRating[1]) ? $totalRating[1] : 0; ?></span>
 					</div>
 				</div>
 			</div>

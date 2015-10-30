@@ -78,7 +78,8 @@ scrolltotop.init()
 //right scroll
 $(window).scroll(function () {
     var window_top = $(window).scrollTop();
-    if (window_top >= $("#ads-two").offset().top + $("#ads-two").height()) {
+	var adsHeight = $("#ads-two").offset().top + $("#ads-two").height();
+    if (window_top >= adsHeight/2) {
         $("#scroll-right").removeClass("fixed-bot");
         $("#scroll-right").addClass("fixed-top");
     } else {

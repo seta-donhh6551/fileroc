@@ -11,12 +11,14 @@ class Utility
      * @param $val int
      * @return array
      */
-    public static function debugData($value)
+    public static function debugData($value, $die = true)
     {
         echo "<pre>";
         print_r($value);
         echo "</pre>";
-		die();
+		if($die){
+			die();
+		}
     }
 
 	public static function getUserIp()
