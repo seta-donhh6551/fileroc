@@ -1058,6 +1058,9 @@ p.brand b{
 .detail-content .full-content ul{
 	padding-left: 40px
 }
+table.login td{
+	padding: 4px 6px;
+}
 .manual ul li{
 	margin-bottom: 10px;
 }

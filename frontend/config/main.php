@@ -13,6 +13,9 @@ return [
     'modules' => [
         'home' => [
             'class' => 'frontend\modules\home\home',
+        ],
+		'account' => [
+            'class' => 'frontend\modules\account\account',
         ]
     ],
     'controllerNamespace' => 'frontend\controllers',

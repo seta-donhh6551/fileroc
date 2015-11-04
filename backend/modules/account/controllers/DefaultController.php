@@ -65,15 +65,13 @@ class DefaultController extends MyController
         }
 
         $model = new LoginForm();
-        //\common\components\Utility::debugData(Yii::$app->request->post());
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goHome();
-        } else {
-            $model->password = '';
-            return $this->render('login', [
-                        'model' => $model,
-            ]);
         }
+
+		return $this->render('login', [
+			'model' => $model,
+		]);
     }
 
     /**
