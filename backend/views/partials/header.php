@@ -46,6 +46,7 @@
                     <a href="<?= Yii::$app->request->baseUrl . "/users"; ?>"><span class="l"><span></span></span><span class="m"><em>Thành viên</em><span></span></span><span class="r"><span></span></span></a>
                 </li>
                 <li><a href="<?= Yii::$app->request->baseUrl . "/posts"; ?>"><span class="l"><span></span></span><span class="m"><em>Bài viết</em><span></span></span><span class="r"><span></span></span></a></li>
+				<li><a href="<?= Yii::$app->request->baseUrl . "/comment"; ?>"><span class="l"><span></span></span><span class="m"><em>Comments</em><span></span></span><span class="r"><span></span></span></a></li>
                 <li><a href="#"><span class="l"><span></span></span><span class="m"><em>Nhiều hơn</em><span></span></span><span class="r"><span></span></span></a>
                     <ul>
                         <li><a href="<?= Yii::$app->request->baseUrl . "admin/config"; ?>"><span class="l"><span></span></span><span class="m"><em>Cấu hình</em><span></span></span><span class="r"><span></span></span></a></li>

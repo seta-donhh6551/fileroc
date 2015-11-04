@@ -10,7 +10,7 @@
     <script type="text/javascript">
     $(document).ready(function(){
         var $items = $("ul#menu li a");
-        $items.eq(3).addClass("selected_lk");
+        $items.eq(4).addClass("selected_lk");
     });
     </script>
     <!--[if !IE]>start title wrapper<![endif]-->

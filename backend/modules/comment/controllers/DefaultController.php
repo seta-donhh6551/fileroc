@@ -16,7 +16,6 @@ class DefaultController extends MyController{
 
         Yii::$app->view->title = 'Quản lý comments';
 
-        $active = 4;
         $query = \common\models\Comment::find();
 
         $pagination = new \yii\data\Pagination([
@@ -31,7 +30,6 @@ class DefaultController extends MyController{
 
         return $this->render('index', [
                     'listAll' => $listAll,
-                    'active' => $active,
                     'pages' => $pagination
                 ]
         );
