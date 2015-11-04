@@ -22,6 +22,9 @@ return [
         'category' => [
             'class' => 'backend\modules\category\category',
         ],
+		'comment' => [
+            'class' => 'backend\modules\comment\comment',
+        ],
         'users' => [
             'class' => 'backend\modules\users\users',
         ],
