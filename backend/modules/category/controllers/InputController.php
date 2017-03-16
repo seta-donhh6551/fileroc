@@ -28,33 +28,39 @@ class InputController extends MyController
         $model = $this->loadModel($id);
         $request = Yii::$app->request;
         
-        if ($request->isPost && $request->Post('submit')) {
+        if ($request->isPost && $request->Post('submit'))
+		{
             $post = $request->Post('Category');
             $model->attributes = $post;
             
-            if ($model->validate()) {
+            if ($model->validate())
+			{
 				$imgUpload = UploadedFile::getInstance($model, 'icon');
-                if($imgUpload){
+                if($imgUpload)
+				{
                     $allowType = ['jpg','png','gif']; 
                     $extend = pathinfo($imgUpload->name, PATHINFO_EXTENSION);
                     if(!in_array($extend,$allowType) ) {
                         die('file không hợp lệ');
                     }
+					
                     $baseName = $imgUpload->baseName.'.'.$imgUpload->extension;
                     if(file_exists('../../uploads/icons/'.$imgUpload->baseName.'.'.$imgUpload->extension)){                     
                         $baseName = date('dmY-His').$imgUpload->baseName.'.'.$imgUpload->extension;
                     }
+					
                     $imgUpload->saveAs('../../uploads/icons/'.$baseName);
                     
                     $model->icon = $baseName;
                 }
                 $model->rewrite = str_replace(' ','-',Utility::replaceUrl($post['name']));
                 $model->save();
+				
                 Yii::$app->response->redirect(array('/category'));
             }
         }
         
-		//list categorys
+		//list categories
         $cateModel = new \common\models\Category();
         $listCategory = $cateModel->getListCategory();
 		

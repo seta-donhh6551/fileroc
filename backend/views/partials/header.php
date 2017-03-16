@@ -11,8 +11,9 @@
                     <li class="welcome">Chào bạn <strong><?= Yii::$app->user->getIdentity()->username; ?>(<a class="new_messages" href="#">1 new message</a>)</strong></li>
                     <li>
                         <ul id="user_access">
-                            <li class="first"><a href="<?= Yii::$app->homeUrl ?>" target="_blank">Trang chủ</a></li>
-                            <li class="last"><a href="<?= Yii::$app->request->baseUrl . "/account/default/logout"; ?>">Thoát</a></li>
+							<?php $homeUrl = str_replace('/system', '', Yii::$app->homeUrl); ?>
+                            <li class="first"><a href="<?= $homeUrl ?>" target="_blank">Trang chủ</a></li>
+                            <li class="last"><a href="<?= Yii::$app->request->baseUrl."/account/default/logout"; ?>">Thoát</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -20,7 +21,7 @@
                 <div id="server_details">
                     <dl>
                         <dt>Server time :</dt>
-                        <dd>9:22 AM | 03/04/2009</dd>
+                        <dd><?= date('H:i'); ?> | <?= date('d/m/Y'); ?> </dd>
                     </dl>
                     <dl>
                         <dt>Last login ip :</dt>

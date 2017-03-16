@@ -4,6 +4,8 @@ namespace common\components;
 
 class Utility
 {
+	public static $defaultPageSize = 10;
+	
     /**
      * Debug data
      *

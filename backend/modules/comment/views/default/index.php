@@ -29,7 +29,21 @@
     <!--[if !IE]>start section content<![endif]-->
     <div class="section_content">
         <span class="section_content_top"></span>
-
+		<div class="section_content_inner" style="padding-bottom:0px;">
+			<div class="div_search">
+                <form action="" method="get" name="search-form">
+					<table cellpadding="0" cellspacing="0">
+						<tbody>
+							<tr>
+								<!--td style="width:100px"><strong style="color:green">Tìm kiếm</strong></td-->
+								<td style="width:300px"><input type="text" name="keyword" value="<?= Yii::$app->getRequest()->getQueryParam('keyword'); ?>" size="35" style="height:22px;border:1px solid #dbdbdb;border-radius:3px;padding:0px 3px"/></td>
+								<td><input type="submit" value="Tìm kiếm" class="magin"></td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+		</div>
         <div class="section_content_inner minheight">
             <div class="table_tabs_menu">
                 <ul class="table_tabs">

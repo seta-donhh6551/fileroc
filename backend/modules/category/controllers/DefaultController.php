@@ -31,7 +31,7 @@ class DefaultController extends MyController
         $query = Category::find();
         
         $pagination = new \yii\data\Pagination([
-            'defaultPageSize' => 10,
+            'defaultPageSize' => \common\components\Utility::$defaultPageSize,
             'totalCount' => $query->count()
         ]);
 

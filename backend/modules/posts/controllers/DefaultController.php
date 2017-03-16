@@ -18,37 +18,47 @@ use common\components\Utility;
  * @copyright
  * @link
  */
-class DefaultController extends MyController {
+class DefaultController extends MyController
+{
 
-    public function actionIndex() {
+    public function actionIndex()
+	{
         Yii::$app->view->title = 'Quản lý bài viết';
-
+		
+		$request = Yii::$app->request;
+		
         $active = 3;
-        $query = Posts::find();
-        
-        $pagination = new \yii\data\Pagination([
-            'defaultPageSize' => 10,
+		
+		$modelCategory = new \common\models\Category();
+		$listCategory = $modelCategory->getListCategory();
+		
+		$query = Posts::find();
+		if($request->Get('keyword'))
+		{
+			$query->where(['LIKE', 'title', $request->Get('keyword')]);
+		}
+		
+		$pagination = new \yii\data\Pagination([
+            'defaultPageSize' => Utility::$defaultPageSize,
             'totalCount' => $query->count()
         ]);
 		
-		$model_category = new \common\models\Category();
-		$listCategory = $model_category->getListCategory();
-		
-        $listAll = $query
-                ->offset($pagination->offset)
-                ->limit($pagination->limit)
-                ->all();
-
+		$listAll = $query->offset($pagination->offset)
+						->limit($pagination->limit)
+						->all();
+				
         return $this->render('index', [
                     'listAll' => $listAll,
 					'listCategory' => $listCategory,
                     'active' => $active,
-                    'pages' => $pagination
+                    'pages' => $pagination,
+					'keyword' => $request->Get('keyword')
                 ]
         );
     }
 
-    public function actionDelete($id) {
+    public function actionDelete($id)
+	{
         Yii::$app->view->title = 'Xóa bài viết';
 
         $model = Posts::findOne(['id' => $id]);

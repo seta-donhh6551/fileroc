@@ -4,7 +4,7 @@
         <div class="inner">
 
             <div id="footer_info">
-                Created by haanhdon | &copy; 2013 North Star Company. All rights reserved
+                Created by haanhdon | &copy; <?= date('Y'); ?> North Star Company. All rights reserved
             </div>
             <ul id="footer_menu">
                 <li class="first"><a href="#">Help</a></li>
