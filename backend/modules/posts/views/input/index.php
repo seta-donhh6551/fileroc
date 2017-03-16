@@ -99,6 +99,14 @@ $(document).ready(function(){
                             <div class="form_items_right"><?= Html::activeTextInput($model, 'views', ['size' => 35]); ?></div>
                         </div>
                         <div class="form_items">
+                            <div class="form_items_left">Trạng thái</div>
+                            <div class="form_items_right">
+                                <?php if($model->status == null){ $model->status = 0;}?>
+                                <input type="radio" name="Posts[status]" value="1" <?php if($model->status == 1){ echo "checked='checked'";} ?>/>Yes
+                                <input type="radio" name="Posts[status]" value="0" <?php if($model->status == 0){ echo "checked='checked'";} ?>/>No
+                            </div>
+                        </div>
+                        <div class="form_items">
                             <div class="form_items_left">Phân loại</div>
                             <div class="form_items_right">
                                 <?php if($model->type == null){ $model->type = 1;}?>

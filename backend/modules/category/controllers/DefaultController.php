@@ -26,7 +26,7 @@ class DefaultController extends MyController
      */
     public function actionIndex()
     {
-        Yii::$app->view->title = 'Free download ｜ quản lý menu';
+        Yii::$app->view->title = 'Free download｜Quản lý menu';
 		
         $query = Category::find();
         

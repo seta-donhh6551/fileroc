@@ -60,10 +60,10 @@
                             <tbody>
                                 <tr>
                                     <th width="31"><input type="checkbox" name="checkall" onclick="chkallClick(this)"/></th>
-                                    <th width="353"><a href="#">Tiêu đề tin</a></th>
-                                    <th width="168"><a href="#">Thuộc mục</a></th>
-                                    <th with="160"><a href="#">Thuộc</a></th>
-                                    <th width="100"><a href="#">Ngày đăng</a></th>
+                                    <th width="300"><a href="#">Tiêu đề tin</a></th>
+                                    <th width="150"><a href="#">Thuộc mục</a></th>
+                                    <th with="60"><a href="#">Tác giả</a></th>
+                                    <th width="100"><a href="#">Trạng thái</a></th>
                                     <th width="91">Actions</th>
                                   </tr>
 								<?php $listCategory = array_column($listCategory, 'name', 'id'); ?>
@@ -74,7 +74,7 @@
                                             <td><a href="<?= Yii::$app->request->baseUrl . '/posts/input?id=' . $items->id; ?>"><?= $items->title; ?></a></td>
                                             <td><?= array_key_exists($items['cate_id'], $listCategory) ? $listCategory[$items['cate_id']] : ''; ?></td>
                                             <td></td>
-                                            <td><?= date('d/m/Y', strtotime($items->creat_date)); ?></td>
+                                            <td><?= $items->status == 1 ? 'Active' : '<font color=red>Not active</font>'; ?></td>
                                             <td>
                                                 <div class="actions_menu">
                                                     <ul>

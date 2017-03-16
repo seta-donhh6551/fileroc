@@ -47,8 +47,8 @@
                                     <th width="170"><a href="#">Tên chuyên mục</a></th>
                                     <th width="55"><a href="#">Thứ tự</a></th>
 									<th width="85"><a href="#">Parent</a></th>
-									<th width="70"><a href="#">Children</a></th>
-                                    <th width="93"><a href="#">Trạng thái</a></th>
+									<th width="93"><a href="#">Children</a></th>
+                                    <th width="70"><a href="#">Trạng thái</a></th>
                                     <th width="74">Actions</th>
                                 </tr>
                                 <?php if (isset($listAll) && $listAll != null) { ?>
@@ -60,7 +60,7 @@
                                             <td><?= $items['order']; ?></td>
 											<td><?= array_key_exists($items['parent_id'], $listCate) ? $listCate[$items['parent_id']] : ''; ?></td>
 											<td><?= array_key_exists($items['child_id'], $listCate) ? $listCate[$items['child_id']] : ''; ?></td>
-                                            <td><?= $items['status'] = 1 ? 'Active' : 'Not active'; ?></td>
+                                            <td><?= $items['status'] == 1 ? 'Active' : 'Not active'; ?></td>
                                             <td>
                                                 <div class="actions_menu">
                                                     <ul>
