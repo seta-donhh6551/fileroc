@@ -2,7 +2,7 @@
     <script type="text/javascript">
         $(document).ready(function(){
             var $items = $("ul#menu li a");
-            $items.eq(1).addClass("selected_lk");
+            $items.eq(3).addClass("selected_lk");
         });
         function checkDel() {
             if(!confirm('Bạn có chắc muốn xóa không ?')) {
