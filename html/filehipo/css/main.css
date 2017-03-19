@@ -4295,10 +4295,9 @@ section {
         overflow: hidden;
         width: 100%;
         float: left;
+        padding: 0px 10px;
     }
     .container {
-        padding: 0px 10px !important;
-        width: 100% !important;
         max-width: 320px !important;
     }
     .left-hand-col {
