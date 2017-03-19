@@ -767,7 +767,8 @@ h2 a:hover {
 .news-counts>div {
     float: left;
     margin-top: -6px;
-    padding-right: 20px
+    padding-right: 20px;
+    padding-top: 3px
 }
 .news-counts {
     float: left;

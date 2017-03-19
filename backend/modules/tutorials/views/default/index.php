@@ -53,7 +53,7 @@
                                 <tr>
                                     <th width="31"><input type="checkbox" name="checkall" onclick="chkallClick(this)"/></th>
                                     <th width="300"><a href="#">Tiêu đề tin</a></th>
-                                    <th width="150"><a href="#">Thuộc mục</a></th>
+                                    <th width="150"><a href="#">Ngày tạo</a></th>
                                     <th with="60"><a href="#">Tác giả</a></th>
                                     <th width="100"><a href="#">Trạng thái</a></th>
                                     <th width="91">Actions</th>
@@ -63,15 +63,15 @@
                                 <?php foreach ($listAll as $items) { ?>
                                         <tr>
                                             <td><input type="checkbox" name="checkDel[]" value="<?= $items->id ?>"/></td>
-                                            <td><a href="<?= Yii::$app->request->baseUrl . '/posts/input?id=' . $items->id; ?>"><?= $items->title; ?></a></td>
-                                            <td><?= array_key_exists($items['cate_id'], $listCategory) ? $listCategory[$items['cate_id']] : ''; ?></td>
+                                            <td><a href="<?= Yii::$app->request->baseUrl . '/tutorials/input?id=' . $items->id; ?>"><?= $items->title; ?></a></td>
+                                            <td><?= date('d/m/Y H:i', strtotime($items->creat_date)); ?></td>
                                             <td></td>
                                             <td><?= $items->status == 1 ? 'Active' : '<font color=red>Not active</font>'; ?></td>
                                             <td>
                                                 <div class="actions_menu">
                                                     <ul>
-                                                        <li><a href="<?= Yii::$app->request->baseUrl . '/posts/input?id=' . $items->id; ?>" class="edit">Edit</a></li>
-                                                        <li><a href="<?= Yii::$app->request->baseUrl . '/posts/default/delete?id=' . $items->id; ?>" class="delete" onclick="return myUtility.confirmDel()">Del</a></li>
+                                                        <li><a href="<?= Yii::$app->request->baseUrl . '/tutorials/input?id=' . $items->id; ?>" class="edit">Edit</a></li>
+                                                        <li><a href="<?= Yii::$app->request->baseUrl . '/tutorials/default/delete?id=' . $items->id; ?>" class="delete" onclick="return myUtility.confirmDel()">Del</a></li>
                                                     </ul>
                                                 </div>
                                             </td>

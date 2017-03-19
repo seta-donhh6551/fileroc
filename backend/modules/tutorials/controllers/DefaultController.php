@@ -30,6 +30,8 @@ class DefaultController extends MyController
 			$query->where(['LIKE', 'title', $request->Get('keyword')]);
 		}
 		
+        $query->leftJoin('tbl_user', 'tbl_user.id = tbl_tutorials.user_id');
+        
 		$pagination = new \yii\data\Pagination([
             'defaultPageSize' => \common\components\Utility::$defaultPageSize,
             'totalCount' => $query->count()
