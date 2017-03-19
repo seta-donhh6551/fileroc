@@ -6,6 +6,11 @@ class Utility
 {
 	public static $defaultPageSize = 10;
 	
+    public static $defaultImageThumb = array(
+        'width' => 250,
+        'height' => 250
+    );
+    
     /**
      * Debug data
      *
