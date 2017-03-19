@@ -4174,6 +4174,20 @@ section {
     }
 }
 @media (max-width: 767px) {
+    .lower-part {
+        height: 181px;
+    }
+    .grey-top {
+        background-color: #f2f2f2;
+        padding-top: 10px;
+        border-bottom: solid 2px #e3e8ea;
+    }
+    .splash-content h1 {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 20px;
+    }
     #footer-mobile .copy {
         font-size: 11px;
         float: left;
