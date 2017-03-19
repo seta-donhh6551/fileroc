@@ -39,10 +39,12 @@ $(document).ready(function(){
             <!--[if !IE]>start table_wrapper<![endif]-->
             <div class="table_wrapper" style="background:none;">
                 <div class="table_wrapper_inner">
+                     <?php $errorUpload = Yii::$app->session->getFlash('errorUpload'); ?>
                     <?php $err = $model->getErrors(); ?>
-                    <?php if ($err): ?>
+                    <?php if($err || $errorUpload): ?>
                         <div class="error_red">
                             <ul>
+                                <li><?= $errorUpload ?></li>
                                 <?php foreach ($err as $key => $value): ?>
                                     <li><?php echo $value[0] ?></li>
                                 <?php endforeach; ?>
@@ -60,11 +62,15 @@ $(document).ready(function(){
                             <div class="form_items_right"><?= Html::activeTextInput($model, 'views', ['size' => 35]); ?></div>
                         </div>
                         <div class="form_items">
+                            <div class="form_items_left">Thứ tự hiển thị</div>
+                            <div class="form_items_right"><?= Html::activeTextInput($model, 'order_by', ['size' => 35]); ?></div>
+                        </div>
+                        <div class="form_items">
                             <div class="form_items_left">Trạng thái</div>
                             <div class="form_items_right">
                                 <?php if($model->status == null){ $model->status = 0;}?>
-                                <input type="radio" name="Posts[status]" value="1" <?php if($model->status == 1){ echo "checked='checked'";} ?>/>Yes
-                                <input type="radio" name="Posts[status]" value="0" <?php if($model->status == 0){ echo "checked='checked'";} ?>/>No
+                                <input type="radio" name="Tutorials[status]" value="1" <?php if($model->status == 1){ echo "checked='checked'";} ?>/>Yes
+                                <input type="radio" name="Tutorials[status]" value="0" <?php if($model->status == 0){ echo "checked='checked'";} ?>/>No
                             </div>
                         </div>
                         <div class="form_items">
@@ -83,7 +89,7 @@ $(document).ready(function(){
                             <div class="form_items_left">Mô tả đầu bài viết</div>
                             <div class="form_items_right">
                             <?php 
-                            $fck = new FCKeditor('Posts[info]');
+                            $fck = new FCKeditor('Tutorials[info]');
                             $fck->BasePath = sBASEPATH;
                             $fck->Value  = $model->info;
                             $fck->Width  = '100%';
@@ -95,7 +101,7 @@ $(document).ready(function(){
                             <div class="form_items_left">Nội dung bài viết</div>
                             <div class="form_items_right">
                             <?php 
-                            $fck = new FCKeditor('Posts[fullcontent]');
+                            $fck = new FCKeditor('Tutorials[fullcontent]');
                             $fck->BasePath = sBASEPATH;
                             $fck->Value  = $model->fullcontent;
                             $fck->Width  = '100%';
@@ -122,7 +128,7 @@ $(document).ready(function(){
                                     <img src="<?= '/uploads/thumb/'.$model->thumb; ?>" width="100" />
                                 <?php } ?>
                                 <?= $form->field($model, 'imgUpload')->fileInput()->label(false); ?>
-                                <input type="checkbox" name="Posts[autoResize]" value="1" />Auto Resize
+                                <input type="checkbox" name="Tutorials[autoResize]" value="1" />Auto Resize
                             </div>
                         </div> 
                         <div class="form_items">

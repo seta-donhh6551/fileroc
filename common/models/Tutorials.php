@@ -39,7 +39,7 @@ class Tutorials extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'rewrite', 'keywords', 'description', 'views', 'thumb', 'info', 'fullcontent', 'order_by', 'status', 'user_id', 'creat_date'], 'required'],
+            [['title', 'keywords', 'description', 'info', 'fullcontent', 'status'], 'required'],
             [['keywords', 'description', 'info', 'fullcontent'], 'string'],
             [['views', 'order_by', 'status', 'user_id'], 'integer'],
             [['creat_date'], 'safe'],
@@ -67,6 +67,7 @@ class Tutorials extends \yii\db\ActiveRecord
             'status' => 'Status',
             'user_id' => 'User ID',
             'creat_date' => 'Creat Date',
+            'imgUpload' => 'Ảnh thumb'
         ];
     }
 }
