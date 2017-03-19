@@ -4174,6 +4174,9 @@ section {
     }
 }
 @media (max-width: 767px) {
+    .ratingHeader {
+        margin-top: 20px;
+    }
     .lower-part {
         height: 181px;
     }
@@ -4214,6 +4217,7 @@ section {
         font-size: 12px;
         padding-right: 13px;
         vertical-align: top;
+        padding-top: 20px;
     }
     .news-name{
         display: none;
@@ -4253,13 +4257,10 @@ section {
         width: 320px !important;
     }
     .news-image {
-        padding-left: 5px;
-        float: left;
-        margin-right: 15px;
-        padding-top: 6px;
-        width: 100px !important;
-        max-height: 125px;
+        float: left !important;
+        margin-right: 5px !important;
         height: 50px;
+        width: auto !important;
         padding: 5px 0px 0px 0px !important;
     }
     .news-title h3 {
