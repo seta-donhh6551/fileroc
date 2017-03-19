@@ -13,7 +13,7 @@ AppAsset::register($this);
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="<?= Yii::$app->charset ?>"/>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?= Html::csrfMetaTags() ?>
         <title><?= Html::encode($this->title) ?></title>
@@ -22,25 +22,31 @@ AppAsset::register($this);
 		<meta name="keywords" content="<?= $infoConfig['keywords'] ?>" />
 		<meta name="description" content="<?= $infoConfig['description'] ?>" />
         <meta property="fb:admins" content="100003239486888"/>
+        
         <!-- stylesheet -->
-        <link href="<?= Yii::$app->request->baseUrl; ?>css/style.css" rel="stylesheet" type="text/css">
+        <link href="<?= Yii::$app->request->baseUrl; ?>css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?= Yii::$app->request->baseUrl; ?>css/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+        
+        <link href="<?= Yii::$app->request->baseUrl; ?>css/main.css" rel="stylesheet" type="text/css" />
+        <link href="<?= Yii::$app->request->baseUrl; ?>css/home.css" rel="stylesheet" type="text/css" />
+        <link href="<?= Yii::$app->request->baseUrl; ?>fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        
+        <!--[if lt IE 9]>
+        <link rel="stylesheet" type="text/css" href="http://cache.filehippo.com/inc/IE8.css?v1" />
+        <![endif]-->
+        <!--[if gte IE 9]>
+        <style type="text/css">
+           .gradient {filter: none;}
+        </style>
+        <![endif]-->
 
         <!-- jQuery -->
-        <script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/jquery-1.11.3.min.js"></script>
-		<script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/utility.js"></script>
-		<script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/scroll.js"></script>
-        <script type="text/javascript">
-            document.write('<div id="fb-root"></div>');
-            (function(d, s, id) {
-              var js, fjs = d.getElementsByTagName(s)[0];
-              if (d.getElementById(id)) return;
-              js = d.createElement(s); js.id = id;
-              js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1&appId=1592895507593753&version=v2.0";
-              fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        </script>
+        <script type="text/javascript" src="http://cache.filehippo.com/inc/px.js?ch=2"></script>
+        
     </head>
-    <body>
+    
+    <body class="en">
 		<div id="container">
         <?= $this->render('//partials/header'); ?>
         <div id="content">
