@@ -71,6 +71,7 @@ class Category extends \yii\db\ActiveRecord
 		if($type == 1 || $type == 0 || $type == 2){
 			$query->where(['type' => $type]);
 		}
+        
         $command = $query->createCommand();
         return $command->queryAll();
     }

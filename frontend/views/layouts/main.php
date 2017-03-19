@@ -42,8 +42,7 @@ AppAsset::register($this);
         <![endif]-->
 
         <!-- jQuery -->
-        <script type="text/javascript" src="http://cache.filehippo.com/inc/px.js?ch=2"></script>
-        
+        <script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/px.js"></script>
     </head>
     
     <body class="en">

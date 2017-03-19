@@ -22,20 +22,20 @@
                             </button>
                         </div>
                     </form>
+                    <?php $listMenu = Yii::$app->controller->listMenu; ?>
                     <ul class="nav navbar-nav navbar-right">
+                        <?php if($listMenu){ ?>
                         <li class="dropdown platform-dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <a href="<?= Yii::$app->request->baseUrl.$listMenu[0]['rewrite']; ?>.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-windows"></i> 
-                                <span>Windows</span>
+                                <span><?= $listMenu[0]['name'] ?></span>
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li>
-                                    <a href="http://filehippo.com/mac/" ><i class="fa fa-apple"></i>Mac</a>
-                                </li>
-                                <li>
-                                    <a href="http://filehippo.com/web/web-apps/" ><i class="fa fa-television"></i>Web Apps</a>
-                                </li>
+                            <?php unset($listMenu[0]); ?>
+                            <?php foreach($listMenu as $menuItem){ ?>
+                                <li><a href="<?= Yii::$app->request->baseUrl.$menuItem['rewrite']; ?>.html" ><i class="fa <?= $menuItem['icon_class']; ?>"></i><?= $menuItem['name']; ?></a></li>
+                            <?php } ?>
                             </ul>
                         </li>
                         <li class="dropdown language-dropdown">
@@ -46,6 +46,7 @@
                                 </li>
                             </ul>
                         </li>
+                        <?php } ?>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->

@@ -7,25 +7,23 @@ use yii\web\Controller;
 use common\models\Category;
 use frontend\controllers\MyController;
 
-class DefaultController extends MyController{
+class DefaultController extends MyController
+{
     public $enableCsrfValidation = false;
 
-    public function actionIndex() {
+    public function actionIndex()
+    {
         Yii::$app->view->title = 'Free download software';
 
 		$cateId = 4;
 		$modelPost = new \common\models\Posts();
 		$listPost = $modelPost->getListPosts(array(), 10, null, $cateId);
 		$listAllPost = $modelPost->getListPosts(array(), 10, null);
-
+        
 		return $this->render('index', [
 			'listPost' => $listPost,
 			'listAllPost' => $listAllPost,
-			'subCategory' => [
-				'listMenu' => Yii::$app->controller->listMenu[0]['listSubMenu'],
-				'titleMenu' => 'Window',
-				'rewrite' => 'windows'
-			]
+			//'listMenu' => Yii::$app->controller->listMenu
 		]);
 	}
 

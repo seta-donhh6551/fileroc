@@ -18,19 +18,19 @@ class MyController extends Controller
 	{
             $model_category = new Category();
             $listMenu = $model_category->getListCategory(0);
-            if($listMenu)
-            {
-                foreach($listMenu as $key => $val)
-                {
-                    $listSubMenu = $model_category->getListSubCategory($val['id'], 1);
-                    $listMenu[$key]['listSubMenu'] = $listSubMenu;
-                    foreach($listSubMenu as $k => $v){
-                        $listMenu[$key]['listSubMenu'][$k]['listChildMenu'] = $model_category->getListSubCategory($v['id'], 2, true);
-                    }				
-                }
-            }
+//            if($listMenu)
+//            {
+//                foreach($listMenu as $key => $val)
+//                {
+//                    $listSubMenu = $model_category->getListSubCategory($val['id'], 1);
+//                    $listMenu[$key]['listSubMenu'] = $listSubMenu;
+//                    foreach($listSubMenu as $k => $v){
+//                        $listMenu[$key]['listSubMenu'][$k]['listChildMenu'] = $model_category->getListSubCategory($v['id'], 2, true);
+//                    }				
+//                }
+//            }
 
-            $this->listMenu = $listMenu;
+            $this->listMenu = $model_category->getListCategory(0);
 	}
 }
 
