@@ -8,7 +8,7 @@ use yii\helpers\ArrayHelper;
 <script type="text/javascript">
 $(document).ready(function(){
     var $items = $("ul#menu li a");
-    $items.eq(1).addClass("selected_lk");
+    $items.eq(3).addClass("selected_lk");
 	$('input[type=submit]').click(function(){
 		var val = $('div.parent input[type=radio]:checked').val();
 		var parent = $('#category-parent_id');

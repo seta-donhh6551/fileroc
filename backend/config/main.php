@@ -13,6 +13,9 @@ return [
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [
+        'tutorials' => [
+            'class' => 'backend\modules\tutorials\tutorials',
+        ],
         'posts' => [
             'class' => 'backend\modules\posts\posts',
         ],

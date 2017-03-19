@@ -28,7 +28,7 @@ AppAsset::register($this);
         <script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>/js/jquery-1.9.1.min.js"></script>
         <script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>/js/cufon-yui.js"></script>
         <script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>/js/UTM_Facebook_KT_400.font.js"></script>
-        <script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>/js/behaviour.js"></script>
+        <script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>/js/utility.js"></script>
         <script type="text/javascript">
             Cufon.replace('h2.menu_title');
         </script>        

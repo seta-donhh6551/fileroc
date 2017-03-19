@@ -1,20 +1,19 @@
 <?php
 
-namespace backend\modules\posts\controllers;
+namespace backend\modules\tutorials\controllers;
 
 use Yii;
 use yii\web\Controller;
 use backend\components\MyController;
-use common\models\Posts;
 use common\components\Utility;
 use yii\web\UploadedFile;
 use yii\imagine\Image;
 
 /**
  * Default controller class
- * Posts class
- * @category Posts
- * @author Ha Huu Don <donhh6551@setacinq.com.vn>
+ * Tutorials class
+ * @category Tutorials
+ * @author Ha Huu Don <haanhdon@gmail.com>
  */
 class InputController extends MyController
 {
@@ -27,9 +26,18 @@ class InputController extends MyController
      */
     public function actionIndex($id = null)
     {
-        Yii::$app->view->title = 'Thêm mới, sửa bài viết | Free download';
+        Yii::$app->view->title = 'Thêm mới, sửa bài viết | Freefile.vn';
         
-        $model = $this->loadModel($id);
+        $model = new \common\models\Tutorials();
+        if($id)
+        {
+            $model = \common\models\Tutorials::findOne($id);
+            if(empty($model))
+            {
+                throw new \yii\web\HttpException(404, 'Bài viết này không tồn tại.');
+            }
+        }
+        
         $request = Yii::$app->request;
 
         if($request->isPost && $request->Post('submit'))
@@ -44,12 +52,14 @@ class InputController extends MyController
                 {
                     $allowType = ['jpg','png','gif'];
                     $extend = pathinfo($imgUpload->name, PATHINFO_EXTENSION);
-                    if(!in_array($extend,$allowType) ) {
+                    if(!in_array($extend,$allowType))
+                    {
                         die('file không hợp lệ');
                     }
                     
                     $baseName = $imgUpload->baseName.'.'.$imgUpload->extension;
-                    if(file_exists('../../uploads/'.$imgUpload->baseName.'.'.$imgUpload->extension)){
+                    if(file_exists('../../uploads/'.$imgUpload->baseName.'.'.$imgUpload->extension))
+                    {
                         $baseName = date('dmY-His').$imgUpload->baseName.'.'.$imgUpload->extension;
                     }
                     
@@ -100,7 +110,7 @@ class InputController extends MyController
         $cateModel = new \common\models\Category();
         $listCategory = $cateModel->getListCategory();
 
-        return $this->render('index', ['model'=>$model,'listCate'=>$listCategory]);
+        return $this->render('index', ['model' => $model, 'listCate' => $listCategory]);
     }
 
 	/*
