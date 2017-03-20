@@ -6,10 +6,12 @@ use Yii;
 use yii\web\Controller;
 use frontend\controllers\MyController;
 
-class CategoryController extends MyController {
+class CategoryController extends MyController
+{
     public $enableCsrfValidation = false;
 
-    public function actionIndex($rewrite){
+    public function actionIndex($rewrite)
+    {
         $model = \common\models\Category::findOne(['rewrite'=>$rewrite]);
         if (!$model){
             throw new \yii\web\HttpException(404, 'The requested item could not be found.');
@@ -41,12 +43,20 @@ class CategoryController extends MyController {
 		]);
     }
 
-	public function actionSubcate($rewrite){
+	public function actionSubcate($slug, $rewrite)
+    {   
         $model = \common\models\Category::findOne(['rewrite' => $rewrite, 'type' => 1]);
-        if (!$model){
+        if(!$model){
             throw new \yii\web\HttpException(404, 'The requested item could not be found.');
         }
-
+        
+        $homePageCate = \common\models\Category::findOne(['rewrite' => $slug, 'type' => 0]);
+        if(!$homePageCate){
+            throw new \yii\web\HttpException(404, 'The requested item could not be found.');
+        }
+        
+        //set active menu on header
+		$this->activeMenu = $homePageCate;
 		$this->infoConfig = ['keywords' => $model->keywords, 'description' => $model->description];
 
 		$cateId = $model->id;
@@ -54,9 +64,7 @@ class CategoryController extends MyController {
 
 		$listSubCategory = $model->getListSubCategory($cateId);
 
-        Yii::$app->view->title = $model->name.', Free download';
-
-        $limit = 10;
+        Yii::$app->view->title = 'Phần mềm '.$homePageCate->name.', Tìm kiếm và tải phần mềm '.$model->name;
 
 		$listPost = $modelPost->getListBySubId($cateId);
 
@@ -73,7 +81,8 @@ class CategoryController extends MyController {
 		]);
     }
 
-	public function actionChildcate($rewrite){
+	public function actionChildcate($rewrite)
+    {
         $model = \common\models\Category::findOne(['rewrite' => $rewrite, 'type' => 2]);
         if (!$model){
             throw new \yii\web\HttpException(404, 'The requested item could not be found.');

@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 ?>
+<?= $this->render('//layouts/slogan');?>
 <div class="container">
     <div id="root-content">
         <div class="home-main-left">

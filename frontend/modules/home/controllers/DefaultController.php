@@ -13,6 +13,8 @@ class DefaultController extends MyController
 
     public function actionIndex($rewrite = null)
     {
+        $this->layout = "@app/views/layouts/default";
+         
 		$model = \common\models\Category::findOne(['id' => 4]);
 		if($rewrite){
 			$model = \common\models\Category::findOne(['rewrite' => $rewrite]);
