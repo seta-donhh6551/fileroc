@@ -13,7 +13,8 @@ class MyController extends Controller
 {
     public $listMenu = [];
 	public $infoConfig = ['keywords' => null, 'description' => null];
-	
+	public $activeMenu = null;
+
 	public function init()
 	{
             $model_category = new Category();

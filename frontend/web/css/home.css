@@ -743,7 +743,8 @@ h2 a:hover {
 }
 .latest-software-news a {
     text-decoration: none;
-    color: #0093de
+	color: #333
+    /*color: #0093de*/
 }
 .latest-software-news a:hover {
     text-decoration: underline
@@ -791,7 +792,7 @@ h2 a:hover {
 }
 .news-data {
     clear: both;
-    margin-top: 10px
+    margin-top: 20px
 }
 .news-data:first-of-type {
     margin-top: 0

@@ -67,9 +67,10 @@ class Category extends \yii\db\ActiveRecord
     {
         $query = new \yii\db\Query();
         $query->select('*')
-                ->from($this->tableName());
+                ->from($this->tableName())
+				->where(['status' => 1]);
 		if($type == 1 || $type == 0 || $type == 2){
-			$query->where(['type' => $type]);
+			$query->andWhere(['type' => $type]);
 		}
         
         $command = $query->createCommand();

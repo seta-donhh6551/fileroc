@@ -14,7 +14,7 @@
             <div class="col-md-9 no-padding">
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                    <form class="navbar-form navbar-left search-container" action="http://filehippo.com/search">
+                    <form class="navbar-form navbar-left search-container" action="search">
                         <div class="input-group search-container-inner">
                             <i class="fa fa-search"></i>
                             <input type="text" class="form-control search-box auto-complete-search" autocomplete="off" placeholder="Tìm kiếm" name="q">
@@ -23,30 +23,35 @@
                         </div>
                     </form>
                     <?php $listMenu = Yii::$app->controller->listMenu; ?>
+					<?php $activeMenu = Yii::$app->controller->activeMenu; ?>
                     <ul class="nav navbar-nav navbar-right">
-                        <?php if($listMenu){ ?>
                         <li class="dropdown platform-dropdown">
-                            <a href="<?= Yii::$app->request->baseUrl.$listMenu[0]['rewrite']; ?>.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-windows"></i> 
-                                <span><?= $listMenu[0]['name'] ?></span>
+							<?php if($activeMenu) { ?>
+                            <a href="<?= Yii::$app->request->baseUrl.$activeMenu['rewrite']; ?>.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa <?= $activeMenu['icon_class']; ?>"></i> 
+                                <span><?= $activeMenu['name']; ?></span>
                                 <span class="caret"></span>
                             </a>
+							<?php } ?>
+							<?php if($listMenu){ ?>
                             <ul class="dropdown-menu">
-                            <?php unset($listMenu[0]); ?>
+                            <?php $activeMenuId = isset($activeMenu->id) ? $activeMenu->id : 0;?>
                             <?php foreach($listMenu as $menuItem){ ?>
+								<?php if($menuItem['id'] != $activeMenuId){ ?>
                                 <li><a href="<?= Yii::$app->request->baseUrl.$menuItem['rewrite']; ?>.html" ><i class="fa <?= $menuItem['icon_class']; ?>"></i><?= $menuItem['name']; ?></a></li>
+								<?php } ?>
                             <?php } ?>
                             </ul>
+							<?php } ?>
                         </li>
                         <li class="dropdown language-dropdown">
                             <a href="#" class="dropdown-toggle no-left-border" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">VN<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="http://filehippo.com/de/software/security/" >En</a>
+                                    <a href="security/" >En</a>
                                 </li>
                             </ul>
                         </li>
-                        <?php } ?>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -58,10 +63,10 @@
         <div class="container">
             <ol class="hidden-xs hidden-sm" role="navigation">
                 <li class="active"><a href="../../index.html">TẢI VỀ</a></li>
-                <li class=""><a href="http://filehippo.com/browse-business-software/">PHẦN MỀM KINH DOANH</a></li>
-                <li class=""><a href="http://news.filehippo.com/">TIN TỨC</a></li>
-                <li class=""><a href="http://news.filehippo.com/category/product-reviews/">ĐÁNH GIÁ</a></li>
-                <li class=""><a href="http://filehippo.com/popular/">TOP ỨNG DỤNG</a></li>
+                <li class=""><a href="#">PHẦN MỀM KINH DOANH</a></li>
+                <li class=""><a href="#">TIN TỨC</a></li>
+                <li class=""><a href="#">ĐÁNH GIÁ</a></li>
+                <li class=""><a href="#">TOP ỨNG DỤNG</a></li>
             </ol>
         </div>
     </div>
@@ -191,7 +196,7 @@
             <div>
                 <div class="s-count-items">
                     <div id="downloads-served">3,285,747,657</div>
-                    <div class="splash-count-title">Downloads Served</div>
+                    <div class="splash-count-title">Lượt tải về</div>
                 </div>
             </div>
             <div class="v-spacer">&nbsp;</div>

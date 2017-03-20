@@ -12,70 +12,11 @@ use yii\widgets\ActiveForm;
                         <div id="home-categories">
                             <h2>DANH SÁCH</h2>
                             <ul id="home-categories-list">
-                                <li><a title="Browsers" href="/software/internet/">
-                                        Browsers
-                                    </a>
-                                </li>
-                                <li><a title="Anti-Malware" href="/software/antimalware/">
-                                        Anti-Malware
-                                    </a>
-                                </li>
-                                <li><a title="System Tuning" href="/software/system_tuning/">
-                                        System Tuning
-                                    </a>
-                                </li>
-                                <li><a title="Photo / Image" href="/software/photos_images/">
-                                        Photo / Image
-                                    </a>
-                                </li>
-                                <li><a title="File Sharing" href="/software/p2p/">
-                                        File Sharing
-                                    </a>
-                                </li>
-                                <li><a title="Security" href="/software/security/">
-                                        Security
-                                    </a>
-                                </li>
-                                <li><a title="Compression" href="/software/archiving/">
-                                        Compression
-                                    </a>
-                                </li>
-                                <li><a title="Multimedia" href="/software/multimedia/">
-                                        Multimedia
-                                    </a>
-                                </li>
-                                <li><a title="Messaging" href="/software/messaging/">
-                                        Messaging
-                                    </a>
-                                </li>
-                                <li><a title="Office / News" href="/software/office/">
-                                        Office / News
-                                    </a>
-                                </li>
-                                <li><a title="Networking" href="/software/networking/">
-                                        Networking
-                                    </a>
-                                </li>
-                                <li><a title="Desktop" href="/software/desktop/">
-                                        Desktop
-                                    </a>
-                                </li>
-                                <li><a title="File Transfer" href="/software/file_transfer/">
-                                        File Transfer
-                                    </a>
-                                </li>
-                                <li><a title="Developer" href="/software/developer/">
-                                        Developer
-                                    </a>
-                                </li>
-                                <li><a title="Drivers" href="/software/drivers/">
-                                        Drivers
-                                    </a>
-                                </li>
-                                <li><a title="CD / DVD" href="/software/dvd/">
-                                        CD / DVD
-                                    </a>
-                                </li>
+							<?php if(isset($listSubCategory)){ ?>
+								<?php foreach($listSubCategory as $subCate){ ?>
+                                <li><a title="<?= $subCate['name']; ?>" href="<?= Yii::$app->request->baseUrl.$model->rewrite.'/'.$subCate['rewrite']; ?>.html"><?= $subCate['name']; ?></a></li>
+								<?php } ?>
+							<?php } ?>
                             </ul>
                         </div>
                         <div class="home-categories-spacer"></div>
@@ -89,46 +30,46 @@ use yii\widgets\ActiveForm;
                     <div>
                         <div id="popular">
                             <h2><a href="/popular/">PHỔ BIẾN</a></h2>
-                            <a href="/popular/" class="view-more-link">View more</a>
+                            <a href="/popular/" class="view-more-link">Xem Thêm</a>
                             <div class="clearfix-no-padding"></div>
                             <ul id="popular-list">
-                                <li><a href="http://filehippo.com/download_ccleaner/">
+                                <li><a href="#">
                                         <img src="http://cache.filehippo.com/img/ex/6067t__ccleaner_icon.png" alt="Download CCleaner 5.28.6005">CCleaner 5.28.6005
                                     </a>
                                 </li>
-                                <li><a href="http://filehippo.com/download_advanced_ip_scanner/">
+                                <li><a href="#">
                                         <img src="http://cache.filehippo.com/img/ex/6936t__AIPS_icon.png" alt="Download Advanced IP Scanner 2.4.3021">Advanced IP Scanner 2.4.3021
                                     </a>
                                 </li>
-                                <li><a href="http://filehippo.com/download_recuva/">
+                                <li><a href="#">
                                         <img src="http://cache.filehippo.com/img/ex/6052t__recuva-icon.png" alt="Download Recuva 1.53.1087">Recuva 1.53.1087
                                     </a>
                                 </li>
-                                <li><a href="http://filehippo.com/download_vlc_64/">
+                                <li><a href="#">
                                         <img src="http://cache.filehippo.com/img/ex/6050t__vlc-icon.png" alt="Download VLC Media Player 2.2.4 (64-bit)">VLC Media Player 2.2.4 (64-bit)
                                     </a>
                                 </li>
-                                <li><a href="http://filehippo.com/download_vlc_32/">
+                                <li><a href="#">
                                         <img src="http://cache.filehippo.com/img/ex/6049t__vlc-icon.png" alt="Download VLC Media Player 2.2.4 (32-bit)">VLC Media Player 2.2.4 (32-bit)
                                     </a>
                                 </li>
-                                <li><a href="http://filehippo.com/download_microsoft_office_2013/">
+                                <li><a href="#">
                                         <img src="http://cache.filehippo.com/img/ex/8745t__microsoft_office_2013_icon_8_12_16_converted.png" alt="Download Microsoft Office 2013">Microsoft Office 2013
                                     </a>
                                 </li>
-                                <li><a href="http://filehippo.com/download_picasa/">
+                                <li><a href="#">
                                         <img src="http://cache.filehippo.com/img/ex/7180t__picasa_new_icon_converted.png" alt="Download Picasa 3.9 Build 141.259">Picasa 3.9 Build 141.259
                                     </a>
                                 </li>
-                                <li><a href="http://filehippo.com/download_google_chrome_for_work_32/">
+                                <li><a href="#">
                                         <img src="http://cache.filehippo.com/img/ex/2171t__ChromeNew_icon.png" alt="Download Google Chrome for Work 32-bit 43.02357.124">Google Chrome for Work 32-bit 43.02357.124
                                     </a>
                                 </li>
-                                <li><a href="http://filehippo.com/download_shockwave/">
+                                <li><a href="#">
                                         <img src="http://cache.filehippo.com/img/ex/8744t__adobe_shockwave_player_icon_8_12_16_converted.png" alt="Download Shockwave Player 12.2.8.198">Shockwave Player 12.2.8.198
                                     </a>
                                 </li>
-                                <li><a href="http://filehippo.com/download_dotnet_framework_4/">
+                                <li><a href="#">
                                         <img src="http://cache.filehippo.com/img/ex/8747t__Net_Framework_Version_4.png" alt="Download .NET Framework Version 4.6.2">.NET Framework Version 4.6.2
                                     </a>
                                 </li>
@@ -139,43 +80,43 @@ use yii\widgets\ActiveForm;
                             <a href="/latest/" class="view-more-link">View more</a>
                             <div class="clearfix-no-padding"></div>
                             <ul id="latest-list">
-                                <li><a href="http://filehippo.com/download_google_chrome/">
+                                <li><a href="#">
                                         <img src="http://cache.filehippo.com/img/ex/6468t__chrome-icon-110x110.png" alt="Download Google Chrome 58.0.3029.19 Beta">Google Chrome 58.0.3029.19 Beta
                                     </a>
                                 </li>
-                                <li><a href="http://filehippo.com/download_driver_genius/">
+                                <li><a href="#">
                                         <img src="http://cache.filehippo.com/img/ex/4774t__driver_genius_icon.png" alt="Download Driver Genius 17.0.0.138">Driver Genius 17.0.0.138
                                     </a>
                                 </li>
-                                <li><a href="http://filehippo.com/download_debut_video_capture/">
+                                <li><a href="#">
                                         <img src="http://cache.filehippo.com/img/ex/8979t__debut_video_capture_icon_6_2_17.png" alt="Download Debut Video Capture 4.00">Debut Video Capture 4.00
                                     </a>
                                 </li>
-                                <li><a href="http://filehippo.com/download_eusing_maze_lock/">
+                                <li><a href="#">
                                         <img src="http://cache.filehippo.com/img/ex/5851t__eusing_maze_lock_icon.png" alt="Download Eusing Maze Lock 3.6">Eusing Maze Lock 3.6
                                     </a>
                                 </li>
-                                <li><a href="http://filehippo.com/download_google_chrome/">
+                                <li><a href="#">
                                         <img src="http://cache.filehippo.com/img/ex/6468t__chrome-icon-110x110.png" alt="Download Google Chrome 57.0.2987.110">Google Chrome 57.0.2987.110
                                     </a>
                                 </li>
-                                <li><a href="http://filehippo.com/download_firefox/">
+                                <li><a href="#">
                                         <img src="http://cache.filehippo.com/img/ex/6055t__firefox_icon.png" alt="Download Firefox 53.0 Beta 3">Firefox 53.0 Beta 3
                                     </a>
                                 </li>
-                                <li><a href="http://filehippo.com/download_comodo_cloud_antivirus/">
+                                <li><a href="#">
                                         <img src="http://cache.filehippo.com/img/ex/6734t__comodo_cloud_antivirus_icon_converted.png" alt="Download Comodo Cloud Antivirus 1.9.412027.469">Comodo Cloud Antivirus 1.9.412027.469
                                     </a>
                                 </li>
-                                <li><a href="http://filehippo.com/download_potplayer_64_bit/">
+                                <li><a href="#">
                                         <img src="http://cache.filehippo.com/img/ex/4956t__potplayer_icon.png" alt="Download Potplayer 1.7.1150 64-Bit">Potplayer 1.7.1150 64-Bit
                                     </a>
                                 </li>
-                                <li><a href="http://filehippo.com/download_potplayer_32_bit/">
+                                <li><a href="#">
                                         <img src="http://cache.filehippo.com/img/ex/4954t__potplayer_icon.png" alt="Download Potplayer 1.7.1150 32-Bit">Potplayer 1.7.1150 32-Bit
                                     </a>
                                 </li>
-                                <li><a href="http://filehippo.com/download_libre_office_64/">
+                                <li><a href="#">
                                         <img src="http://cache.filehippo.com/img/ex/2176t__LibreOffice3_icon.png" alt="Download LibreOffice 5.3.1 64-bit">LibreOffice 5.3.1 64-bit
                                     </a>
                                 </li>
@@ -194,271 +135,42 @@ use yii\widgets\ActiveForm;
                     </div>
                 </div>
                 <div>
-                    <div>
+                    <div style="padding-top:10px">
                         <div id="soft-news">
-                            <h2><a href="http://news.filehippo.com/">Latest Software News</a></h2>
+                            <h2><a href="#">Thủ thuật & Hướng Dẫn</a></h2>
                             <div class="latest-software-news">
+								<?php if(isset($listTutorials)){ ?>
+								<?php foreach($listTutorials as $tutorials){ ?>
                                 <div class="news-data">
                                     <div class="news-title">
-                                        <h3><a href="http://news.filehippo.com/2017/03/secure-your-pc-mac-or-mobile-device-with-norton-wifi-privacy/">Secure your PC, Mac, or mobile device with Norton WiFi Privacy</a></h3>
+                                        <h3><a href="<?= Yii::$app->request->baseUrl.$tutorials['rewrite']; ?>.html"><?= $tutorials['title']; ?></a></h3>
                                     </div>
-                                    <a href="http://news.filehippo.com/2017/03/secure-your-pc-mac-or-mobile-device-with-norton-wifi-privacy/">
+                                    <a href="#">
                                         <div class="news-image-overlay">
-                                            <img class="news-image" src="http://news.filehippo.com/wp-content/uploads/2017/03/Norton_wifi_privacy-190x110.png" alt="Secure your PC, Mac, or mobile device with Norton WiFi Privacy">
+                                            <img class="news-image" src="<?= Yii::$app->request->baseUrl.'uploads/thumb/'.$tutorials['thumb']; ?>" alt="<?= $tutorials['title']; ?>" />
                                         </div>
                                     </a>
                                     <div class="news-counts">
                                         <div class="news-name">
-                                            <img src="http://0.gravatar.com/avatar/cc96d9151997a22593226efc458c04fd?s=24&amp;d=mm&amp;r=g" alt="Arianna Gael">
-                                            Arianna Gael
+                                            <img src="<?= Yii::$app->request->baseUrl; ?>img/icon-user.png" alt="haanhdon" width="27" />
+                                            <span style="text-transform:lowercase">haanhdon</span>
                                         </div>
                                         <div class="news-dates">
-                                            <img src="http://cache.filehippo.com/img/new/news-date.png">1 hour
+                                            <img src="<?= Yii::$app->request->baseUrl; ?>img/news-date.png" />1 giờ
                                         </div>
                                         <div class="news-comments">
-                                            <img src="http://cache.filehippo.com/img/new/news-comments.png">
-                                            <span class="disqus-comment-count" data-disqus-url="http://news.filehippo.com/2017/03/secure-your-pc-mac-or-mobile-device-with-norton-wifi-privacy/">
-                                                0 Comments
+                                            <img src="<?= Yii::$app->request->baseUrl; ?>img/news-comments.png" />
+                                            <span class="disqus-comment-count" data-disqus-url="#">
+                                                0 Bình luận
                                             </span>
                                         </div>
                                     </div>
-                                    <div class="news-excerpt">Take charge of your public Wi-Fi security and privacy with Norton WiFi Privacy.
-                                        If you're not using a VPN when you connect over public Wi-Fi, you're simply playing with fire. (If you're not using a VPN even when you connect over your own network, you might also be playing with spying and monitoring fire, but that<a href="http://news.filehippo.com/2017/03/secure-your-pc-mac-or-mobile-device-with-norton-wifi-privacy/">read more</a>
+                                    <div class="news-excerpt">
+                                        <?= $tutorials['info']; ?>
                                     </div>
                                     <div style="clear: both; height: 0"></div>
                                 </div>
-                                <div class="news-data">
-                                    <div class="news-title">
-                                        <h3><a href="http://news.filehippo.com/2017/03/researcher-finds-200000-wi-fi-cameras-wide-open-to-hacking/">Researcher Finds 200,000 Wi-Fi Cameras Wide Open To Hacking</a></h3>
-                                    </div>
-                                    <a href="http://news.filehippo.com/2017/03/researcher-finds-200000-wi-fi-cameras-wide-open-to-hacking/">
-                                        <div class="news-image-overlay">
-                                            <img class="news-image" src="http://news.filehippo.com/wp-content/uploads/2017/03/Capture-190x110.jpg" alt="Researcher Finds 200,000 Wi-Fi Cameras Wide Open To Hacking">
-                                        </div>
-                                    </a>
-                                    <div class="news-counts">
-                                        <div class="news-name">
-                                            <img src="http://2.gravatar.com/avatar/e12e89229416c35c3f2e72d7ac6f8dc2?s=24&amp;d=mm&amp;r=g" alt="Euan Viveash">
-                                            Euan Viveash
-                                        </div>
-                                        <div class="news-dates">
-                                            <img src="http://cache.filehippo.com/img/new/news-date.png">17 hours
-                                        </div>
-                                        <div class="news-comments">
-                                            <img src="http://cache.filehippo.com/img/new/news-comments.png">
-                                            <span class="disqus-comment-count" data-disqus-url="http://news.filehippo.com/2017/03/researcher-finds-200000-wi-fi-cameras-wide-open-to-hacking/">
-                                                0 Comments
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="news-excerpt">Vast&nbsp;swathes of Wi-Fi IP cameras suffering from zero-day vulnerabilities, making&nbsp;them easy targets for hackers.
-                                        What began as an everyday study of basic security issue in one IP camera quickly turned into seven major vulnerabilities that affects over 1,000 camera models and left nearly 200,000 cameras wide open<a href="http://news.filehippo.com/2017/03/researcher-finds-200000-wi-fi-cameras-wide-open-to-hacking/">read more</a>
-                                    </div>
-                                    <div style="clear: both; height: 0"></div>
-                                </div>
-                                <div class="news-data">
-                                    <div class="news-title">
-                                        <h3><a href="http://news.filehippo.com/2017/03/political-winds-of-change-affect-tech-industry-in-many-ways/">Political Winds Of Change Affect Tech Industry In Many Ways</a></h3>
-                                    </div>
-                                    <a href="http://news.filehippo.com/2017/03/political-winds-of-change-affect-tech-industry-in-many-ways/">
-                                        <div class="news-image-overlay">
-                                            <img class="news-image" src="http://news.filehippo.com/wp-content/uploads/2017/03/Engineer-190x110.jpg" alt="Political Winds Of Change Affect Tech Industry In Many Ways">
-                                        </div>
-                                    </a>
-                                    <div class="news-counts">
-                                        <div class="news-name">
-                                            <img src="http://0.gravatar.com/avatar/cc96d9151997a22593226efc458c04fd?s=24&amp;d=mm&amp;r=g" alt="Arianna Gael">
-                                            Arianna Gael
-                                        </div>
-                                        <div class="news-dates">
-                                            <img src="http://cache.filehippo.com/img/new/news-date.png">1 day
-                                        </div>
-                                        <div class="news-comments">
-                                            <img src="http://cache.filehippo.com/img/new/news-comments.png">
-                                            <span class="disqus-comment-count" data-disqus-url="http://news.filehippo.com/2017/03/political-winds-of-change-affect-tech-industry-in-many-ways/">
-                                                0 Comments
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="news-excerpt">Travel bans, import tarifis, and the impact on Silicon Valley.
-                                        When the current US presidential administration first began releasing a series of executive orders in January, the public outcry was immediate and angry. One order in particular barred immigration and visitation from several Muslim countries, and the <a href="http://news.filehippo.com/2017/03/political-winds-of-change-affect-tech-industry-in-many-ways/">read more</a>
-                                    </div>
-                                    <div style="clear: both; height: 0"></div>
-                                </div>
-                                <div class="news-data">
-                                    <div class="news-title">
-                                        <h3><a href="http://news.filehippo.com/2017/03/technology-could-kill-us-all-without-a-world-government-says-stephen-hawking/">Technology Could Kill Us All Without A World Government, Says Stephen Hawking</a></h3>
-                                    </div>
-                                    <a href="http://news.filehippo.com/2017/03/technology-could-kill-us-all-without-a-world-government-says-stephen-hawking/">
-                                        <div class="news-image-overlay">
-                                            <img class="news-image" src="http://news.filehippo.com/wp-content/uploads/2017/03/ed-209-190x110.jpg" alt="Technology Could Kill Us All Without A World Government, Says Stephen Hawking">
-                                        </div>
-                                    </a>
-                                    <div class="news-counts">
-                                        <div class="news-name">
-                                            <img src="http://2.gravatar.com/avatar/e12e89229416c35c3f2e72d7ac6f8dc2?s=24&amp;d=mm&amp;r=g" alt="Euan Viveash">
-                                            Euan Viveash
-                                        </div>
-                                        <div class="news-dates">
-                                            <img src="http://cache.filehippo.com/img/new/news-date.png">2 days
-                                        </div>
-                                        <div class="news-comments">
-                                            <img src="http://cache.filehippo.com/img/new/news-comments.png">
-                                            <span class="disqus-comment-count" data-disqus-url="http://news.filehippo.com/2017/03/technology-could-kill-us-all-without-a-world-government-says-stephen-hawking/">
-                                                0 Comments
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="news-excerpt">Advances in technology and innate human tendency for aggression could threaten survival chances of human race, but it might not come to that…
-                                        Stephen Hawking, the world renowned theoretical physicist and cosmologist has said in an interview the UK Times newspaper that he thinks that rapid technological advances<a href="http://news.filehippo.com/2017/03/technology-could-kill-us-all-without-a-world-government-says-stephen-hawking/">read more</a>
-                                    </div>
-                                    <div style="clear: both; height: 0"></div>
-                                </div>
-                                <div class="news-data">
-                                    <div class="news-title">
-                                        <h3><a href="http://news.filehippo.com/2017/03/save-65-percent-on-system-mechanic-or-system-mechanic-pro/">Save 65 Percent On System Mechanic or System Mechanic Pro</a></h3>
-                                    </div>
-                                    <a href="http://news.filehippo.com/2017/03/save-65-percent-on-system-mechanic-or-system-mechanic-pro/">
-                                        <div class="news-image-overlay">
-                                            <img class="news-image" src="http://news.filehippo.com/wp-content/uploads/2017/03/System-Mechanic-save-65-percent-190x110.png" alt="Save 65 Percent On System Mechanic or System Mechanic Pro">
-                                        </div>
-                                    </a>
-                                    <div class="news-counts">
-                                        <div class="news-name">
-                                            <img src="http://1.gravatar.com/avatar/1bcbc0ec4c7ca7a04eb39970f4dcf238?s=24&amp;d=mm&amp;r=g" alt="Andrew Baxter">
-                                            Andrew Baxter
-                                        </div>
-                                        <div class="news-dates">
-                                            <img src="http://cache.filehippo.com/img/new/news-date.png">2 days
-                                        </div>
-                                        <div class="news-comments">
-                                            <img src="http://cache.filehippo.com/img/new/news-comments.png">
-                                            <span class="disqus-comment-count" data-disqus-url="http://news.filehippo.com/2017/03/save-65-percent-on-system-mechanic-or-system-mechanic-pro/">
-                                                0 Comments
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="news-excerpt">Take advantage of System Mechanic's 'March Madness' deal.
-                                        An award-winning PC optimization suite designed to fix, speed up and maintain PCs so they run like new. System Mechanic&nbsp;is used by more than 36 million consumers worldwide to keep more than 75 million computers running at peak performance. As the only tun<a href="http://news.filehippo.com/2017/03/save-65-percent-on-system-mechanic-or-system-mechanic-pro/">read more</a>
-                                    </div>
-                                    <div style="clear: both; height: 0"></div>
-                                </div>
-                                <div class="news-data">
-                                    <div class="news-title">
-                                        <h3><a href="http://news.filehippo.com/2017/03/edge-safari-use-on-the-decline/">Edge And Safari Use On The Decline</a></h3>
-                                    </div>
-                                    <a href="http://news.filehippo.com/2017/03/edge-safari-use-on-the-decline/">
-                                        <div class="news-image-overlay">
-                                            <img class="news-image" src="http://news.filehippo.com/wp-content/uploads/2017/03/Edge-190x110.png" alt="Edge And Safari Use On The Decline">
-                                        </div>
-                                    </a>
-                                    <div class="news-counts">
-                                        <div class="news-name">
-                                            <img src="http://0.gravatar.com/avatar/cc96d9151997a22593226efc458c04fd?s=24&amp;d=mm&amp;r=g" alt="Arianna Gael">
-                                            Arianna Gael
-                                        </div>
-                                        <div class="news-dates">
-                                            <img src="http://cache.filehippo.com/img/new/news-date.png">2 days
-                                        </div>
-                                        <div class="news-comments">
-                                            <img src="http://cache.filehippo.com/img/new/news-comments.png">
-                                            <span class="disqus-comment-count" data-disqus-url="http://news.filehippo.com/2017/03/edge-safari-use-on-the-decline/">
-                                                0 Comments
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="news-excerpt">Dip in popularity of pre-installed&nbsp;Microsoft and Apple browsers.
-                                        There's a mindset shift taking place in the tech world, and it appears to be one that rebels against "forced" software and web browser choices. New reports have indicated that both the Microsoft Edge browser that came pre-installed with Windows 10 <a href="http://news.filehippo.com/2017/03/edge-safari-use-on-the-decline/">read more</a>
-                                    </div>
-                                    <div style="clear: both; height: 0"></div>
-                                </div>
-                                <div class="news-data">
-                                    <div class="news-title">
-                                        <h3><a href="http://news.filehippo.com/2017/03/firefox-52-bans-plugins-and-is-first-browser-to-use-webassembly/">Firefox 52 Bans Plugins And Is First Browser To Use WebAssembly</a></h3>
-                                    </div>
-                                    <a href="http://news.filehippo.com/2017/03/firefox-52-bans-plugins-and-is-first-browser-to-use-webassembly/">
-                                        <div class="news-image-overlay">
-                                            <img class="news-image" src="http://news.filehippo.com/wp-content/uploads/2017/03/firefox-52-190x110.jpg" alt="Firefox 52 Bans Plugins And Is First Browser To Use WebAssembly">
-                                        </div>
-                                    </a>
-                                    <div class="news-counts">
-                                        <div class="news-name">
-                                            <img src="http://2.gravatar.com/avatar/e12e89229416c35c3f2e72d7ac6f8dc2?s=24&amp;d=mm&amp;r=g" alt="Euan Viveash">
-                                            Euan Viveash
-                                        </div>
-                                        <div class="news-dates">
-                                            <img src="http://cache.filehippo.com/img/new/news-date.png">5 days
-                                        </div>
-                                        <div class="news-comments">
-                                            <img src="http://cache.filehippo.com/img/new/news-comments.png">
-                                            <span class="disqus-comment-count" data-disqus-url="http://news.filehippo.com/2017/03/firefox-52-bans-plugins-and-is-first-browser-to-use-webassembly/">
-                                                0 Comments
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="news-excerpt">Firefox 52 bans plugins except for Flash, warns users about logins on unencrypted websites, and claims to run processor intensive apps at nearly the same speed as native code.
-                                        Mozilla have quietly released their latest browser, Firefox 52 into the wilds of the internet this week. In doing so Firefox has officiall<a href="http://news.filehippo.com/2017/03/firefox-52-bans-plugins-and-is-first-browser-to-use-webassembly/">read more</a>
-                                    </div>
-                                    <div style="clear: both; height: 0"></div>
-                                </div>
-                                <div class="news-data">
-                                    <div class="news-title">
-                                        <h3><a href="http://news.filehippo.com/2017/03/toyota-guardian-software-leans-towards-safety-autonomy/">Toyota "Guardian" Software Leans Towards Safety Autonomy</a></h3>
-                                    </div>
-                                    <a href="http://news.filehippo.com/2017/03/toyota-guardian-software-leans-towards-safety-autonomy/">
-                                        <div class="news-image-overlay">
-                                            <img class="news-image" src="http://news.filehippo.com/wp-content/uploads/2017/03/Toyota-FCV-Concept-Car-e1444586900893-190x110.jpg" alt="Toyota " guardian"="" software="" leans="" towards="" safety="" autonomy"="">
-                                        </div>
-                                    </a>
-                                    <div class="news-counts">
-                                        <div class="news-name">
-                                            <img src="http://0.gravatar.com/avatar/cc96d9151997a22593226efc458c04fd?s=24&amp;d=mm&amp;r=g" alt="Arianna Gael">
-                                            Arianna Gael
-                                        </div>
-                                        <div class="news-dates">
-                                            <img src="http://cache.filehippo.com/img/new/news-date.png">5 days
-                                        </div>
-                                        <div class="news-comments">
-                                            <img src="http://cache.filehippo.com/img/new/news-comments.png">
-                                            <span class="disqus-comment-count" data-disqus-url="http://news.filehippo.com/2017/03/toyota-guardian-software-leans-towards-safety-autonomy/">
-                                                0 Comments
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="news-excerpt">Car maker's software can detect imminent danger and take action.
-                                        In the hotly contested race to get self-driving cars on the road, everyone from Uber to Google has a stake. But one company is quietly working on a less flashy option, one that only kicks in if the vehicle is in danger. Even better, their program is<a href="http://news.filehippo.com/2017/03/toyota-guardian-software-leans-towards-safety-autonomy/">read more</a>
-                                    </div>
-                                    <div style="clear: both; height: 0"></div>
-                                </div>
-                                <div class="news-data">
-                                    <div class="news-title">
-                                        <h3><a href="http://news.filehippo.com/2017/03/microsoft-closing-quasi-social-network-experiment-so-cl/">Microsoft Closing Quasi Social Network Experiment So.cl</a></h3>
-                                    </div>
-                                    <a href="http://news.filehippo.com/2017/03/microsoft-closing-quasi-social-network-experiment-so-cl/">
-                                        <div class="news-image-overlay">
-                                            <img class="news-image" src="http://news.filehippo.com/wp-content/uploads/2017/03/socl-190x110.jpg" alt="Microsoft Closing Quasi Social Network Experiment So.cl">
-                                        </div>
-                                    </a>
-                                    <div class="news-counts">
-                                        <div class="news-name">
-                                            <img src="http://2.gravatar.com/avatar/e12e89229416c35c3f2e72d7ac6f8dc2?s=24&amp;d=mm&amp;r=g" alt="Euan Viveash">
-                                            Euan Viveash
-                                        </div>
-                                        <div class="news-dates">
-                                            <img src="http://cache.filehippo.com/img/new/news-date.png">6 days
-                                        </div>
-                                        <div class="news-comments">
-                                            <img src="http://cache.filehippo.com/img/new/news-comments.png">
-                                            <span class="disqus-comment-count" data-disqus-url="http://news.filehippo.com/2017/03/microsoft-closing-quasi-social-network-experiment-so-cl/">
-                                                0 Comments
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="news-excerpt">The social network you probably didn’t know ever existed, is closing due to a lack of users.
-                                        Microsoft are pulling the plug on yet another one its projects. The So.cl experiment will be shut down at the end of the month joining other recent projects such as Windows Phone and the wearable fitness tracker, the Ba<a href="http://news.filehippo.com/2017/03/microsoft-closing-quasi-social-network-experiment-so-cl/">read more</a>
-                                    </div>
-                                    <div style="clear: both; height: 0"></div>
-                                </div>
+								<?php } } ?>
                             </div>
                         </div>
                     </div>

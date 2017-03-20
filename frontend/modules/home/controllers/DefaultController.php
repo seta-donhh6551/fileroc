@@ -14,30 +14,35 @@ class DefaultController extends MyController
     public function actionIndex($rewrite = null)
     {
 		$model = \common\models\Category::findOne(['id' => 4]);
-		if($rewrite)
-		{
+		if($rewrite){
 			$model = \common\models\Category::findOne(['rewrite' => $rewrite]);
-			if(!$model){
+		}
+		
+		if(!$model){
 				throw new \yii\web\HttpException(404, 'The requested item could not be found.');
-			}
 		}
 		
         $cateId = $model->id;
         $modelPost = new \common\models\Posts();
-
+		
+		//set active menu on header
+		$this->activeMenu = $model;
 		$this->infoConfig = ['keywords' => $model->keywords, 'description' => $model->description];
 
 		$listSubCategory = $model->getListSubCategory($cateId);
-
-        Yii::$app->view->title = $model->name.', Free download';
 		
-		$modelPost = new \common\models\Posts();
-		$listPost = $modelPost->getListPosts(array(), 10, null, $cateId);
-		$listAllPost = $modelPost->getListPosts(array(), 10, null);
+        Yii::$app->view->title = 'Phần mềm dành cho '.$model->name.', Miễn phí download phần mềm';
+		
+		$modelTutorial = new \common\models\Tutorials();
+		$listTutorials = $modelTutorial->find()
+						->where(['status' => 1])
+						->orderBy(['id' => 'desc'])
+						->limit(\common\components\Utility::$defaultLimitPost)
+						->all();
 
 		return $this->render('index', [
-			'listPost' => $listPost,
-			'listAllPost' => $listAllPost,
+			'model' => $model,
+			'listTutorials' => $listTutorials,
 			'listSubCategory' => $listSubCategory
 		]);
 	}

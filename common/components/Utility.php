@@ -5,6 +5,7 @@ namespace common\components;
 class Utility
 {
 	public static $defaultPageSize = 10;
+	public static $defaultLimitPost = 9;
 	
     public static $defaultImageThumb = array(
         'width' => 250,
@@ -75,7 +76,7 @@ class Utility
   	            'y'=>array('ý','ỳ','ỷ','ỹ','ỵ'),
   	            'Y'=>array('Ý','Ỳ','Ỷ','Ỹ','Ỵ'),
                     '-'=>array(', ','. '),
-                    '' =>array(',','.'),
+                    '' =>array(',','.'."'"),
                     '-'=>array(' .',' ;','; ',' :',': '),
   	            '-'=>array(';',':')
   	        );
