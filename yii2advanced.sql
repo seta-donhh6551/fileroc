@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.14
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 19, 2017 at 04:00 PM
--- Server version: 5.6.26
--- PHP Version: 5.6.12
+-- Generation Time: Mar 20, 2017 at 11:32 AM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -26,8 +26,8 @@ SET time_zone = "+00:00";
 -- Table structure for table `tbl_category`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_category` (
-  `id` int(11) unsigned NOT NULL,
+CREATE TABLE `tbl_category` (
+  `id` int(11) UNSIGNED NOT NULL,
   `name` varchar(150) NOT NULL,
   `rewrite` varchar(150) NOT NULL,
   `keywords` text NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `tbl_category` (
   `child_id` int(11) DEFAULT '0',
   `parent_id` int(11) NOT NULL DEFAULT '0',
   `status` int(1) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_category`
@@ -50,10 +50,10 @@ INSERT INTO `tbl_category` (`id`, `name`, `rewrite`, `keywords`, `description`, 
 (4, 'Windows', 'windows', 'Windows Software, Window Software Free', 'Windows Software, Window Software Free', 'Windows', 1, 'windows8.png', 'fa-windows', 0, 0, 0, 1),
 (5, 'Mac', 'mac', 'Mac software, Free download', 'Mac software, Free download', 'Mac software, Free download', 2, 'mac-os.png', 'fa-apple', 0, 0, 0, 1),
 (6, 'Android', 'android', 'Keywords', 'Description', 'Android', 3, 'android.png', 'fa-android', 0, 0, 0, 1),
-(7, 'iOs', 'ios', 'iOs software', 'iOs software', 'iOs software', 4, 'ios.png', NULL, 0, 0, 0, 1),
-(8, 'Website', 'website', 'Software for website', 'Software for website', 'Software for website', 5, 'globe.png', 'fa-television', 0, 0, 0, 1),
+(7, 'iOs', 'ios', 'iOs software', 'iOs software', 'iOs software', 4, 'ios.png', 'fa-apple', 0, 0, 0, 1),
+(8, 'Web app', 'web-app', 'Software for website', 'Software for website', 'Software for website', 5, 'globe.png', 'fa-television', 0, NULL, 0, 1),
 (9, 'Games', 'games', 'Free games download', 'Free games download', 'Free games download', 6, 'games.png', 'fa-gamepad', 0, 0, 0, 1),
-(10, 'Khác', 'khac', 'Other', 'Other', 'Other', 7, '', NULL, 0, NULL, 0, 1),
+(10, 'Khác', 'khac', 'Other', 'Other', 'Other', 7, '', NULL, 0, NULL, 0, 0),
 (11, 'Phần mềm bảo mật', 'phan-mem-bao-mat', 'Window Security Software, Window Security, Security Software, Security Software For Window', 'Download is a security software for Window at Fileroc.com with the latest version including Internet Security application packages, which protects computers completely. Computer Security not only protects your computer but also includes applications encoding data, hard disk and some application with strong password…', 'Download is a security software for Window at Fileroc.com with the latest version including Internet Security application packages, which protects computers completely. Computer Security not only protects your computer but also includes applications encoding data, hard disk and some application with strong password…', 1, 'security.png', NULL, 1, NULL, 4, 1),
 (12, 'Diệt virus, mã độc', 'diet-virus-ma-doc', 'Antivirus soft, Antivirus for window, Antivirus free', 'With thousands of antivirus software, spyware helps to prevent malware and other dangerous programs. Fileroc.com is the stock of software that you need to remember whenever your computer faces virus, spyware or adware.', 'With thousands of antivirus software, spyware helps to prevent malware and other dangerous programs. Fileroc.com is the stock of software that you need to remember whenever your computer faces virus, spyware or adware.', 2, 'antivirus.png', NULL, 1, NULL, 4, 1),
 (13, 'Chat, Video call, Sms', 'chat-video-call-sms', 'Video call, Sms software, Video call software', 'Sms and calling now not only limited to on the phone or handheld device, you can chat, messaging and phone calls from their PCs. fileroc.com synthesis software application supports chat, free messaging, free video calls in the list below.', 'Sms and calling now not only limited to on the phone or handheld device, you can chat, messaging and phone calls from their PCs. fileroc.com synthesis software application supports chat, free messaging, free video calls in the list below.', 3, 'video-call-sms.png', NULL, 1, NULL, 4, 1),
@@ -103,8 +103,8 @@ INSERT INTO `tbl_category` (`id`, `name`, `rewrite`, `keywords`, `description`, 
 -- Table structure for table `tbl_posts`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_posts` (
-  `id` int(11) unsigned NOT NULL,
+CREATE TABLE `tbl_posts` (
+  `id` int(11) UNSIGNED NOT NULL,
   `title` varchar(255) NOT NULL,
   `rewrite` varchar(255) NOT NULL,
   `author` varchar(50) NOT NULL,
@@ -137,7 +137,7 @@ CREATE TABLE IF NOT EXISTS `tbl_posts` (
   `user_id` int(11) NOT NULL,
   `creat_date` datetime NOT NULL,
   `update_date` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_posts`
@@ -156,8 +156,8 @@ INSERT INTO `tbl_posts` (`id`, `title`, `rewrite`, `author`, `author_url`, `keyw
 -- Table structure for table `tbl_reviews`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_reviews` (
-  `id` int(11) unsigned NOT NULL,
+CREATE TABLE `tbl_reviews` (
+  `id` int(11) UNSIGNED NOT NULL,
   `name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `title` varchar(255) NOT NULL,
@@ -166,7 +166,7 @@ CREATE TABLE IF NOT EXISTS `tbl_reviews` (
   `user_ip` varchar(50) NOT NULL,
   `post_id` int(11) NOT NULL,
   `created_date` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_reviews`
@@ -186,8 +186,8 @@ INSERT INTO `tbl_reviews` (`id`, `name`, `email`, `title`, `review`, `star`, `us
 -- Table structure for table `tbl_tutorials`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_tutorials` (
-  `id` int(11) unsigned NOT NULL,
+CREATE TABLE `tbl_tutorials` (
+  `id` int(11) UNSIGNED NOT NULL,
   `title` varchar(255) NOT NULL,
   `rewrite` varchar(255) NOT NULL,
   `keywords` text NOT NULL,
@@ -200,14 +200,19 @@ CREATE TABLE IF NOT EXISTS `tbl_tutorials` (
   `status` tinyint(4) NOT NULL,
   `user_id` int(11) NOT NULL,
   `creat_date` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_tutorials`
 --
 
 INSERT INTO `tbl_tutorials` (`id`, `title`, `rewrite`, `keywords`, `description`, `views`, `thumb`, `info`, `fullcontent`, `order_by`, `status`, `user_id`, `creat_date`) VALUES
-(1, 'Don test thoi ma', 'don-test-thoi-ma', 'Keywords', 'Description', 123, '19032017-054439Color-Folder-Icons-Collage.png', 'Mô tả đầu bài viết', 'Nội dung bài viết', 234, 0, 1, '2017-03-19 11:44:39');
+(1, 'Hướng dẫn tạo usb boot bằng hiren''s boot cho window 7,8,10', 'huong-dan-tao-usb-boot-bang-hiren''s-boot-cho-window-7810', 'Tao usb boot, Tạo usb boot usb, Tạo usb boot cài win.', 'Hướng dẫn cách tạo USB boot đơn giản với Hiren''s Boot. Chỉ với vài thao tác đơn giản bạn đã có một hiren''s bot mà không cần đến đĩa CD.', 0, 'tao-boot-usb.jpg', 'Trong trường hợp Windows của bạn không thể khởi động, không sử dụng được ổ đĩa quang, bạn nên tạo USB Boot bằng Hiren''s boot để có thể xử lý vấn đề này. Ưu điểm của cách làm này là có thể xử lý vấn đề trên máy tính của bạn chỉ với một chiếc USB nhỏ gọn mà bạn có thể mang đi bất cứ nơi nào. FreeFile sẽ hướng dẫn các bạn những bước rất cơ bản để tạo USB boot bằng Hiren''s boot.', '<p style="font-size: 14px; margin: 10px 0px 0px; padding: 10px 0px 0px; text-align: justify; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, Arial, Helvetica, sans-serif;">USB là một thiết bị nhỏ gọn có thể mang theo bên mình có khả năng lưu trữ dữ liệu, sử dụng nhiều chức năng mà không cần những thiết bị cồng kềnh, phức tạp. Đối với những kỹ thuật viên máy tính, usb càng quan trọng hơn khi có thể đảm nhiệm nhiều chức năng như tạo usb cài win, tạo usb boot đa năng, tạo usb ghost usb format... Việc tạo usb hiren boot là vô cùng cần thiết do đã được tích hợp rất nhiều phần mềm hỗ trợ.</p>\r\n<p style="font-size: 14px; margin: 10px 0px 0px; padding: 10px 0px 0px; text-align: justify; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, Arial, Helvetica, sans-serif;">Máy tính của bạn thường xuyên bị treo và chạy rất chậm, và bạn muốn ghost lại máy tính của bạn lại hỏng ổ đĩa vậy giải pháp khắc phục chỉ còn cách tạo usb ghost, mà bạn lại không thành thạo về việc tạo usb hiren boot. Bài viết này taimienphi.vn sẽ hướng dẫn bạn chi tiết và cụ thể các bước để bạn có thể&#160;<a href="http://taimienphi.vn/tk/t%E1%BA%A1o+usb+boot" style="text-decoration: none; color: rgb(46, 46, 46);">tạo USB Boot</a>&#160;một cách hiệu quả nhất với phần mềm tạo usb boot....</p>', 0, 1, 1, '2017-03-19 11:44:39'),
+(2, 'Phân biệt ổ SSD và HDD, nên dùng ổ SSD hay HDD cho laptop?', 'phan-biet-o-ssd-va-hdd-nen-dung-o-ssd-hay-hdd-cho-laptop?', 'Phân biệt ổ SSD và HDD', 'Phân biệt ổ SSD và HDD, nên dùng ổ SSD hay HDD cho laptop?', 0, '20032017-103143hdd-vs-ssd.jpg', 'Hiện nay, ổ cứng SSD đã dần trở nên phổ biến hơn và giá thành cũng dễ chịu hơn so với trước kia. Trước khi mua một chiếc SSD hay HDD, bạn nên tìm hiểu và phân biệt ổ SSD và HDD, nên dùng ổ SSD hay HDD cho laptop để phù hợp hơn so với nhu cầu dùng của bạn.', 'Hiện nay, ổ cứng SSD đã dần trở nên phổ biến hơn và giá thành cũng dễ chịu hơn so với trước kia. Trước khi mua một chiếc SSD hay HDD, bạn nên tìm hiểu và phân biệt ổ SSD và HDD, nên dùng ổ SSD hay HDD cho laptop để phù hợp hơn so với nhu cầu dùng của bạn.', 1, 1, 1, '2017-03-20 16:31:43'),
+(3, 'Khôi phục dữ liệu bằng DiskGetor Data Recovery', 'khoi-phuc-du-lieu-bang-diskgetor-data-recovery', 'Khôi phục dữ liệu bằng DiskGetor Data Recovery', 'Khôi phục dữ liệu bằng DiskGetor Data Recovery', 1, 'recovery-data.jpg', 'DiskGetor Data Recovery là phần mềm khôi phục dữ liệu mạnh mẽ, phục hồi lại dữ liệu đã bị xóa, hỏng và bị format trên tất cả các phân vùng ổ cứng. Phần mềm xứng đáng là công cụ hữu ích dành cho những ai thường xuyên làm việc trên máy tính.', 'DiskGetor Data Recovery là phần mềm khôi phục dữ liệu mạnh mẽ, phục hồi lại dữ liệu đã bị xóa, hỏng và bị format trên tất cả các phân vùng ổ cứng. Phần mềm xứng đáng là công cụ hữu ích dành cho những ai thường xuyên làm việc trên máy tính.', 2, 1, 1, '2017-03-20 16:37:33'),
+(4, 'Cài và sử dụng InnoExtractor giải nén file dữ liệu', 'cai-va-su-dung-innoextractor-giai-nen-file-du-lieu', 'Cài và sử dụng InnoExtractor giải nén file dữ liệu', 'Cài và sử dụng InnoExtractor giải nén file dữ liệu', 123, 'data-extract.jpg', 'InnoExtractor đem đến cho người dùng khả năng giải nén các tập tin dữ liệu hiệu quả với tốc độ cực nhanh. Tuy nhiên để sử dụng được phần mềm này bạn cần cài đặt InnoExtractor đúng cách.', 'InnoExtractor đem đến cho người dùng khả năng giải nén các tập tin dữ liệu hiệu quả với tốc độ cực nhanh. Tuy nhiên để sử dụng được phần mềm này bạn cần cài đặt InnoExtractor đúng cách.', 3, 1, 1, '2017-03-20 16:41:58'),
+(5, 'Khôi phục dữ liệu bằng Active Partition Recovery', 'khoi-phuc-du-lieu-bang-active-partition-recovery', 'Khôi phục dữ liệu bằng Active Partition Recovery', 'Khôi phục dữ liệu bằng Active Partition Recovery', 3, '1382645199_active-partition-recovery-professional.jpg', 'Những dữ liệu lưu trữ trên ổ cứng của máy tính bị mất do rất nhiều nguyên nhân như do người sử dụng vô tình xóa hoặc do virus gây ra… Và Active Partition Recovery chính là giải pháp dành cho bạn lúc này.', 'Những dữ liệu lưu trữ trên ổ cứng của máy tính bị mất do rất nhiều nguyên nhân như do người sử dụng vô tình xóa hoặc do virus gây ra… Và Active Partition Recovery chính là giải pháp dành cho bạn lúc này.', 4, 1, 1, '2017-03-20 17:21:54'),
+(6, 'Cách cài Free PDF Compressor giảm kích thước file PDF', 'cach-cai-free-pdf-compressor-giam-kich-thuoc-file-pdf', 'Cách cài Free PDF Compressor giảm kích thước file PDF', 'Cách cài Free PDF Compressor giảm kích thước file PDF', 0, 'adobe-reader.jpg', 'Phần mềm Free PDF Compressor ra đời giúp bạn nén, làm giảm kích thước các file PDF để dễ dàng lưu trữ hoặc chia sẻ trên mạng Internet. Thông qua bài viết dưới đây của FreeFile.vn bạn sẽ biết cách cài Free PDF Compressor sử dụng hiệu quả nhất trên máy tinh.', 'Phần mềm Free PDF Compressor ra đời giúp bạn nén, làm giảm kích thước các file PDF để dễ dàng lưu trữ hoặc chia sẻ trên mạng Internet. Thông qua bài viết dưới đây của FreeFile.vn bạn sẽ biết cách cài Free PDF Compressor sử dụng hiệu quả nhất trên máy tinh.', 0, 1, 1, '2017-03-20 17:23:46');
 
 -- --------------------------------------------------------
 
@@ -215,8 +220,8 @@ INSERT INTO `tbl_tutorials` (`id`, `title`, `rewrite`, `keywords`, `description`
 -- Table structure for table `tbl_user`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_user` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_user` (
+  `id` int(10) UNSIGNED NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `name` varchar(100) NOT NULL,
@@ -224,9 +229,9 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `phone` varchar(20) DEFAULT NULL,
   `adress` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `level` int(10) unsigned NOT NULL DEFAULT '2',
+  `level` int(10) UNSIGNED NOT NULL DEFAULT '2',
   `status` int(1) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_user`
@@ -278,27 +283,27 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_category`
 --
 ALTER TABLE `tbl_category`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=54;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 --
 -- AUTO_INCREMENT for table `tbl_posts`
 --
 ALTER TABLE `tbl_posts`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `tbl_reviews`
 --
 ALTER TABLE `tbl_reviews`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `tbl_tutorials`
 --
 ALTER TABLE `tbl_tutorials`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
