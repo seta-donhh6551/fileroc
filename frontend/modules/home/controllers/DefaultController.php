@@ -11,19 +11,34 @@ class DefaultController extends MyController
 {
     public $enableCsrfValidation = false;
 
-    public function actionIndex()
+    public function actionIndex($rewrite = null)
     {
-        Yii::$app->view->title = 'Free download software';
+		$model = \common\models\Category::findOne(['id' => 4]);
+		if($rewrite)
+		{
+			$model = \common\models\Category::findOne(['rewrite' => $rewrite]);
+			if(!$model){
+				throw new \yii\web\HttpException(404, 'The requested item could not be found.');
+			}
+		}
+		
+        $cateId = $model->id;
+        $modelPost = new \common\models\Posts();
 
-		$cateId = 4;
+		$this->infoConfig = ['keywords' => $model->keywords, 'description' => $model->description];
+
+		$listSubCategory = $model->getListSubCategory($cateId);
+
+        Yii::$app->view->title = $model->name.', Free download';
+		
 		$modelPost = new \common\models\Posts();
 		$listPost = $modelPost->getListPosts(array(), 10, null, $cateId);
 		$listAllPost = $modelPost->getListPosts(array(), 10, null);
-        
+
 		return $this->render('index', [
 			'listPost' => $listPost,
 			'listAllPost' => $listAllPost,
-			//'listMenu' => Yii::$app->controller->listMenu
+			'listSubCategory' => $listSubCategory
 		]);
 	}
 

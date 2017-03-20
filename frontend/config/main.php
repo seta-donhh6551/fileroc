@@ -53,7 +53,7 @@ return [
                 //front end
 				'/search.html' => 'home/default/search',
                 //'/<keyword:[a-zA-Z0-9_-]+>-<id:[0-9]+>.html' => 'home/default/detail',
-                '/<rewrite:[a-zA-Z0-9_-]+>.html' => 'home/category/index',
+                '/<rewrite:[a-zA-Z0-9_-]+>.html' => 'home/default/index',
 				'/download/<rewrite:[a-zA-Z0-9_-]+>.html' => 'home/posts/index',
 				'/download-option/<rewrite:[a-zA-Z0-9_-]+>.html' => 'home/posts/option',
 				'/<slug:[a-zA-Z0-9_-]+>/<rewrite:[a-zA-Z0-9_-]+>.html' => 'home/category/subcate',
