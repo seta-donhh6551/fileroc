@@ -1,3 +1,21 @@
+<div class="grey-top lower-part mobile grey-top-mobile">
+    <div class="container">
+        <div id="main-splash">
+            <div class="splash-content">
+                <h1>The Latest Versions<br>of the Best Software</h1>
+            </div>
+            <ul>
+                <li>Hand picked software titles - only the best!</li>
+                <li>Tested for malware, adware and viruses</li>
+                <li>No added bundles, installers or toolbars</li>
+            </ul>
+            <div class="button-container">
+                <div class="software-button"><a href="/browse-software/">BROWSE SOFTWARE</a></div>
+                <div class="software-button latest-button"><a href="/latest/">Latest updates</a></div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="grey-top height-fix desktop">
     <div class="left-bg"></div>
     <div class="bg">

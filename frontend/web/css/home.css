@@ -383,7 +383,8 @@
     text-decoration: none
 }
 .software-button a:hover {
-    text-decoration: underline
+    text-decoration: none;
+    color: #0095e2;
 }
 .splash-image {
     margin-left: 30px;
@@ -501,7 +502,7 @@ a img {
     margin-right: auto;
     margin-left: auto;
     padding: 0;
-    /*width: 1110px*/
+    width: 1110px
 }
 .container.header {
     margin-right: auto;
@@ -762,8 +763,9 @@ h2 a:hover {
     float: left;
     margin-right: 15px;
     padding-top: 15px;
-    width: 195px;
-    max-height: 125px
+    width: 200px;
+    /* max-height: 125px; */
+    height:150px;
 }
 .news-counts>div {
     float: left;
@@ -788,7 +790,7 @@ h2 a:hover {
     top: 5px
 }
 .news-name img {
-    top: 9px!important
+    top: 5px;
 }
 .news-data {
     clear: both;

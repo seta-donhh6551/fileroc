@@ -3343,7 +3343,9 @@ a:hover {
     background-color: #fff;
     color: #5f6d80;
     padding-bottom: 20px;
-    min-height: 945px
+    min-height: 945px;
+    width: 1052px;
+    margin: 0px auto;
 }
 #content-main.no-header {
     padding-top: 24px
@@ -4175,6 +4177,45 @@ section {
     }
 }
 @media (max-width: 767px) {
+    .container {
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0;
+        width: 320px;
+    }
+    #main-splash ul{
+        padding-top: 15px;
+    }
+    #main-splash .splash-content h1 {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 20px;
+        color: #000000;
+        text-transform: capitalize;
+        line-height: 25px;
+    }
+    .grey-top-mobile .software-button {
+        background-color: #e27421;
+        border-radius: 3px;
+        height: 31px !important;
+        width: 150px !important;
+        min-width: 150px !important;
+        text-align: center;
+        line-height: 29px !important;
+        float: left;
+        text-transform: uppercase !important;
+        margin-left: 5px;
+    }
+    .grey-top-mobile .software-button a {
+        font-size: 14px;
+    }
+    .grey-top-mobile .latest-button {
+        margin-left: 10px;
+    }
+    #main-splash {
+        font-size: 13px;
+    }
     .lower-part {
         height: 181px;
     }
@@ -4221,6 +4262,7 @@ section {
     }
     .news-counts {
         float: none !important;
+        padding-top: 35px;
     }
     .news-title h3 {
         font-size: 14px;
@@ -4262,6 +4304,7 @@ section {
         max-height: 125px;
         height: 50px;
         padding: 5px 0px 0px 0px !important;
+        height: 75px !important;
     }
     .news-title h3 {
         font-size: 13px !important;
@@ -4334,7 +4377,7 @@ section {
     }
     #content-main {
         width: 300px;
-        padding-left: 10px !important
+        padding-left: 0px !important
     }
     .container-width-fix {
         width: 300px
@@ -5001,4 +5044,12 @@ html {
     position: absolute;
     right: 0;
     top: 0
+}
+.lower-part {
+    height: 181px;
+}
+.grey-top {
+    background-color: #f2f2f2;
+    padding-top: 10px;
+    border-bottom: solid 2px #e3e8ea;
 }

@@ -21,7 +21,7 @@ if(isset($infoSubCate)){
 }
 ?>
 <div class="content-wrapper">
-    <div id="content-main" class="container nopadding ">
+    <div id="content-main" class="nopadding ">
        <div id="sidebar-left" class="category-page-box-fix">
           <ol id="category-navigation">
              <li class="highlighted category-level-1">
