@@ -73,9 +73,7 @@ if(isset($infoSubCate)){
              <!--dfp_skyscraper -->
              <div class="ad-unit-label" style="color: #869aab;font-size: 11px;margin-bottom: 2px;">Advertisement</div>
              <div id='div-gpt-ad-1384762460430-934a43e13eb4400186a6ebc8285dd946' style=''>
-                <!-- <script type='text/javascript'>
-                   googletag.cmd.push(function () { googletag.display('div-gpt-ad-1384762460430-934a43e13eb4400186a6ebc8285dd946'); });
-                </script>  -->
+                <img src="<?= Yii::$app->request->baseUrl; ?>img/adsense-160x600.jpg" width="160" />
              </div>
           </div>
        </div>
@@ -328,9 +326,7 @@ if(isset($infoSubCate)){
              <!--dfp_topMpu -->
              <div class="ad-unit-label" style="color: #869aab;font-size: 11px;margin-bottom: 2px;">Advertisement</div>
              <div id='div-gpt-ad-1384762460430-922df1082d0048deb70a07ef4e1e443f' style=''>
-                <!-- <script type='text/javascript'>
-                   googletag.cmd.push(function () { googletag.display('div-gpt-ad-1384762460430-922df1082d0048deb70a07ef4e1e443f'); });
-                </script>  -->
+                <img src="<?= Yii::$app->request->baseUrl; ?>img/ads-google-300.jpg" width="300" />
              </div>
           </div>
           <div id="techbeat-widget">
@@ -342,9 +338,7 @@ if(isset($infoSubCate)){
              <!--dfp_bottomMpu -->
              <div class="ad-unit-label" style="color: #869aab;font-size: 11px;margin-bottom: 2px;">Advertisement</div>
              <div id='div-gpt-ad-1384762460430-dd0ef69811094147b6cb26aedb86de52' style=''>
-                <!-- <script type='text/javascript'>
-                   googletag.cmd.push(function () { googletag.display('div-gpt-ad-1384762460430-dd0ef69811094147b6cb26aedb86de52'); });
-                </script>  -->
+                <img src="<?= Yii::$app->request->baseUrl; ?>img/mobile-leaderboard.png" width="300" />
              </div>
           </div>
        </div>

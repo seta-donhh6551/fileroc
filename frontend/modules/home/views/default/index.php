@@ -131,7 +131,7 @@ use yii\widgets\ActiveForm;
                         <!--middleLeaderboardAdUnit -->
                         <div class="ad-unit-label" style="color: #869aab;font-size: 11px;margin-bottom: 2px;">Advertisement</div>
                         <div id="div-gpt-ad-1384762460430-3a118e30e650453192aee2604bb7a827" style="width:728px; height:90px;" data-google-query-id="CP-NjsOH39ICFcWBvQodwagJKA">
-                            <img src="img/adsense-728x90.gif" width="728" />
+                            <img src="<?= Yii::$app->request->baseUrl; ?>img/adsense-728x90.gif" width="728" />
                         </div>
                     </div>
                 </div>
