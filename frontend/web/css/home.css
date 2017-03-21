@@ -972,3 +972,70 @@ h2 {
     margin-top: 19px;
     padding-top: 5px
 }
+.cls{clear:left}
+#navigation{
+    margin-bottom: 15px;
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 7px;
+}
+#navigation ul{
+    list-style-type:none;
+    margin:0px;
+    padding:0px
+}
+#navigation ul li{
+    float: left;
+    margin-right: 15px;
+}
+#navigation ul li a{
+    font-weight: normal;
+    font-size: 13px;
+    color: #039;
+}
+#navigation ul li a:hover{
+    font-weight: bold
+}
+#navigation ul li:after{
+    content: ">";
+    font-family: Comic Sans MS;
+    padding: 0 5px 0px 15px;
+    color: #666;
+    font-size: 11px;
+}
+#navigation ul li:last-child:after{
+    display: none
+}
+.category-breadcrumb-entry h1{
+    font-size: 21px;
+    margin: 0px 0px 15px 0px
+}
+.free {
+    color: #F00;
+    font-size: 12px;
+}
+.free:after {
+    content: "Miễn phí";
+    background: #060;
+    color: #fff;
+    padding: 2px 4px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 9px;
+    margin: 0 8px 0 0;
+    font-family: Tahoma;
+}
+.trial {
+    color: #F00;
+    font-size: 12px;
+}
+.trial:after {
+    content: "Dùng thử";
+    background: #0072bc;
+	color: #fff;
+    padding: 2px 4px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 9px;
+    margin: 0 8px 0 0;
+    font-family: Tahoma;
+}

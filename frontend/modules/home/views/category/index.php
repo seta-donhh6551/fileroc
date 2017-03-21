@@ -25,45 +25,40 @@ if(isset($infoSubCate)){
        <div id="sidebar-left" class="category-page-box-fix">
           <ol id="category-navigation">
              <li class="highlighted category-level-1">
-                <h3>
-                   <a class="internal-link" href="index.html" title="Firewalls and Security">Firewalls and Security</a>
-                </h3>
-             <li class=" category-level-2">
-                <a class="internal-link" href="http://filehippo.com/software/security/firewalls/" title="">Firewalls</a>
+                <h3><a class="internal-link" href="<?= Yii::$app->request->baseUrl.$infoCate->rewrite.'/'.$model->rewrite; ?>.html" title="<?= $model->name; ?>"><?= $model->name; ?></a></h3>
              </li>
-             <li class=" category-level-2">
-                <a class="internal-link" href="http://filehippo.com/software/security/encryption/" title="">Data Encryption</a>
+             <?php if(isset($listChilds) && $listChilds != null){ ?>
+             <?php foreach($listChilds as $childItem){ ?>
+             <li class="category-level-2">
+                <a class="internal-link" href="<?= Yii::$app->request->baseUrl.$infoCate['rewrite'].'/'.$subCategory['rewrite'].'/'.$childItem['rewrite']; ?>.html" title="<?= $childItem['name'] ?>"><?= $childItem['name'] ?></a>
              </li>
-             <li class=" category-level-2">
-                <a class="internal-link" href="http://filehippo.com/software/security/diagnostics/" title="">Diagnostics</a>
-             </li>
-             </li>
+             <?php } } ?>
           </ol>
           <div class="hidden-sm hidden-xs">
              <ul id="category-popular-software">
                 <li>Popular software</li>
                 <li>
-                   <a class="internal-link" href="http://filehippo.com/download_folder_lock/" title="Folder Lock 7.5.6">
+                   <a class="internal-link" href="#" title="Folder Lock 7.5.6">
                    <img src="http://cache.filehippo.com/img/ex/5063t__folder_lock_icon.png"/>Folder Lock 7.5.6</a>
                 </li>
                 <li>
-                   <a class="internal-link" href="http://filehippo.com/download_peerblock/" title="PeerBlock 1.2">
+                   <a class="internal-link" href="#" title="PeerBlock 1.2">
                    <img src="http://cache.filehippo.com/img/ex/1326t__peerblock1_icon.png"/>PeerBlock 1.2</a>
                 </li>
                 <li>
-                   <a class="internal-link" href="http://filehippo.com/download_anvi_folder_locker_free/" title="Anvi Folder Locker Free 1.2">
+                   <a class="internal-link" href="#" title="Anvi Folder Locker Free 1.2">
                    <img src="http://cache.filehippo.com/img/ex/5110t__anvifolderlocker_icon.png"/>Anvi Folder Locker Free 1.2</a>
                 </li>
                 <li>
-                   <a class="internal-link" href="http://filehippo.com/download_nmap/" title="Nmap 7.12">
+                   <a class="internal-link" href="#" title="Nmap 7.12">
                    <img src="http://cache.filehippo.com/img/ex/1805t__nmap_icon.png"/>Nmap 7.12</a>
                 </li>
                 <li>
-                   <a class="internal-link" href="http://filehippo.com/download_comodo/" title="Comodo Internet Security 8.4.0.5076">
+                   <a class="internal-link" href="#" title="Comodo Internet Security 8.4.0.5076">
                    <img src="http://cache.filehippo.com/img/ex/1295t__comodo_icon.png"/>Comodo Internet Security 8.4.0.5076</a>
                 </li>
                 <li>
-                   <a class="internal-link" href="http://filehippo.com/download_truecrypt/" title="TrueCrypt 7.2">
+                   <a class="internal-link" href="#" title="TrueCrypt 7.2">
                    <img src="http://cache.filehippo.com/img/ex/129t__truecrypt.png"/>TrueCrypt 7.2</a>
                 </li>
              </ul>
@@ -78,10 +73,14 @@ if(isset($infoSubCate)){
           </div>
        </div>
        <div id="category-header">
+          <?= $this->render('//layouts/navigator', ['navigator' => $navigator]); ?>
           <div class="category-breadcrumbs">
              <div class="category-breadcrumb-entry">
-                <h1>Security Software</h1>
+                <h1><?= $model->name; ?></h1>
              </div>
+          </div>
+          <div class="short-info">
+             <?= $model->info; ?>
           </div>
        </div>
        <div id="main-column">
@@ -97,208 +96,29 @@ if(isset($infoSubCate)){
 
           </div>
           <div id="programs-list">
+             <?php if(isset($listPost)){ ?>
+             <?php foreach($listPost as $postItem){ ?>
              <div class="program-entry">
                 <div class="program-entry-header">
-                   <a href="http://filehippo.com/download_comodo/" class="internal-link">
-                      <img src="http://cache.filehippo.com/img/ex/1295__comodo_icon.png" alt="Download Comodo Internet Security"/>
+                   <a href="<?= Yii::$app->request->baseUrl.'download/'.$postItem['rewrite']; ?>.html" title="<?= $postItem['title'] ?>" class="internal-link">
+                      <img src="<?= Yii::getAlias('@web') ?>/uploads/thumb/<?= $postItem['thumb'] ?>" alt="Download <?= $postItem['title'] ?>" />
                       <span class="program-title-text">
-                         <h3>Comodo Internet Security</h3>
+                         <h3><?= $postItem['title'] ?></h3>
                       </span>
                    </a>
                 </div>
                 <div class="program-entry-download-button category-page-box-fix">
-                   <a href="http://filehippo.com/download_comodo/" class="green program-entry-download-link button-link">
+                   <a href="<?= Yii::$app->request->baseUrl.'download/'.$postItem['rewrite']; ?>.html" class="green program-entry-download-link button-link">
                    <span class="sprite download-icon-white"></span>Download</a>
                 </div>
-                <div class="program-entry-details">Comodo - 5.20MB (Freeware)</div>
+                <div class="program-entry-details"><?= $postItem['author'] ?> - <?= $postItem['filesize'] ?>MB - <span class="<?= $postItem['type'] == 1 ? 'trial' : 'free' ?>">License </span></div>
                 <div class="program-entry-description">
-                   Comodo Internet Security is a free, security app that provides complete protection from virus attacks, Trojans, worms, buffer overflows, zero-day at...
+                    <?= $postItem['short_intro'] ?>
                 </div>
                 <ul class="child-programs">
                 </ul>
              </div>
-             <div class="program-entry">
-                <div class="program-entry-header">
-                   <a href="http://filehippo.com/download_sunbelt_personal_firewall/" class="internal-link">
-                      <img src="http://cache.filehippo.com/img/ex/22__keriopf.png" alt="Download Sunbelt Personal Firewall"/>
-                      <span class="program-title-text">
-                         <h3>Sunbelt Personal Firewall</h3>
-                      </span>
-                   </a>
-                </div>
-                <div class="program-entry-download-button category-page-box-fix">
-                   <a href="http://filehippo.com/download_sunbelt_personal_firewall/" class="green program-entry-download-link button-link">
-                   <span class="sprite download-icon-white"></span>Download</a>
-                </div>
-                <div class="program-entry-details">Sunbelt Software - 5.72MB (Non-Commercial Freeware)</div>
-                <div class="program-entry-description">
-                   Protect yourself from hackers. Secure your PC with a 100% free firewall download. Sunbelt Personal Firewall (SPF), previously known as Kerio Firewall,...
-                </div>
-                <ul class="child-programs">
-                </ul>
-             </div>
-             <div class="program-entry">
-                <div class="program-entry-header">
-                   <a href="http://filehippo.com/download_sygate_personal_firewall/" class="internal-link">
-                      <img src="http://cache.filehippo.com/img/ex/31__sygate.png" alt="Download Sygate Personal Firewall"/>
-                      <span class="program-title-text">
-                         <h3>Sygate Personal Firewall</h3>
-                      </span>
-                   </a>
-                </div>
-                <div class="program-entry-download-button category-page-box-fix">
-                   <a href="http://filehippo.com/download_sygate_personal_firewall/" class="green program-entry-download-link button-link">
-                   <span class="sprite download-icon-white"></span>Download</a>
-                </div>
-                <div class="program-entry-details">Sygate Technologies - 8.80MB (Freeware)</div>
-                <div class="program-entry-description">
-                   Free for personal use, Sygate Personal Firewall provides best of breed security in a user friendly interface, protecting your PC from hackers, trojans...
-                </div>
-                <ul class="child-programs">
-                </ul>
-             </div>
-             <div class="program-entry">
-                <div class="program-entry-header">
-                   <a href="http://filehippo.com/download_zonealarm_free_firewall/" class="internal-link">
-                      <img src="http://cache.filehippo.com/img/ex/971__zoneAlarm2.gif" alt="Download ZoneAlarm Free Firewall"/>
-                      <span class="program-title-text">
-                         <h3>ZoneAlarm Free Firewall</h3>
-                      </span>
-                   </a>
-                </div>
-                <div class="program-entry-download-button category-page-box-fix">
-                   <a href="http://filehippo.com/download_zonealarm_free_firewall/" class="green program-entry-download-link button-link">
-                   <span class="sprite download-icon-white"></span>Download</a>
-                </div>
-                <div class="program-entry-details">Zone Labs - 5.68MB (Non-Commercial Freeware)</div>
-                <div class="program-entry-description">
-                   ZoneAlarm Free Firewall blocks hackers from infiltrating your home PC by hiding your computer from unsolicited network traffic. By detecting and preve...
-                </div>
-                <ul class="child-programs">
-                </ul>
-             </div>
-             <div class="program-entry">
-                <div class="program-entry-header">
-                   <a href="http://filehippo.com/download_360_total_security_essential/" class="internal-link">
-                      <img src="http://cache.filehippo.com/img/ex/3064__360internetsecurity.png" alt="Download 360 Total Security Essential"/>
-                      <span class="program-title-text">
-                         <h3>360 Total Security Essential</h3>
-                      </span>
-                   </a>
-                </div>
-                <div class="program-entry-download-button category-page-box-fix">
-                   <a href="http://filehippo.com/download_360_total_security_essential/" class="green program-entry-download-link button-link">
-                   <span class="sprite download-icon-white"></span>Download</a>
-                </div>
-                <div class="program-entry-details">QIHU 360 - 31.09MB (Freeware)</div>
-                <div class="program-entry-description">
-                   QIHU’s 360 Total Security Essential (previously named 360 Internet Security) is a quality, free antivirus product.
-                   The software carries out essential...
-                </div>
-                <ul class="child-programs">
-                </ul>
-             </div>
-             <div class="program-entry">
-                <div class="program-entry-header">
-                   <a href="http://filehippo.com/download_abelssoft-antilogger/" class="internal-link">
-                      <img src="http://cache.filehippo.com/img/ex/8002__antilogger_icon.png" alt="Download Abelssoft AntiLogger"/>
-                      <span class="program-title-text">
-                         <h3>Abelssoft AntiLogger</h3>
-                      </span>
-                   </a>
-                </div>
-                <div class="program-entry-download-button category-page-box-fix">
-                   <a href="http://filehippo.com/download_abelssoft-antilogger/" class="green program-entry-download-link button-link">
-                   <span class="sprite download-icon-white"></span>Download</a>
-                </div>
-                <div class="program-entry-details">Abelssoft - 3.38MB (Commercial Trial)</div>
-                <div class="program-entry-description">
-                   Keyloggers are well designed software programs that can monitor and record every keystroke on your computer. Whilst an Antivirus suite and firewall ...
-                </div>
-                <ul class="child-programs">
-                </ul>
-             </div>
-             <div class="program-entry">
-                <div class="program-entry-header">
-                   <a href="http://filehippo.com/download_advanced-password-manager/" class="internal-link">
-                      <img src="http://cache.filehippo.com/img/ex/7748__advanced_password_manager_icon.png" alt="Download Advanced Password Manager"/>
-                      <span class="program-title-text">
-                         <h3>Advanced Password Manager</h3>
-                      </span>
-                   </a>
-                </div>
-                <div class="program-entry-download-button category-page-box-fix">
-                   <a href="http://filehippo.com/download_advanced-password-manager/" class="green program-entry-download-link button-link">
-                   <span class="sprite download-icon-white"></span>Download</a>
-                </div>
-                <div class="program-entry-details">Advanced Password Manager - 5.60MB (Commercial Demo)</div>
-                <div class="program-entry-description">
-                   Advanced Password Manager is a fairly lightweight app that is able to detect and delete identity traces from your computer system after saving them ...
-                </div>
-                <ul class="child-programs">
-                </ul>
-             </div>
-             <div class="program-entry">
-                <div class="program-entry-header">
-                   <a href="http://filehippo.com/download_anvi_folder_locker_free/" class="internal-link">
-                      <img src="http://cache.filehippo.com/img/ex/5110__anvifolderlocker_icon.png" alt="Download Anvi Folder Locker Free"/>
-                      <span class="program-title-text">
-                         <h3>Anvi Folder Locker Free</h3>
-                      </span>
-                   </a>
-                </div>
-                <div class="program-entry-download-button category-page-box-fix">
-                   <a href="http://filehippo.com/download_anvi_folder_locker_free/" class="green program-entry-download-link button-link">
-                   <span class="sprite download-icon-white"></span>Download</a>
-                </div>
-                <div class="program-entry-details">Anvsoft Corporation - 13.95MB (Freeware)</div>
-                <div class="program-entry-description">
-                   Anvi Folder Locker is a free security tool that has been developed to help you manage and protect your 
-                   important files. With Anvi Folder Locker, you...
-                </div>
-                <ul class="child-programs">
-                </ul>
-             </div>
-             <div class="program-entry">
-                <div class="program-entry-header">
-                   <a href="http://filehippo.com/download_ashampoo_privacy_protector/" class="internal-link">
-                      <img src="http://cache.filehippo.com/img/ex/5279__ashampoo_privacy_protector_icon.png" alt="Download Ashampoo Privacy Protector"/>
-                      <span class="program-title-text">
-                         <h3>Ashampoo Privacy Protector</h3>
-                      </span>
-                   </a>
-                </div>
-                <div class="program-entry-download-button category-page-box-fix">
-                   <a href="http://filehippo.com/download_ashampoo_privacy_protector/" class="green program-entry-download-link button-link">
-                   <span class="sprite download-icon-white"></span>Download</a>
-                </div>
-                <div class="program-entry-details">Ashampoo GmbH & Co.KG - 21.40MB (Commercial Trial)</div>
-                <div class="program-entry-description">
-                   Ashampoo Privacy Protector is a great security tool that combines encryption, archiving and trace removal in one application. AES256-encrypted files c...
-                </div>
-                <ul class="child-programs">
-                </ul>
-             </div>
-             <div class="program-entry">
-                <div class="program-entry-header">
-                   <a href="http://filehippo.com/download_axcrypt/" class="internal-link">
-                      <img src="http://cache.filehippo.com/img/ex/7765__axcrypt_transparent_converted (1).png" alt="Download AxCrypt"/>
-                      <span class="program-title-text">
-                         <h3>AxCrypt</h3>
-                      </span>
-                   </a>
-                </div>
-                <div class="program-entry-download-button category-page-box-fix">
-                   <a href="http://filehippo.com/download_axcrypt/" class="green program-entry-download-link button-link">
-                   <span class="sprite download-icon-white"></span>Download</a>
-                </div>
-                <div class="program-entry-details">AxCrypt AB - 5.70MB (Open Source)</div>
-                <div class="program-entry-description">
-                   AxCrypt is a highly secure data encryption app that provides AES-128/256 file encryption and compression for Windows. It has a simple interface and ...
-                </div>
-                <ul class="child-programs">
-                </ul>
-             </div>
+             <?php } } ?>
           </div>
           <div class="adsense-words">
              <div id="afs_div_container-1">
@@ -330,8 +150,20 @@ if(isset($infoSubCate)){
              </div>
           </div>
           <div id="techbeat-widget">
-             <header><a href="http://news.filehippo.com/" target="_blank">Latest Software News</a></header>
-             <script type="text/javascript" src="http://news.filehippo.com/wp-content/custom-php/tbrecentposts3.php?th=1&amp;c=4&amp;s=&amp;cat=software"></script>
+             <header><a href="#" target="_blank">Bài Viết Hướng Dẫn & Thủ Thuật Mới</a></header>
+             <?php if(isset($listTutorials)){ ?>
+             <?php foreach($listTutorials as $tutorials){ ?>
+             <div class="tb_postItem">
+                 <div class="tb_postImage">
+                     <a rel="bookmark" href="<?= Yii::$app->request->baseUrl.$tutorials['rewrite']; ?>.html" title="<?= $tutorials['title']; ?>">
+                         <img src="<?= Yii::$app->request->baseUrl.'uploads/thumb/'.$tutorials['thumb']; ?>" alt="<?= $tutorials['title']; ?>" />
+                     </a>
+                 </div>
+                <div class="tb_postTitle">
+                    <a rel="bookmark" href="<?= Yii::$app->request->baseUrl.$tutorials['rewrite']; ?>.html"><?= $tutorials['title']; ?></a>
+                </div>
+             </div>
+             <?php } } ?>
           </div>
           <div id="ad-slot-3">
              <!-- Categories_Security_Bottom_MPU -->

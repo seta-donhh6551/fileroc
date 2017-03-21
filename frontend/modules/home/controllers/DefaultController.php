@@ -34,17 +34,10 @@ class DefaultController extends MyController
 		$listSubCategory = $model->getListSubCategory($cateId);
 		
         Yii::$app->view->title = 'Phần mềm dành cho '.$model->name.', Miễn phí download phần mềm';
-		
-		$modelTutorial = new \common\models\Tutorials();
-		$listTutorials = $modelTutorial->find()
-						->where(['status' => 1])
-						->orderBy(['id' => 'desc'])
-						->limit(\common\components\Utility::$defaultLimitPost)
-						->all();
 
 		return $this->render('index', [
 			'model' => $model,
-			'listTutorials' => $listTutorials,
+			'listTutorials' => $this->newTutorials(9),
 			'listSubCategory' => $listSubCategory
 		]);
 	}

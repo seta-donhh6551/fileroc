@@ -2379,8 +2379,8 @@ footer {
     margin-top: 4px;
     margin-left: 24px;
     padding-bottom: 18px;
-    font-size: 21px;
-    font-weight: 700
+    /*font-size: 21px;
+    font-weight: 700*/
 }
 #programs-list .program-entry-download-button {
     float: right;
@@ -3614,7 +3614,8 @@ a:hover {
 #techbeat-widget header {
     font-size: 16px;
     font-weight: 700;
-    height: 20px
+    /*height: 20px;*/
+    margin-bottom: 25px;
 }
 #techbeat-widget header .sprite {
     display: inline-block;
@@ -3842,7 +3843,7 @@ a:hover {
     border-radius: 4px
 }
 #programs-list {
-    border-top: 2px solid #d4dadf;
+    border-top: 1px solid #d4dadf;
     border-bottom: 1px solid #d4dadf
 }
 #programs-list .program-entry {

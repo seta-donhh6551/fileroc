@@ -17,21 +17,21 @@ class MyController extends Controller
 
 	public function init()
 	{
-            $model_category = new Category();
-            $listMenu = $model_category->getListCategory(0);
-//            if($listMenu)
-//            {
-//                foreach($listMenu as $key => $val)
-//                {
-//                    $listSubMenu = $model_category->getListSubCategory($val['id'], 1);
-//                    $listMenu[$key]['listSubMenu'] = $listSubMenu;
-//                    foreach($listSubMenu as $k => $v){
-//                        $listMenu[$key]['listSubMenu'][$k]['listChildMenu'] = $model_category->getListSubCategory($v['id'], 2, true);
-//                    }				
-//                }
-//            }
-
-            $this->listMenu = $model_category->getListCategory(0);
+        $model_category = new Category();
+        $listMenu = $model_category->getListCategory(0);
+        $this->listMenu = $model_category->getListCategory(0);
 	}
+    
+    public function newTutorials($limit)
+    {
+        $modelTutorial = new \common\models\Tutorials();
+		$listTutorials = $modelTutorial->find()
+            ->where(['status' => 1])
+            ->orderBy(['id' => 'desc'])
+            ->limit($limit)
+            ->all();
+        
+        return $listTutorials;
+    }
 }
 

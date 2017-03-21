@@ -50,10 +50,7 @@ class CategoryController extends MyController
             throw new \yii\web\HttpException(404, 'The requested item could not be found.');
         }
         
-        $homePageCate = \common\models\Category::findOne(['rewrite' => $slug, 'type' => 0]);
-        if(!$homePageCate){
-            throw new \yii\web\HttpException(404, 'The requested item could not be found.');
-        }
+        $homePageCate = $model->findOne(['id' => $model->parent_id]);
         
         //set active menu on header
 		$this->activeMenu = $homePageCate;
@@ -63,7 +60,7 @@ class CategoryController extends MyController
         $modelPost = new \common\models\Posts();
 
 		$listSubCategory = $model->getListSubCategory($cateId);
-
+        
         Yii::$app->view->title = 'Phần mềm '.$homePageCate->name.', Tìm kiếm và tải phần mềm '.$model->name;
 
 		$listPost = $modelPost->getListBySubId($cateId);
@@ -71,8 +68,9 @@ class CategoryController extends MyController
 		return $this->render('index', [
 			'model' => $model,
 			'listPost' => $listPost,
-			'listChild' => $model->getListSubCategory($cateId, 2, true),
-			'infoCate' => $model->findOne(['id' => $model->parent_id]),
+			'listChilds' => $model->getListSubCategory($cateId, 2, true),
+			'infoCate' => $homePageCate,
+            'listTutorials' => $this->newTutorials(6),
 			'subCategory' => [
 				'listMenu' => $listSubCategory,
 				'titleMenu' => $model->name,
