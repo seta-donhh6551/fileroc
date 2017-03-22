@@ -64,7 +64,7 @@ class InputController extends MyController
                     }
                     else
                     {
-                         $baseName = $imgUpload->baseName.'.'.$imgUpload->extension;
+                        $baseName = $imgUpload->baseName.'.'.$imgUpload->extension;
                         if(file_exists('../../uploads/'.$imgUpload->baseName.'.'.$imgUpload->extension))
                         {
                             $baseName = date('dmY-His').$imgUpload->baseName.'.'.$imgUpload->extension;
@@ -75,6 +75,9 @@ class InputController extends MyController
                         //Create thumb
                         Image::thumbnail('../../uploads/'.$baseName, Utility::$defaultImageThumb['width'], Utility::$defaultImageThumb['height'], $autoResize)
                         ->save('../../uploads/thumb/'.$baseName, ['quality' => 100]);
+						
+						Image::thumbnail('../../uploads/'.$baseName, Utility::$smallImageThumb['width'], Utility::$smallImageThumb['height'], $autoResize)
+                        ->save('../../uploads/thumb/smaller/'.$baseName, ['quality' => 100]);
 
                         $model->thumb = $baseName;
                     }

@@ -4,12 +4,17 @@ namespace common\components;
 
 class Utility
 {
-	public static $defaultPageSize = 10;
+	public static $defaultPageSize = 9;
 	public static $defaultLimitPost = 9;
 	
     public static $defaultImageThumb = array(
         'width' => 250,
         'height' => 250
+    );
+	
+	public static $smallImageThumb = array(
+        'width' => 77,
+        'height' => 52
     );
     
     /**

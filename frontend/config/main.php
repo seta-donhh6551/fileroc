@@ -47,6 +47,7 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+			'baseUrl' => 'http://download.file',
             'rules' => [
                 //login
                 '/login' => 'account/default/login',

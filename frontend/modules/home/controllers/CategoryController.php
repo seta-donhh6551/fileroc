@@ -57,19 +57,32 @@ class CategoryController extends MyController
 		$this->infoConfig = ['keywords' => $model->keywords, 'description' => $model->description];
 
 		$cateId = $model->id;
-        $modelPost = new \common\models\Posts();
+		
+        $modelPost = \common\models\Posts::find()
+					->where(['sub_id' => $cateId]);
 
 		$listSubCategory = $model->getListSubCategory($cateId);
-        
+		
+		$listPopular = $modelPost->orderBy(['views' => 'desc'])->limit(10)->all();
+
         Yii::$app->view->title = 'Phần mềm '.$homePageCate->name.', Tìm kiếm và tải phần mềm '.$model->name;
-
-		$listPost = $modelPost->getListBySubId($cateId);
-
+		
+		$pagination = new \yii\data\Pagination([
+            'defaultPageSize' => \common\components\Utility::$defaultPageSize,
+            'totalCount' => $modelPost->count()
+        ]);
+		
+		$listPost = $modelPost->offset($pagination->offset)
+						->limit($pagination->limit)
+						->all();
+		
 		return $this->render('index', [
 			'model' => $model,
 			'listPost' => $listPost,
+			'listPopular' => $listPopular,
 			'listChilds' => $model->getListSubCategory($cateId, 2, true),
 			'infoCate' => $homePageCate,
+			'pages' => $pagination,
             'listTutorials' => $this->newTutorials(6),
 			'subCategory' => [
 				'listMenu' => $listSubCategory,

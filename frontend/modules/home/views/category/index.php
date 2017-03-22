@@ -37,30 +37,13 @@ if(isset($infoSubCate)){
           <div class="hidden-sm hidden-xs">
              <ul id="category-popular-software">
                 <li>Popular software</li>
+				<?php if(isset($listPopular) && $listPopular){ ?>
+				<?php foreach($listPopular as $popular){ ?>
                 <li>
-                   <a class="internal-link" href="#" title="Folder Lock 7.5.6">
-                   <img src="http://cache.filehippo.com/img/ex/5063t__folder_lock_icon.png"/>Folder Lock 7.5.6</a>
+                   <a class="internal-link" href="<?= Yii::$app->request->baseUrl.'download/'.$popular['rewrite']; ?>.html" title="<?= $popular['title']; ?>">
+                   <img src="http://cache.filehippo.com/img/ex/5063t__folder_lock_icon.png"/><?= $popular['title']; ?></a>
                 </li>
-                <li>
-                   <a class="internal-link" href="#" title="PeerBlock 1.2">
-                   <img src="http://cache.filehippo.com/img/ex/1326t__peerblock1_icon.png"/>PeerBlock 1.2</a>
-                </li>
-                <li>
-                   <a class="internal-link" href="#" title="Anvi Folder Locker Free 1.2">
-                   <img src="http://cache.filehippo.com/img/ex/5110t__anvifolderlocker_icon.png"/>Anvi Folder Locker Free 1.2</a>
-                </li>
-                <li>
-                   <a class="internal-link" href="#" title="Nmap 7.12">
-                   <img src="http://cache.filehippo.com/img/ex/1805t__nmap_icon.png"/>Nmap 7.12</a>
-                </li>
-                <li>
-                   <a class="internal-link" href="#" title="Comodo Internet Security 8.4.0.5076">
-                   <img src="http://cache.filehippo.com/img/ex/1295t__comodo_icon.png"/>Comodo Internet Security 8.4.0.5076</a>
-                </li>
-                <li>
-                   <a class="internal-link" href="#" title="TrueCrypt 7.2">
-                   <img src="http://cache.filehippo.com/img/ex/129t__truecrypt.png"/>TrueCrypt 7.2</a>
-                </li>
+				<?php } } ?>
              </ul>
           </div>
           <div id="ad-slot-4" class="hidden-xs">
@@ -129,15 +112,10 @@ if(isset($infoSubCate)){
                 </script>
              </div>
           </div>
-          <div class="pager-container">
-             <span class="pager-current-page">1</span>
-             <a href="http://filehippo.com/software/security/2/" class="pager-page-link">2</a>
-             <a href="http://filehippo.com/software/security/3/" class="pager-page-link">3</a>
-             <a href="http://filehippo.com/software/security/4/" class="pager-page-link">4</a>
-             <a href="http://filehippo.com/software/security/5/" class="pager-page-link">5</a>
-             <a href="http://filehippo.com/software/security/6/" class="pager-page-link">6</a>
-             <a href="http://filehippo.com/software/security/7/" class="pager-page-link">7</a>
-             <a href="http://filehippo.com/software/security/2/" class="pager-next-link">Next</a>    
+          <div class="pager-container"> 
+			 <?php echo \yii\widgets\LinkPager::widget([
+				'pagination' => $pages,
+			 ]); ?>   
           </div>
        </div>
        <div id="sidebar-right" class="hidden-sm hidden-xs">
