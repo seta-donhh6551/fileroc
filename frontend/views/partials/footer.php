@@ -185,7 +185,7 @@
     </div>
 </div>
 <!-- <script type="text/javascript" src="js/master2013.min.js"></script> -->
-<script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/master2013.min.js"></script>
+<!--script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/master2013.min.js"></script-->
 <!--[if lt IE 10]>
 <script type="text/javascript" src="http://cache.filehippo.com/inc/jquery.placeholder.js"></script>
 <script type="text/javascript">

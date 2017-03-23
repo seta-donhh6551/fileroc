@@ -260,6 +260,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 		]);
 		?>
 	</div>
+	<div class="cls"></div>
 </div>
 <script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/scroll.js"></script>
 <script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/vote.js"></script>
