@@ -219,16 +219,52 @@ class Upload
 
 		}
 
-		if (@move_uploaded_file($this->_value['tmp_name'], $dest . $fileName)) {
+		if(@move_uploaded_file($this->_value['tmp_name'], $dest . $fileName)) 
+        {
+            //$addText = $this->addTextCopryRight($dest.$fileName);
 			@chmod($dest . $fileName, $this->uploadFileMode);
 			$this->fileName = $fileName;
 			$this->filePath = $dest . $fileName;
+            
 			return true;
-		} else {
+		}
+        else
+        {
 			return false;
 		}
 	}
 
+    function addTextCopryRight($fileName)
+    {
+        $imgSize = getimagesize($fileName);
+
+        if($imgSize['mime'] == 'image/jpeg'){
+            $jpgImage = imagecreatefromjpeg($fileName);
+        }
+        
+        if($imgSize['mime'] == 'image/png'){
+            $jpgImage = imagecreatefrompng($fileName);
+        }
+        
+        // Allocate A Color For The Text
+        $textColor = imagecolorallocate($jpgImage, 255, 0, 0);
+
+        $top = $imgSize[1] - 50;
+        $left = $imgSize[0] - 200;
+
+        // Set Path to Font File
+        $fontPath = 'Fashionv.ttf';
+
+        // Set Text to Be Printed On Image
+        $text = "FreeFile.vn";
+
+        // Print Text On Image
+        imagettftext($jpgImage, 30, 0, $left, $top, $textColor, $fontPath, $text);
+
+        // Send Image to Browser
+        header('Content-Type: image/jpg');
+        imagejpeg($jpgImage, $fileName, 100);
+    }
 
 	/**
 		 * check if the uploaded is permitted to upload
