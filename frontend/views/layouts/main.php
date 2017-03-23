@@ -47,13 +47,11 @@ AppAsset::register($this);
     </head>
     
     <body class="en">
-		<div id="container">
         <?= $this->render('//partials/header'); ?>
-        <div id="content">
+        <div class="content-wrapper">
         <?= $content ?>
 		</div>
         <?= $this->render('//partials/footer'); ?>
-		</div>
     </body>
 </html>
 <?php $this->endPage() ?>

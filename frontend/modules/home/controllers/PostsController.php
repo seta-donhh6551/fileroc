@@ -10,19 +10,24 @@ class PostsController extends MyController {
 
     public $enableCsrfValidation = false;
 
-    public function actionIndex($rewrite){
-		$model = \common\models\Posts::findOne(['rewrite'=>$rewrite]);
+    public function actionIndex($rewrite)
+	{
+		$model = \common\models\Posts::findOne(['rewrite' => $rewrite]);
         if (!$model){
             throw new \yii\web\HttpException(404, 'The requested item could not be found.');
         }
-
+		
+		$modelPost = new \common\models\Posts();
+		$modelCate = new \common\models\Category();
+		
+		//set active menu on header
+		$homePageCate = \common\models\Category::findOne(['id' => $model->cate_id]);
+		$this->activeMenu = $homePageCate;
+		
         $this->infoConfig = ['keywords' => $model->keywords, 'description' => $model->description];
 
         Yii::$app->view->title = 'Download '.$model->title;
-
-        $modelPost = new \common\models\Posts();
-		$modelCate = new \common\models\Category();
-
+		
 		$listComment = \common\models\Reviews::findAll(['post_id' => $model->id]);
 
 		return $this->render('index', [

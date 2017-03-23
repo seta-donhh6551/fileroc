@@ -1,0 +1,325 @@
+#left-all{
+	width: 200px;
+    float: left;
+	width: 730px;
+	min-height: 100px;
+	margin-right: 15px;
+}
+#right-page{
+	width:300px;
+	float: left;
+	height:auto;
+}
+#popular{
+    width: 300px;
+    margin:20px 0px 0px 0px !important
+}
+#popular h2{
+	float: none !important;
+	margin-left: 0px !important;
+    font-size: 16px;
+    height: 28px;
+    line-height: 28px;
+    text-transform: uppercase;
+    background: #333;
+    color: #fff;
+    display: block;
+    font-weight: normal;
+    text-align: center;
+}
+#download-option{
+    margin:10px 0px 15px 0px;  
+}
+#download-option tr td{
+    border-bottom: 1px dashed #DDD;
+    padding: 5px 15px;
+	color: #F00;
+}
+#download-option tr td:first-child{
+	padding-left: 0px
+}
+.download-now{
+	text-align: left;
+	margin-bottom: 20px;
+}
+.download-now h1{
+	font-size: 18px;
+	color: #F60;
+	margin-bottom: 30px;
+}
+a.download, a.review{
+    width: 150px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px #aaa;
+    color: #fff;
+    background: #64991e;
+    background: -webkit-gradient(linear,left top,left bottom,from(#F30),to(#f30));
+    background: -moz-linear-gradient(top,#F30,#f30);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db72f',endColorstr='#4e7d0e');
+}
+a.review {
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 11px;
+    font-weight: normal;
+    margin: 0px auto;
+    cursor: pointer
+}
+.download-option{
+    clear: both
+}
+.download-option p{
+    margin: 0px;
+}
+.download-small{
+    float: right;
+    width: 120px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px #aaa;
+    color: #fff;        
+    background: #64991e;
+    background: -webkit-gradient(linear,left top,left bottom,from(#F90),to(#f90));
+    background: -moz-linear-gradient(top,#F90,#f90);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F30',endColorstr='#f30');
+}
+.popular{
+	padding: 10px 0px
+}
+.topdown{
+	padding:5px 0px;
+	margin-bottom: 7px;
+	clear: both;
+	position: relative
+}
+.topdown h3 a{
+	display: block;
+	width: 220px;
+	text-decoration: none;
+	color: #039;
+	font-weight: 100;
+	font-size: 13px
+}
+.topdown p{
+	color: #888
+}
+.topdown img{
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin: 3px 7px 0px 0px;
+}
+.total-right{font-weight: 100; position: absolute; right: 0px ; top: 5px; font-size: 12px; color: #039}
+.related-item{
+	clear: both;
+	padding: 7px 0px;
+}
+.related-item div{
+	float: left;
+	height: 32px;
+	line-height: 32px;
+}
+.related-img{
+	width: 260px;
+	overflow: hidden
+}
+.related-img a{
+	font-weight: 100;
+	font-size: 14px;
+}
+.related-img img{
+	float: left;
+	margin-right: 7px
+}
+.related-info{
+	width: 300px;
+	color: #888
+}
+.related-total{
+	width: 70px;
+	text-align: right;
+	color: #F60
+}
+.down-left{
+	width: 325px;
+	float: left;
+}
+.down-right{
+	width: 300px;
+	float: left;	
+}
+.down-right a{
+	display: block;
+	float: left;
+	margin: 0px 10px;
+}
+.down-right h2{
+	font-size: 17px;
+	margin-bottom: 5px;
+	color: #333
+}
+.rating-title{
+    width: 595px;
+    height: 30px; 
+    background:#F2F2F2;
+    color:#03848E;
+    font-weight:bold;
+    font-size:15px;
+    line-height:30px;
+    padding-left: 5px
+}
+.user-rating{
+    width: 598px;
+    border:1px solid #DDD;overflow:auto;display:table;
+}
+.rating-left{
+    width: 300px;
+    float:left;
+    color:#999;
+    border-right:1px solid #DDD;
+    border-bottom:1px solid #DDD
+}
+.rating-right{
+    width: 290px;
+    float:left;
+    color:#999;
+    border-bottom:1px solid #DDD;
+}
+.rate-title{
+    margin-left:10px;font-weight:bold;line-height:30px;
+}
+.reviews-list{
+    width: 600px;
+    margin: 30px 0px;
+}
+.ritems-left{
+    width:90px;
+    float:left;
+}
+.ritems-left img{
+    width: 50px;
+    margin-left: 15px;
+}
+.ritems-right{
+    width:480px;
+    float:left;
+    margin-left:20px;
+}
+.title-ritems{
+    font-size: 16px;
+    color: #257B88;
+    margin-bottom: 5px;
+}
+.revire-descr{
+    margin-top: 10px
+}
+.review-user-info{width:80px;text-align:center;}
+.review-user-info p{color: #333;font-weight: bold;}
+.review-form-title{background-color: #E6EDF6;color: #0E3D52;font-weight: bold;}
+.review-form{width: 600px}
+.review-form-body{
+    width: 560px;
+    padding: 20px;
+    background-color: #F2F2F2;
+    margin: 10px 0px;
+    min-height: 150px;    
+}
+.tblvoted tr td{
+    width: 250px;
+    padding: 3px 5px 3px 10px;
+}
+.tblvoted tr td.odd{
+    width: 120px;
+    padding-left: 0px;
+}
+.related{
+    padding: 15px 0px;
+}
+.stars{
+	margin: 7px 0px;
+}
+.stars span{
+	display: block;
+	float: left;
+	height: 16px;
+	color: #F90
+}
+.stars span.voted{
+	margin-left: 5px;
+	height: 16px;
+}
+.star-gray {
+	width: 80px;
+    background: url(../img/star_gay.png) repeat scroll 0% 0% transparent;
+}
+.star-active {
+    width: 48px;
+    background: url(../img/star_icons.png) repeat scroll 0% 0% transparent;
+}
+.barview {
+    width: 120px;
+    height: 14px;
+    float: left;
+    background: url(../img/barview.jpg) repeat-x scroll center center transparent;
+    margin-top: 8px;
+}
+.barview .active {
+    width: 80px;
+    height: 14px;
+    background: url(../img/barview_red.jpg) repeat-x scroll center center transparent;
+}
+.link-title{color: #F30; margin-bottom: 7px}
+.padtop{padding-top: 15px;}
+.padbot{padding-bottom: 15px;}
+.padtobot{padding: 15px 0px;}
+.padleft{padding-left: 15px;}
+.martop{margin-top: 15px;}
+.marbot{margin-bottom: 15px;}
+.bold{font-weight: bold}
+.floatleft{float: left}
+.cls{clear: both}
+.short-descr{font-size: 11pt; color: #888; font-weight: normal}
+.bortop{border-top: 1px solid #CCC}
+.borbot{border-bottom: 1px solid #CCC}
+.full-content h2{color: #333}
+.full-content ul{padding-left: 15px}
+.full-content ul li{list-style-type: disc !important}
+.detail-content .full-content ul{
+	padding-left: 40px
+}
+.manual ul li{
+	margin-bottom: 10px;
+}
+.hand{
+    width: 445px;
+    float: left;
+    padding-left: 75px;
+    color: #039;
+    min-height: 38px;
+    background: url(../img/hand-arrow.png) no-repeat;
+}
+.hand-right{
+    width: 120px;
+    float: left
+}
+.clearAll {
+    clear: both;
+    font-size: 1px;
+    height: 1px;
+    line-height: 1px;
+    width: 1px;
+}
+.fixed-top{padding-top:15px;position:fixed;top:50px;z-index:99;}
+.fixed-bot{position:fixed;bottom:100px;z-index:99;}
