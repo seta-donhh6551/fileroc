@@ -44,14 +44,14 @@
                             </ul>
 							<?php } ?>
                         </li>
-                        <li class="dropdown language-dropdown">
+                        <!-- <li class="dropdown language-dropdown">
                             <a href="#" class="dropdown-toggle no-left-border" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">VN<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li>
                                     <a href="security/" >En</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -59,7 +59,7 @@
         </div>
         <!-- /.container -->
     </nav>
-    <div class="bootstrap-home" id="site-header-secondary-nav">
+    <!-- <div class="bootstrap-home" id="site-header-secondary-nav">
         <div class="container">
             <ol class="hidden-xs hidden-sm" role="navigation">
                 <li class="active"><a href="../../index.html">TẢI VỀ</a></li>
@@ -69,7 +69,7 @@
                 <li class=""><a href="#">TOP ỨNG DỤNG</a></li>
             </ol>
         </div>
-    </div>
+    </div> -->
     <!-- /.container-fluid -->
 </div>
 <div id="header-tablet" class="visible-sm">

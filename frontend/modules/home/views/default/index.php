@@ -21,12 +21,12 @@ use yii\widgets\ActiveForm;
                             </ul>
                         </div>
                         <div class="home-categories-spacer"></div>
-                        <div class="download-manager">
+                        <!-- <div class="download-manager">
                             <a href="http://www.filehippo.com/download_app_manager/">
                                 <img src="http://cache.filehippo.com/img/new/download-icon.png" alt="Download FileHippo App Manager">
                                 <div class="download-manager-text">Download FileHippo App Manager</div>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                     <div>
                         <div id="popular">
