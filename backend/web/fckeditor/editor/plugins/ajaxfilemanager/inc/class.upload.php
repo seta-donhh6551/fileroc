@@ -221,7 +221,7 @@ class Upload
 
 		if(@move_uploaded_file($this->_value['tmp_name'], $dest . $fileName)) 
         {
-            //$addText = $this->addTextCopryRight($dest.$fileName);
+            $addText = $this->addTextCopryRight($dest.$fileName);
 			@chmod($dest . $fileName, $this->uploadFileMode);
 			$this->fileName = $fileName;
 			$this->filePath = $dest . $fileName;

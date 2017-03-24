@@ -8,5 +8,5 @@ RewriteCond %{REQUEST_URI} ^/system/$
 RewriteRule ^(system)/$ /$1 [R=301,L]
 RewriteCond %{REQUEST_URI} ^/system
 RewriteRule ^system(/.+)?$ /backend/web/$1 [L,PT]
-RewriteCond $1 !^(index\.php|uploads|favicon\.ico)
+RewriteCond $1 !^(index\.php|uploads|uploaded|favicon\.ico)
 RewriteRule ^(.*)$ frontend/web/$1 [L]

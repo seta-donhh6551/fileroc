@@ -36,7 +36,7 @@ if(isset($infoSubCate)){
           </ol>
           <div class="hidden-sm hidden-xs">
              <ul id="category-popular-software">
-                <li>Popular software</li>
+                <li>Phần mềm phổ biến</li>
 				<?php if(isset($listPopular) && $listPopular){ ?>
 				<?php foreach($listPopular as $popular){ ?>
                 <li>

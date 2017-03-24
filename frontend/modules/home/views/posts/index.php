@@ -195,7 +195,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 				</div>
 				<div style="width:260px;float:left;color:#999;padding:20px 0px 0px 20px">
 					Bạn có muốn đánh giá cho sản phẩm này không?
-					<a class="review">Viết đánh giá</a>
+					<a class="review" style="margin-top:10px">Viết đánh giá</a>
 				 </div>
 			</div>
 			<div class="reviews-list">
@@ -230,7 +230,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 							<div class="stars" style="float:left">
 								<input type="hidden" id="number-star" value="0" />
 								<input type="hidden" name="post_id" value="<?= $model->id ?>" />
-								<div class="star-gray review-star" style="height:16px">
+								<div class="star-gray review-star">
 									<div class="star-button">
 										<span role="1"></span>
 										<span role="2"></span>
@@ -238,7 +238,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 										<span role="4"></span>
 										<span role="5"></span>
 									</div>
-									<div class="star-active" style="width:48px;height:15px"></div>
+									<div class="star-active" style="width:48px"></div>
 								</div>
 								<div class="cls"></div>
 							</div>

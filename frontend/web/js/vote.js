@@ -3,8 +3,9 @@ $(document).ready(function(){
     var active = $(".review-star .star-active");
     var title = $('.review-star-title');
     $('#number-star').val(3);
-    object.hover(function(){
+    object.click(function(){
         number = $(this).attr("role");
+		alert(number);
         width  = number*16;
         switch(number){
             case "1" : text = "Terrible"; break;
