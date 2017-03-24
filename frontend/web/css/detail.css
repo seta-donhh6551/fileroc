@@ -272,6 +272,7 @@ a.review {
 	margin: 7px 0px;
 }
 .stars span{
+	width: 16px;
 	display: block;
 	float: left;
 	height: 16px;
