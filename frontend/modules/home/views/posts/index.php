@@ -23,12 +23,12 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 		</div>
 		<div id="download-option">
 			<div class="download-now">
-				<h1>Download <?= $model->title ?></h1>
+				<h1>Tải phần mềm <?= $model->title ?></h1>
 				<div class="down-left">
-					<a href="<?= Yii::$app->request->baseUrl.'download-option/'.$model->rewrite; ?>.html" class="download">Download</a>
+					<a href="<?= Yii::$app->request->baseUrl.'download-option/'.$model->rewrite; ?>.html" class="download">Tải Về</a>
 				</div>
 				<div class="down-right">
-					<h2>Find <?= $model->title ?> on</h2>
+					<h2>Tìm <?= $model->title ?> trên</h2>
 					<a href="#"><img src="<?= Yii::getAlias('@web') ?>/uploads/icons/mac-os.png" /> Mac</a>
 					<a href="#"><img src="<?= Yii::getAlias('@web') ?>/uploads/icons/android.png" /> Android</a>
 					<a href="#"><img src="<?= Yii::getAlias('@web') ?>/uploads/icons/mac-os.png" /> iOs</a>
@@ -94,34 +94,34 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 		</div>
 		<div id="download-detail">
 			<div class="detail-intro padbot">
-				<h2>Introduction</h2>
+				<h2>GIỚI THIỆU</h2>
 				<div class="intro-content">
 					<?= $model->info ?>
 				</div>
 			</div>
 			<div class="detail-content">
-				<h2>Main functions</h2>
+				<h2>CHỨC NĂNG CHÍNH</h2>
 				<div class="full-content">
 					<?= $model->info_function ?>
 				</div>
 			</div>
 			<?php if($model->url_video){ ?>
 			<div class="detail-video">
-				<h2>Video instruction</h2>
+				<h2>VIDEO VỀ <?= $model->title ?></h2>
 				<div class="video-content">
 					<iframe width="600" height="350" src="<?= $model->url_video ?>" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</div>
 			<?php } ?>
 			<div class="manual" style="margin-top:30px">
-				<h2>Manual</h2>
+				<h2>HƯỚNG DẪN CÀI ĐẶT</h2>
 				<div class="full-content">
 					<?= $model->fullcontent ?>
 				</div>
 			</div>
 		</div>
 		<div id="reviews">
-			<h2>Reviews</h2>
+			<h2 style="font-size:18px;color:#F60;margin-bottom:15px;">NGƯỜI DÙNG ĐÁNH GIÁ</h2>
 			<div class="rating-title martop">
 			<?= count($listComment); ?> review(s) from our community
 			<?php
@@ -139,15 +139,15 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 			</div>
 			<div class="user-rating">
 				<div class="rating-left">
-					<span class="rate-title">User Rating</span>
+					<span class="rate-title">Người dùng đánh giá</span>
 				</div>
 				<div class="rating-right">
-					<span class="rate-title">Write review</span>
+					<span class="rate-title">Viết đánh giá</span>
 				</div>
 				<div style="width:300px;float:left;color:#999;border-right:1px solid #DDD;">
 					<div class="item">
 						<div style="width:35%;float:left;">
-							<span style="margin-left:10px;float: left;color: #218592;line-height:30px;">Excellent</span>
+							<span style="margin-left:10px;float: left;color: #218592;line-height:30px;">Xuất sắc</span>
 						</div>
 						<div style="float:left;width:65%;">
 							<div class="barview">
@@ -156,7 +156,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 							<span style="margin-left:5px;line-height:30px;"><?= $excellent ?></span>
 						</div>
 						<div style="width:35%;float:left;">
-							<span style="margin-left:10px;float: left;color: #218592;line-height:30px;">Very good</span>
+							<span style="margin-left:10px;float: left;color: #218592;line-height:30px;">Rất tốt</span>
 						</div>
 						<div style="float:left;width:65%;">
 							<div class="barview">
@@ -165,7 +165,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 							<span style="margin-left:5px;line-height:30px;"><?= $veryGood ?></span>
 						</div>
 						<div style="width:35%;float:left;">
-							<span style="margin-left:10px;float: left;color: #218592;line-height:30px;">Average</span>
+							<span style="margin-left:10px;float: left;color: #218592;line-height:30px;">Tạm được</span>
 						</div>
 						<div style="float:left;width:65%;">
 							<div class="barview">
@@ -174,7 +174,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 							<span style="margin-left:5px;line-height:30px;"><?= $average ?></span>
 						</div>
 						<div style="width:35%;float:left;">
-							<span style="margin-left:10px;float: left;color: #218592;line-height:30px;">Poor</span>
+							<span style="margin-left:10px;float: left;color: #218592;line-height:30px;">Kém</span>
 						</div>
 						<div style="float:left;width:65%;">
 							<div class="barview">
@@ -183,7 +183,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 							<span style="margin-left:5px;line-height:30px;"><?= $poor ?></span>
 						</div>
 						<div style="width:35%;float:left;">
-							<span style="margin-left:10px;float: left;color: #218592;line-height:30px;">Terrible</span>
+							<span style="margin-left:10px;float: left;color: #218592;line-height:30px;">Quá tồi</span>
 						</div>
 						<div style="float:left;width:65%;">
 							<div class="barview">
@@ -194,8 +194,8 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 					</div>
 				</div>
 				<div style="width:260px;float:left;color:#999;padding:20px 0px 0px 20px">
-					Write your review, How would you rate this software?
-					<a class="review">Write review</a>
+					Bạn có muốn đánh giá cho sản phẩm này không?
+					<a class="review">Viết đánh giá</a>
 				 </div>
 			</div>
 			<div class="reviews-list">
@@ -204,34 +204,33 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 			</div>
 			<div class="review-form">
 				<div class="review-form-title">
-					<span style="margin-left:10px;line-height:35px;">Leave your comments</span>
+					<span style="margin-left:10px;line-height:35px;">Đê Lại Bình Luận</span>
 				</div>
 				<div class="review-form-body">
-					<script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/vote.js"></script>
 					<div class="errors red err-icon" style="display:none;margin-bottom:10px"></div>
 					<form method="post" action="javascript:void(0)">
 						<div class="form-items">
-							<label>Your name <span class="red">*</span></label> <input type="text" name="name" size="40" maxlength="50" />
+							<label>Tên của bạn <span class="red">*</span></label> <input type="text" name="name" size="40" maxlength="50" />
 						</div>
 						<div class="form-items">
-							<label>Your email <span class="red">*</span></label> <input type="text" name="email" size="40" maxlength="50" />
+							<label>Địa chỉ email <span class="red">*</span></label> <input type="text" name="email" size="40" maxlength="50" />
 						</div>
 						<div class="form-items">
-							<label>Title <span class="red">*</span></label> <input type="text" name="title" size="40" maxlength="150" />
+							<label>Tiêu đề <span class="red">*</span></label> <input type="text" name="title" size="40" maxlength="150" />
 						</div>
 						<div class="form-items">
-							<label>Your review <span class="red">*</span></label> <textarea name="review" cols="50" rows="5"></textarea>
+							<label>Viết đánh giá <span class="red">*</span></label> <textarea name="review" cols="50" rows="5"></textarea>
 						</div>
 						<div class="form-items" style="padding:0px">
 							<label>&nbsp;</label>
-							How would you rate this software?
+							Bạn muốn đánh giá phần mềm này mấy sao?
 						</div>
 						<div class="form-items" style="padding:0px">
 							<label>&nbsp;</label>
 							<div class="stars" style="float:left">
 								<input type="hidden" id="number-star" value="0" />
 								<input type="hidden" name="post_id" value="<?= $model->id ?>" />
-								<div class="star-gray review-star">
+								<div class="star-gray review-star" style="height:16px">
 									<div class="star-button">
 										<span role="1"></span>
 										<span role="2"></span>
@@ -239,7 +238,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 										<span role="4"></span>
 										<span role="5"></span>
 									</div>
-									<div class="star-active" style="width:48px;"></div>
+									<div class="star-active" style="width:48px;height:15px"></div>
 								</div>
 								<div class="cls"></div>
 							</div>
