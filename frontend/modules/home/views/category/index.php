@@ -92,7 +92,7 @@ if(isset($infoSubCate)){
                 </div>
                 <div class="program-entry-download-button category-page-box-fix">
                    <a href="<?= Yii::$app->request->baseUrl.'download/'.$postItem['rewrite']; ?>.html" class="green program-entry-download-link button-link">
-                   <span class="sprite download-icon-white"></span>Download</a>
+                   <span class="sprite download-icon-white"></span>Tải về</a>
                 </div>
                 <div class="program-entry-details"><?= $postItem['author'] ?> - <?= $postItem['filesize'] ?>MB - <span class="<?= $postItem['type'] == 1 ? 'trial' : 'free' ?>">License </span></div>
                 <div class="program-entry-description">

@@ -984,6 +984,7 @@ h2 {
 }
 .cls{clear:left}
 #navigation{
+    width: 680px;
     margin-bottom: 15px;
     border-bottom: 1px solid #CCC;
     padding-bottom: 7px;
@@ -1024,7 +1025,7 @@ h2 {
     font-size: 12px;
 }
 .free:after {
-    content: "Miễn phí";
+    content: "Free";
     background: #060;
     color: #fff;
     padding: 2px 4px;
@@ -1039,7 +1040,7 @@ h2 {
     font-size: 12px;
 }
 .trial:after {
-    content: "Dùng thử";
+    content: "Trial";
     background: #0072bc;
 	color: #fff;
     padding: 2px 4px;

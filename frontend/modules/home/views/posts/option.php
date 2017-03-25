@@ -11,14 +11,14 @@ if($subCate){
 }
 $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'title' => $model->title];
 ?>
-
 <link href="<?= Yii::$app->request->baseUrl; ?>css/detail.css" rel="stylesheet" type="text/css" />
-
+<script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/scroll.js"></script>
 <div id="content-main">
     <div id="left-all">
         <?= $this->render('//layouts/navigator', ['navigator' => $navigator]); ?>
         <div id="download-option" class="padbot">
-            <div class="download-now">
+            <div class="download-now" style="width:660px">
                 <h1>Download <?= $model->title ?></h1>
                 <p><?= $model->short_intro ?></p>
             </div>

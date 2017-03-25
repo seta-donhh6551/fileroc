@@ -11,9 +11,9 @@ if($subCate){
 }
 $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'title' => $model->title];
 ?>
-
 <link href="<?= Yii::$app->request->baseUrl; ?>css/detail.css" rel="stylesheet" type="text/css" />
-
+<script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/scroll.js"></script>
 <div id="content-main">
 	<div id="left-all">
 		<?= $this->render('//layouts/navigator', ['navigator' => $navigator]); ?>
@@ -24,7 +24,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 			<div class="download-now">
 				<h1>Tải phần mềm <?= $model->title ?></h1>
 				<div class="down-left">
-					<a href="<?= Yii::$app->request->baseUrl.'download-option/'.$model->rewrite; ?>.html" class="download">Tải Về</a>
+                    <a href="<?= Yii::$app->request->baseUrl.'download-option/'.$model->rewrite; ?>.html" class="download" style="font-size:18px">Tải Về</a>
 				</div>
 				<div class="down-right">
 					<h2>Tìm <?= $model->title ?> trên</h2>
@@ -85,7 +85,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 					</tr>
 				</table>
 			</div>
-			<div style="width: 350px; float: left; margin-left: 15px; padding-top: 40px; text-align: center">
+			<div style="width: 350px; float: left; margin-left: 15px; padding-top: 30px; text-align: center">
                 <img src="<?= Yii::getAlias('@web') ?>/uploads/<?= $model->thumb ?>" alt="<?= $model->title ?>" width="150" style="margin-bottom:5px"/>
 				<p><?= $model->short_info ?></p>
 			</div>
@@ -122,7 +122,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 		<div id="reviews">
 			<h2 style="font-size:18px;color:#F60;margin-bottom:15px;">NGƯỜI DÙNG ĐÁNH GIÁ</h2>
 			<div class="rating-title martop">
-			<?= count($listComment); ?> review(s) from our community
+			Hiện có <?= count($listComment); ?> đánh giá từ người dùng
 			<?php
 			$listRating = [];
 			foreach($listComment as $key => $val){
