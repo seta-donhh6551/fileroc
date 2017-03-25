@@ -249,7 +249,7 @@ a.review {
 .review-user-info{width:80px;text-align:center;}
 .review-user-info p{color: #333;font-weight: bold;}
 .review-form-title{background-color: #E6EDF6;color: #0E3D52;font-weight: bold;}
-.review-form{width: 600px}
+.review-form{width:660px}
 .review-form-body{
     width: 660px;
     padding: 20px;
@@ -272,7 +272,6 @@ a.review {
 	margin: 7px 0px;
 }
 .stars span{
-	width: 16px;
 	display: block;
 	float: left;
 	height: 16px;

@@ -11,6 +11,7 @@ if($subCate){
 }
 $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'title' => $model->title];
 ?>
+<link href="<?= Yii::$app->request->baseUrl; ?>css/detail.css" rel="stylesheet" type="text/css" />
 <div id="left-all">
 	<?= $this->render('//layouts/navigator', ['navigator' => $navigator]); ?>
 	<div id="download-option" class="padbot">

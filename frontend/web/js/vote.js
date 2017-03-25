@@ -29,30 +29,30 @@ $(document).ready(function(){
        var star = $('#number-star').val();
        var error = $('div.errors');
        if(name == '' || email == '' || title == '' || review == ''){
-           error.show().html('<span class="red">* field</span> is required');
+           error.show().html('<span class="red">Trường * yêu cầu</span> nhập dữ liệu');
            return false;
        }
        if(name.length < 5){
-          error.show().html('Name 5 characters minimum');
+          error.show().html('Tên yêu cầu từ 5 kí tự trở lên');
           return false;
        }
        if(validateEmail(email) == false){
-           error.show().html('Email address is not valid');
+           error.show().html('Email không đúng định dạng');
            return false;
        }
-       if(title.length < 10){
-          error.show().html('Title 10 characters minimum');
+       if(title.length < 5){
+          error.show().html('Tiêu đề cầu từ 5 kí tự trở lên');
           return false;
        }
        if(review.length < 10){
-          error.show().html('Review 10 characters minimum');
+          error.show().html('Nội dung đánh giá yêu cầu từ 10 kí tự trở lên');
           return false;
        }
        error.show().removeClass('err-icon').html('<img src="'+window.location.origin+'/img/loading.gif" />');
        setTimeout(function(){
         $.post(window.location.origin+'/home/posts/review', {name:name, email:email, title:title, review:review, star:star, post_id:post_id}, function(result){
             if(result == 'voted'){
-                error.addClass('err-icon').show().html('You has been voted this product');
+                error.addClass('err-icon').show().html('Bạn đã đánh giá sản phẩm này rồi!');
                 return false;
             }
             if(result == 'true'){

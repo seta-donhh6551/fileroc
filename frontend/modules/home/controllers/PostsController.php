@@ -39,12 +39,17 @@ class PostsController extends MyController {
 		]);
     }
 
-	public function actionOption($rewrite){
+	public function actionOption($rewrite)
+    {
 		$model = \common\models\Posts::findOne(['rewrite'=>$rewrite]);
         if (!$model){
             throw new \yii\web\HttpException(404, 'The requested item could not be found.');
         }
-
+        
+        //set active menu on header
+		$homePageCate = \common\models\Category::findOne(['id' => $model->cate_id]);
+		$this->activeMenu = $homePageCate;
+        
         $this->infoConfig = ['keywords' => $model->keywords, 'description' => $model->description];
 
         Yii::$app->view->title = 'Download options '.$model->title;
