@@ -22,25 +22,31 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
                 <h1>Download <?= $model->title ?></h1>
                 <p><?= $model->short_intro ?></p>
             </div>
-            <div class="download-option marbot">
-                <h3 class="link-title">Direct link</h3>
+            <div class="download-now">
+                <p>Để tải phần mềm <?= $model->title ?>, bạn click trực tiếp vào các link sau để tải về máy của mình</p>
+            </div>
+            <div class="download-option">
+                <h3 class="link-title">Link Trực Tiếp</h3>
+                <div class="cls" style="padding:7px"></div>
                 <p class="hand martop"><?= $model->url_soft ?></p>
-                <p class="hand-right"><a href="<?= $model->url_soft ?>" class="download-small" data-id="<?= $model->id ?>">Download</a></p>
+                <p class="hand-right"><a href="<?= $model->url_soft ?>" class="download-small" data-id="<?= $model->id ?>">Tải về</a></p>
                 <div class="cls"></div>
             </div>
             <?php if($model->url_provide1){ ?>
-            <div class="download-option marbot">
-                <h3 class="link-title">Preventive link</h3>
+            <div class="download-option">
+                <h3 class="link-title">Link Dự Phòng 1</h3>
+                <div class="cls" style="padding:7px"></div>
                 <p class="hand martop marbot"><?= $model->url_provide1 ?></p>
-                <p class="hand-right"><a href="<?= $model->url_provide1 ?>" class="download-small" data-id="<?= $model->id ?>">Download</a></p>
+                <p class="hand-right"><a href="<?= $model->url_provide1 ?>" class="download-small" data-id="<?= $model->id ?>">Tải về</a></p>
                 <div class="cls"></div>
             </div>
             <?php } ?>
             <?php if($model->url_provide2){ ?>
             <div class="download-option">
-                <h3 class="link-title">Preventive link</h3>
+                <h3 class="link-title">Link Dự Phòng 2</h3>
+                <div class="cls" style="padding:7px"></div>
                 <p class="hand martop"><?= $model->url_provide2 ?></p>
-                <p class="hand-right"><a href="<?= $model->url_provide2 ?>" class="download-small" data-id="<?= $model->id ?>">Download</a></p>
+                <p class="hand-right"><a href="<?= $model->url_provide2 ?>" class="download-small" data-id="<?= $model->id ?>">Tải về</a></p>
                 <div class="cls"></div>
             </div>
             <?php } ?>

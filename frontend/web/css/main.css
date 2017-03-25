@@ -3341,7 +3341,7 @@ a:hover {
     height: auto!important;
     height: 750px;
     background-color: #fff;
-    color: #5f6d80;
+    /*color: #5f6d80;*/
     padding-bottom: 20px;
     min-height: 945px;
     width: 1052px;
@@ -3910,7 +3910,6 @@ a:hover {
     background-color: #eff3f7;
     padding: 23px 0 23px 0;
     font-size: 13px;
-    color: #5f6d80;
     border-top: solid 2px #d4dadf
 }
 .footer-background {
@@ -4028,7 +4027,6 @@ section {
 .content-wrapper {
     margin: 0 auto;
     background-color: #fff;
-    color: #5f6d80
 }
 .category-page-box-fix * {
     box-sizing: unset

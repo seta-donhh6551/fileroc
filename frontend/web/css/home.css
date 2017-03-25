@@ -492,6 +492,9 @@ body {
     color: #333;
     padding-top: 50px;
 	background: #fff
+    color: #333;
+    background: #fefefe;
+    line-height: 1.5em;
 }
 a {
     outline: 0

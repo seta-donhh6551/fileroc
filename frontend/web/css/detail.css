@@ -6,6 +6,7 @@
 	margin-right: 15px;
 }
 #right-page{
+    padding-top: 20px;
 	width:300px;
 	float: left;
 	height:auto;
@@ -93,7 +94,8 @@ a.review {
     cursor: pointer
 }
 .download-option{
-    clear: both
+    margin-bottom: 25px;
+    clear: both;
 }
 .download-option p{
     margin: 0px;
@@ -164,7 +166,7 @@ a.review {
 	margin-right: 7px
 }
 .related-info{
-	width: 300px;
+	width: 370px;
 	color: #888
 }
 .related-total{
@@ -173,7 +175,7 @@ a.review {
 	color: #F60
 }
 .down-left{
-	width: 325px;
+	width: 425px;
 	float: left;
 }
 .down-right{
@@ -191,7 +193,7 @@ a.review {
 	color: #777
 }
 .rating-title{
-    width: 595px;
+    width: 660px;
     height: 30px; 
     background:#F2F2F2;
     color:#03848E;
@@ -201,7 +203,7 @@ a.review {
     padding-left: 5px
 }
 .user-rating{
-    width: 598px;
+    width: 660px;
     border:1px solid #DDD;overflow:auto;display:table;
 }
 .rating-left{
@@ -212,7 +214,7 @@ a.review {
     border-bottom:1px solid #DDD
 }
 .rating-right{
-    width: 290px;
+    width: 357px;
     float:left;
     color:#999;
     border-bottom:1px solid #DDD;
@@ -301,7 +303,7 @@ a.review {
     height: 14px;
     background: url(../img/barview_red.jpg) repeat-x scroll center center transparent;
 }
-.link-title{color: #F30; margin-bottom: 7px}
+.link-title{color: #F30; margin-bottom: 17px;font-weight: bold}
 .padtop{padding-top: 15px;}
 .padbot{padding-bottom: 15px;}
 .padtobot{padding: 15px 0px;}
@@ -324,7 +326,7 @@ a.review {
 	margin-bottom: 10px;
 }
 .hand{
-    width: 445px;
+    width: 580px;
     float: left;
     padding-left: 75px;
     color: #039;

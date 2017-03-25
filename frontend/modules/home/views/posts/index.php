@@ -38,15 +38,15 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 			<div style="width: 363px; float: left">
 				<table cellpadding="0">
 					<tr>
-						<td>Publisher</td>
+						<td>Nhà phát hành</td>
 						<td class="even"><b><?php if($model->author_url){ echo '<a href="'.$model->author_url.'" target="_blank">'.$model->author.'</a>'; }else{ echo $model->author; } ?></b></td>
 					</tr>
 					<tr>
-						<td>Version</td>
+						<td>Phiên bản</td>
 						<td class="even"><?= $model->version ?></td>
 					</tr>
 					<tr>
-						<td>Voted</td>
+						<td>Đánh giá</td>
 						<td class="even">
 							<div class="stars">
 								<span class="star-gray">
@@ -58,7 +58,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 						</td>
 					</tr>
 					<tr>
-						<td>License</td>
+						<td>Bản quyền</td>
 						<td class="even"><span class="<?= $model->type == 1 ? 'trial' : 'free' ?>"></span></td>
 					</tr>
 					<?php if($model->type == 1 && $model->time_limit != null){ ?>
@@ -68,25 +68,25 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 					</tr>
 					<?php } ?>
 					<tr>
-						<td>File size</td>
+						<td>Dung lượng file</td>
 						<td class="even"><?= $model->filesize ?> Mb</td>
 					</tr>
 					<tr>
-						<td>Date Added</td>
+						<td>Ngày tạo</td>
 						<td class="even"><?= date('F. j, Y', strtotime($model->creat_date)); ?></td>
 					</tr>
 					<tr>
-						<td>Update date</td>
+						<td>Ngày cập nhật</td>
 						<td class="even"><?= date('F. j, Y', strtotime($model->update_date)); ?></td>
 					</tr>
 					<tr>
-						<td>Os required</td>
+						<td>Hệ điều hành yêu cầu</td>
 						<td class="even"><?= $model->required ?></td>
 					</tr>
 				</table>
 			</div>
-			<div style="width: 250px; float: left; margin-left: 15px; padding-top: 40px; text-align: center">
-				<img src="<?= Yii::getAlias('@web') ?>/uploads/<?= $model->thumb ?>" alt="<?= $model->title ?>" width="150"/>
+			<div style="width: 350px; float: left; margin-left: 15px; padding-top: 40px; text-align: center">
+                <img src="<?= Yii::getAlias('@web') ?>/uploads/<?= $model->thumb ?>" alt="<?= $model->title ?>" width="150" style="margin-bottom:5px"/>
 				<p><?= $model->short_info ?></p>
 			</div>
 			<div class="cls"></div>
