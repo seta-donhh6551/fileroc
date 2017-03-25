@@ -13,7 +13,6 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 ?>
 
 <link href="<?= Yii::$app->request->baseUrl; ?>css/detail.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/jquery-1.11.3.min.js"></script>
 
 <div id="content-main">
 	<div id="left-all">
@@ -261,5 +260,3 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 	</div>
 	<div class="cls"></div>
 </div>
-<script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/scroll.js"></script>
-<script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/vote.js"></script>
