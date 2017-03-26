@@ -8,8 +8,11 @@
     line-height: 60px;
     height: 60px;
     color: #fff;
-    border-left: 1px solid #66beeb;
-    border-right: 1px solid #66beeb
+    border-left: 1px solid #e45639;
+    border-right: 1px solid #e45639
+}
+#site-header .navbar-nav>li>a:hover{
+    color: #F00 !important
 }
 #site-header .no-left-border {
     border-left: none!important
@@ -46,7 +49,7 @@
     padding-left: 15px;
     height: 60px;
     line-height: 60px;
-    border-top: 1px solid #66beeb
+    border-top: 1px solid #e45639
 }
 #site-header .language-dropdown .dropdown-menu li {
     padding-right: 15px;

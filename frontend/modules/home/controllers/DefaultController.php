@@ -55,19 +55,33 @@ class DefaultController extends MyController
 		if($keyword == null){
 			Yii::$app->response->redirect('/');
 		}
-
-		$modelPost = new \common\models\Posts();
-		$listPost = $modelPost->getListPosts(['keyword' => $keyword]);
-
-		Yii::$app->view->title = 'Results for '.$keyword.' .Fileroc ,Free download software';
+        
+        //set active menu on header
+        $model = \common\models\Category::findOne(['id' => 4]);
+        if(!$model){
+            throw new \yii\web\HttpException(404, 'The requested item could not be found.');
+		}
+        
+		$this->activeMenu = $model;
+        
+        $query = \common\models\Posts::find();
+		$query->where(['LIKE', 'title', $keyword]);
+        
+		$pagination = new \yii\data\Pagination([
+            'defaultPageSize' => \common\components\Utility::$defaultPageSize,
+            'totalCount' => $query->count()
+        ]);
+        
+        $listPost = $query->offset($pagination->offset)
+						->limit($pagination->limit)
+						->all();
+            
+		Yii::$app->view->title = 'Kết quả tìm kiếm '.$keyword.'. Freefile.vn, tải phần mềm miễn phí';
 
 		return $this->render('search', [
 			'listPost' => $listPost,
-			'subCategory' => [
-				'listMenu' => Yii::$app->controller->listMenu[0]['listSubMenu'],
-				'titleMenu' => 'Window',
-				'rewrite' => 'windows'
-			]
+            'pages' => $pagination,
+			'subCategory' => []
 		]);
     }
 

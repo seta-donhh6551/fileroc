@@ -14,10 +14,10 @@
             <div class="col-md-9 no-padding">
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                    <form class="navbar-form navbar-left search-container" action="search">
+                    <form class="navbar-form navbar-left search-container" action="<?= Yii::$app->request->baseUrl; ?>tim-kiem.html">
                         <div class="input-group search-container-inner">
                             <i class="fa fa-search"></i>
-                            <input type="text" class="form-control search-box auto-complete-search" autocomplete="off" placeholder="Tìm kiếm" name="q">
+                            <input type="text" class="form-control search-box auto-complete-search" autocomplete="off" placeholder="Tìm kiếm" name="keyword" value="<?= Yii::$app->getRequest()->getQueryParam('keyword') ?>">
                             <button type="submit" style="position:absolute; left: -9999px;" tabindex="-1">                            
                             </button>
                         </div>
