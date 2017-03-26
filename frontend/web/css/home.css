@@ -92,7 +92,7 @@
     border-radius: 0 0 5px 5px
 }
 .grey-top {
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     width: 100%;
 }
 .blue-menu {
@@ -351,10 +351,10 @@
     background-size: 100%;
     margin-left: auto;
     margin-right: auto;
-    float: left;
     background-repeat: no-repeat;
     height: 250px;
     width: 1052px;
+    margin: 0px auto;
 }
 .height-fix {
     height: 240px
