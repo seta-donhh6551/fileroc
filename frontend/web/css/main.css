@@ -90,7 +90,8 @@ a:hover{
     height: 36px;
     text-align: center;
     padding-left: 40px;
-    border-radius: 3px
+    border-radius: 3px;
+    width:80%;
 }
 #site-header .navbar-nav>li {
     color: #fff
@@ -2401,7 +2402,7 @@ footer {
 }
 #sidebar-right {
     position: absolute;
-    right: 0;
+    right: -10px;
     top: 10px
 }
 #program-sidebar {
@@ -5093,4 +5094,7 @@ html {
     .mobile{
         display: none;
     }
+}
+#category-header #navigation{
+    width: 100%;
 }

@@ -5,11 +5,15 @@
 	min-height: 100px;
 	margin-right: 15px;
 }
-#right-page{
+#right-page {
     padding-top: 20px;
-	width:300px;
-	float: left;
-	height:auto;
+    width: 300px;
+    float: left;
+    height: auto;
+    /* margin-left: 15px; */
+    position: absolute;
+    top: 0px;
+    right: -10px;
 }
 #popular{
     width: 300px;
