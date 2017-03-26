@@ -24,7 +24,7 @@ class PopularController extends MyController
         
         //switch between menu
         $orderBy = ['views' => SORT_DESC];
-        $infoData = ['title' => 'Tải về nhiều nhất', 'rewrite' => 'tai-nhiet-nhat'];
+        $infoData = ['title' => 'Tải về nhiều nhất', 'rewrite' => 'tai-nhieu-nhat'];
         $infoData['text'] = 'Top những phần mềm '.$model->name.' được tải về nhiều nhất';
         if($slug == 'moi-cap-nhat'){
             $orderBy = ['id' => SORT_DESC];

@@ -60,7 +60,7 @@
             <div class="v-spacer">&nbsp;</div>
             <div>
                 <div class="s-count-items">
-                    <div class="software-button"><a href="/browse-software/">Phần mềm Hot</a></div>
+                    <div class="software-button"><a href="#">Đánh Giá Hay Nhất</a></div>
                 </div>
             </div>
         </div>
