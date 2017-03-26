@@ -1366,11 +1366,12 @@ q {
     width: 155px
 }
 #main-logo-mobile {
-    background-image: url(../img/filehippo-logo.png);
+    background-image: url(../img/new/logo.png);
     background-repeat: no-repeat;
     height: 38px;
     width: 155px;
-    margin-top: 7px
+    margin-top: 7px;
+    background-size: 100%;
 }
 #header-mobile .language-container {
     padding-right: 5px;
@@ -4040,16 +4041,46 @@ section {
     width: 400px;
     padding: 30px 0 30px 0
 }
-@media (min-width: 768px) {
+@media only screen and (min-width:768px) and (max-width: 991px) {
+    #root-content .home-right-col {
+        float: none !important;
+    }
+    .right-hand-col {
+        float: none !important;
+        margin: 0px auto;
+    }
     .mobile{
         display: none;
     }
     .container {
-        width: 768px
+        width: 768px !important;
+    }
+    .counter-container .container {
+        width: 768px;
+    }
+    .container #splash-counts {
+        margin-top: 22px;
+        margin-left: 40px;
+    }
+    #splash-counts .v-spacer {
+        border: none;
+    }
+    .container #splash-counts>div {
+        float: left;
+        width: 190px;
     }
     #content-full .sitetext {
         padding: 20px 130px 30px 80px
     }
+    body {
+        padding-top: 0px !important;
+    }
+}
+@media only screen and (min-width:992px) and (max-width: 1024px) {
+    .grey-top {
+        background-color: #f2f2f2;
+        width: 1110px !important;
+    } 
 }
 @media (min-width: 992px) {
     #navbar-first,
@@ -5048,6 +5079,15 @@ html {
 }
 .grey-top {
     background-color: #f2f2f2;
-    padding-top: 10px;
+    padding-top: 0px;
     border-bottom: solid 2px #e3e8ea;
+}
+@media (min-width: 768px){
+    .navbar-right {
+        float: right!important;
+        margin-right: 15px;
+    }
+    .mobile{
+        display: none;
+    }
 }
