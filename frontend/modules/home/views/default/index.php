@@ -42,8 +42,6 @@ use yii\widgets\ActiveForm;
                 </div>
                 <div class="middle-column-leaderboard-ad-container">
                     <div class="middle-column-leaderboard-ad">
-                        <!-- Homepage_leaderboard_Top -->
-                        <!--middleLeaderboardAdUnit -->
                         <div class="ad-unit-label" style="color: #869aab;font-size: 11px;margin-bottom: 2px;">Advertisement</div>
                         <div id="div-gpt-ad-1384762460430-3a118e30e650453192aee2604bb7a827" style="width:728px; height:90px;" data-google-query-id="CP-NjsOH39ICFcWBvQodwagJKA">
                             <img src="<?= Yii::$app->request->baseUrl; ?>img/adsense-728x90.gif" width="728" />
@@ -95,15 +93,13 @@ use yii\widgets\ActiveForm;
         </div>
         <div class="home-right-col">
             <div class="right-hand-col">
-                <!-- Homepage_MPU_Top -->
-                <!--largeLayoutTopMPUAdUnit -->
                 <div class="ad-unit-label" style="color: #869aab;font-size: 11px;margin-bottom: 2px;">Advertisement</div>
                 <div style="width:300px; height:250px;" data-google-query-id="CICOjsOH39ICFcWBvQodwagJKA">
                     <img src="img/adsense-300x250.gif" width="300" />
                 </div>
                 <div class="featured-software">
                     <h2>Featured Software</h2>
-                    <a href="http://news.filehippo.com/2017/03/secure-your-pc-mac-or-mobile-device-with-norton-wifi-privacy/" title="FEATURED SOFTWARE: Norton WiFi Privacy">
+                    <a href="#" title="FEATURED SOFTWARE: Norton WiFi Privacy">
                         <img src="http://news.filehippo.com/wp-content/uploads/2017/03/Norton_wifi_privacy-300x139.png" alt="FEATURED SOFTWARE: Norton WiFi Privacy">
                         <div class="featured-title-container">
                             <div class="feature-title">FEATURED SOFTWARE: Norton WiFi Privacy</div>
@@ -118,7 +114,7 @@ use yii\widgets\ActiveForm;
                 </div>
                 <div class="outbrain-container">
                     <div id="ob_holder" style="display: none;">
-                        <iframe id="ob_iframe" src="http://widgets.outbrain.com/nanoWidget/externals/obFrame/obFrame.htm#pid=6584&amp;dmpenabled=true&amp;csenabled=true&amp;d=whtfz2H6OanCI2CBdQ-zIfSKP_9KGlE0N6k9d239o8Hi3LIp-PfikvNN9jczMInW" style="display: none; width: 1px; height: 1px;"></iframe><script type="text/javascript" src="http://log.outbrain.com/loggerServices/widgetGlobalEvent?eT=0&amp;tm=1143&amp;pid=6584&amp;sid=10873&amp;wId=110&amp;wRV=01001603&amp;rId=8112db6a041c3d4e0f32bd28e1a11031&amp;idx=0&amp;pvId=8112db6a041c3d4e0f32bd28e1a11031&amp;org=0&amp;pad=3&amp;pVis=1&amp;eIdx=&amp;ab=0&amp;wl=0" charset="UTF-8" async=""></script><script type="text/javascript" src="http://log.outbrain.com/loggerServices/widgetGlobalEvent?eT=3&amp;tm=4348535&amp;pid=6584&amp;sid=10873&amp;wId=110&amp;wRV=01001603&amp;rId=8112db6a041c3d4e0f32bd28e1a11031&amp;idx=0&amp;pvId=8112db6a041c3d4e0f32bd28e1a11031&amp;org=0&amp;pad=3&amp;pVis=1&amp;eIdx=0&amp;ab=0&amp;wl=0" charset="UTF-8" async=""></script>
+                        <iframe id="ob_iframe" src="#" style="display: none; width: 1px; height: 1px;"></iframe><script type="text/javascript" src="http://log.outbrain.com/loggerServices/widgetGlobalEvent?eT=0&amp;tm=1143&amp;pid=6584&amp;sid=10873&amp;wId=110&amp;wRV=01001603&amp;rId=8112db6a041c3d4e0f32bd28e1a11031&amp;idx=0&amp;pvId=8112db6a041c3d4e0f32bd28e1a11031&amp;org=0&amp;pad=3&amp;pVis=1&amp;eIdx=&amp;ab=0&amp;wl=0" charset="UTF-8" async=""></script><script type="text/javascript" src="http://log.outbrain.com/loggerServices/widgetGlobalEvent?eT=3&amp;tm=4348535&amp;pid=6584&amp;sid=10873&amp;wId=110&amp;wRV=01001603&amp;rId=8112db6a041c3d4e0f32bd28e1a11031&amp;idx=0&amp;pvId=8112db6a041c3d4e0f32bd28e1a11031&amp;org=0&amp;pad=3&amp;pVis=1&amp;eIdx=0&amp;ab=0&amp;wl=0" charset="UTF-8" async=""></script>
                     </div>
                     <div class="OUTBRAIN" data-src="http://filehippo.com" data-widget-id="AR_3" data-ob-template="FileHippo" data-ob-mark="true" data-browser="chrome" data-os="win32" data-dynload="" data-idx="0" id="outbrain_widget_0">
                         <div class="ob-widget ob-strip-layout AR_3" data-dynamic-truncate="true">

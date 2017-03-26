@@ -3877,7 +3877,7 @@ a:hover {
 #programs-list .program-entry-header img {
     vertical-align: bottom;
     margin-right: 16px;
-    height: 32px;
+    /*height: 32px;*/
     width: 32px;
     float: left
 }

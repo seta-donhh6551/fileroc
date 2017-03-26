@@ -45,15 +45,16 @@
 <div class="grey-top counter-container desktop">
     <div class="container main-splash">
         <div id="splash-counts">
+            <?php $activeMenu = Yii::$app->controller->activeMenu; ?>
             <div>
                 <div class="s-count-items">
-                    <div class="software-button"><a href="/browse-software/">Phần Mềm Mới nhất</a></div>
+                    <div class="software-button"><a href="<?= Yii::$app->request->baseUrl.$activeMenu['rewrite']; ?>/moi-cap-nhat.html">Phần Mềm Mới nhất</a></div>
                 </div>
             </div>
             <div class="v-spacer">&nbsp;</div>
             <div>
                 <div class="s-count-items">
-                    <div class="software-button"><a href="/browse-software/">Tải về nhiều nhất</a></div>
+                    <div class="software-button"><a href="<?= Yii::$app->request->baseUrl.$activeMenu['rewrite']; ?>/tai-nhieu-nhat.html">Tải về nhiều nhất</a></div>
                 </div>
             </div>
             <div class="v-spacer">&nbsp;</div>

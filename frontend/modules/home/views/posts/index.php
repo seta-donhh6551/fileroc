@@ -86,7 +86,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 				</table>
 			</div>
 			<div style="width: 350px; float: left; margin-left: 15px; padding-top: 30px; text-align: center">
-                <img src="<?= Yii::getAlias('@web') ?>/uploads/<?= $model->thumb ?>" alt="<?= $model->title ?>" width="150" style="margin-bottom:5px"/>
+                <img src="<?= Yii::getAlias('@web') ?>/uploads/<?= $model->thumb ?>" alt="<?= $model->title ?>" width="150" style="margin-bottom:15px"/>
 				<p><?= $model->short_info ?></p>
 			</div>
 			<div class="cls"></div>

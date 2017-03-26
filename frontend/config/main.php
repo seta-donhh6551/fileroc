@@ -47,12 +47,14 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-			'baseUrl' => 'http://download.file',
+			'baseUrl' => 'http://freefile.vn',
             'rules' => [
                 //login
                 '/login' => 'account/default/login',
                 //front end
 				'/tim-kiem.html' => 'home/default/search',
+                '/<rewrite:[a-zA-Z0-9_-]+>/<slug:tai-nhieu-nhat>.html' => 'home/popular/index',
+                '/<rewrite:[a-zA-Z0-9_-]+>/<slug:moi-cap-nhat>.html' => 'home/popular/index',
                 //'/<keyword:[a-zA-Z0-9_-]+>-<id:[0-9]+>.html' => 'home/default/detail',
                 '/<rewrite:[a-zA-Z0-9_-]+>.html' => 'home/default/index',
 				'/download/<rewrite:[a-zA-Z0-9_-]+>.html' => 'home/posts/index',
