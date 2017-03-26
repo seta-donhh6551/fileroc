@@ -4042,6 +4042,9 @@ section {
     padding: 30px 0 30px 0
 }
 @media only screen and (min-width:768px) and (max-width: 991px) {
+    .grey-top .bg {
+        background-size: cover;
+    }
     #root-content .home-right-col {
         float: none !important;
     }
