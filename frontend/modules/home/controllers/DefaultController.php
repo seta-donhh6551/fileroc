@@ -25,18 +25,25 @@ class DefaultController extends MyController
 		}
 		
         $cateId = $model->id;
-        $modelPost = new \common\models\Posts();
 		
 		//set active menu on header
 		$this->activeMenu = $model;
 		$this->infoConfig = ['keywords' => $model->keywords, 'description' => $model->description];
-
+        
+        //get list poplular software
+        $listPupolar = \common\models\Posts::find()
+                    ->where(['cate_id' => $cateId])
+                    ->orderBy(['views' => SORT_DESC])
+                    ->limit(10)
+                    ->all();
+        
 		$listSubCategory = $model->getListSubCategory($cateId);
 		
         Yii::$app->view->title = 'Phần mềm dành cho '.$model->name.', Miễn phí download phần mềm';
 
 		return $this->render('index', [
 			'model' => $model,
+            'listPupolar' => $listPupolar,
 			'listTutorials' => $this->newTutorials(9),
 			'listSubCategory' => $listSubCategory
 		]);

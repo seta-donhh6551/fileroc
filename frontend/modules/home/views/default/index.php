@@ -21,106 +21,21 @@ use yii\widgets\ActiveForm;
                             </ul>
                         </div>
                         <div class="home-categories-spacer"></div>
-                        <!-- <div class="download-manager">
-                            <a href="http://www.filehippo.com/download_app_manager/">
-                                <img src="http://cache.filehippo.com/img/new/download-icon.png" alt="Download FileHippo App Manager">
-                                <div class="download-manager-text">Download FileHippo App Manager</div>
-                            </a>
-                        </div> -->
                     </div>
                     <div>
                         <div id="popular">
-                            <h2><a href="/popular/">PHỔ BIẾN</a></h2>
-                            <a href="/popular/" class="view-more-link">Xem Thêm</a>
+                            <h2><a href="<?= Yii::$app->request->baseUrl.$model->rewrite.'/'; ?>tai-nhieu-nhat.html">PHỔ BIẾN</a></h2>
+                            <a href="<?= Yii::$app->request->baseUrl.$model->rewrite.'/'; ?>tai-nhieu-nhat.html" class="view-more-link">Xem Thêm</a>
                             <div class="clearfix-no-padding"></div>
                             <ul id="popular-list">
-                                <li><a href="#">
-                                        <img src="http://cache.filehippo.com/img/ex/6067t__ccleaner_icon.png" alt="Download CCleaner 5.28.6005">CCleaner 5.28.6005
+                                <?php if(isset($listPupolar)){ ?>
+                                <?php foreach($listPupolar as $popular){ ?>
+                                <li>
+                                    <a href="<?= Yii::$app->request->baseUrl.'download/'.$popular['rewrite']; ?>.html" title="Download <?= $popular['title']; ?>">
+                                        <img src="<?= Yii::getAlias('@web') ?>/uploads/icons/<?= $popular['icon'] ?>" alt="Download <?= $popular['title']; ?>"><?= $popular['title'].' '.$popular['version']; ?>
                                     </a>
                                 </li>
-                                <li><a href="#">
-                                        <img src="http://cache.filehippo.com/img/ex/6936t__AIPS_icon.png" alt="Download Advanced IP Scanner 2.4.3021">Advanced IP Scanner 2.4.3021
-                                    </a>
-                                </li>
-                                <li><a href="#">
-                                        <img src="http://cache.filehippo.com/img/ex/6052t__recuva-icon.png" alt="Download Recuva 1.53.1087">Recuva 1.53.1087
-                                    </a>
-                                </li>
-                                <li><a href="#">
-                                        <img src="http://cache.filehippo.com/img/ex/6050t__vlc-icon.png" alt="Download VLC Media Player 2.2.4 (64-bit)">VLC Media Player 2.2.4 (64-bit)
-                                    </a>
-                                </li>
-                                <li><a href="#">
-                                        <img src="http://cache.filehippo.com/img/ex/6049t__vlc-icon.png" alt="Download VLC Media Player 2.2.4 (32-bit)">VLC Media Player 2.2.4 (32-bit)
-                                    </a>
-                                </li>
-                                <li><a href="#">
-                                        <img src="http://cache.filehippo.com/img/ex/8745t__microsoft_office_2013_icon_8_12_16_converted.png" alt="Download Microsoft Office 2013">Microsoft Office 2013
-                                    </a>
-                                </li>
-                                <li><a href="#">
-                                        <img src="http://cache.filehippo.com/img/ex/7180t__picasa_new_icon_converted.png" alt="Download Picasa 3.9 Build 141.259">Picasa 3.9 Build 141.259
-                                    </a>
-                                </li>
-                                <li><a href="#">
-                                        <img src="http://cache.filehippo.com/img/ex/2171t__ChromeNew_icon.png" alt="Download Google Chrome for Work 32-bit 43.02357.124">Google Chrome for Work 32-bit 43.02357.124
-                                    </a>
-                                </li>
-                                <li><a href="#">
-                                        <img src="http://cache.filehippo.com/img/ex/8744t__adobe_shockwave_player_icon_8_12_16_converted.png" alt="Download Shockwave Player 12.2.8.198">Shockwave Player 12.2.8.198
-                                    </a>
-                                </li>
-                                <li><a href="#">
-                                        <img src="http://cache.filehippo.com/img/ex/8747t__Net_Framework_Version_4.png" alt="Download .NET Framework Version 4.6.2">.NET Framework Version 4.6.2
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="latest" style="display:none">
-                            <h2><a href="/latest/">Latest updates</a></h2>
-                            <a href="/latest/" class="view-more-link">View more</a>
-                            <div class="clearfix-no-padding"></div>
-                            <ul id="latest-list">
-                                <li><a href="#">
-                                        <img src="http://cache.filehippo.com/img/ex/6468t__chrome-icon-110x110.png" alt="Download Google Chrome 58.0.3029.19 Beta">Google Chrome 58.0.3029.19 Beta
-                                    </a>
-                                </li>
-                                <li><a href="#">
-                                        <img src="http://cache.filehippo.com/img/ex/4774t__driver_genius_icon.png" alt="Download Driver Genius 17.0.0.138">Driver Genius 17.0.0.138
-                                    </a>
-                                </li>
-                                <li><a href="#">
-                                        <img src="http://cache.filehippo.com/img/ex/8979t__debut_video_capture_icon_6_2_17.png" alt="Download Debut Video Capture 4.00">Debut Video Capture 4.00
-                                    </a>
-                                </li>
-                                <li><a href="#">
-                                        <img src="http://cache.filehippo.com/img/ex/5851t__eusing_maze_lock_icon.png" alt="Download Eusing Maze Lock 3.6">Eusing Maze Lock 3.6
-                                    </a>
-                                </li>
-                                <li><a href="#">
-                                        <img src="http://cache.filehippo.com/img/ex/6468t__chrome-icon-110x110.png" alt="Download Google Chrome 57.0.2987.110">Google Chrome 57.0.2987.110
-                                    </a>
-                                </li>
-                                <li><a href="#">
-                                        <img src="http://cache.filehippo.com/img/ex/6055t__firefox_icon.png" alt="Download Firefox 53.0 Beta 3">Firefox 53.0 Beta 3
-                                    </a>
-                                </li>
-                                <li><a href="#">
-                                        <img src="http://cache.filehippo.com/img/ex/6734t__comodo_cloud_antivirus_icon_converted.png" alt="Download Comodo Cloud Antivirus 1.9.412027.469">Comodo Cloud Antivirus 1.9.412027.469
-                                    </a>
-                                </li>
-                                <li><a href="#">
-                                        <img src="http://cache.filehippo.com/img/ex/4956t__potplayer_icon.png" alt="Download Potplayer 1.7.1150 64-Bit">Potplayer 1.7.1150 64-Bit
-                                    </a>
-                                </li>
-                                <li><a href="#">
-                                        <img src="http://cache.filehippo.com/img/ex/4954t__potplayer_icon.png" alt="Download Potplayer 1.7.1150 32-Bit">Potplayer 1.7.1150 32-Bit
-                                    </a>
-                                </li>
-                                <li><a href="#">
-                                        <img src="http://cache.filehippo.com/img/ex/2176t__LibreOffice3_icon.png" alt="Download LibreOffice 5.3.1 64-bit">LibreOffice 5.3.1 64-bit
-                                    </a>
-                                </li>
+                                <?php } } ?>
                             </ul>
                         </div>
                     </div>
