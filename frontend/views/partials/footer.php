@@ -18,7 +18,7 @@
                 <div class="copy">
                     &copy;
                     Copyright
-                    2017 FreeFile Media.
+                    2017 FreeFile.Vn
                     All rights reserved.
                 </div>
                 <div class="footer-menu right-footer-menu">
@@ -59,7 +59,7 @@
                     <div class="copy">
                         &copy;
                         Copyright
-                        2017 FreeFile Media.
+                        2017 FreeFile.Vn
                         All rights reserved.
                     </div>
                     <div class="footer-menu right-footer-menu">
@@ -100,7 +100,7 @@
                 <div class="copy">
                     &copy;
                     Copyright
-                    2017 FreeFile Media.
+                    2017 FreeFile.Vn
                     All rights reserved.
                 </div>
                 <div class="footer-menu right-footer-menu">

@@ -23,7 +23,7 @@ if(isset($infoSubCate)){
 <div class="content-wrapper">
     <div id="content-main" class="nopadding ">
        <div id="sidebar-left" class="category-page-box-fix">
-          <ol id="category-navigation">
+           <ol id="category-navigation">
              <li class="highlighted category-level-1">
                 <h3><a class="internal-link" href="<?= Yii::$app->request->baseUrl.$infoCate->rewrite.'/'.$model->rewrite; ?>.html" title="<?= $model->name; ?>"><?= $model->name; ?></a></h3>
              </li>
@@ -40,8 +40,8 @@ if(isset($infoSubCate)){
 				<?php if(isset($listPopular) && $listPopular){ ?>
 				<?php foreach($listPopular as $popular){ ?>
                 <li>
-                   <a class="internal-link" href="<?= Yii::$app->request->baseUrl.'download/'.$popular['rewrite']; ?>.html" title="<?= $popular['title']; ?>">
-                   <img src="http://cache.filehippo.com/img/ex/5063t__folder_lock_icon.png"/><?= $popular['title']; ?></a>
+                   <a class="internal-link" href="<?= Yii::$app->request->baseUrl.'download/'.$popular['rewrite']; ?>.html" title="Download <?= $popular['title']; ?>">
+                       <img src="<?= Yii::getAlias('@web') ?>/uploads/icons/<?= $popular['icon'] ?>" alt="Download <?= $popular['title']; ?>"/><?= $popular['title']; ?></a>
                 </li>
 				<?php } } ?>
              </ul>
@@ -124,7 +124,7 @@ if(isset($infoSubCate)){
              <!--dfp_topMpu -->
              <div class="ad-unit-label" style="color: #869aab;font-size: 11px;margin-bottom: 2px;">Advertisement</div>
              <div id='div-gpt-ad-1384762460430-922df1082d0048deb70a07ef4e1e443f' style=''>
-                <img src="<?= Yii::$app->request->baseUrl; ?>img/ads-google-300.jpg" width="300" />
+                 <img src="<?= Yii::$app->request->baseUrl; ?>img/adsense-300x250.gif" width="300" alt="Adsvertise"/>
              </div>
           </div>
           <div id="techbeat-widget">

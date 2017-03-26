@@ -1,4 +1,4 @@
-<div id="navigation">
+<div id="navigation" style="width:540px">
 	<ul>
 		<li><a href="<?= Yii::getAlias('@web') ?>">Home</a></li>
 		<?php if(isset($navigator)){ ?>

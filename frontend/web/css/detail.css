@@ -1,6 +1,7 @@
 #left-all{
     float: left;
 	width: 730px;
+    padding-top: 15px;
    /*width: 645px;*/
 	min-height: 100px;
 	margin-right: 15px;

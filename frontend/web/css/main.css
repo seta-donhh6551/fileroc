@@ -1519,6 +1519,7 @@ q {
     text-decoration: none
 }
 #footer-desktop a {
+    font-size: 14px;
     outline: 0
 }
 #footer-desktop .lastmenu {
