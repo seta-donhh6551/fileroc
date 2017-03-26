@@ -92,11 +92,11 @@
                 </ul>
             </div>
             <div class="main-search-container">
-                <div id="tablet-language-container">
+                <!-- <div id="tablet-language-container">
                     <div class="selected-language">
                         English <span class="disclosure-arrow-down"></span>
                     </div>
-                </div>
+                </div> -->
                 <form name="f" action="http://filehippo.com/search">
                     <div class="main-search-box">
                         <input name="q" type="search" id="tablet-search" class="auto-complete-search" />
@@ -133,11 +133,11 @@
                     </div>
                 </a>
             </div>
-            <div class="language-container">
+            <!-- <div class="language-container">
                 <div id="selected-language-mobile">
                     EN <span class="disclosure-arrow-down"></span>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <!-- language drop down -->
