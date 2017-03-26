@@ -337,24 +337,24 @@
     background-color: #3a688b;
     height: 250px;
     float: left;
-    width: calc(50% - 550px)
+    width: calc(52% - 550px)
 }
 .right-bg {
     background-color: #08416c;
     height: 250px;
     float: left;
-    width: calc(50% - 550px)
+    width: calc(51% - 550px)
 }
 .bg {
+   margin-left: auto; 
+    background-image: url(../img/new/bg-hometest.jpg);
+    background-size: 100%;
     margin-left: auto;
     margin-right: auto;
     float: left;
-   /* background-image: url(../img/new/background.png); */
-    background-image: url(../img/new/bg-hometest.jpg);
     background-repeat: no-repeat;
     height: 250px;
-    width: 100%;
-    background-size: 100%;
+    width: 1052px;
 }
 .height-fix {
     height: 240px

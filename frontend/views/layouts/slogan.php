@@ -17,7 +17,7 @@
     </div>
 </div>
 <div class="grey-top height-fix desktop">
-    <!-- <div class="left-bg"></div> -->
+    <div class="left-bg"></div>
     <div class="bg">
         <div class="container main-splash">
             <div>
@@ -40,7 +40,7 @@
             </div>
         </div>
     </div>
-    <!-- <div class="right-bg"></div> -->
+    <div class="right-bg"></div>
 </div>
 <div class="grey-top counter-container desktop">
     <div class="container main-splash">
