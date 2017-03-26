@@ -20,7 +20,7 @@
 				</span>
 				<div class="cls"></div>
 			</div>
-			<span style="font-size:12px">Reviewed at <?= date('F. j, Y H:i', strtotime($comment->created_date)); ?></span>
+			<span style="font-size:12px">Đã viết lúc <?= date('d/m/Y H:i', strtotime($comment->created_date)); ?></span>
 		</div>
 		<p class="revire-descr"><?= $comment->review ?></p>
 	</div>

@@ -19,12 +19,18 @@ class PostsController extends MyController {
 		
 		$modelPost = new \common\models\Posts();
 		$modelCate = new \common\models\Category();
-		
+		//\common\components\Utility::debugData($model);
 		//set active menu on header
-		$homePageCate = \common\models\Category::findOne(['id' => $model->cate_id]);
-		$this->activeMenu = $homePageCate;
-		
+		$this->activeMenu = \common\models\Category::findOne(['id' => $model->cate_id]);;
         $this->infoConfig = ['keywords' => $model->keywords, 'description' => $model->description];
+        
+        //get related software
+        $listRelated = \common\models\Posts::find()
+                        ->where(['sub_id' => $model->sub_id])
+                        ->andWhere(['<>','id',$model->id])
+                        ->orderBy(['views' => SORT_DESC])
+                        ->limit(10)
+                        ->all();
 
         Yii::$app->view->title = 'Download '.$model->title;
 		
@@ -35,7 +41,8 @@ class PostsController extends MyController {
 			'infoCate' => $modelCate->findOne(['id' => $model->cate_id]),
 			'subCate' => $modelCate->findOne(['id' => $model->sub_id]),
 			'listPost' => $modelPost->getListPosts(),
-			'listComment' => $listComment
+			'listComment' => $listComment,
+            'listRelated' => $listRelated
 		]);
     }
 
@@ -47,12 +54,18 @@ class PostsController extends MyController {
         }
         
         //set active menu on header
-		$homePageCate = \common\models\Category::findOne(['id' => $model->cate_id]);
-		$this->activeMenu = $homePageCate;
-        
+		$this->activeMenu = \common\models\Category::findOne(['id' => $model->cate_id]);
         $this->infoConfig = ['keywords' => $model->keywords, 'description' => $model->description];
+        
+        //get related software
+        $listRelated = \common\models\Posts::find()
+                        ->where(['sub_id' => $model->sub_id])
+                        ->andWhere(['<>','id',$model->id])
+                        ->orderBy(['views' => SORT_DESC])
+                        ->limit(10)
+                        ->all();
 
-        Yii::$app->view->title = 'Download options '.$model->title;
+        Yii::$app->view->title = 'Tùy chọn download '.$model->title.' - Tải '.$model->title.' miễn phí';
 
         $modelPost = new \common\models\Posts();
 		$modelCate = new \common\models\Category();
@@ -61,7 +74,8 @@ class PostsController extends MyController {
 			'model' => $model,
 			'infoCate' => $modelCate->findOne(['id' => $model->cate_id]),
 			'subCate' => $modelCate->findOne(['id' => $model->sub_id]),
-			'listPost' => $modelPost->getListPosts()
+			'listPost' => $modelPost->getListPosts(),
+            'listRelated' => $listRelated
 		]);
     }
 

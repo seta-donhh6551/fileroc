@@ -89,6 +89,9 @@ a.download, a.review{
     background: -moz-linear-gradient(top,#F30,#f30);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db72f',endColorstr='#4e7d0e');
 }
+a.download:hover{
+    background: -webkit-gradient(linear,left top,left bottom,from(#64991e),to(#64991e));
+}
 a.review {
     width: 140px;
     height: 30px;

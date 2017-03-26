@@ -3,7 +3,7 @@
 		<img src="<?= Yii::$app->request->baseUrl; ?>img/adsense-300x250.gif" />
 	</div>
 	<div id="popular">
-		<h2>Popular Download</h2>
+		<h2>Phần Mềm Tương Tự</h2>
 		<div class="popular">
 			<?php if(isset($listPost)){ ?>
 			<?php foreach($listPost as $postItem){ ?>

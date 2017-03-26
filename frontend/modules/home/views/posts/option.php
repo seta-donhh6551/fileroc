@@ -19,18 +19,19 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
         <?= $this->render('//layouts/navigator', ['navigator' => $navigator]); ?>
         <div id="download-option" class="padbot">
             <div class="download-now" style="width:660px">
-                <h1>Download <?= $model->title ?></h1>
+                <h1>Download <?= $model->title ?> miễn phí</h1>
                 <p><?= $model->short_intro ?></p>
             </div>
-            <div class="download-now">
-                <p>Để tải phần mềm <?= $model->title ?>, bạn click trực tiếp vào các link sau để tải về máy của mình</p>
+            <div class="download-now" style="text-align:center">
+                <a href="<?= $model->url_soft ?>">
+                    <img src="<?= Yii::$app->request->baseUrl; ?>img/download-cicle-icon.jpg" alt="Download <?= $model->title ?>" />
+                    <span class="red">Tải phần mềm</span>
+                </a>
+                <p>&nbsp;</p>
+                
             </div>
             <div class="download-option">
-                <h3 class="link-title">Link Trực Tiếp</h3>
-                <div class="cls" style="padding:7px"></div>
-                <p class="hand martop"><?= $model->url_soft ?></p>
-                <p class="hand-right"><a href="<?= $model->url_soft ?>" class="download-small" data-id="<?= $model->id ?>">Tải về</a></p>
-                <div class="cls"></div>
+                <p>Nếu liên kết trên bị hỏng, bạn có thể tải <?= $model->title ?> từ các link dự phòng dưới đây</p>
             </div>
             <?php if($model->url_provide1){ ?>
             <div class="download-option">
@@ -93,7 +94,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
                 </table>
             </div>
             <div class="related bortop martop">
-                <h2>Related Applications and replace</h2>
+                <h2>PHẦN MỀM TƯƠNG TỰ</h2>
                 <div class="related-soft">
                     <?php if(isset($listPost)){ ?>
                     <?php foreach($listPost as $postItem){ ?>
@@ -116,7 +117,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
     </div>
     <div id="right-page">
         <?= $this->render('//layouts/popular-download',[
-            'listPost' => $listPost
+            'listPost' => $listRelated
         ]);
         ?>
     </div>

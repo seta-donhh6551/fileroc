@@ -254,7 +254,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 	</div>
 	<div id="right-page">
 		<?= $this->render('//layouts/popular-download',[
-			'listPost' => $listPost
+			'listPost' => $listRelated
 		]);
 		?>
 	</div>
