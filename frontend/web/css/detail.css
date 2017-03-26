@@ -108,6 +108,9 @@ a.review {
 .download-option p{
     margin: 0px;
 }
+.download-option p:hover{
+    color: #f00;
+}
 .download-small{
     float: right;
     width: 120px;

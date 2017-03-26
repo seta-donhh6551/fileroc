@@ -22,14 +22,14 @@
         <div class="container main-splash">
             <div>
                 <div class="splash-text">
-                    <div class="splash-content">
+                    <!-- <div class="splash-content">
                         <h1>Luôn Cập Nhật<br>Phiên Bản Mới Nhất</h1>
                         <ul>
                             <li>Dễ dàng tìm kiếm và download phần mềm miễn phí</li>
                             <li>Đã được kiểm tra không có phần mềm độc hại, virus</li>
                             <li>Không có quảng cáo, toolbars hoặc trình cài đặt khác</li>
                         </ul>
-                    </div>
+                    </div> -->
 
                     <!-- <div class="software-button"><a href="/browse-software/">Tìm Kiếm Phần Mềm</a></div>
                     <div class="software-button latest-button"><a href="/latest/">Mới Cập Nhật</a></div> -->

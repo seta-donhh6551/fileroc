@@ -35,7 +35,7 @@
 }
 #site-header {
     height: 60px;
-    background-color: #0093de;
+    background-color: #e0001f;
     border-color: #66beeb;
     border-bottom: none;
     font-family: 'Open Sans', sans-serif;
@@ -51,7 +51,7 @@
     #site-header .container,
     #site-header-secondary-nav .container {
         width: 1100px;
-        padding-left: 25px
+        padding-left: 15px
     }
 }
 a:hover{
@@ -83,7 +83,7 @@ a:hover{
     padding: 5px 10px;
     pointer-events: none;
     z-index: 5;
-    color: #0093de;
+    color: #333;
     font-size: 22px
 }
 #site-header .search-box {
@@ -98,7 +98,7 @@ a:hover{
 }
 #site-header .nav .open>a,
 #site-header .nav .open>a:focus {
-    background-color: #0093de;
+    background-color: #e0001f;
     color: #fff
 }
 #site-header .dropdown-menu li:hover,
@@ -1331,7 +1331,7 @@ q {
 #header-mobile .blue-menu {
     font-family: 'Open Sans', sans-serif;
     height: 50px;
-    background-color: #0093de;
+    background-color: #e0001f;
     padding: 0 10px 0 10px;
     line-height: normal
 }
@@ -3781,14 +3781,14 @@ a:hover {
 #category-popular-software li:first-child {
     width: 141px;
     height: 30px;
-    border: 2px solid #0083c6;
+    border: 2px solid #e0001f;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    background-color: #0091dd;
+    background-color: #e0001f;
     color: #fff;
     font-weight: 700;
     padding-left: 10px;
-    line-height: 28px
+    line-height: 28px;
 }
 #category-navigation li:first-child a.internal-link,
 #category-navigation li:first-child.highlighted a.internal-link {
@@ -4212,6 +4212,23 @@ section {
     }
 }
 @media (max-width: 767px) {
+    .intro-content img{
+        width: 100%;
+        height: auto;
+    }
+    #content-main #left-all {
+        float: left;
+        max-width: 730px;
+        width: 100%;
+    }
+    #right-page {
+        position: static !important;
+    }
+    #right-page .fixed-bot {
+        position: static !important;
+        bottom: 100px;
+        z-index: 99;
+    }
     .container {
         margin-right: auto;
         margin-left: auto;
@@ -4636,7 +4653,8 @@ section {
         padding-left: 1px
     }
     #content-main {
-        width: 300px
+        width: 300px;
+        overflow: hidden;
     }
     #category-header {
         border-bottom: 2px solid #d4dadf;

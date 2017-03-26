@@ -38,7 +38,7 @@
 }
 #site-header .navbar-nav>li>.dropdown-menu {
     padding: 0;
-    background-color: #0093de;
+    background-color: #e0001f;
     border-radius: 0
 }
 #site-header .dropdown-menu li {
@@ -353,7 +353,7 @@
     margin-right: auto;
     background-repeat: no-repeat;
     height: 250px;
-    width: 1052px;
+    width: 1070px;
     margin: 0px auto;
 }
 .height-fix {
@@ -371,7 +371,7 @@
     margin-top: 10px
 }
 .software-button {
-    background-color: #0095e0;
+    background-color: #e0001f;
     border-radius: 3px;
     height: 45px;
     text-align: center;
@@ -386,7 +386,7 @@
 }
 .software-button a:hover {
     text-decoration: none;
-    color: #f00;
+    color: #000000;
 }
 .splash-image {
     margin-left: 30px;
@@ -612,7 +612,7 @@ h2 a:hover {
 .left-hand-col {
     padding-top: 17px;
     width: 728px;
-    margin-left: 30px
+    margin-left: 20px
 }
 #categories {
     padding-right: 5px;
@@ -744,7 +744,8 @@ h2 a:hover {
     text-decoration: none
 }
 #popular a:hover {
-    text-decoration: none
+    text-decoration: none;
+    color: #f00
 }
 .soft-news {
     width: 328px
