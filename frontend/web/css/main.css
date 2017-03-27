@@ -4245,6 +4245,15 @@ section {
     padding: 20px 0px 0px 20px;
 }
 @media (max-width: 767px) {
+    .down-right h2 {
+        padding: 10px 0px;
+    }
+    .down-right {
+        text-align: center;
+    }
+    .down-right a {
+        margin: 0px 15px !important;
+    }
     .full-content img{
         width: 100%;
         height: auto;
