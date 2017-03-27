@@ -63,7 +63,9 @@ class CategoryController extends MyController
 
 		$listSubCategory = $model->getListSubCategory($cateId);
 		
-		$listPopular = $modelPost->orderBy(['views' => 'desc'])->limit(10)->all();
+		$listPopular = $modelPost->orderBy(['views' => SORT_DESC])
+						->limit(10)
+						->all();
 
         Yii::$app->view->title = 'Phần mềm '.$homePageCate->name.', Tìm kiếm và tải phần mềm '.$model->name;
 		
@@ -98,25 +100,35 @@ class CategoryController extends MyController
         if (!$model){
             throw new \yii\web\HttpException(404, 'The requested item could not be found.');
         }
-
+		
 		$this->infoConfig = ['keywords' => $model->keywords, 'description' => $model->description];
 
 		$cateId = $model->id;
-        $modelPost = new \common\models\Posts();
+		$modelPost = \common\models\Posts::find()
+					->where(['kid_id' => $cateId]);
+		
+		$pagination = new \yii\data\Pagination([
+            'defaultPageSize' => \common\components\Utility::$defaultPageSize,
+            'totalCount' => $modelPost->count()
+        ]);
+		
+		$listPost = $modelPost->offset($pagination->offset)
+						->limit($pagination->limit)
+						->all();
 
 		$listSubCategory = $model->getListSubCategory($cateId);
+		
+        Yii::$app->view->title = $model->name.', Freefile.vn miễn phí download phần mềm';
 
-        Yii::$app->view->title = $model->name.', Free download';
-
-        $limit = 10;
-
-		$listPost = $modelPost->getListBySubId($cateId, true);
 
 		return $this->render('index', [
+			'leftMenuTitle' => '',
 			'model' => $model,
 			'listPost' => $listPost,
 			'infoCate' => $model->findOne(['id' => $model->parent_id]),
 			'infoSubCate' => $model->findOne(['id' => $model->child_id]),
+			'listChilds' => $model->getListSubCategory($model->child_id, 2, true),
+			'pages' => $pagination,
 			'subCategory' => [
 				'listMenu' => $listSubCategory,
 				'titleMenu' => $model->name,

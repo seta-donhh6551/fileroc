@@ -55,7 +55,7 @@ return [
 				'/tim-kiem.html' => 'home/default/search',
                 '/<rewrite:[a-zA-Z0-9_-]+>/<slug:tai-nhieu-nhat>.html' => 'home/popular/index',
                 '/<rewrite:[a-zA-Z0-9_-]+>/<slug:moi-cap-nhat>.html' => 'home/popular/index',
-                //'/<keyword:[a-zA-Z0-9_-]+>-<id:[0-9]+>.html' => 'home/default/detail',
+                '/<rewrite:[a-zA-Z0-9_-]+>-<id:[0-9]+>.html' => 'home/tutorials/index',
                 '/<rewrite:[a-zA-Z0-9_-]+>.html' => 'home/default/index',
 				'/download/<rewrite:[a-zA-Z0-9_-]+>.html' => 'home/posts/index',
 				'/download-option/<rewrite:[a-zA-Z0-9_-]+>.html' => 'home/posts/option',

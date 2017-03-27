@@ -51,13 +51,13 @@ use yii\widgets\ActiveForm;
                 <div>
                     <div style="padding-top:10px">
                         <div id="soft-news">
-                            <h2><a href="#">Thủ thuật & Hướng Dẫn</a></h2>
+                            <h2 style="margin-bottom:20px"><a href="#">Thủ thuật & Hướng Dẫn</a></h2>
                             <div class="latest-software-news">
 								<?php if(isset($listTutorials)){ ?>
 								<?php foreach($listTutorials as $tutorials){ ?>
                                 <div class="news-data">
                                     <div class="news-title">
-                                        <h3><a href="<?= Yii::$app->request->baseUrl.$tutorials['rewrite']; ?>.html"><?= $tutorials['title']; ?></a></h3>
+                                        <h3><a href="<?= Yii::$app->request->baseUrl.$tutorials['rewrite'].'-'.$tutorials['id']; ?>.html"><?= $tutorials['title']; ?></a></h3>
                                     </div>
                                     <a href="#">
                                         <div class="news-image-overlay">
