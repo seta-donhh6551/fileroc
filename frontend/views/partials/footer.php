@@ -184,9 +184,8 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/vote.js"></script>
+
 <!-- <script type="text/javascript" src="js/master2013.min.js"></script> -->
-<!--script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/master2013.min.js"></script-->
 <!--[if lt IE 10]>
 <script type="text/javascript" src="http://cache.filehippo.com/inc/jquery.placeholder.js"></script>
 <script type="text/javascript">
@@ -205,4 +204,6 @@
    (function ($, d) { $.each(readyQ, function (i, f) { $(f) }); $.each(bindReadyQ, function (i, f) { $(d).bind("ready", f) }) })(jQuery, document)
 </script> -->
 <script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/vote.js"></script>
+<script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/script.js"></script>
 <!-- <script src="http://cache.filehippo.com/scripts/v5/jquery-scrolltofixed.min.js" type="text/javascript"></script> -->

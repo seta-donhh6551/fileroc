@@ -108,7 +108,7 @@ a:hover{
 .bootstrap-home .dropdown-menu>li>a:focus,
 .bootstrap-home .dropdown-menu>li>a:hover {
     background-color: #fff;
-    color: #0093de
+    color: #e0001f
 }
 #site-header .nav>li>a:focus {
     background-color: #0093de;
@@ -1417,10 +1417,10 @@ q {
     font-family: 'Open Sans', sans-serif;
     z-index: 10;
     width: 120px;
-    background-color: rgba(46, 51, 55, .8);
+    background-color: rgb(0, 146, 221);
     padding-left: 10px;
     position: absolute;
-    top: 0;
+    top: 50px;
     left: 0;
     display: none
 }
@@ -1471,7 +1471,7 @@ q {
     font-family: 'Open Sans', sans-serif
 }
 #footer-desktop .grey-top {
-    background-color: #f2f2f2;
+    background-color: #e0001f;
     width: 100%
 }
 #footer-desktop .footer-space {
@@ -1486,7 +1486,8 @@ q {
 }
 #footer-desktop .footer-container {
     padding: 5px 0 15px;
-    overflow: hidden
+    overflow: hidden;
+    color:#fff;
 }
 #footer-desktop .left-footer-menu {
     float: left;
@@ -1508,7 +1509,7 @@ q {
     float: left;
     padding-right: 20px;
     padding-left: 20px;
-    border-right: solid 1px #0095e0;
+    border-right: solid 1px #fff;
     font-size: 16px
 }
 #footer-desktop .firstmenu {
@@ -1520,7 +1521,11 @@ q {
 }
 #footer-desktop a {
     font-size: 14px;
-    outline: 0
+    outline: 0;
+    color: #fff;
+}
+#footer-desktop a:hover{
+    color: #000;
 }
 #footer-desktop .lastmenu {
     border-right: 0!important;
@@ -1628,15 +1633,18 @@ q {
     float: right
 }
 #footer-mobile .grey-top {
-    background-color: #f2f2f2;
+    background-color: #e0001f;
     padding-top: 10px;
-    border-bottom: solid 2px #e3e8ea;
+    border-bottom: solid 2px #e0001f;
     -webkit-box-sizing: initial;
-    box-sizing: initial
+    box-sizing: initial;
 }
 #footer-mobile .footer-space {
-    margin-top: 35px;
-    height: 40px
+    margin-top: 25px;
+    height: 40px;
+    float: left;
+    width: 100%;
+    height: auto;
 }
 #footer-mobile .clearfix {
     clear: both;
@@ -1668,7 +1676,8 @@ q {
     font-size: 16px;
     list-style-type: none;
     margin: 0;
-    padding: 0 10px
+    padding: 0 10px;
+    border: none;
 }
 #footer-mobile .firstmenu {
     padding-left: 0!important
@@ -1678,8 +1687,8 @@ q {
     padding-right: 0!important
 }
 #footer-mobile a {
-    color: -webkit-link;
-    text-decoration: underline
+    color: #ffffff;
+    text-decoration: none;
 }
 #footer-mobile .copy {
     font-size: 12px;
@@ -3013,7 +3022,7 @@ a:hover {
     z-index: 100;
     display: none;
     left: 50%;
-    margin-left: -47.5%
+    margin-left: -32.5%;
 }
 .roll-over-search input {
     position: relative;
@@ -4236,6 +4245,10 @@ section {
     padding: 20px 0px 0px 20px;
 }
 @media (max-width: 767px) {
+    .full-content img{
+        width: 100%;
+        height: auto;
+    }
     .width100-mobile{
         width: 100% !important;
     }
@@ -4362,6 +4375,7 @@ section {
         float: left;
         padding-left: 0px;
         padding-right: 2px;
+        color: #fff;
     }
     #footer-mobile .left-footer-menu {
        padding-left: 0px !important;

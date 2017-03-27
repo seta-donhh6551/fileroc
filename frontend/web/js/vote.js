@@ -1,4 +1,4 @@
-$(document).ready(function(){
+jQuery(document).ready(function($){
     var object = $(".star-button span");
     var active = $(".review-star .star-active");
     var title = $('.review-star-title');
