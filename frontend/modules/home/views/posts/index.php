@@ -35,7 +35,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 				<div class="cls"></div>
 			</div>
 			<div class="cls"></div>
-			<div style="width: 363px; float: left">
+			<div class="detail-info-left">
 				<table cellpadding="0">
 					<tr>
 						<td>Nhà phát hành</td>
@@ -85,8 +85,8 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 					</tr>
 				</table>
 			</div>
-			<div style="width: 350px; float: left; margin-left: 15px; padding-top: 30px; text-align: center">
-                <img src="<?= Yii::getAlias('@web') ?>/uploads/<?= $model->thumb ?>" alt="<?= $model->title ?>" width="150" style="margin-bottom:15px"/>
+			<div class="detail-info-right">
+                <img src="<?= Yii::getAlias('@web') ?>/uploads/<?= $model->thumb ?>" alt="<?= $model->title ?>" width="150" style="margin-bottom:5px"/>
 				<p><?= $model->short_info ?></p>
 			</div>
 			<div class="cls"></div>
@@ -192,7 +192,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 						</div>
 					</div>
 				</div>
-				<div style="width:260px;float:left;color:#999;padding:20px 0px 0px 20px">
+				<div class="detail-ques-reviews" style="width:260px;float:left;color:#999;padding:20px 0px 0px 20px">
 					Bạn có muốn đánh giá cho sản phẩm này không?
 					<a class="review" style="margin-top:10px">Viết đánh giá</a>
 				 </div>
@@ -221,7 +221,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 							<label>Viết đánh giá <span class="red">*</span></label> <textarea name="review" cols="50" rows="5"></textarea>
 						</div>
 						<div class="form-items" style="padding:0px">
-							<label>&nbsp;</label>
+							<label class="width100-mobile">&nbsp;</label>
 							Bạn muốn đánh giá phần mềm này mấy sao?
 						</div>
 						<div class="form-items" style="padding:0px">

@@ -1195,7 +1195,7 @@ q {
 }
 #header-tablet .blue-menu {
     height: 75px;
-    background-color: #0093de;
+    background-color: #e0001f;
     font-family: 'Open Sans', sans-serif;
     line-height: normal
 }
@@ -4044,6 +4044,13 @@ section {
     padding: 30px 0 30px 0
 }
 @media only screen and (min-width:768px) and (max-width: 991px) {
+    #content-main {
+        padding-left: 10px!important;
+        width: 100%;
+    }
+    #right-page{
+        display: none !important;
+    }
     .grey-top .bg {
         background-size: cover;
         width: 100%;
@@ -4211,7 +4218,73 @@ section {
         margin-right: 70px
     }
 }
+.detail-info-left{
+    width: 50%;
+    float: left;
+}
+.detail-info-right{
+    width: 45%;
+    float: left;
+    margin-left: 15px;
+    padding-top: 30px;
+    text-align: center;
+}
+.detail-ques-reviews{
+    width: 260px;
+    float: left;
+    color: #999;
+    padding: 20px 0px 0px 20px;
+}
 @media (max-width: 767px) {
+    .width100-mobile{
+        width: 100% !important;
+    }
+    .review-form {
+        width: 100% !important;
+    }
+    .review-form .review-form-body {
+        max-width: 660px;
+        width: 100%;
+    }
+    .form-items input{
+        width: 100%;
+    }
+    .form-items textarea{
+        width: 100%;
+    }
+    
+    .detail-ques-reviews{
+        padding: 20px 0px 10px 20px !important;
+    }
+    .rating-right{
+        display: none;
+    }
+    #reviews .user-rating {
+        width: 100%;
+    }
+    .detail-info-right{
+        width: 100%;
+    }
+    .detail-info-left{
+        width: 100%;
+        float: left;
+    }
+    #left-all #navigation{
+        width: 100%;
+    }
+    #left-all #navigation ul li {
+        float: left;
+        margin-right: 15px;
+        width: 50%;
+    }
+    .download-now .down-left {
+        width: 100%;
+        float: left;
+    }
+    .download-now .down-left a.download{
+        margin: 0px auto;
+        margin-bottom: 10px;
+    }
     .intro-content img{
         width: 100%;
         height: auto;
@@ -4220,9 +4293,11 @@ section {
         float: left;
         max-width: 730px;
         width: 100%;
+        padding-top: 0px;
     }
     #right-page {
         position: static !important;
+        display: none;
     }
     #right-page .fixed-bot {
         position: static !important;

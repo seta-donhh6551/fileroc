@@ -77,7 +77,8 @@
         <div class="container container-fh header">
             <div class="logo-holder">
                 <a href="../../index.html" title="Home">
-                    <img src="http://cache.filehippo.com/img/new/logo-small.png" alt="FileHippo - Software that matters" />
+                    <!-- <img src="/img/new/logo-small.png" alt="FreeFile - Software that matters" /> -->
+                    <img src="<?= Yii::$app->request->baseUrl; ?>img/new/logo-small.png" alt="FileHippo - Software that matters" />
                 </a>
             </div>
             <div class="os-options">
