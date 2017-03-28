@@ -1,3 +1,30 @@
+#tutorial-menu{
+    float: left;
+	width: 190px;
+	min-height: 300px;
+}
+#tutorial-content{
+    float: left;
+	width: 562px;
+	margin: 0px 10px 0px 15px;
+	min-height: 300px;
+}
+#tutorial-right{
+    float: left;
+	width: 250px;
+	margin-top: 10px;
+	min-height: 300px;
+}
+#content_left_menu{width:190px;height:auto;margin:0px 0px 10px 0px;}
+#content_left_menu h2{height:35px;line-height:35px;color:#ffa100;padding-left:22px;font-size:16px;padding-top:10px;}
+#left_menu_top{height:35px;background:url(../img/menu_left_top.jpg) no-repeat}
+#left_menu_mid{padding-top:10px;background:url(../img/menu_left_mid.jpg) repeat-y}
+#left_menu_bot{height:25px;background:url(../img/menu_left_bot.jpg) no-repeat}
+#content_left_menu img{margin:11px 5px 0px 0px;}
+#content_left_menu ul{list-style:none;margin:0px;padding:0px}
+#content_left_menu ul li{}
+#content_left_menu ul li a{line-height:30px;width:165px;float:left;margin:0px 10px;display:block;color:#666;background:url(../img/more.png) 13px 50% no-repeat;padding-left:25px;border-bottom:1px dashed #ffa100;font-size:13px}
+#content_left_menu ul li a:hover{color:#ff7200;background:url(../img/more1.png) 13px 50% no-repeat;}
 #left-all{
     float: left;
 	width: 730px;

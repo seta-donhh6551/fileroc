@@ -12,7 +12,17 @@ class TutorialsController extends MyController {
 
     public function actionIndex($rewrite, $id)
 	{
-		echo $id;
-		\common\components\Utility::debugData($rewrite);
+		Yii::$app->view->title = 'Freefile.vn, Hướng dẫn thủ thuật internet và pc miễn phí';
+		
+		$model = \common\models\Category::findOne(['id' => 4]);
+		if(!$model){
+				throw new \yii\web\HttpException(404, 'The requested item could not be found.');
+		}
+		
+		//set active menu on header
+		$this->activeMenu = $model;
+		$this->infoConfig = ['keywords' => $model->keywords, 'description' => $model->description];
+		
+		return $this->render('index', []);
     }
 }

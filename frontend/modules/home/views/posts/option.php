@@ -55,7 +55,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
         </div>
         <div id="download-detail" class="cls">
             <div class="detail-intro padbot">
-                <img src="<?= Yii::$app->request->baseUrl; ?>img/adsense-468x60.gif" style="margin-left: 100px"/>
+                <img src="<?= Yii::$app->request->baseUrl; ?>img/adsense-468x60.gif" style="margin-left:100px"/>
             </div>
             <div class="soft-info">
                 <table cellpadding="0" class="tblvoted">
