@@ -1467,9 +1467,6 @@ q {
 #mobile-roll-over-search input:focus {
     outline: 0
 }
-#footer-desktop {
-    font-family: 'Open Sans', sans-serif
-}
 #footer-desktop .grey-top {
     background-color: #e0001f;
     width: 100%

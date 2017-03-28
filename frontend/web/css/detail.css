@@ -6,6 +6,7 @@
 #tutorial-content{
     float: left;
 	width: 562px;
+    padding: 10px;
 	margin: 0px 10px 0px 15px;
 	min-height: 300px;
 }
@@ -25,6 +26,7 @@
 #content_left_menu ul li{}
 #content_left_menu ul li a{line-height:30px;width:165px;float:left;margin:0px 10px;display:block;color:#666;background:url(../img/more.png) 13px 50% no-repeat;padding-left:25px;border-bottom:1px dashed #ffa100;font-size:13px}
 #content_left_menu ul li a:hover{color:#ff7200;background:url(../img/more1.png) 13px 50% no-repeat;}
+#ads-left{margin-top: 15px;text-align: center}
 #left-all{
     float: left;
 	width: 730px;
@@ -91,6 +93,12 @@
 #reviews{
     margin: 50px 0px;
 }
+#tutorial-body,.tutorial-body{font-size:13px;text-align:justify}
+.tutorial-body img{max-width:540px;}
+.tutorial-body h3{font-size:15px;font-weight:bold}
+.tutorial-title h2{font-size:16px;color:#666}
+.tutorial-description{margin-bottom:15px}
+.ads-250{margin-bottom: 15px}
 .download-now{
 	text-align: left;
 	margin-bottom: 20px;
@@ -174,7 +182,8 @@ a.review {
 }
 .topdown p{
     font-size: 13px;
-	color: #888
+	color: #888;
+    overflow: hidden
 }
 .topdown img{
 	width: 30px;

@@ -12,17 +12,24 @@ class TutorialsController extends MyController {
 
     public function actionIndex($rewrite, $id)
 	{
-		Yii::$app->view->title = 'Freefile.vn, Hướng dẫn thủ thuật internet và pc miễn phí';
-		
 		$model = \common\models\Category::findOne(['id' => 4]);
 		if(!$model){
-				throw new \yii\web\HttpException(404, 'The requested item could not be found.');
+            throw new \yii\web\HttpException(404, 'The requested item could not be found.');
 		}
 		
 		//set active menu on header
 		$this->activeMenu = $model;
 		$this->infoConfig = ['keywords' => $model->keywords, 'description' => $model->description];
 		
-		return $this->render('index', []);
+        $modelTutorial = \common\models\Tutorials::findOne(['id' => $id]);
+        if(!$modelTutorial){
+            throw new \yii\web\HttpException(404, 'Trang không tồn tại!');
+        }
+        
+        Yii::$app->view->title = $modelTutorial->title.' - Thủ thuật phần mềm miễn phí';
+        
+		return $this->render('index', [
+            'model' => $modelTutorial
+        ]);
     }
 }
