@@ -24,13 +24,10 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/'.$model['rewrite'].'-'.$model[
 			</div>
 			<div id="left_menu_mid">
 				<ul>
-					<li><a href="http://phpandmysql.net/html-css.html" title="Html Css">Html Css</a></li>
-					<li><a href="http://phpandmysql.net/javascript-jquery.html" title="Javascript &amp; jQuery">Javascript &amp; jQuery</a></li>
-					<li><a href="http://phpandmysql.net/php-can-ban.html" title="PHP Căn bản">PHP Căn bản</a></li>
-					<li><a href="http://phpandmysql.net/php-nang-cao.html" title="PHP Nâng cao">PHP Nâng cao</a></li>
-					<li><a href="http://phpandmysql.net/php-training.html" title="PHP Training">PHP Training</a></li>
-					<li><a href="http://phpandmysql.net/yii2-framework.html" title="Yii2 Framework">Yii2 Framework</a></li>
-					<li><a href="http://phpandmysql.net/codeigniter-framework.html" title="Codeigniter Framework">Codeigniter Framework</a></li>
+					<?php if(isset($listCategory)){ ?>
+					<?php foreach($listCategory as $categoryTuto){ ?>
+					<li><a href="<?= Yii::getAlias('@web').$categoryTuto['rewrite']; ?>.html" title="<?= $categoryTuto['name']; ?>"><?= $categoryTuto['name']; ?></a></li>
+					<?php } } ?>
 				</ul>
 				<div class="cls"></div>
 			</div>

@@ -28,9 +28,14 @@ class TutorialsController extends MyController {
 		$this->infoConfig = ['keywords' => $modelTutorial->keywords, 'description' => $modelTutorial->description];
         
         Yii::$app->view->title = $modelTutorial->title.' - Thủ thuật phần mềm miễn phí';
-        
+		
+		$listCategory = \common\models\Categorytutorial::find()
+						->where(['status' => 1])
+						->all();
+		
 		return $this->render('index', [
-            'model' => $modelTutorial
+            'model' => $modelTutorial,
+			'listCategory' => $listCategory
         ]);
     }
 }
