@@ -82,7 +82,7 @@ $(window).scroll(function () {
 
 //left scroll
 $(window).scroll(function () {
-	scrollWindows('#scroll-left', '#ads-two', '#footer-desktop');
+	scrollWindows('#content_left_menu', '#ads-two', '#footer-desktop');
 });
 
 function scrollWindows(Object, elementTo, lastObj){

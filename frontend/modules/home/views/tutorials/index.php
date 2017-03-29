@@ -13,6 +13,15 @@ $navigator = [
 $navigator[] = ['url' => Yii::getAlias('@web').'/'.$model['rewrite'].'-'.$model['id'],'title' => $model['title']];
 ?>
 <link href="<?= Yii::$app->request->baseUrl; ?>css/detail.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+document.write('<div id="fb-root"></div>');
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1&appId=199828456846777";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/scroll.js"></script>
 <div id="content-main" class="nopadding" style="margin-top:10px">
@@ -34,8 +43,11 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/'.$model['rewrite'].'-'.$model[
 			<div id="left_menu_bot"></div>
 		</div>
         <div id="ads-left">
-            <img src="<?= Yii::$app->request->baseUrl; ?>img/acai-160x600.gif" width="160" />
+            <img src="<?= Yii::$app->request->baseUrl; ?>img/google-adsense-200x200.png" width="190" />
         </div>
+            <div style="margin-top:10px">
+            <img src="<?= Yii::$app->request->baseUrl; ?>img/200x200.jpg" width="190" />
+        </div> 
 		</div>
 		<div id="ads-two" style="height:30px">
 		<!--img src="/img/adsense-300x250-01.gif" width="300" /-->
@@ -52,6 +64,10 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/'.$model['rewrite'].'-'.$model[
             </div>
             <div class="tutorial-body">
                 <?= $model->fullcontent ?>
+            </div>
+            <div style="margin:10px 0px 30px 0px;border-bottom:1px solid #DDD;"></div>
+            <div id="commentfa">
+            	<div class="fb-comments" data-href="<?php echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" data-width="540" data-num-posts="100"></div>
             </div>
         </div>
 	</div>
@@ -97,7 +113,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/'.$model['rewrite'].'-'.$model[
         <div class="popular-soft" style="width:250px">
 			<h2>Bài Viết Mới</h2>
 			<div id="techbeat-widget" style="width:250px">
-			<div class="tb_postItem">
+                <div class="tb_postItem" style="margin-top:5px">
 			 <div class="tb_postImage">
 				 <a rel="bookmark" href="/huong-dan-tao-usb-boot-bang-hiren's-boot-cho-window-7810.html" title="Hướng dẫn tạo usb boot bằng hiren's boot cho window 7,8,10">
 					 <img src="/uploads/thumb/tao-boot-usb.jpg" alt="Hướng dẫn tạo usb boot bằng hiren's boot cho window 7,8,10">
@@ -159,6 +175,10 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/'.$model['rewrite'].'-'.$model[
 		 </div>
 		 	  </div>
 		</div>
+        <div class="popular-soft" style="width:250px;margin-top:20px">
+            <h2 style="margin-bottom:5px !important">FreeFile.Vn Trên Facebook</h2>
+            <object style="border:1px solid #DDD; overflow: hidden; width: 250px; height: 300px;"  data="http://www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/hocthietkewebsite&amp;width=250&amp;height=300&amp;connections=10&amp;header=false"></object>
+        </div>
 	</div>
 	<div class="cls"></div>
 </div>

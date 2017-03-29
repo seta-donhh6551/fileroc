@@ -2962,11 +2962,12 @@ a:hover {
 }
 .tb_postTitle {
     height: 50px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    /*overflow: hidden;
+    text-overflow: ellipsis;*/
     vertical-align: middle;
     padding-top: 4px;
-    font-size: 13px
+    font-size: 13px;
+    text-align: justify
 }
 .tb_postTitle a {
     text-decoration: none;
@@ -2976,6 +2977,9 @@ a:hover {
     text-decoration: underline;
     color: #0092dd;
     text-decoration: underline
+}
+.tb_postImage{
+    width:81px
 }
 #content-wrapper {
     margin: 0 auto;

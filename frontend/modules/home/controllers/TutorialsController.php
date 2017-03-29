@@ -16,7 +16,7 @@ class TutorialsController extends MyController {
 		if(!$model){
             throw new \yii\web\HttpException(404, 'The requested item could not be found.');
 		}
-		
+        
 		//set active menu on header
 		$this->activeMenu = $model;
 		
