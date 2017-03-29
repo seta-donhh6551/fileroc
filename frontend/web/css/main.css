@@ -1482,14 +1482,14 @@ q {
     width: 1110px
 }
 #footer-desktop .footer-container {
-    padding: 5px 0 15px;
+    padding: 5px 0 0px;
     overflow: hidden;
     color:#fff;
 }
 #footer-desktop .left-footer-menu {
     float: left;
     margin-top: 8px;
-    margin-left: 10px
+    margin-left: 0px
 }
 #footer-desktop .footer-menu {
     float: left;
@@ -1497,17 +1497,15 @@ q {
 }
 #footer-desktop .footer-menu ul {
     padding: 0;
-    margin: 0
+    margin: 0;
+    width: 100%;
 }
 #footer-desktop .footer-menu ul li {
     list-style-type: none;
-    padding: 0;
+    padding: 0px 0px;
     margin: 0;
-    float: left;
-    padding-right: 20px;
-    padding-left: 20px;
-    border-right: solid 1px #fff;
-    font-size: 16px
+    padding-left: 0px;
+    font-size: 16px;
 }
 #footer-desktop .firstmenu {
     padding-left: 0!important
@@ -1519,7 +1517,7 @@ q {
 #footer-desktop a {
     font-size: 14px;
     outline: 0;
-    color: #fff;
+    color: #e4c2c2;
 }
 #footer-desktop a:hover{
     color: #000;
@@ -1530,15 +1528,18 @@ q {
 }
 #footer-desktop .copy {
     font-size: 12px;
-    float: right
+    float: right;
+    width: 30%;
+    text-align: right;
 }
 #footer-desktop .footer-menu {
     float: left;
-    width: 535px
+    width: 30%;
 }
 #footer-desktop .right-footer-menu,
 .right-footer-menu ul {
-    float: right
+   float: left;
+    width: 30%;
 }
 #footer-desktop .right-footer-menu ul li {
     font-size: 12px
@@ -1557,7 +1558,7 @@ q {
     padding-bottom: 30px
 }
 #footer-tablet .grey-top {
-    background-color: #f2f2f2;
+    background-color: #e0001f;
     margin-left: auto;
     margin-right: auto;
     width: 100%
@@ -1599,10 +1600,10 @@ q {
     padding: 0;
     margin: 0;
     float: left;
-    padding-right: 20px;
-    padding-left: 20px;
-    border-right: solid 1px #0095e0;
-    font-size: 16px
+    font-size: 16px;
+}
+#footer-tablet .footer-menu ul li a{
+    color: #ffffff;
 }
 #footer-tablet .firstmenu {
     padding-left: 0!important
@@ -1617,17 +1618,18 @@ q {
 #footer-tablet .copy {
     font-size: 12px;
     float: right;
-    padding-right: 15px
+    padding-right: 15px;
+    color: #ffffff;
 }
 #footer-tablet .footer-menu {
-    width: 370px
+    width: 30%;
 }
 #footer-tablet .footer-rightside-group {
     padding-right: 5px
 }
 #footer-tablet .right-footer-menu {
     padding-right: 3px;
-    float: right
+    float: left;
 }
 #footer-mobile .grey-top {
     background-color: #e0001f;
@@ -1657,7 +1659,8 @@ q {
     padding: 5px 0 15px
 }
 #footer-mobile .footer-menu {
-    width: 320px
+    width: 320px;
+    padding: 10px 0px;
 }
 #footer-mobile .left-footer-menu {
     float: left;
@@ -1665,7 +1668,8 @@ q {
 }
 #footer-mobile .footer-menu ul {
     padding: 0;
-    margin: 0
+    margin: 0;
+    width: 100%;
 }
 #footer-mobile .footer-menu ul li {
     border-right: 1px solid #0095e0;
@@ -1673,8 +1677,10 @@ q {
     font-size: 16px;
     list-style-type: none;
     margin: 0;
-    padding: 0 10px;
+    /* padding: 0 10px; */
     border: none;
+    width: 100%;
+    padding: 0px 0px 5px 0px;
 }
 #footer-mobile .firstmenu {
     padding-left: 0!important
@@ -1698,7 +1704,7 @@ q {
     padding-right: 2px
 }
 #footer-mobile .right-footer-menu ul li {
-    font-size: 12px
+    font-size: 16px
 }
 .sprite {
     background-image: url(../img/commonimages.png);
@@ -5204,7 +5210,6 @@ html {
 .grey-top {
     background-color: #f2f2f2;
     padding-top: 0px;
-    border-bottom: solid 2px #e3e8ea;
 }
 @media (min-width: 768px){
     .navbar-right {
@@ -5217,4 +5222,46 @@ html {
 }
 #category-header #navigation{
     width: 100%;
+}
+.social li a {
+    background: url(../img/social.png) no-repeat;
+    float: left;
+    height: 19px;
+    margin-right: 5px;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -9999px;
+    width: 19px;
+}
+.social .fb {
+    background-position: 0 -20px;
+}
+.social .gg {
+    background-position: -48px -20px;
+}
+.social .rss {
+    background-position: -74px -20px;
+}
+.social .lki {
+    background-position: -103px -20px;
+}
+.social li{
+    float: right;
+    list-style-type: none;
+}
+.social{
+    width: 100%;
+    float: left;
+    height: auto;
+    padding: 0px;
+    padding-top: 0px;
+}
+.footer-menu h3{
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+    float: left;
+    width: 100%;
+    color: #ffffff;
+    padding-bottom: 10px;
 }

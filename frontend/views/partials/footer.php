@@ -3,6 +3,7 @@
         <div class="container container-fh">
             <div class="footer-container">
                 <div class="footer-menu left-footer-menu">
+                    <h3>Về chúng tôi</h3>
                     <ul>
                         <li class="firstmenu">
                             <a href="#" title="About">Về chúng tôi</a>
@@ -15,13 +16,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="copy">
-                    &copy;
-                    Copyright
-                    2017 FreeFile.Vn
-                    All rights reserved.
-                </div>
                 <div class="footer-menu right-footer-menu">
+                    <h3>Điều kiện điều khoản</h3>
                     <ul>
                         <li class="firstmenu"><a href="#" title="Terms and Conditions">
                                 Terms and Conditions</a>
@@ -32,6 +28,20 @@
                         <li class="lastmenu"><a href="#" title="Privacy Policy">
                                 Privacy Policy</a>
                         </li>
+                    </ul>
+                </div>
+                <div class="copy">
+                    &copy;
+                    Copyright
+                    2017 FreeFile.Vn
+                    All rights reserved.
+                </div>
+                <div class="copy">
+                    <ul class="social">                         
+                        <li><a title="Google +" class="gg" target="_blank" rel="publisher" href="https://plus.google.com/110749430077828635378">google+ Taimienphi</a></li>     
+                        <li><a rel="nofollow" href="#" target="_bank" class="rss">RSS</a></li>      
+                        <li><a rel="nofollow" href="#" target="_blank" class="lki">LinkedIn</a></li>   
+                        <li><a class="fb" rel="nofollow" title="Facebook page" target="_blank" href="https://www.facebook.com/caotung1992">Facebook</a></li>      
                     </ul>
                 </div>
             </div>
@@ -39,71 +49,25 @@
     </div>
 </div>
 <div id="footer-tablet" class="visible-sm">
-    <div class="grey-top footer-space clearfix">
+    <div class="grey-top footer-space">
         <div class="container container-fh">
             <div class="footer-container">
                 <div class="footer-menu left-footer-menu">
+                    <h3>Về chúng tôi</h3>
                     <ul>
-                        <li class="firstmenu"><a href="#" title="About">
-                                About</a>
+                        <li class="firstmenu">
+                            <a href="#" title="About">Về chúng tôi</a>
                         </li>
-                        <li><a href="#" title="Contact Us">
-                                Contact Us</a>
+                        <li><a href="#" title="Liên hệ với chúng tôi">
+                                Liên hệ với chúng tôi</a>
                         </li>
                         <li class="lastmenu"><a href="#" title="Advertise">
-                                Advertise</a>
+                                Quảng cáo</a>
                         </li>
                     </ul>
-                </div>
-                <div class="footer-rightside-group">
-                    <div class="copy">
-                        &copy;
-                        Copyright
-                        2017 FreeFile.Vn
-                        All rights reserved.
-                    </div>
-                    <div class="footer-menu right-footer-menu">
-                        <ul>
-                            <li class="firstmenu"><a href="#" title="Terms and Conditions">
-                                    Terms and Conditions</a>
-                            </li>
-                            <li><a href="#" title="Cookie Policy">
-                                    Cookie Policy</a>
-                            </li>
-                            <li class="lastmenu"><a href="#" title="Privacy Policy">
-                                    Privacy Policy</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="footer-mobile" class="visible-xs">
-    <div class="grey-top footer-space clearfix">
-        <div class="container container-fh">
-            <div class="footer-container">
-                <div class="footer-menu left-footer-menu">
-                    <ul>
-                        <li class="firstmenu"><a href="#" title="About">
-                                About</a>
-                        </li>
-                        <li><a href="#" title="Contact Us">
-                                Contact Us</a>
-                        </li>
-                        <li class="lastmenu"><a href="#" title="Advertise">
-                                Advertise</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="copy">
-                    &copy;
-                    Copyright
-                    2017 FreeFile.Vn
-                    All rights reserved.
                 </div>
                 <div class="footer-menu right-footer-menu">
+                    <h3>Điều kiện điều khoản</h3>
                     <ul>
                         <li class="firstmenu"><a href="#" title="Terms and Conditions">
                                 Terms and Conditions</a>
@@ -114,6 +78,70 @@
                         <li class="lastmenu"><a href="#" title="Privacy Policy">
                                 Privacy Policy</a>
                         </li>
+                    </ul>
+                </div>
+                <div class="copy">
+                    &copy;
+                    Copyright
+                    2017 FreeFile.Vn
+                    All rights reserved.
+                </div>
+                <div class="copy">
+                    <ul class="social">                         
+                        <li><a title="Google +" class="gg" target="_blank" rel="publisher" href="https://plus.google.com/110749430077828635378">google+ Taimienphi</a></li>     
+                        <li><a rel="nofollow" href="#" target="_bank" class="rss">RSS</a></li>      
+                        <li><a rel="nofollow" href="#" target="_blank" class="lki">LinkedIn</a></li>   
+                        <li><a class="fb" rel="nofollow" title="Facebook page" target="_blank" href="https://www.facebook.com/caotung1992">Facebook</a></li>      
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer-mobile" class="visible-xs">
+    <div class="grey-top footer-space">
+        <div class="container container-fh">
+            <div class="footer-container">
+                <div class="footer-menu left-footer-menu">
+                    <h3>Về chúng tôi</h3>
+                    <ul>
+                        <li class="firstmenu">
+                            <a href="#" title="About">Về chúng tôi</a>
+                        </li>
+                        <li><a href="#" title="Liên hệ với chúng tôi">
+                                Liên hệ với chúng tôi</a>
+                        </li>
+                        <li class="lastmenu"><a href="#" title="Advertise">
+                                Quảng cáo</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-menu right-footer-menu">
+                    <h3>Điều kiện điều khoản</h3>
+                    <ul>
+                        <li class="firstmenu"><a href="#" title="Terms and Conditions">
+                                Terms and Conditions</a>
+                        </li>
+                        <li><a href="#" title="Cookie Policy">
+                                Cookie Policy</a>
+                        </li>
+                        <li class="lastmenu"><a href="#" title="Privacy Policy">
+                                Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="copy">
+                    &copy;
+                    Copyright
+                    2017 FreeFile.Vn
+                    All rights reserved.
+                </div>
+                <div class="copy">
+                    <ul class="social">                         
+                        <li><a title="Google +" class="gg" target="_blank" rel="publisher" href="https://plus.google.com/110749430077828635378">google+ Taimienphi</a></li>     
+                        <li><a rel="nofollow" href="#" target="_bank" class="rss">RSS</a></li>      
+                        <li><a rel="nofollow" href="#" target="_blank" class="lki">LinkedIn</a></li>   
+                        <li><a class="fb" rel="nofollow" title="Facebook page" target="_blank" href="https://www.facebook.com/caotung1992">Facebook</a></li>      
                     </ul>
                 </div>
             </div>
