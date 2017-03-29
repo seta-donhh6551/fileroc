@@ -19,12 +19,13 @@ class TutorialsController extends MyController {
 		
 		//set active menu on header
 		$this->activeMenu = $model;
-		$this->infoConfig = ['keywords' => $model->keywords, 'description' => $model->description];
 		
         $modelTutorial = \common\models\Tutorials::findOne(['id' => $id]);
         if(!$modelTutorial){
             throw new \yii\web\HttpException(404, 'Trang không tồn tại!');
         }
+		
+		$this->infoConfig = ['keywords' => $modelTutorial->keywords, 'description' => $modelTutorial->description];
         
         Yii::$app->view->title = $modelTutorial->title.' - Thủ thuật phần mềm miễn phí';
         

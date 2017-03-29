@@ -3686,7 +3686,8 @@ a:hover {
     float: left;
     margin-right: 14px;
     height: 52px;
-    width: 77px
+    width: 77px;
+	padding: 2px
 }
 #categories {
     font-size: 14px

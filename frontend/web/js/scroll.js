@@ -80,6 +80,11 @@ $(window).scroll(function () {
 	scrollWindows('#scroll-right', '#ads-two', '#footer-desktop');
 });
 
+//left scroll
+$(window).scroll(function () {
+	scrollWindows('#scroll-left', '#ads-two', '#footer-desktop');
+});
+
 function scrollWindows(Object, elementTo, lastObj){
 	var window_top = $(window).scrollTop();
 	var adsHeight = $(elementTo).offset().top + $(elementTo).height();
