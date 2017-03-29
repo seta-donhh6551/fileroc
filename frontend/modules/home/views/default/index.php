@@ -107,11 +107,6 @@ use yii\widgets\ActiveForm;
                     </a>
                 </div>
                 <!-- Homepage_MPU_Bottom -->
-                <!--largeLayoutBottomMPUAdUnit -->
-                <div class="ad-unit-label" style="color: #869aab;font-size: 11px;margin-bottom: 2px;">Advertisement</div>
-                <div id="div-gpt-ad-1384762460430-4b46dd7c3eef406a91452fb1489cc077" style="" data-google-query-id="CIGOjsOH39ICFcWBvQodwagJKA">
-                    <img src="img/adsense-300x250.gif" width="300" />
-                </div>
                 <div class="outbrain-container">
                     <div id="ob_holder" style="display: none;">
                         <iframe id="ob_iframe" src="#" style="display: none; width: 1px; height: 1px;"></iframe><script type="text/javascript" src="http://log.outbrain.com/loggerServices/widgetGlobalEvent?eT=0&amp;tm=1143&amp;pid=6584&amp;sid=10873&amp;wId=110&amp;wRV=01001603&amp;rId=8112db6a041c3d4e0f32bd28e1a11031&amp;idx=0&amp;pvId=8112db6a041c3d4e0f32bd28e1a11031&amp;org=0&amp;pad=3&amp;pVis=1&amp;eIdx=&amp;ab=0&amp;wl=0" charset="UTF-8" async=""></script><script type="text/javascript" src="http://log.outbrain.com/loggerServices/widgetGlobalEvent?eT=3&amp;tm=4348535&amp;pid=6584&amp;sid=10873&amp;wId=110&amp;wRV=01001603&amp;rId=8112db6a041c3d4e0f32bd28e1a11031&amp;idx=0&amp;pvId=8112db6a041c3d4e0f32bd28e1a11031&amp;org=0&amp;pad=3&amp;pVis=1&amp;eIdx=0&amp;ab=0&amp;wl=0" charset="UTF-8" async=""></script>
@@ -186,7 +181,7 @@ use yii\widgets\ActiveForm;
                             <style type="text/css" class="ob-custom-css">
                             </style>
                             <div class="ob-widget-section ob-first">
-                                <div class="ob-widget-header">PROMOTED STORIES</div>
+                                <div class="ob-widget-header">BÀI VIẾT HAY</div>
                                 <ul class="ob-widget-items-container">
                                     <li class="ob-dynamic-rec-container ob-recIdx-0 ob-p" data-pos="0">
                                         <a class="ob-dynamic-rec-link" onclick="" href="https://cpi.mooseroots.com/stories/15691/cost-of-beer-then-and-now?utm_medium=cm&amp;utm_source=outbrain&amp;utm_campaign=i3.cm.ob.dt.11000" onmousedown="this.href = 'http://paid.outbrain.com/network/redir?p=bQzuTAmLyjfz9zY8UVBWTCLooHXvwPBDeTkrdPZx2VFIZPyt2WRRn7ng5TxFNQFUBrDnx-T8pu9FJoWabd6k0dQZPUldelvneRLAmqwLSEZODFKfse6EGSpWsgH4Bkss91rWBL9d7XgqTaOG2Pg8A2u6CDCtwJVL7_Z2GMQ_HOMlp7DpZBVYHiunsShbiiRLJshiX9VzvsBRb6BYIKWZq8EcKH54excKaTz4Y_-xbFGNl4mYUBAonOGcoEErzu9Rjt9XLRHnzY63zVmSpnF2tzJoEcOZkbMph4eWDu2TlBmPdmjxuWpv0qened4TKfG8GX6TkPDQVII26_Y-mfETYGLXGArPD19bejEUiS1O5AzIDzzjC2wCljttZyoew_63mrizQ33fnX-n3GvUtbEXV1JMFWg30mSSp5HvTXW5XFtxS21UJnqLQzpuMG3P-8d3UOa4lyrWJxJ3GydW7wIEVviDcaNaqB8g4jcPFcmhdYjWs2VA0pk7bOx2H_qp3kmPIOFCqNCor1J23xclnJ5YReqN0ouWl1ChY0KIO5uMxyDeeDKpj_ALHOoXxNso_-22ZUeCrfpKImlQbTQBlqJeMkhuVbxHeWaswD408EVZnT1zAXaYYDopy9mEQkR6sdQtEcDXRIvEEirVb6FjjpENUwRK7yMu-7LYYPqoA2_mz2_KjvIIiPMKt27GLgL9I7x5W2nkkJL0HJuxbojB9urHNKRaFq4GCvok9UlfLY7-J32hhqwZAXrgzuW1v7Pe3ToKnwtl3dJ2PYSCT8INXNahakD3i85GBIAWpMux7Ag2f1FlnGCAxs-A8yMbHwMCecoS&amp;c=7714b2ea&amp;v=3';
@@ -245,6 +240,11 @@ use yii\widgets\ActiveForm;
                         </div>
                     </div>
                     <script type="text/javascript" async="async" src="http://widgets.outbrain.com/outbrain.js"></script>
+                </div>
+				<!--largeLayoutBottomMPUAdUnit -->
+                <div class="ad-unit-label" style="color: #869aab;font-size: 11px;margin-bottom: 2px;">Advertisement</div>
+                <div id="div-gpt-ad-1384762460430-4b46dd7c3eef406a91452fb1489cc077" style="" data-google-query-id="CIGOjsOH39ICFcWBvQodwagJKA">
+                    <img src="img/adsense-300x250.gif" width="300" />
                 </div>
             </div>
         </div>

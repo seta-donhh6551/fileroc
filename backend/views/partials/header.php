@@ -46,7 +46,11 @@
                         <li><a href="<?= Yii::$app->request->baseUrl . "/tutorials"; ?>"><span class="l"><span></span></span><span class="m"><em>Hướng dẫn</em><span></span></span><span class="r"><span></span></span></a></li>
                     </ul>
                 </li>
-                <li><a href="<?= Yii::$app->request->baseUrl . "/category"; ?>"><span class="l"><span></span></span><span class="m"><em>Menu</em><span></span></span><span class="r"><span></span></span></a></li>
+                <li><a href="<?= Yii::$app->request->baseUrl . "/category"; ?>"><span class="l"><span></span></span><span class="m"><em>Menu</em><span></span></span><span class="r"><span></span></span></a>
+					<ul>
+                        <li><a href="<?= Yii::$app->request->baseUrl . "/categorytutorial"; ?>"><span class="l"><span></span></span><span class="m"><em>Menu hướng dẫn</em><span></span></span><span class="r"><span></span></span></a></li>
+                    </ul>
+				</li>
                 <li>
                     <a href="<?= Yii::$app->request->baseUrl . "/users"; ?>"><span class="l"><span></span></span><span class="m"><em>Thành viên</em><span></span></span><span class="r"><span></span></span></a>
                 </li>
