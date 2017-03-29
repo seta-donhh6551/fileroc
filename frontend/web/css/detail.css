@@ -146,7 +146,7 @@ a.review {
     margin: 0px;
 }
 .download-option p:hover{
-    color: #f00;
+    /*color: #f00;*/
 }
 .download-small{
     float: right;
@@ -202,6 +202,7 @@ a.review {
 	float: left;
 	height: 32px;
 	line-height: 32px;
+    overflow: hidden
 }
 .related-img{
 	width: 260px;

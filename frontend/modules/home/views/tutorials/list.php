@@ -9,19 +9,8 @@ $navigator = [
 		'title' => 'Thủ thuật hướng dẫn'
 	]
 ];
-
-$navigator[] = ['url' => Yii::getAlias('@web').'/'.$model['rewrite'].'-'.$model['id'],'title' => $model['title']];
 ?>
 <link href="<?= Yii::$app->request->baseUrl; ?>css/detail.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript">
-document.write('<div id="fb-root"></div>');
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1&appId=199828456846777";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 <script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/scroll.js"></script>
 <div id="content-main" class="nopadding" style="margin-top:10px">
@@ -57,17 +46,13 @@ document.write('<div id="fb-root"></div>');
 		<?= $this->render('//layouts/navigator', ['navigator' => $navigator]); ?>
         <div id="tutorial-body">
             <div class="tutorial-title">
-                <h2><?= $model->title ?></h2>
+                <h2>Hướng Dẫn Thủ Thuật</h2>
             </div>
             <div class="tutorial-description">
-                <?= $model->info ?>
+                Hướng Dẫn Thủ Thuật
             </div>
             <div class="tutorial-body">
-                <?= $model->fullcontent ?>
-            </div>
-            <div style="margin:10px 0px 30px 0px;border-bottom:1px solid #DDD;"></div>
-            <div id="commentfa">
-            	<div class="fb-comments" data-href="<?php echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" data-width="540" data-num-posts="100"></div>
+                Hướng Dẫn Thủ Thuật
             </div>
         </div>
 	</div>

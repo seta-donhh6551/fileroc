@@ -53,6 +53,7 @@ return [
                 '/login' => 'account/default/login',
                 //front end
 				'/tim-kiem.html' => 'home/default/search',
+                '/huong-dan.html' => 'home/tutorials/list',
                 '/<rewrite:[a-zA-Z0-9_-]+>/<slug:tai-nhieu-nhat>.html' => 'home/popular/index',
                 '/<rewrite:[a-zA-Z0-9_-]+>/<slug:moi-cap-nhat>.html' => 'home/popular/index',
                 '/<rewrite:[a-zA-Z0-9_-]+>-<id:[0-9]+>.html' => 'home/tutorials/index',

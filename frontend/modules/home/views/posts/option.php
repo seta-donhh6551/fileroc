@@ -60,35 +60,35 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
             <div class="soft-info">
                 <table cellpadding="0" class="tblvoted">
                     <tr>
-                        <td class="odd">Voted</td>
+                        <td class="odd">Đánh giá</td>
                         <td class="even">
                             <div class="stars">
                                 <span class="star-gray">
                                     <span class="star-active" style="width:48px;"></span>
                                 </span>
-                                <span class="voted">4.300 voted</span>
+                                <span class="voted">4.300 đánh giá</span>
                                 <div class="cls"></div>
                             </div>
                         </td>
-                        <td class="odd">Publisher</td>
+                        <td class="odd">Nhà phát hành</td>
                         <td class="even"><b><?= $model->author ?></b></td>
                     </tr>
                     <tr>
-                        <td class="odd">Version</td>
+                        <td class="odd">Phiên bản</td>
                         <td class="even"><?= $model->version ?></td>
-                        <td class="odd">License</td>
+                        <td class="odd">Bản quyền</td>
                         <td class="even"><span class="<?= $model->type == 1 ? 'trial' : 'free' ?>"></span></td>
                     </tr>
                     <tr>
-                        <td class="odd">File size</td>
+                        <td class="odd">Dung lượng file</td>
                         <td class="even"><?= $model->filesize ?> mb</td>
-                        <td class="odd">Updated</td>
+                        <td class="odd">Ngày cập nhật</td>
                         <td class="even"><?= $model->update_date ?></td>
                     </tr>
                     <tr>
-                        <td class="odd">Total downloads</td>
+                        <td class="odd">Số lượt tải</td>
                         <td class="even"><?= $model->total_down ?></td>
-                        <td class="odd">Os required</td>
+                        <td class="odd">Hệ điều hành yêu cầu</td>
                         <td class="even"><?= $model->required ?></td>
                     </tr>
                 </table>
@@ -107,7 +107,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
                             <?= $postItem['short_info'] ?>
                         </div>
                         <div class="related-total">
-                            <?= '123.000' ?>
+                            <?= $postItem['total_down'] ?>
                         </div>
                     </div>
                     <?php } } ?>
