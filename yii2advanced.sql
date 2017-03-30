@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.14
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 29, 2017 at 05:47 PM
--- Server version: 5.6.26
--- PHP Version: 5.6.12
+-- Generation Time: Mar 30, 2017 at 11:03 AM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -26,8 +26,8 @@ SET time_zone = "+00:00";
 -- Table structure for table `tbl_category`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_category` (
-  `id` int(11) unsigned NOT NULL,
+CREATE TABLE `tbl_category` (
+  `id` int(11) UNSIGNED NOT NULL,
   `name` varchar(150) NOT NULL,
   `rewrite` varchar(150) NOT NULL,
   `keywords` text NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `tbl_category` (
   `child_id` int(11) DEFAULT '0',
   `parent_id` int(11) NOT NULL DEFAULT '0',
   `status` tinyint(4) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_category`
@@ -103,8 +103,8 @@ INSERT INTO `tbl_category` (`id`, `name`, `rewrite`, `keywords`, `description`, 
 -- Table structure for table `tbl_caterory_tutorial`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_caterory_tutorial` (
-  `id` int(11) unsigned NOT NULL,
+CREATE TABLE `tbl_caterory_tutorial` (
+  `id` int(11) UNSIGNED NOT NULL,
   `name` varchar(150) NOT NULL,
   `rewrite` varchar(150) NOT NULL,
   `keywords` text NOT NULL,
@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `tbl_caterory_tutorial` (
   `icon` varchar(100) NOT NULL,
   `status` tinyint(4) NOT NULL,
   `created_at` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_caterory_tutorial`
@@ -122,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `tbl_caterory_tutorial` (
 
 INSERT INTO `tbl_caterory_tutorial` (`id`, `name`, `rewrite`, `keywords`, `description`, `info`, `order`, `icon`, `status`, `created_at`) VALUES
 (1, 'Thủ thuật internet', 'thu-thuat-internet', 'Thủ thuật internet', 'Thủ thuật internet', 'Thủ thuật internet', 1, 'thu-thuat-internet.png', 1, '2017-03-29 15:29:23'),
-(2, 'Thủ thuật linux', 'thu-thuat-linux', 'Thủ thuật linux', 'Thủ thuật linux', 'Thủ thuật linux', 2, '', 1, '2017-03-29 15:30:01'),
+(2, 'Thủ thuật linux', 'thu-thuat-linux', 'Thủ thuật linux', 'Thủ thuật linux', 'Server là thành phần lưu trữ hoạt động của website, Server Linux là một trong những hệ điều hành được sử dụng nhiều nhất', 2, '', 1, '2017-03-30 15:28:16'),
 (3, 'Bảo vệ máy tính', 'bao-ve-may-tinh', 'Thủ thuật bảo vệ máy tính', 'Thủ thuật bảo vệ máy tính, các thủ thuật hướng dẫn bạn sử dụng máy tính khỏi những tấn công từ bên ngoài.', 'Thủ thuật bảo vệ máy tính, các thủ thuật hướng dẫn bạn sử dụng máy tính khỏi những tấn công từ bên ngoài.', 3, '', 1, '2017-03-29 15:31:34'),
 (4, 'Ảnh và đồ họa', 'anh-va-do-hoa', 'Ảnh và đồ họa', 'Thủ thuật máy tính về ảnh và đồ họa. giúp bạn chỉnh sửa ảnh, hướng dẫn sử dụng các phần mềm đồ họa', 'Thủ thuật máy tính về ảnh và đồ họa. giúp bạn chỉnh sửa ảnh, hướng dẫn sử dụng các phần mềm đồ họa', 1, '', 1, '2017-03-29 15:33:01'),
 (5, 'Phần cứng', 'phan-cung', 'Thủ thuật phần cứng', 'Thủ thuật hướng dẫn sử dụng phần cứng cho máy tính và các thiết bị điện tử khác.', 'Thủ thuật hướng dẫn sử dụng phần cứng cho máy tính và các thiết bị điện tử khác.', 0, '', 1, '2017-03-29 15:35:27'),
@@ -135,8 +135,8 @@ INSERT INTO `tbl_caterory_tutorial` (`id`, `name`, `rewrite`, `keywords`, `descr
 -- Table structure for table `tbl_posts`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_posts` (
-  `id` int(11) unsigned NOT NULL,
+CREATE TABLE `tbl_posts` (
+  `id` int(11) UNSIGNED NOT NULL,
   `title` varchar(255) NOT NULL,
   `rewrite` varchar(255) NOT NULL,
   `author` varchar(50) NOT NULL,
@@ -169,7 +169,7 @@ CREATE TABLE IF NOT EXISTS `tbl_posts` (
   `user_id` int(11) NOT NULL,
   `creat_date` datetime NOT NULL,
   `update_date` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_posts`
@@ -188,8 +188,8 @@ INSERT INTO `tbl_posts` (`id`, `title`, `rewrite`, `author`, `author_url`, `keyw
 -- Table structure for table `tbl_reviews`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_reviews` (
-  `id` int(11) unsigned NOT NULL,
+CREATE TABLE `tbl_reviews` (
+  `id` int(11) UNSIGNED NOT NULL,
   `name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `title` varchar(255) NOT NULL,
@@ -198,7 +198,7 @@ CREATE TABLE IF NOT EXISTS `tbl_reviews` (
   `user_ip` varchar(50) NOT NULL,
   `post_id` int(11) NOT NULL,
   `created_date` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_reviews`
@@ -220,8 +220,8 @@ INSERT INTO `tbl_reviews` (`id`, `name`, `email`, `title`, `review`, `star`, `us
 -- Table structure for table `tbl_tutorials`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_tutorials` (
-  `id` int(11) unsigned NOT NULL,
+CREATE TABLE `tbl_tutorials` (
+  `id` int(11) UNSIGNED NOT NULL,
   `title` varchar(255) NOT NULL,
   `rewrite` varchar(255) NOT NULL,
   `keywords` text NOT NULL,
@@ -233,20 +233,21 @@ CREATE TABLE IF NOT EXISTS `tbl_tutorials` (
   `order_by` int(11) NOT NULL DEFAULT '0',
   `status` tinyint(4) NOT NULL,
   `user_id` int(11) NOT NULL,
+  `cate_id` int(11) NOT NULL,
   `creat_date` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_tutorials`
 --
 
-INSERT INTO `tbl_tutorials` (`id`, `title`, `rewrite`, `keywords`, `description`, `views`, `thumb`, `info`, `fullcontent`, `order_by`, `status`, `user_id`, `creat_date`) VALUES
-(1, 'Hướng dẫn tạo usb boot bằng hiren''s boot cho window 7,8,10', 'huong-dan-tao-usb-boot-bang-hiren''s-boot-cho-window-7810', 'Tao usb boot, Tạo usb boot usb, Tạo usb boot cài win.', 'Hướng dẫn cách tạo USB boot đơn giản với Hiren''s Boot. Chỉ với vài thao tác đơn giản bạn đã có một hiren''s bot mà không cần đến đĩa CD.', 0, 'tao-boot-usb.jpg', 'Trong trường hợp Windows của bạn không thể khởi động, không sử dụng được ổ đĩa quang, bạn nên tạo USB Boot bằng Hiren''s boot để có thể xử lý vấn đề này. Ưu điểm của cách làm này là có thể xử lý vấn đề trên máy tính của bạn chỉ với một chiếc USB nhỏ gọn mà bạn có thể mang đi bất cứ nơi nào. FreeFile sẽ hướng dẫn các bạn những bước rất cơ bản để tạo USB boot bằng Hiren''s boot.', '<p style="font-size: 14px; margin: 10px 0px 0px; padding: 10px 0px 0px; text-align: justify; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, Arial, Helvetica, sans-serif;">USB là một thiết bị nhỏ gọn có thể mang theo bên mình có khả năng lưu trữ dữ liệu, sử dụng nhiều chức năng mà không cần những thiết bị cồng kềnh, phức tạp. Đối với những kỹ thuật viên máy tính, usb càng quan trọng hơn khi có thể đảm nhiệm nhiều chức năng như tạo usb cài win, tạo usb boot đa năng, tạo usb ghost usb format... Việc tạo usb hiren boot là vô cùng cần thiết do đã được tích hợp rất nhiều phần mềm hỗ trợ.</p>\r\n<p style="font-size: 14px; margin: 10px 0px 0px; padding: 10px 0px 0px; text-align: justify; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, Arial, Helvetica, sans-serif;">Máy tính của bạn thường xuyên bị treo và chạy rất chậm, và bạn muốn ghost lại máy tính của bạn lại hỏng ổ đĩa vậy giải pháp khắc phục chỉ còn cách tạo usb ghost, mà bạn lại không thành thạo về việc tạo usb hiren boot. Bài viết này taimienphi.vn sẽ hướng dẫn bạn chi tiết và cụ thể các bước để bạn có thể&#160;<a href="http://taimienphi.vn/tk/t%E1%BA%A1o+usb+boot" style="text-decoration: none; color: rgb(46, 46, 46);">tạo USB Boot</a>&#160;một cách hiệu quả nhất với phần mềm tạo usb boot....</p>', 0, 1, 1, '2017-03-19 11:44:39'),
-(2, 'Phân biệt ổ SSD và HDD, nên dùng ổ SSD hay HDD cho laptop?', 'phan-biet-o-ssd-va-hdd-nen-dung-o-ssd-hay-hdd-cho-laptop?', 'Phân biệt ổ SSD và HDD', 'Phân biệt ổ SSD và HDD, nên dùng ổ SSD hay HDD cho laptop?', 0, '20032017-103143hdd-vs-ssd.jpg', 'Hiện nay, ổ cứng SSD đã dần trở nên phổ biến hơn và giá thành cũng dễ chịu hơn so với trước kia. Trước khi mua một chiếc SSD hay HDD, bạn nên tìm hiểu và phân biệt ổ SSD và HDD, nên dùng ổ SSD hay HDD cho laptop để phù hợp hơn so với nhu cầu dùng của bạn.', 'Hiện nay, ổ cứng SSD đã dần trở nên phổ biến hơn và giá thành cũng dễ chịu hơn so với trước kia. Trước khi mua một chiếc SSD hay HDD, bạn nên tìm hiểu và phân biệt ổ SSD và HDD, nên dùng ổ SSD hay HDD cho laptop để phù hợp hơn so với nhu cầu dùng của bạn.', 1, 1, 1, '2017-03-20 16:31:43'),
-(3, 'Khôi phục dữ liệu bằng DiskGetor Data Recovery', 'khoi-phuc-du-lieu-bang-diskgetor-data-recovery', 'Khôi phục dữ liệu bằng DiskGetor Data Recovery', 'Khôi phục dữ liệu bằng DiskGetor Data Recovery', 1, 'recovery-data.jpg', 'DiskGetor Data Recovery là phần mềm khôi phục dữ liệu mạnh mẽ, phục hồi lại dữ liệu đã bị xóa, hỏng và bị format trên tất cả các phân vùng ổ cứng. Phần mềm xứng đáng là công cụ hữu ích dành cho những ai thường xuyên làm việc trên máy tính.', 'Dữ liệu mà bạn có thể dùng phần mềm lấy lại là do HĐH mới chỉ "đánh dấu" là xoá trên ổ cứng mà chưa tiến hành xoá hẳn ở mức vật lý vì vậy mà các phần mềm khôi phục sẽ tìm kiếm những tệp tin này và cho phép người dùng phục hồi lại nó, nhưng nếu trong quá trình phục hồi chính những file cần phục hồi lại (giả sử là file A) ghi đè vào không gian ổ đĩa có chứa chính file cần phục hồi khác (giả sử file B) (HĐH hiểu những khu vực đã đánh dấu xoá  có thể ghi file), nếu việc này xảy ra thì sau khi phần mềm phục hồi được file A nó tìm lại vị trí file B để phục hồi nhưng thực tế tại địa chỉ này giờ lại là file A đã phục hồi, như vậy File B sẽ bị mất vĩnh viễn. Do đó như đã nói, để an toàn hãy sử dụng thêm thiết bị lưu trữ mới để chứa file cần phục hồi.<br />\r\n<br />\r\n<img src="http://thuthuat.taimienphi.vn/cf/Images/ntt/2014/3/khoi-phuc-du-lieu-bang-diskgetor-data-recovery.jpg" align="middle" alt="" /><br />\r\n<h3>HƯỚNG DẪN KHÔI PHỤC DỮ LIỆU BẰNG DISKGETOR DATA RECOVERY</h3>\r\n<br />\r\n<br />\r\n<div><strong>Bước 1: Tải và cài đặt phần mềm</strong><br />\r\n&#160;</div>\r\n<div>- Bạn có thể tải phiên bản mới nhất của DiskGetor Data Recovery tại đây : Download DiskGetor Data Recovery</div>\r\n<div>- Cài đặt: Khá đơn giản, bạn chỉ cần thực hiện theo các bước hướng dẫn là được.<br />\r\n<br />\r\n<div><strong>Bước 2: Tiến hành khôi phục dữ liệu</strong><br />\r\n&#160;</div>\r\n<div>- Khi bạn mở phần mềm lên thì sẽ thấy giao diện như sau:<br />\r\n<br />\r\n<img src="http://taimienphi.vn/tmp/cf/aut/khoi-phuc-du-lieu-bang-diskgetor-data-recovery-1.jpg" width="500" height="352" alt="" /><br />\r\n<br />\r\n- Bạn click vào mục Recovered Deleted Files và chọn Next<br />\r\n<br />\r\n<img src="http://imgt.taimienphi.vn/cf/Images/ntt/2014/3/khoi-phuc-du-lieu-bang-diskgetor-data-recovery-2.jpg" alt="" /><br />\r\n<br />\r\n- Tiếp đó chọn ổ đĩa chứa những file bạn muốn khôi phục và ấn Next<br />\r\n<br />\r\n<img src="http://imgt.taimienphi.vn/cf/Images/ntt/2014/3/khoi-phuc-du-lieu-bang-diskgetor-data-recovery-3.jpg" alt="" /><br />\r\n&#160;</div>\r\n</div>', 2, 1, 1, '2017-03-20 16:37:33'),
-(4, 'Cài và sử dụng InnoExtractor giải nén file dữ liệu', 'cai-va-su-dung-innoextractor-giai-nen-file-du-lieu', 'Cài và sử dụng InnoExtractor giải nén file dữ liệu', 'Cài và sử dụng InnoExtractor giải nén file dữ liệu', 123, 'data-extract.jpg', 'InnoExtractor đem đến cho người dùng khả năng giải nén các tập tin dữ liệu hiệu quả với tốc độ cực nhanh. Tuy nhiên để sử dụng được phần mềm này bạn cần cài đặt InnoExtractor đúng cách.', 'InnoExtractor đem đến cho người dùng khả năng giải nén các tập tin dữ liệu hiệu quả với tốc độ cực nhanh. Tuy nhiên để sử dụng được phần mềm này bạn cần cài đặt InnoExtractor đúng cách.', 3, 1, 1, '2017-03-20 16:41:58'),
-(5, 'Khôi phục dữ liệu bằng Active Partition Recovery', 'khoi-phuc-du-lieu-bang-active-partition-recovery', 'Khôi phục dữ liệu bằng Active Partition Recovery', 'Khôi phục dữ liệu bằng Active Partition Recovery', 3, '1382645199_active-partition-recovery-professional.jpg', 'Những dữ liệu lưu trữ trên ổ cứng của máy tính bị mất do rất nhiều nguyên nhân như do người sử dụng vô tình xóa hoặc do virus gây ra… Và Active Partition Recovery chính là giải pháp dành cho bạn lúc này.', 'Những dữ liệu lưu trữ trên ổ cứng của máy tính bị mất do rất nhiều nguyên nhân như do người sử dụng vô tình xóa hoặc do virus gây ra… Và Active Partition Recovery chính là giải pháp dành cho bạn lúc này.<br />\r\n<br />\r\n<img src="https://s-media-cache-ak0.pinimg.com/564x/4e/7d/60/4e7d602ed97b6535f81a851ac3da63a6.jpg" alt="" /><br />\r\n<br />\r\n<div>KHÔI PHỤC DỮ LIỆU BẰNG ACTIVE PARTITION RECOVERY</div>\r\n<div>&#160;</div>\r\n<div>Sau khi tải về, cài đặt trên máy tính và khởi động chương trình ta thực hiện theo các bước sau để tiến hành lấy lại những dữ liệu đã mất: ( Nếu chưa có phần mềm bạn có thể tải phiên bản mới nhất của Active Partition Recovery).</div>\r\n<div>&#160;</div>\r\n<div><strong>Bước 1</strong>: Từ giao diện chính của chương trình bạn nhấn chọn Quick Scan. Chương trình sẽ tiến hành quét bề mặt ổ đĩa cứng của bạn.</div>\r\n<div>&#160;</div>\r\n<div>(Lưu ý: Chương trình còn có chức năng quét sâu hơn là Super Scan, bạn chỉ chọn phương án này nếu khi dùng Quick Scan không có kết quả, vì chức năng Super Scan thực hiện mất rất nhiều thời gian).<br />\r\n<br />\r\n<img src="http://baomoi-photo-2.d.za.zdn.vn/16/05/01/173/19265752/3_218190.jpg" alt="" /><br />\r\n<br />\r\n<strong>Bước 2</strong>: Sau khi chương trình quét bề mặt ổ đĩa kết thúc bạn kiểm tra những dữ liệu nào của đã bị mất và chọn vào vùng dữ liệu dó rồi tiến hành khôi phục lại bằng cách nhấn chọn nút Recover, khi đó chương trình sẽ lấy lại cho bạn những gì mà bạn bị mất.<br />\r\n<br />\r\n<img src="https://s-media-cache-ak0.pinimg.com/736x/3e/e0/b1/3ee0b103b366dc612572cb5141c882b6.jpg" alt="" /></div>', 4, 1, 1, '2017-03-20 17:21:54'),
-(6, 'Cách cài Free PDF Compressor giảm kích thước file PDF', 'cach-cai-free-pdf-compressor-giam-kich-thuoc-file-pdf', 'Cách cài Free PDF Compressor giảm kích thước file PDF', 'Cách cài Free PDF Compressor giảm kích thước file PDF', 0, 'adobe-reader.jpg', 'Phần mềm Free PDF Compressor ra đời giúp bạn nén, làm giảm kích thước các file PDF để dễ dàng lưu trữ hoặc chia sẻ trên mạng Internet. Thông qua bài viết dưới đây của FreeFile.vn bạn sẽ biết cách cài Free PDF Compressor sử dụng hiệu quả nhất trên máy tinh.', 'Phần mềm Free PDF Compressor ra đời giúp bạn nén, làm giảm kích thước các file PDF để dễ dàng lưu trữ hoặc chia sẻ trên mạng Internet. Thông qua bài viết dưới đây của FreeFile.vn bạn sẽ biết cách cài Free PDF Compressor sử dụng hiệu quả nhất trên máy tinh.', 0, 1, 1, '2017-03-20 17:23:46');
+INSERT INTO `tbl_tutorials` (`id`, `title`, `rewrite`, `keywords`, `description`, `views`, `thumb`, `info`, `fullcontent`, `order_by`, `status`, `user_id`, `cate_id`, `creat_date`) VALUES
+(1, 'Hướng dẫn tạo usb boot bằng hiren''s boot cho window 7,8,10', 'huong-dan-tao-usb-boot-bang-hiren''s-boot-cho-window-7810', 'Tao usb boot, Tạo usb boot usb, Tạo usb boot cài win.', 'Hướng dẫn cách tạo USB boot đơn giản với Hiren''s Boot. Chỉ với vài thao tác đơn giản bạn đã có một hiren''s bot mà không cần đến đĩa CD.', 0, 'tao-boot-usb.jpg', 'Trong trường hợp Windows của bạn không thể khởi động, không sử dụng được ổ đĩa quang, bạn nên tạo USB Boot bằng Hiren''s boot để có thể xử lý vấn đề này. Ưu điểm của cách làm này là có thể xử lý vấn đề trên máy tính của bạn chỉ với một chiếc USB nhỏ gọn mà bạn có thể mang đi bất cứ nơi nào. FreeFile sẽ hướng dẫn các bạn những bước rất cơ bản để tạo USB boot bằng Hiren''s boot.', '<p style="font-size: 14px; margin: 10px 0px 0px; padding: 10px 0px 0px; text-align: justify; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, Arial, Helvetica, sans-serif;">USB là một thiết bị nhỏ gọn có thể mang theo bên mình có khả năng lưu trữ dữ liệu, sử dụng nhiều chức năng mà không cần những thiết bị cồng kềnh, phức tạp. Đối với những kỹ thuật viên máy tính, usb càng quan trọng hơn khi có thể đảm nhiệm nhiều chức năng như tạo usb cài win, tạo usb boot đa năng, tạo usb ghost usb format... Việc tạo usb hiren boot là vô cùng cần thiết do đã được tích hợp rất nhiều phần mềm hỗ trợ.</p>\r\n<p style="font-size: 14px; margin: 10px 0px 0px; padding: 10px 0px 0px; text-align: justify; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, Arial, Helvetica, sans-serif;">Máy tính của bạn thường xuyên bị treo và chạy rất chậm, và bạn muốn ghost lại máy tính của bạn lại hỏng ổ đĩa vậy giải pháp khắc phục chỉ còn cách tạo usb ghost, mà bạn lại không thành thạo về việc tạo usb hiren boot. Bài viết này taimienphi.vn sẽ hướng dẫn bạn chi tiết và cụ thể các bước để bạn có thể&#160;<a href="http://taimienphi.vn/tk/t%E1%BA%A1o+usb+boot" style="text-decoration: none; color: rgb(46, 46, 46);">tạo USB Boot</a>&#160;một cách hiệu quả nhất với phần mềm tạo usb boot....</p>', 0, 1, 1, 0, '2017-03-19 11:44:39'),
+(2, 'Phân biệt ổ SSD và HDD, nên dùng ổ SSD hay HDD cho laptop?', 'phan-biet-o-ssd-va-hdd-nen-dung-o-ssd-hay-hdd-cho-laptop?', 'Phân biệt ổ SSD và HDD', 'Phân biệt ổ SSD và HDD, nên dùng ổ SSD hay HDD cho laptop?', 0, '20032017-103143hdd-vs-ssd.jpg', 'Hiện nay, ổ cứng SSD đã dần trở nên phổ biến hơn và giá thành cũng dễ chịu hơn so với trước kia. Trước khi mua một chiếc SSD hay HDD, bạn nên tìm hiểu và phân biệt ổ SSD và HDD, nên dùng ổ SSD hay HDD cho laptop để phù hợp hơn so với nhu cầu dùng của bạn.', 'Hiện nay, ổ cứng SSD đã dần trở nên phổ biến hơn và giá thành cũng dễ chịu hơn so với trước kia. Trước khi mua một chiếc SSD hay HDD, bạn nên tìm hiểu và phân biệt ổ SSD và HDD, nên dùng ổ SSD hay HDD cho laptop để phù hợp hơn so với nhu cầu dùng của bạn.', 1, 1, 1, 0, '2017-03-20 16:31:43'),
+(3, 'Khôi phục dữ liệu bằng DiskGetor Data Recovery', 'khoi-phuc-du-lieu-bang-diskgetor-data-recovery', 'Khôi phục dữ liệu bằng DiskGetor Data Recovery', 'Khôi phục dữ liệu bằng DiskGetor Data Recovery', 1, 'recovery-data.jpg', 'DiskGetor Data Recovery là phần mềm khôi phục dữ liệu mạnh mẽ, phục hồi lại dữ liệu đã bị xóa, hỏng và bị format trên tất cả các phân vùng ổ cứng. Phần mềm xứng đáng là công cụ hữu ích dành cho những ai thường xuyên làm việc trên máy tính.', 'Dữ liệu mà bạn có thể dùng phần mềm lấy lại là do HĐH mới chỉ "đánh dấu" là xoá trên ổ cứng mà chưa tiến hành xoá hẳn ở mức vật lý vì vậy mà các phần mềm khôi phục sẽ tìm kiếm những tệp tin này và cho phép người dùng phục hồi lại nó, nhưng nếu trong quá trình phục hồi chính những file cần phục hồi lại (giả sử là file A) ghi đè vào không gian ổ đĩa có chứa chính file cần phục hồi khác (giả sử file B) (HĐH hiểu những khu vực đã đánh dấu xoá  có thể ghi file), nếu việc này xảy ra thì sau khi phần mềm phục hồi được file A nó tìm lại vị trí file B để phục hồi nhưng thực tế tại địa chỉ này giờ lại là file A đã phục hồi, như vậy File B sẽ bị mất vĩnh viễn. Do đó như đã nói, để an toàn hãy sử dụng thêm thiết bị lưu trữ mới để chứa file cần phục hồi.<br />\r\n<br />\r\n<img src="http://thuthuat.taimienphi.vn/cf/Images/ntt/2014/3/khoi-phuc-du-lieu-bang-diskgetor-data-recovery.jpg" align="middle" alt="" /><br />\r\n<h3>HƯỚNG DẪN KHÔI PHỤC DỮ LIỆU BẰNG DISKGETOR DATA RECOVERY</h3>\r\n<br />\r\n<br />\r\n<div><strong>Bước 1: Tải và cài đặt phần mềm</strong><br />\r\n&#160;</div>\r\n<div>- Bạn có thể tải phiên bản mới nhất của DiskGetor Data Recovery tại đây : Download DiskGetor Data Recovery</div>\r\n<div>- Cài đặt: Khá đơn giản, bạn chỉ cần thực hiện theo các bước hướng dẫn là được.<br />\r\n<br />\r\n<div><strong>Bước 2: Tiến hành khôi phục dữ liệu</strong><br />\r\n&#160;</div>\r\n<div>- Khi bạn mở phần mềm lên thì sẽ thấy giao diện như sau:<br />\r\n<br />\r\n<img src="http://taimienphi.vn/tmp/cf/aut/khoi-phuc-du-lieu-bang-diskgetor-data-recovery-1.jpg" width="500" height="352" alt="" /><br />\r\n<br />\r\n- Bạn click vào mục Recovered Deleted Files và chọn Next<br />\r\n<br />\r\n<img src="http://imgt.taimienphi.vn/cf/Images/ntt/2014/3/khoi-phuc-du-lieu-bang-diskgetor-data-recovery-2.jpg" alt="" /><br />\r\n<br />\r\n- Tiếp đó chọn ổ đĩa chứa những file bạn muốn khôi phục và ấn Next<br />\r\n<br />\r\n<img src="http://imgt.taimienphi.vn/cf/Images/ntt/2014/3/khoi-phuc-du-lieu-bang-diskgetor-data-recovery-3.jpg" alt="" /><br />\r\n&#160;</div>\r\n</div>', 2, 1, 1, 5, '2017-03-20 16:37:33'),
+(4, 'Cài và sử dụng InnoExtractor giải nén file dữ liệu', 'cai-va-su-dung-innoextractor-giai-nen-file-du-lieu', 'Cài và sử dụng InnoExtractor giải nén file dữ liệu', 'Cài và sử dụng InnoExtractor giải nén file dữ liệu', 123, 'data-extract.jpg', 'InnoExtractor đem đến cho người dùng khả năng giải nén các tập tin dữ liệu hiệu quả với tốc độ cực nhanh. Tuy nhiên để sử dụng được phần mềm này bạn cần cài đặt InnoExtractor đúng cách.', 'InnoExtractor đem đến cho người dùng khả năng giải nén các tập tin dữ liệu hiệu quả với tốc độ cực nhanh. Tuy nhiên để sử dụng được phần mềm này bạn cần cài đặt InnoExtractor đúng cách.', 3, 1, 1, 0, '2017-03-20 16:41:58'),
+(5, 'Khôi phục dữ liệu bằng Active Partition Recovery', 'khoi-phuc-du-lieu-bang-active-partition-recovery', 'Khôi phục dữ liệu bằng Active Partition Recovery', 'Khôi phục dữ liệu bằng Active Partition Recovery', 3, '1382645199_active-partition-recovery-professional.jpg', 'Những dữ liệu lưu trữ trên ổ cứng của máy tính bị mất do rất nhiều nguyên nhân như do người sử dụng vô tình xóa hoặc do virus gây ra… Và Active Partition Recovery chính là giải pháp dành cho bạn lúc này.', 'Những dữ liệu lưu trữ trên ổ cứng của máy tính bị mất do rất nhiều nguyên nhân như do người sử dụng vô tình xóa hoặc do virus gây ra… Và Active Partition Recovery chính là giải pháp dành cho bạn lúc này.<br />\r\n<br />\r\n<img src="https://s-media-cache-ak0.pinimg.com/564x/4e/7d/60/4e7d602ed97b6535f81a851ac3da63a6.jpg" alt="" /><br />\r\n<br />\r\n<div>KHÔI PHỤC DỮ LIỆU BẰNG ACTIVE PARTITION RECOVERY</div>\r\n<div>&#160;</div>\r\n<div>Sau khi tải về, cài đặt trên máy tính và khởi động chương trình ta thực hiện theo các bước sau để tiến hành lấy lại những dữ liệu đã mất: ( Nếu chưa có phần mềm bạn có thể tải phiên bản mới nhất của Active Partition Recovery).</div>\r\n<div>&#160;</div>\r\n<div><strong>Bước 1</strong>: Từ giao diện chính của chương trình bạn nhấn chọn Quick Scan. Chương trình sẽ tiến hành quét bề mặt ổ đĩa cứng của bạn.</div>\r\n<div>&#160;</div>\r\n<div>(Lưu ý: Chương trình còn có chức năng quét sâu hơn là Super Scan, bạn chỉ chọn phương án này nếu khi dùng Quick Scan không có kết quả, vì chức năng Super Scan thực hiện mất rất nhiều thời gian).<br />\r\n<br />\r\n<img src="http://baomoi-photo-2.d.za.zdn.vn/16/05/01/173/19265752/3_218190.jpg" alt="" /><br />\r\n<br />\r\n<strong>Bước 2</strong>: Sau khi chương trình quét bề mặt ổ đĩa kết thúc bạn kiểm tra những dữ liệu nào của đã bị mất và chọn vào vùng dữ liệu dó rồi tiến hành khôi phục lại bằng cách nhấn chọn nút Recover, khi đó chương trình sẽ lấy lại cho bạn những gì mà bạn bị mất.<br />\r\n<br />\r\n<img src="https://s-media-cache-ak0.pinimg.com/736x/3e/e0/b1/3ee0b103b366dc612572cb5141c882b6.jpg" alt="" /></div>', 4, 1, 1, 0, '2017-03-20 17:21:54'),
+(6, 'Cách cài Free PDF Compressor giảm kích thước file PDF', 'cach-cai-free-pdf-compressor-giam-kich-thuoc-file-pdf', 'Cách cài Free PDF Compressor giảm kích thước file PDF', 'Cách cài Free PDF Compressor giảm kích thước file PDF', 0, 'adobe-reader.jpg', 'Phần mềm Free PDF Compressor ra đời giúp bạn nén, làm giảm kích thước các file PDF để dễ dàng lưu trữ hoặc chia sẻ trên mạng Internet. Thông qua bài viết dưới đây của FreeFile.vn bạn sẽ biết cách cài Free PDF Compressor sử dụng hiệu quả nhất trên máy tinh.', 'Phần mềm Free PDF Compressor ra đời giúp bạn nén, làm giảm kích thước các file PDF để dễ dàng lưu trữ hoặc chia sẻ trên mạng Internet. Thông qua bài viết dưới đây của FreeFile.vn bạn sẽ biết cách cài Free PDF Compressor sử dụng hiệu quả nhất trên máy tinh.', 0, 1, 1, 0, '2017-03-20 17:23:46');
 
 -- --------------------------------------------------------
 
@@ -254,8 +255,8 @@ INSERT INTO `tbl_tutorials` (`id`, `title`, `rewrite`, `keywords`, `description`
 -- Table structure for table `tbl_user`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_user` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_user` (
+  `id` int(10) UNSIGNED NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `name` varchar(100) NOT NULL,
@@ -263,9 +264,9 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `phone` varchar(20) DEFAULT NULL,
   `adress` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `level` int(10) unsigned NOT NULL DEFAULT '2',
+  `level` int(10) UNSIGNED NOT NULL DEFAULT '2',
   `status` int(1) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_user`
@@ -323,32 +324,32 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_category`
 --
 ALTER TABLE `tbl_category`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=54;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 --
 -- AUTO_INCREMENT for table `tbl_caterory_tutorial`
 --
 ALTER TABLE `tbl_caterory_tutorial`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `tbl_posts`
 --
 ALTER TABLE `tbl_posts`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `tbl_reviews`
 --
 ALTER TABLE `tbl_reviews`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `tbl_tutorials`
 --
 ALTER TABLE `tbl_tutorials`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

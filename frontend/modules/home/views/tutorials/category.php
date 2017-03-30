@@ -9,6 +9,7 @@ $navigator = [
 		'title' => 'Thủ thuật hướng dẫn'
 	]
 ];
+$navigator[] = ['url' => Yii::getAlias('@web').'/'.$model['rewrite'],'title' => $model['name']];
 ?>
 <link href="<?= Yii::$app->request->baseUrl; ?>css/detail.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/jquery-1.11.3.min.js"></script>
@@ -26,29 +27,8 @@ $navigator = [
             <div class="tutorial-description">
                 <?= $model->info; ?>
             </div>
-            <div id="programs-list">
-			<?php if(isset($listTutorials)){ ?>
-			<?php foreach($listTutorials as $tutorial){ ?>
-				<div class="program-entry">
-					<div class="program-entry-header">
-					   <a href="/download/folder-lock-75.html" title="Folder Lock 7.5" class="internal-link">
-						  <img src="/uploads/thumb/folder-lock.jpg" alt="Download Folder Lock 7.5">
-						  <span class="program-title-text">
-							 <h3><?= $tutorial['title']; ?></h3>
-						  </span>
-					   </a>
-					</div>
-					<div class="program-entry-download-button category-page-box-fix">
-					   <a href="/download/folder-lock-75.html" class="green program-entry-download-link button-link">
-					   <span class="sprite download-icon-white"></span>Chi Tiết</a>
-					</div>
-					<div class="program-entry-details">New Softwares - 9.42MB - <span class="trial">License </span></div>
-					<div class="program-entry-description">
-						Folder Lock is a revolution in data security, allow you not only lock and/or code personal files and folders but also offer you great option to backup your precious data and saved them on a cloud storage’s account.			</div>
-					<ul class="child-programs">
-					</ul>
-				 </div>
-			<?php } } ?>
+            <div class="tutorial-body">
+                
             </div>
         </div>
 	</div>

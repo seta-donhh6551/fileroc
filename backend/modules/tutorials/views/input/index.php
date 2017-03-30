@@ -73,6 +73,17 @@ $(document).ready(function(){
                                 <input type="radio" name="Tutorials[status]" value="0" <?php if($model->status == 0){ echo "checked='checked'";} ?>/>No
                             </div>
                         </div>
+						<div class="form_items">
+                            <div class="form_items_left">Thuộc mục</div>
+                            <div class="form_items_right">
+                                <?php
+                                    $listData=ArrayHelper::map($listCate,'id','name');
+                                    echo $form->field($model, 'cate_id')->dropDownList(
+                                        $listData, ['prompt' => 'Select','class' => 'pulldown']
+                                    )->label(false)->error(false);
+                                ?>
+                            </div>
+                        </div>
                         <div class="form_items">
                             <div class="form_items_left">Keywords</div>
                             <div class="form_items_right">
@@ -111,7 +122,7 @@ $(document).ready(function(){
                             </div>
                         </div>
                         <div class="form_items">
-                            <div class="form_items_left">Thuộc phần mềm</div>
+                            <div class="form_items_left">Phần mềm liên quan</div>
                             <div class="form_items_right">
                                 <?php
 //                                    $listData=ArrayHelper::map($listCate,'id','name');

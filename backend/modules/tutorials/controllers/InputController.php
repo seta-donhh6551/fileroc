@@ -39,8 +39,9 @@ class InputController extends MyController
         }
         
          //list categorys
-        $cateModel = new \common\models\Category();
-        $listCategory = $cateModel->getListCategory();
+        $listCategory = \common\models\Categorytutorial::find()
+						->where(['status' => 1])
+						->all();
         
         $request = Yii::$app->request;
 
@@ -85,6 +86,7 @@ class InputController extends MyController
                 
                 $model->rewrite = str_replace(' ','-',Utility::replaceUrl(trim($post['title'])));
                 $model->user_id = Yii::$app->user->getIdentity()->id;
+				$model->cate_id = $post['cate_id'] != null ? $post['cate_id'] : 0;
                 
 				if($id == null)
                 {

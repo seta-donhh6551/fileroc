@@ -996,7 +996,7 @@ h2 {
     color: #039;
 }
 #navigation ul li a:hover{
-    font-weight: bold
+    color: #F00
 }
 #navigation ul li:after{
     content: ">";

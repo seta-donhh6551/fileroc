@@ -13,7 +13,13 @@ $navigator = [
 $navigator[] = ['url' => Yii::getAlias('@web').'/'.$model['rewrite'].'-'.$model['id'],'title' => $model['title']];
 ?>
 <link href="<?= Yii::$app->request->baseUrl; ?>css/detail.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/scroll.js"></script>
 <script type="text/javascript">
+//right scroll
+$(window).scroll(function () {
+	scrollWindows('#popular', '#techbeat-widget', '#footer-desktop');
+});
 document.write('<div id="fb-root"></div>');
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -22,36 +28,9 @@ document.write('<div id="fb-root"></div>');
   js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1&appId=199828456846777";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/scroll.js"></script>
 <div id="content-main" class="nopadding" style="margin-top:10px">
 	<div id="tutorial-menu">
-		<div id="scroll-left">
-		<div id="content_left_menu">
-			<div id="left_menu_top">
-				<h2>HƯỚNG DẪN</h2>
-			</div>
-			<div id="left_menu_mid">
-				<ul>
-					<?php if(isset($listCategory)){ ?>
-					<?php foreach($listCategory as $categoryTuto){ ?>
-					<li><a href="<?= Yii::getAlias('@web').$categoryTuto['rewrite']; ?>.html" title="<?= $categoryTuto['name']; ?>"><?= $categoryTuto['name']; ?></a></li>
-					<?php } } ?>
-				</ul>
-				<div class="cls"></div>
-			</div>
-			<div id="left_menu_bot"></div>
-		</div>
-        <div id="ads-left">
-            <img src="<?= Yii::$app->request->baseUrl; ?>img/google-adsense-200x200.png" width="190" />
-        </div>
-            <div style="margin-top:10px">
-            <img src="<?= Yii::$app->request->baseUrl; ?>img/200x200.jpg" width="190" />
-        </div> 
-		</div>
-		<div id="ads-two" style="height:30px">
-		<!--img src="/img/adsense-300x250-01.gif" width="300" /-->
-		</div>
+		<?= $this->render('//layouts/tutorial-left-menu', ['listCategory' => $listCategory]); ?>
 	</div>
 	<div id="tutorial-content">
 		<?= $this->render('//layouts/navigator', ['navigator' => $navigator]); ?>
@@ -175,10 +154,10 @@ document.write('<div id="fb-root"></div>');
 		 </div>
 		 	  </div>
 		</div>
-        <div class="popular-soft" style="width:250px;margin-top:20px">
+        <!--div class="popular-soft" style="width:250px;margin-top:20px">
             <h2 style="margin-bottom:5px !important">FreeFile.Vn Trên Facebook</h2>
             <object style="border:1px solid #DDD; overflow: hidden; width: 250px; height: 300px;"  data="http://www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/hocthietkewebsite&amp;width=250&amp;height=300&amp;connections=10&amp;header=false"></object>
-        </div>
+        </div-->
 	</div>
 	<div class="cls"></div>
 </div>
