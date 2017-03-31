@@ -100,6 +100,54 @@
 .tutorial-body h3{font-size:15px;font-weight:bold}
 .tutorial-title h2{font-size:16px;color:#666}
 .tutorial-description{margin-bottom:15px}
+.tutorial-list{
+	border-bottom: 1px solid #d4dadf;
+    padding: 10px 0px 13px 0px;
+	margin-bottom: 10px;
+	clear: both
+}
+.tutol-list-header{
+	width: 542px;
+}
+.tutol-list-header a{
+	font-size:16px;
+	text-align: left
+}
+.tutol-list-header a:hover{
+	text-decoration:none;
+	color: #e0001f
+}
+.tutol-list-header h3{
+	text-align: left
+}
+.tutol-list-header img{
+	width: 90px;
+	margin-right: 15px;
+	margin-left: 0px;
+	float: left
+}
+.tutol-list-info{
+	/*padding-left: 107px;*/
+}
+.tutol-list-details{
+	padding: 5px 0px;
+}
+.tutol-list-header span.tutol-list-title{
+	width: 435px;
+	float: left;
+	margin-bottom: 3px
+}
+.tutol-list-more{float: right}
+.tutol-list-more .program-entry-download-link.button-link {
+    height: 24px;
+    line-height: 24px;
+    min-width: 85px;
+    line-height: 24px
+}
+.tutol-list-more a{
+	font-size: 12px;
+	text-align: center
+}
 .ads-250{margin-bottom: 15px}
 .download-now{
 	text-align: left;

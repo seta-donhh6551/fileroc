@@ -21,35 +21,40 @@ $navigator = [
 		<?= $this->render('//layouts/navigator', ['navigator' => $navigator]); ?>
         <div id="tutorial-body">
             <div class="tutorial-title">
-                <h2><?= $model->name; ?></h2>
+                <h2>Thủ thuật hướng dẫn</h2>
             </div>
             <div class="tutorial-description">
-                <?= $model->info; ?>
+                Tổng hợp những bài viết về thủ thuật và hướng dẫn sử dụng máy tính, phần mềm, ứng dụng... chia sẻ những thủ thuật hay giúp bạn chăm sóc và quản lý tốt máy tính và những thiết bị của mình
             </div>
-            <div id="programs-list">
+            <div class="tutorial-body">
 			<?php if(isset($listTutorials)){ ?>
 			<?php foreach($listTutorials as $tutorial){ ?>
-				<div class="program-entry">
-					<div class="program-entry-header">
-					   <a href="/download/folder-lock-75.html" title="Folder Lock 7.5" class="internal-link">
-						  <img src="/uploads/thumb/folder-lock.jpg" alt="Download Folder Lock 7.5">
-						  <span class="program-title-text">
-							 <h3><?= $tutorial['title']; ?></h3>
-						  </span>
-					   </a>
+				<div class="tutorial-list">
+					<div class="tutol-list-header">
+						<a href="<?= Yii::$app->request->baseUrl.$tutorial['rewrite'].'-'.$tutorial['id']; ?>.html" title="<?= $tutorial['title']; ?>" class="internal-link">
+							<img src="<?= Yii::$app->request->baseUrl.'uploads/thumb/'.$tutorial['thumb']; ?>" alt="<?= $tutorial['title']; ?>" style="width:90px" />
+							<span class="tutol-list-title">
+								<h3><?= $tutorial['title']; ?></h3>
+							</span>
+						</a>
+						<div class="tutol-list-details">New Softwares - 9.42MB - <span class="trial" style="float:none">License </span></div>
+						<div class="tutol-list-info">
+							<?= $tutorial['info']; ?>
+						</div>
+						<div class="tutol-list-more">
+							<a href="<?= Yii::$app->request->baseUrl.$tutorial['rewrite'].'-'.$tutorial['id']; ?>.html" class="green program-entry-download-link button-link">
+							Chi Tiết</a>
+						</div>
+						<div style="clear:both"></div>
 					</div>
-					<div class="program-entry-download-button category-page-box-fix">
-					   <a href="/download/folder-lock-75.html" class="green program-entry-download-link button-link">
-					   <span class="sprite download-icon-white"></span>Chi Tiết</a>
-					</div>
-					<div class="program-entry-details">New Softwares - 9.42MB - <span class="trial">License </span></div>
-					<div class="program-entry-description">
-						Folder Lock is a revolution in data security, allow you not only lock and/or code personal files and folders but also offer you great option to backup your precious data and saved them on a cloud storage’s account.			</div>
-					<ul class="child-programs">
-					</ul>
 				 </div>
 			<?php } } ?>
             </div>
+			<div id="pagination">
+				<?php echo \yii\widgets\LinkPager::widget([
+					'pagination' => $pages,
+				]); ?>
+			</div>
         </div>
 	</div>
 	<div id="tutorial-right">
