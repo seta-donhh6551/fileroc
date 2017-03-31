@@ -84,7 +84,7 @@ class TutorialsController extends MyController {
             throw new \yii\web\HttpException(404, 'The requested item could not be found.');
 		}
 		
-		$modelCate = \common\models\Categorytutorial::findOne(['rewrite'=>$rewrite]);
+		$modelCate = \common\models\Categorytutorial::findOne(['rewrite' => $rewrite]);
         if (!$modelCate){
             throw new \yii\web\HttpException(404, 'The requested item could not be found.');
         }
@@ -95,13 +95,29 @@ class TutorialsController extends MyController {
 		$this->activeMenu = $model;
         $this->infoConfig = ['keywords' => $modelCate->keywords, 'description' => $modelCate->description];
         
+		//get all list tutorials
+		$query = \common\models\Tutorials::find()
+					->where(['status' => 1])
+					->andWhere(['cate_id' => $modelCate->id]);
+		
+		$pagination = new \yii\data\Pagination([
+            'defaultPageSize' => \common\components\Utility::$defaultPageSize,
+            'totalCount' => $query->count()
+        ]);
+		
+		$listTutorials = $query->offset($pagination->offset)
+						->limit($pagination->limit)
+						->all();
+		
         $listCategory = \common\models\Categorytutorial::find()
 						->where(['status' => 1])
 						->all();
         
         return $this->render('category', [
             'model' => $modelCate,
-            'listCategory' => $listCategory
+            'listCategory' => $listCategory,
+			'listTutorials' => $listTutorials,
+			'pages' => $pagination
         ]);
     }
 }

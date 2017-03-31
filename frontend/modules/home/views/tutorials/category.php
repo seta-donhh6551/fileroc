@@ -28,8 +28,34 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/'.$model['rewrite'],'title' => 
                 <?= $model->info; ?>
             </div>
             <div class="tutorial-body">
-                
+			<?php if(isset($listTutorials)){ ?>
+			<?php foreach($listTutorials as $tutorial){ ?>
+				<div class="tutorial-list">
+					<div class="tutol-list-header">
+						<a href="<?= Yii::$app->request->baseUrl.$tutorial['rewrite'].'-'.$tutorial['id']; ?>.html" title="<?= $tutorial['title']; ?>" class="internal-link">
+							<img src="<?= Yii::$app->request->baseUrl.'uploads/thumb/'.$tutorial['thumb']; ?>" alt="<?= $tutorial['title']; ?>" style="width:90px" />
+							<span class="tutol-list-title">
+								<h3><?= $tutorial['title']; ?></h3>
+							</span>
+						</a>
+						<div class="tutol-list-details">New Softwares - 9.42MB - <span class="trial" style="float:none">License </span></div>
+						<div class="tutol-list-info">
+							<?= $tutorial['info']; ?>
+						</div>
+						<div class="tutol-list-more">
+							<a href="<?= Yii::$app->request->baseUrl.$tutorial['rewrite'].'-'.$tutorial['id']; ?>.html" class="green program-entry-download-link button-link">
+							Chi Tiết</a>
+						</div>
+						<div style="clear:both"></div>
+					</div>
+				 </div>
+			<?php } } ?>
             </div>
+			<div id="pagination">
+				<?php echo \yii\widgets\LinkPager::widget([
+					'pagination' => $pages,
+				]); ?>
+			</div>
         </div>
 	</div>
 	<div id="tutorial-right">
