@@ -57,6 +57,12 @@ class TutorialsController extends MyController {
 						->where(['status' => 1])
 						->all();
 		
+        $listPopular = \common\models\Posts::find()
+                        ->where(['status' => 1])
+                        ->orderBy(['views' => SORT_DESC])
+                        ->limit(10)
+                        ->all();
+        
 		//get all list tutorials
 		$query = \common\models\Tutorials::find();
 		
@@ -73,7 +79,8 @@ class TutorialsController extends MyController {
             'model' => $model,
 			'listTutorials' => $listTutorials,
             'listCategory' => $listCategory,
-			'pages' => $pagination
+			'pages' => $pagination,
+            'listPopular' => $listPopular
         ]);
 	}
 	
@@ -105,6 +112,12 @@ class TutorialsController extends MyController {
             'totalCount' => $query->count()
         ]);
 		
+        $listPopular = \common\models\Posts::find()
+                        ->where(['status' => 1])
+                        ->orderBy(['views' => SORT_DESC])
+                        ->limit(10)
+                        ->all();
+        
 		$listTutorials = $query->offset($pagination->offset)
 						->limit($pagination->limit)
 						->all();
@@ -117,7 +130,8 @@ class TutorialsController extends MyController {
             'model' => $modelCate,
             'listCategory' => $listCategory,
 			'listTutorials' => $listTutorials,
-			'pages' => $pagination
+			'pages' => $pagination,
+            'listPopular' => $listPopular
         ]);
     }
 }

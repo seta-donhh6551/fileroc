@@ -13,12 +13,17 @@ $navigator = [
 $navigator[] = ['url' => Yii::getAlias('@web').'/'.$model['rewrite'].'-'.$model['id'],'title' => $model['title']];
 ?>
 <link href="<?= Yii::$app->request->baseUrl; ?>css/detail.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/jquery-1.11.3.min.js"></script>
+<link href="http://www.jqueryscript.net/demo/Responsive-Touch-enabled-jQuery-Image-Lightbox-Plugin/dist/simplelightbox.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/scroll.js"></script>
+<script type="text/javascript" src="http://www.jqueryscript.net/demo/Responsive-Touch-enabled-jQuery-Image-Lightbox-Plugin/dist/simple-lightbox.min.js"></script>
 <script type="text/javascript">
 //right scroll
 $(window).scroll(function () {
 	scrollWindows('#popular', '#techbeat-widget', '#footer-desktop');
+});
+$(function(){
+    var gallery = $('.tutorial-title a').simpleLightbox({navText:['&lsaquo;','&rsaquo;']});
 });
 document.write('<div id="fb-root"></div>');
 (function(d, s, id) {

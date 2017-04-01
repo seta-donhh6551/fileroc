@@ -62,41 +62,13 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/'.$model['rewrite'],'title' => 
         <div class="ads-250">
             <img src="<?= Yii::$app->request->baseUrl; ?>img/adsense-250x250-en.png"/>
         </div>
-        <div id="popular" style="width:250px">
-            <h2>Phần Mềm Liên Quan</h2>
-            <div class="popular">
-                <div class="topdown">
-                    <a href="/download/hj-split-30.html"><img src="/uploads/icons/hjsplit-icon.jpg" alt="Download HJ-Split 3.0"></a>
-                    <h3><a href="/download/hj-split-30.html" title="Download HJ-Split 3.0">HJ-Split 3.0</a><span class="total-right">100.000</span></h3>
-                    <p>Easily split and join large files</p>
-                </div>
-                <div class="topdown">
-                    <a href="/download/ytd-video-downloader.html"><img src="/uploads/icons/ytd-video-downloader.png" alt="Download Ytd video downloader"></a>
-                    <h3><a href="/download/ytd-video-downloader.html" title="Download Ytd video downloader">Ytd video downloader</a><span class="total-right">100.000</span></h3>
-                    <p>Download video from youtube, facebook</p>
-                </div>
-                <div class="topdown">
-                    <a href="/download/recuva.html"><img src="/uploads/icons/recuva-icon.png" alt="Download Recuva"></a>
-                    <h3><a href="/download/recuva.html" title="Download Recuva">Recuva</a><span class="total-right">100.000</span></h3>
-                    <p>Restores any files you have deleted </p>
-                </div>
-                <div class="topdown">
-                    <a href="/download/free-download-manager.html"><img src="/uploads/icons/free-download-manager-icon.jpg" alt="Download Free download manager "></a>
-                    <h3><a href="/download/free-download-manager.html" title="Download Free download manager ">Free download manager </a><span class="total-right">100.000</span></h3>
-                    <p>Accelerate download and supports downloading</p>
-                </div>
-                <div class="topdown">
-                    <a href="/download/hj-split-30.html"><img src="/uploads/icons/hjsplit-icon.jpg" alt="Download HJ-Split 3.0"></a>
-                    <h3><a href="/download/hj-split-30.html" title="Download HJ-Split 3.0">HJ-Split 3.0</a><span class="total-right">100.000</span></h3>
-                    <p>Easily split and join large files</p>
-                </div>
-                <div class="topdown">
-                    <a href="/download/ytd-video-downloader.html"><img src="/uploads/icons/ytd-video-downloader.png" alt="Download Ytd video downloader"></a>
-                    <h3><a href="/download/ytd-video-downloader.html" title="Download Ytd video downloader">Ytd video downloader</a><span class="total-right">100.000</span></h3>
-                    <p>Download video from youtube, facebook</p>
-                </div>
-            </div>
-        </div>
+        <?php
+        echo $this->render('//layouts/popular-download', [
+            'listPost' => $listPopular,
+            'title' => 'Phần Mềm Tải Nhiều Nhất',
+            'width' => 250
+        ]); 
+        ?>
         <div class="popular-soft" style="width:250px">
 			<h2>Bài Viết Mới</h2>
 			<div id="techbeat-widget" style="width:250px">
@@ -163,7 +135,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/'.$model['rewrite'],'title' => 
 		 	  </div>
 		</div>
         <div class="popular-soft" style="width:250px;margin-top:20px">
-            <h2 style="margin-bottom:5px !important">FreeFile.Vn Trên Facebook</h2>
+            <h2 style="margin-bottom:5px !important">Facebook</h2>
             <object style="border:1px solid #DDD; overflow: hidden; width: 250px; height: 300px;"  data="http://www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/hocthietkewebsite&amp;width=250&amp;height=300&amp;connections=10&amp;header=false"></object>
         </div>
 	</div>

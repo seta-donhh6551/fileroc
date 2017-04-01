@@ -226,7 +226,7 @@
 <script src="http://cache.filehippo.com/scripts/v1/html5shiv.js"></script>
 <![endif]-->
 <!-- <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script> -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script-->
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
 <!-- <script>
    (function ($, d) { $.each(readyQ, function (i, f) { $(f) }); $.each(bindReadyQ, function (i, f) { $(d).bind("ready", f) }) })(jQuery, document)
