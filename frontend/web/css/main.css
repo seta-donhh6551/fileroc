@@ -1479,7 +1479,7 @@ q {
     margin-right: auto;
     margin-left: auto;
     padding: 0;
-    width: 1110px
+    width: 1074px;
 }
 #footer-desktop .footer-container {
     padding: 5px 0 0px;
@@ -4061,6 +4061,35 @@ section {
     padding: 30px 0 30px 0
 }
 @media only screen and (min-width:768px) and (max-width: 991px) {
+    .popular-soft #techbeat-widget {
+        width: 100% !important;
+    }
+    #tutorial-right #popular, .popular-soft{
+        width: 98% !important;
+        margin: 20px 0px 0px 0px !important;
+    }
+    #content-main #tutorial-right {
+        width: 100%;
+    }
+    #tutorial-content {
+        width: 95% !important;
+    }
+    .tutol-list-header {
+        width: 95% !important;
+    }
+    #scroll-left #ads-left {
+        float: left;
+        margin: 0px;
+        padding: 0px 60px;
+        margin-top: 0px;
+    }
+    #content-main #tutorial-menu {
+        width: 100%;
+    }
+    #content_left_menu {
+        position: static;
+        float: left;
+    }
     #content-main {
         padding-left: 10px!important;
         width: 100%;
@@ -4253,6 +4282,30 @@ section {
     padding: 20px 0px 0px 20px;
 }
 @media (max-width: 767px) {
+    #tutorial-right {
+        width: 100% !important;
+    }
+    #popular, .popular-soft {
+        width: 100% !important;
+        float: left;
+    }
+    #techbeat-widget {
+        margin-bottom: 24px;
+        width: 300px;
+        float: left;
+        width: 100% !important;
+    }
+    #content-main #tutorial-content {
+        min-height: auto;
+        padding: 0px;
+        margin: 0px;
+    }
+    #navigation ul li {
+        width: 100%;
+    }
+    #tutorial-menu {
+        display: none;
+    }
     .down-right h2 {
         padding: 10px 0px;
     }
