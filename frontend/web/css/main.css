@@ -1468,7 +1468,7 @@ q {
     outline: 0
 }
 #footer-desktop .grey-top {
-    background-color: #e0001f;
+    background-color: #96322d;
     width: 100%
 }
 #footer-desktop .footer-space {
@@ -1483,6 +1483,7 @@ q {
 }
 #footer-desktop .footer-container {
     padding: 5px 0 0px;
+    padding-top: 15px;
     overflow: hidden;
     color:#fff;
 }
@@ -1527,6 +1528,7 @@ q {
     padding-right: 0!important
 }
 #footer-desktop .copy {
+    margin-bottom: 10px;
     font-size: 12px;
     float: right;
     width: 30%;
@@ -5258,7 +5260,7 @@ html {
 }
 .footer-menu h3{
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
     float: left;
     width: 100%;

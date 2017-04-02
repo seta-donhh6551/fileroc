@@ -1,6 +1,6 @@
 <div id="footer-desktop" class="hidden-xs hidden-sm">
     <div class="grey-top footer-space">
-        <div class="container container-fh">
+        <div class="container container-fh" style="width:1052px">
             <div class="footer-container">
                 <div class="footer-menu left-footer-menu">
                     <h3>Về chúng tôi</h3>
