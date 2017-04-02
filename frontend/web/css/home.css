@@ -718,6 +718,9 @@ h2 a:hover {
     text-transform: uppercase;
     color: #333
 }
+#soft-news h2 a{
+    color: #F00
+}
 #home-categories h2{
     font-size: 21px;
     text-transform: uppercase;
@@ -804,6 +807,9 @@ h2 a:hover {
     padding-bottom: 10px;
     font-weight: 700;
     color: #0093de
+}
+.news-excerpt{
+    text-align: justify
 }
 .news-excerpt a {
     margin-left: 10px

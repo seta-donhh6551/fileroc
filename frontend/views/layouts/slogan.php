@@ -48,19 +48,19 @@
             <?php $activeMenu = Yii::$app->controller->activeMenu; ?>
             <div>
                 <div class="s-count-items">
-                    <div class="software-button"><a href="<?= Yii::$app->request->baseUrl.$activeMenu['rewrite']; ?>/moi-cap-nhat.html">Phần Mềm Mới nhất</a></div>
-                </div>
-            </div>
-            <div class="v-spacer">&nbsp;</div>
-            <div>
-                <div class="s-count-items">
                     <div class="software-button"><a href="<?= Yii::$app->request->baseUrl.$activeMenu['rewrite']; ?>/tai-nhieu-nhat.html">Tải về nhiều nhất</a></div>
                 </div>
             </div>
             <div class="v-spacer">&nbsp;</div>
             <div>
                 <div class="s-count-items">
-                    <div class="software-button"><a href="#">Đánh Giá Hay Nhất</a></div>
+                    <div class="software-button" style="background:green"><a href="<?= Yii::$app->request->baseUrl; ?>huong-dan.html">Thủ thuật máy tính</a></div>
+                </div>
+            </div>
+            <div class="v-spacer">&nbsp;</div>
+            <div>
+                <div class="s-count-items">
+                    <div class="software-button"><a href="<?= Yii::$app->request->baseUrl.$activeMenu['rewrite']; ?>/moi-cap-nhat.html">Phần Mềm Mới nhất</a></div>
                 </div>
             </div>
         </div>
