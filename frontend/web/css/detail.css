@@ -5,12 +5,15 @@
 }
 #tutorial-content{
     float: left;
-	width: 562px;
+	width: 588px;
     padding: 10px;
 	margin: 0px 10px 0px 15px;
 	min-height: 300px;
 }
 #tutorial-right{
+    position: absolute;
+    top: 10px;
+    right: -10px;
     float: left;
 	width: 250px;
 	margin-top: 10px;
@@ -107,7 +110,7 @@
 	clear: both
 }
 .tutol-list-header{
-	width: 542px;
+	width: 562px;
 }
 .tutol-list-header a{
 	font-size:16px;
