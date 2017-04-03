@@ -174,34 +174,34 @@ use yii\widgets\ActiveForm;
                                         <a class="ob-dynamic-rec-link" href="#">
                                             <span class="ob-unit ob-rec-image-container" data-type="Image">
                                                 <div class="ob-image-ratio"></div>
-                                                <img class="ob-rec-image ob-show" src="<?= Yii::$app->request->baseUrl; ?>img/zalo-cho-mobile.jpg" onload="this.className += ' ob-show'" alt="The Cost of a Beer Every Year Since 1952" title="The Cost of a Beer Every Year Since 1952" onerror="OBR.extern.imageError(this)">
+                                                <img class="ob-rec-image ob-show" src="<?= Yii::$app->request->baseUrl; ?>img/zalo-cho-mobile.jpg" onload="this.className += ' ob-show'" alt="Tải zalo cho ios và android phiên bản mới nhất" title="Tải zalo cho ios và android phiên bản mới nhất">
                                             </span>
-                                            <span class="ob-unit ob-rec-text" data-type="Title" title="The Cost of a Beer Every Year Since 1952">Tải zalo cho ios và android phiên bản mới nhất</span>
+                                            <span class="ob-unit ob-rec-text" data-type="Title" title="Tải zalo cho ios và android phiên bản mới nhất">Tải zalo cho ios và android phiên bản mới nhất</span>
 											<span class="ob-unit ob-rec-source" data-type="Source">Zalo là phần mềm mạng xã hội cho phép bạn chia sẻ hình ảnh & status với bạn bè</span>
                                         </a>
                                     </li>
                                 </ul>
                                 <ul class="ob-widget-items-container ob-multi-row ob-row-1">
                                     <li class="ob-dynamic-rec-container ob-recIdx-1 ob-p" data-pos="1">
-                                        <a class="ob-dynamic-rec-link" onclick="" href="http://us-presidents.insidegov.com/stories/5392/least-intelligent-presidents?utm_medium=cm&amp;utm_source=outbrain&amp;utm_campaign=i3.cm.ob.dt.5392" onmousedown="this.href = 'http://paid.outbrain.com/network/redir?p=W4QpUwbBl4dnpfjTqkhF0gKSs8LeJR-FrqPoSYjaqgzfjUpETSpOunRwfccewslvQ6CyVMrg1y9GDFn8KCywWdmXsMIxyKBkIFhoYqCYkhzmoJdhBqD7ToXMopXth4Kqfy-R93wnccueZVNiBh82oNHiD64yLyC3933baxtJ0TapV8LXdIJbJxa9-P4JiwibiCf6KoNqxLpRurjLk6P2yEGcOd6CDu6FKM-4HFZt-u0oBddiONBoJalG3bZVeO1lYRjMtGrQbPpCL4bTS7KVcXPe5XmO8xJU5_5MOVxVpCAuP34Tq1LLqPKLR5lqXJxKnbnrzphpATnxn50F9IROZwrcSOA1Y8Uq8X36jAD4rv8vk2NmpHmbOcit--yuTpOOMo1sgEQSfYxS61z-jdcMOF8eYBvGKePBeslErTgeIixHPewV6LhHa6eFEHLYmHCvmdyG5Fl6qiL7L83LNQO63eVvKmPvlnw5oyr0VqDIpx8vq6eux7B3JlEnQRGZILQD58jsgya3ef0b_d3Ul9JlWe1SwrNFgjYQreWpHvxpeDCTN2DllNeRJuConJWmNS8Nz-9jKu7RFkG9yXIxy1N3n2frJCWuG3wVqALgtxur_fVLwSh9A1T8BzdJq1C-Od8m6zF4d582-NF9wZnl6KZ2FyCICCdoGVSqkQ6wO3a9gN70Bqi2WVoY1-25eCEO8zfUevtjzSrwYNWi24G57Ayh5q-Rk1lLY4sQ_wE9OjQuGn0HycnKRTv_wL255TxNq2wPPXJ_HVAZ7xSEvi0mm_LrCQFN7CtQx25A5w0gFZb0Qd52e-8TwPQ6pAL6RQ9Hq0QP&amp;c=90f245c2&amp;v=3';
-                                           " target="_blank" rel="nofollow">
+                                        <a class="ob-dynamic-rec-link" href="#">
                                             <span class="ob-unit ob-rec-image-container" data-type="Image">
                                                 <div class="ob-image-ratio"></div>
-                                                <img class="ob-rec-image ob-show" src="http://images.outbrain.com/Imaginarium/api/uuid/b3893c163ca67531c3f270f8ba4d709671843748e0c896642892c96470563449/300/161/1.0" onload="this.className += ' ob-show'" alt="Here Are the 25 Presidents with the Lowest IQ Scores" title="Here Are the 25 Presidents with the Lowest IQ Scores" onerror="OBR.extern.imageError(this)">
+                                                <img class="ob-rec-image ob-show" src="<?= Yii::$app->request->baseUrl; ?>img/avast-antivirus-free.jpg" onload="this.className += ' ob-show'" alt="Avast Antivirus, Phần mềm diệt virus miễn phí tốt cho máy tính của bạn" title="Avast Antivirus, Phần mềm diệt virus miễn phí tốt cho máy tính của bạn">
                                             </span>
-                                            <span class="ob-unit ob-rec-text" data-type="Title" title="Here Are the 25 Presidents with the Lowest IQ Scores">Here Are the 25 Presidents with the Lowest IQ Scores</span>      <span class="ob-unit ob-rec-source" data-type="Source">InsideGov | By Graphiq</span>
+                                            <span class="ob-unit ob-rec-text" data-type="Title" title="Avast Antivirus, Phần mềm diệt virus miễn phí tốt cho máy tính của bạn">Avast Antivirus, Phần mềm diệt virus miễn phí tốt cho máy tính của bạn</span>
+											<span class="ob-unit ob-rec-source" data-type="Source">Kaspersky Anti-virus | AVG Antivirus | Avira Free Antivirus</span>
                                         </a>
                                     </li>
                                 </ul>
                                 <ul class="ob-widget-items-container ob-multi-row ob-row-2">
                                     <li class="ob-dynamic-rec-container ob-recIdx-2 ob-p" data-pos="2">
-                                        <a class="ob-dynamic-rec-link" onclick="" href="http://basketball-players.pointafter.com/stories/5891/biggest-dead-weight-nba-lance-stephenson-rajon-rondo?utm_medium=cm&amp;utm_source=outbrain&amp;utm_campaign=i3.cm.ob.dt.5891" onmousedown="this.href = 'http://paid.outbrain.com/network/redir?p=gSeShGlBgIENx6tIK-l1nOtzVe3elQpXj9jpvv72aoII86agHrMuMgCVzepHu1qbBkUzr8Hw2WySqgEINwK68NcUb4lki2_n1IVq6RuvmXdaJay2JkgfsnyESyl5IiAOfL6U26Z1NOWfdNq4b07geTqBicHggmbMwjlSK5znMB6ZrrFXIeCbRgFKiSQvsoR5XDfMYHj-YxhnYr8jJ2CBv2ZEgs1oJggLLYJIONWRfLplXxfXiSs4H9Ryf7fj_aT09mlR2bUxzB2hSAsXcf_qeBxkVBUODgo67-8YvAGNRXFlGetQwgapUnLz_-1RD_hiLvjAsPlu6Qxmy6d5S23iSbGn6rvHLrKLUvtsTKTGZheMtB15gKUixdI4yxLa4B-EzEBJ628iju8Ghyahq2OKg0KY_LOFSnUQbzQnpl25lzCEgmfclh1eb7ivCxjyy0kM0Y4U34LT8dxo6XJyZ8PxSt08CMbdN72DldXG_o0jcqmnz7feMw-oaQzb6-mAfPwQck-dSs5RrGdHHYYaq8hdEF3o1ejq9fFjyYGC16_0v49C8oInRQFAR358cSsIOo8hDKdG_Xc4vNQdQhdSNouchWUWrSovgsY85177UR5eOs1jrQ2sg6vva_GxrRs1w6UbEfh9c_GnlcM2BQUQKPf-rrRwfeP-HN2s0YY4ldElm3PboR56e7t8eeQJP2L_RbILoOHXPy9v1zZD6lZPf5P4a2sS1l45sXZS4nYSbxfK_TvE-Y5EZDdZkX8C7uoZ77ZfSZkdmp8mhj4_8eTkSoYGra04jCwM1I2KNJLYK8AvAFr44LQzH35WIt4SBoXbEeXM&amp;c=ad1ca247&amp;v=3';
-                                           " target="_blank" rel="nofollow">
+                                        <a class="ob-dynamic-rec-link" href="#">
                                             <span class="ob-unit ob-rec-image-container" data-type="Image">
                                                 <div class="ob-image-ratio"></div>
-                                                <img class="ob-rec-image ob-show" src="http://images.outbrain.com/Imaginarium/api/uuid/2b0a283e7961a8c6df780d3d498b8ba0d07895259935d9834a3166d05bc30beb/300/161/1.0" onload="this.className += ' ob-show'" alt="NBA Teams are Glad These Guys are Gone" title="NBA Teams are Glad These Guys are Gone" onerror="OBR.extern.imageError(this)">
+                                                <img class="ob-rec-image ob-show" src="<?= Yii::$app->request->baseUrl; ?>img/google-chrome.jpg" onload="this.className += ' ob-show'" alt="Tải google chrome, trình duyệt web miễn phí nhanh nhất từ google" title="Tải google chrome, trình duyệt web miễn phí nhanh nhất từ google">
                                             </span>
-                                            <span class="ob-unit ob-rec-text" data-type="Title" title="NBA Teams are Glad These Guys are Gone">NBA Teams are Glad These Guys are Gone</span>      <span class="ob-unit ob-rec-source" data-type="Source">PointAfter | By Graphiq</span>
+                                            <span class="ob-unit ob-rec-text" data-type="Title" title="NBA Teams are Glad These Guys are Gone">Tải google chrome, trình duyệt web miễn phí nhanh nhất từ google</span>
+											<span class="ob-unit ob-rec-source" data-type="Source">Download google chrome | Trình duyệt web miễn phí</span>
                                         </a>
                                     </li>
                                 </ul>

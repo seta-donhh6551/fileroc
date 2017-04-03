@@ -78,7 +78,7 @@ class InputController extends MyController
                         ->save('../../uploads/thumb/'.$baseName, ['quality' => 100]);
 						
 						Image::thumbnail('../../uploads/'.$baseName, Utility::$smallImageThumb['width'], Utility::$smallImageThumb['height'], $autoResize)
-                        ->save('../../uploads/thumb/smaller/'.$baseName, ['quality' => 100]);
+                        ->save('../../uploads/smaller/'.$baseName, ['quality' => 100]);
 
                         $model->thumb = $baseName;
                     }
