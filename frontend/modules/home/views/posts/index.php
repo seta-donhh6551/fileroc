@@ -143,7 +143,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 				<div class="rating-right">
 					<span class="rate-title">Viết đánh giá</span>
 				</div>
-				<div style="width:300px;float:left;color:#999;border-right:1px solid #DDD;">
+				<div class="rating-right2" style="float:left;color:#999;border-right:1px solid #DDD;">
 					<div class="item">
 						<div style="width:35%;float:left;">
 							<span style="margin-left:10px;float: left;color: #218592;line-height:30px;">Xuất sắc</span>

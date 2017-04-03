@@ -1649,6 +1649,7 @@ q {
     float: left;
     width: 100%;
     height: auto;
+    padding-left: 10px;
 }
 #footer-mobile .clearfix {
     clear: both;
@@ -4141,6 +4142,9 @@ section {
     }
 }
 @media only screen and (min-width:992px) and (max-width: 1024px) {
+    #left-all{
+        margin-left: 10px;
+    }
     .grey-top {
         background-color: #f2f2f2;
         width: 1110px !important;
@@ -4286,7 +4290,55 @@ section {
     color: #999;
     padding: 20px 0px 0px 20px;
 }
+.rating-right2{
+    width: 300px;
+}
 @media (max-width: 767px) {
+    .related-total {
+        width: 70px;
+        text-align: right;
+        color: #F60;
+        position: absolute;
+        right: 10px;
+    }
+    .tblvoted tr td {
+        width: 50% !important;
+        padding: 5px 5px 3px 10px;
+        float: left;
+    }
+    .detail-intro.padbot img{
+        margin-left: 0px !important; 
+        width: 100%;
+    }
+    .review-items .ritems-right {
+        margin-left: 10px;
+    }
+    .review-items .ritems-left{
+        width: 100%;
+    }
+    .ritems-left .review-user-info {
+        width: 100%;
+        text-align: left;
+        padding-left: 13px;
+        padding-top: 5px;
+    }
+    .user-rating .rating-right2{
+        border-right: none !important;
+        width: 100%;
+    }
+    .user-rating .rating-left {
+        width: 100%;
+        float: left;
+        color: #999;
+        border-right: 0px solid #DDD;
+    }
+    #reviews .rating-title {
+        width: 100%;
+    }
+    #download-option tr td {
+        width: 50%;
+        padding: 5px 0px !important;
+    }
     #tutorial-right {
         width: 100% !important;
     }
@@ -4336,6 +4388,7 @@ section {
     }
     .form-items input{
         width: 100%;
+        height: 30px;
     }
     .form-items textarea{
         width: 100%;
@@ -4352,6 +4405,7 @@ section {
     }
     .detail-info-right{
         width: 100%;
+        margin-left: 0px;
     }
     .detail-info-left{
         width: 100%;
