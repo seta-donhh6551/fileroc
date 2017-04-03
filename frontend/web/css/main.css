@@ -1207,8 +1207,8 @@ q {
 }
 #header-tablet .os-options {
     float: left;
-    width: 300px!important;
-    margin-left: 66px!important;
+    /*idth: 300px!important;*/
+    margin-left: 30px!important;
     padding-top: 6px;
     white-space: nowrap
 }
@@ -1230,7 +1230,8 @@ q {
 #header-tablet .m-options>li a {
     color: #fff;
     text-decoration: none;
-    padding-bottom: 2px
+    padding-bottom: 2px;
+	text-transform: uppercase
 }
 #header-tablet .divider {
     background-image: url(/img/new/divider.png);
@@ -1247,9 +1248,9 @@ q {
 }
 #header-tablet .main-search-container {
     float: left;
-    width: 245px;
+    /*width: 245px;
     margin-right: 10px;
-    margin-left: 65px
+    margin-left: 65px*/
 }
 #tablet-language-container {
     margin-right: 5px
@@ -1266,6 +1267,7 @@ q {
     padding-bottom: 1px
 }
 #header-tablet .main-search-box {
+	margin-top: 15px;
     float: right;
     height: 34px;
     width: 245px
@@ -1417,7 +1419,7 @@ q {
     font-family: 'Open Sans', sans-serif;
     z-index: 10;
     width: 120px;
-    background-color: rgb(0, 146, 221);
+    background-color: #e0001f;
     padding-left: 10px;
     position: absolute;
     top: 50px;
@@ -1427,7 +1429,8 @@ q {
 #mobile-menu a {
     font-size: 14px;
     color: #fff;
-    text-decoration: none
+    text-decoration: none;
+	text-transform: uppercase
 }
 #mobile-menu a:hover {
     text-decoration: underline

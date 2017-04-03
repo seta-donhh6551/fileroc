@@ -73,11 +73,11 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 					</tr>
 					<tr>
 						<td>Ngày tạo</td>
-						<td class="even"><?= date('F. j, Y', strtotime($model->creat_date)); ?></td>
+						<td class="even"><?= date('d/m/Y H:i', strtotime($model->creat_date)); ?></td>
 					</tr>
 					<tr>
 						<td>Ngày cập nhật</td>
-						<td class="even"><?= date('F. j, Y', strtotime($model->update_date)); ?></td>
+						<td class="even"><?= date('d/m/Y H:i', strtotime($model->update_date)); ?></td>
 					</tr>
 					<tr>
 						<td>Hệ điều hành yêu cầu</td>

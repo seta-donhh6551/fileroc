@@ -33,7 +33,7 @@ AppAsset::register($this);
         <link href="<?= Yii::$app->request->baseUrl; ?>fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         
         <!--[if lt IE 9]>
-        <link rel="stylesheet" type="text/css" href="http://cache.filehippo.com/inc/IE8.css?v1" />
+        <link rel="stylesheet" type="text/css" href="<?= Yii::$app->request->baseUrl; ?>css/IE8.css?v1" />
         <![endif]-->
         <!--[if gte IE 9]>
         <style type="text/css">

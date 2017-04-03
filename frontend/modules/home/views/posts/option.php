@@ -83,7 +83,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
                         <td class="odd">Dung lượng file</td>
                         <td class="even"><?= $model->filesize ?> mb</td>
                         <td class="odd">Ngày cập nhật</td>
-                        <td class="even"><?= $model->update_date ?></td>
+                        <td class="even"><?= date('d/m/Y H:i', strtotime($model->update_date)); ?></td>
                     </tr>
                     <tr>
                         <td class="odd">Số lượt tải</td>

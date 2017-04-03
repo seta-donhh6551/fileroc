@@ -98,99 +98,86 @@ use yii\widgets\ActiveForm;
                     <img src="img/adsense-300x250.gif" width="300" />
                 </div>
                 <div class="featured-software">
-                    <h2>Featured Software</h2>
-                    <a href="#" title="FEATURED SOFTWARE: Norton WiFi Privacy">
-                        <img src="http://news.filehippo.com/wp-content/uploads/2017/03/Norton_wifi_privacy-300x139.png" alt="FEATURED SOFTWARE: Norton WiFi Privacy">
+                    <h2 style="color:#F30">THỦ THUẬT MÁY TÍNH</h2>
+                    <a href="<?= Yii::$app->request->baseUrl; ?>huong-dan.html" title="Thủ thuật máy tính và internet">
+                        <img src="<?= Yii::$app->request->baseUrl; ?>img/thu-thuat-may-tinh.jpg" alt="Thủ thuật máy tính và internet">
                         <div class="featured-title-container">
-                            <div class="feature-title">FEATURED SOFTWARE: Norton WiFi Privacy</div>
+                            <div class="feature-title">THỦ THUẬT: Sử dụng máy tính</div>
                         </div>
                     </a>
                 </div>
                 <!-- Homepage_MPU_Bottom -->
                 <div class="outbrain-container">
-                    <div id="ob_holder" style="display: none;">
-                        <iframe id="ob_iframe" src="#" style="display: none; width: 1px; height: 1px;"></iframe><script type="text/javascript" src="http://log.outbrain.com/loggerServices/widgetGlobalEvent?eT=0&amp;tm=1143&amp;pid=6584&amp;sid=10873&amp;wId=110&amp;wRV=01001603&amp;rId=8112db6a041c3d4e0f32bd28e1a11031&amp;idx=0&amp;pvId=8112db6a041c3d4e0f32bd28e1a11031&amp;org=0&amp;pad=3&amp;pVis=1&amp;eIdx=&amp;ab=0&amp;wl=0" charset="UTF-8" async=""></script><script type="text/javascript" src="http://log.outbrain.com/loggerServices/widgetGlobalEvent?eT=3&amp;tm=4348535&amp;pid=6584&amp;sid=10873&amp;wId=110&amp;wRV=01001603&amp;rId=8112db6a041c3d4e0f32bd28e1a11031&amp;idx=0&amp;pvId=8112db6a041c3d4e0f32bd28e1a11031&amp;org=0&amp;pad=3&amp;pVis=1&amp;eIdx=0&amp;ab=0&amp;wl=0" charset="UTF-8" async=""></script>
-                    </div>
-                    <div class="OUTBRAIN" data-src="http://filehippo.com" data-widget-id="AR_3" data-ob-template="FileHippo" data-ob-mark="true" data-browser="chrome" data-os="win32" data-dynload="" data-idx="0" id="outbrain_widget_0">
-                        <div class="ob-widget ob-strip-layout AR_3" data-dynamic-truncate="true">
+                    <div id="outbrain_widget_0">
+                        <div class="ob-widget ob-strip-layout" data-dynamic-truncate="true">
                             <span style="position:fixed;top:-200px;">&nbsp;</span>
                             <style type="text/css">
                                 /* dynamic basic css */
-                                .AR_3.ob-widget .ob-widget-items-container {margin:0;padding:0;}
-                                .AR_3.ob-widget .ob-widget-items-container .ob-clearfix {display:block;width:100%;float:none;clear:both;height:0px;line-height:0px;font-size:0px;}
-                                .AR_3.ob-widget .ob-widget-items-container.ob-multi-row {padding-top: 2%;}
-                                .AR_3.ob-widget .ob-dynamic-rec-container {position:relative;margin:0;padding;0;}
-                                .AR_3.ob-widget .ob-dynamic-rec-link,
-                                .AR_3.ob-widget .ob-dynamic-rec-link:hover {text-decoration:none;}
-                                .AR_3.ob-widget .ob-rec-image-container .ob-video-icon-container {position:absolute;left:0;height:50%;width:100%;text-align:center;top:25%;}
-                                .AR_3.ob-widget .ob-rec-image-container .ob-video-icon {display:inline-block;height:100%;float:none;opacity:0.7;transition: opacity 500ms;}
-                                .AR_3.ob-widget .ob-rec-image-container .ob-video-icon:hover {opacity:1;}
-                                .AR_3.ob-widget .ob_what{direction:ltr;clear:both;padding:5px 10px 0px;}
-                                .AR_3.ob-widget .ob_what a{color:#999;font-size:11px;font-family:arial;text-decoration: none;}
-                                .AR_3.ob-widget .ob_what.ob-hover:hover a{text-decoration: underline;}
-                                .AR_3.ob-widget .ob_amelia,
-                                .AR_3.ob-widget .ob_logo,
-                                .AR_3.ob-widget .ob_text_logo{vertical-align:baseline !important;display:inline-block;vertical-align:text-bottom;padding:0px 5px;box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;}
-                                .AR_3.ob-widget .ob_amelia{background:url('http://widgets.outbrain.com/images/widgetIcons/ob_logo_16x16.png') no-repeat center top;width:16px;height:16px;margin-bottom:-2px;}
-                                .AR_3.ob-widget .ob_logo{background:url('http://widgets.outbrain.com/images/widgetIcons/ob_logo_67x12.png') no-repeat center top;width:67px;height:12px;}
-                                .AR_3.ob-widget .ob_text_logo{background:url('http://widgets.outbrain.com/images/widgetIcons/ob_text_logo_67x22.png') no-repeat center top;width:67px;height:22px;}
-                                @media only screen and (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
-                                    .AR_3.ob-widget .ob_amelia{background:url('http://widgets.outbrain.com/images/widgetIcons/ob_logo_16x16@2x.png') no-repeat center top;width:16px;height:16px;margin-bottom:-2px; background-size:16px 32px;}
-                                    .AR_3.ob-widget .ob_logo{background:url('http://widgets.outbrain.com/images/widgetIcons/ob_logo_67x12@2x.png') no-repeat center top;width:67px;height:12px; background-size:67px 24px;}
-                                    .AR_3.ob-widget .ob_text_logo{background:url('http://widgets.outbrain.com/images/widgetIcons/ob_text_logo_67x22@2x.png') no-repeat center top;width:67px;height:20px; background-size:67px 40px;}
-                                }
-                                .AR_3.ob-widget:hover .ob_amelia,
-                                .AR_3.ob-widget:hover .ob_logo,
-                                .AR_3.ob-widget:hover .ob_text_logo{background-position:center bottom;}
-                                .AR_3.ob-widget .ob_what{text-align:right;}
-                                .AR_3.ob-widget .ob-rec-image-container .ob-rec-image {display:block;}
+                                .ob-widget .ob-widget-items-container {margin:0;padding:0;}
+                                .ob-widget .ob-widget-items-container .ob-clearfix {display:block;width:100%;float:none;clear:both;height:0px;line-height:0px;font-size:0px;}
+                                .ob-widget .ob-widget-items-container.ob-multi-row {padding-top: 2%;}
+                                .ob-widget .ob-dynamic-rec-container {position:relative;margin:0;padding;0;}
+                                .ob-widget .ob-dynamic-rec-link,
+                                .ob-widget .ob-dynamic-rec-link:hover {text-decoration:none;}
+                                .ob-widget .ob-rec-image-container .ob-video-icon-container {position:absolute;left:0;height:50%;width:100%;text-align:center;top:25%;}
+                                .ob-widget .ob-rec-image-container .ob-video-icon {display:inline-block;height:100%;float:none;opacity:0.7;transition: opacity 500ms;}
+                                .ob-widget .ob-rec-image-container .ob-video-icon:hover {opacity:1;}
+                                .ob-widget .ob_what{direction:ltr;clear:both;padding:5px 10px 0px;}
+                                .ob-widget .ob_what a{color:#999;font-size:11px;font-family:arial;text-decoration: none;}
+                                .ob-widget .ob_what.ob-hover:hover a{text-decoration: underline;}
+                                .ob-widget .ob_amelia,
+                                .ob-widget .ob_logo,
+                                .ob-widget .ob_text_logo{vertical-align:baseline !important;display:inline-block;vertical-align:text-bottom;padding:0px 5px;box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;}
+                                .ob-widget:hover .ob_amelia,
+                                .ob-widget:hover .ob_logo,
+                                .ob-widget:hover .ob_text_logo{background-position:center bottom;}
+                                .ob-widget .ob_what{text-align:right;}
+                                .ob-widget .ob-rec-image-container .ob-rec-image {display:block;}
                                 /* dynamic strip css */
-                                .AR_3.ob-widget .ob-rec-image-container {position:relative;}
-                                .AR_3.ob-widget .ob-rec-image-container .ob-image-ratio {height:0px;line-height:0px;padding-top:53.666666666666664%;}
-                                .AR_3.ob-widget .ob-rec-image-container img.ob-rec-image {width:100%;position:absolute;top:0;bottom:0;left:0;right:0;opacity:0;transition:all 750ms;}
-                                .AR_3.ob-widget .ob-rec-image-container img.ob-show {opacity:1;}
-                                .AR_3.ob-widget .ob-rec-image-container .ob-rec-label {position:absolute;bottom:0px;left:0px;padding:0px 3px;background-color:#666;color:white;font-size:10px;line-height:15px;}
-                                .AR_3.ob-widget {width:auto;min-width:180px;}
-                                .AR_3.ob-widget .ob-dynamic-rec-container {display:inline-block;vertical-align:top;min-width:50px;width:100.0%;box-sizing:border-box;-moz-box-sizing:border-box;}
-                                .AR_3.ob-widget .ob-unit.ob-rec-brandName,
-                                .AR_3.ob-widget .ob-unit.ob-rec-brandLogo-container,
-                                .AR_3.ob-widget .ob-rec-brandLogoAndName {display:inline-block;}
-                                .AR_3.ob-widget .ob-rec-brandLogo {width:auto;height:auto;}
-                                .AR_3.ob-widget .ob-rec-brandName {vertical-align:bottom;}
-                                .AR_3.ob-widget .ob-unit.ob-rec-brandName {vertical-align:super;}
-                                .AR_3.ob-widget .ob-widget-items-container {direction: ltr;}
-                                .AR_3.ob-widget .ob-dynamic-rec-container {margin-left:0;}
-                                .AR_3.ob-widget .ob-dynamic-rec-container ~ .ob-dynamic-rec-container {margin:0 0 0 2.3%; }
-                                .AR_3.ob-widget .ob-widget-header {direction:ltr; font-weight:bold;}
-                                .AR_3.ob-widget .ob-unit {display:block;}
-                                .AR_3.ob-widget .ob-rec-text {max-height:63.0px;overflow:hidden;font-weight:bold;}
-                                .AR_3.ob-widget .ob-rec-source {}
-                                .AR_3.ob-widget .ob-rec-date {font-weight:bold;}
+                                .ob-widget .ob-rec-image-container {position:relative;}
+                                .ob-widget .ob-rec-image-container .ob-image-ratio {height:0px;line-height:0px;padding-top:53.666666666666664%;}
+                                .ob-widget .ob-rec-image-container img.ob-rec-image {width:100%;position:absolute;top:0;bottom:0;left:0;right:0;opacity:0;transition:all 750ms;}
+                                .ob-widget .ob-rec-image-container img.ob-show {opacity:1;}
+                                .ob-widget .ob-rec-image-container .ob-rec-label {position:absolute;bottom:0px;left:0px;padding:0px 3px;background-color:#666;color:white;font-size:10px;line-height:15px;}
+                                .ob-widget {width:auto;min-width:180px;}
+                                .ob-widget .ob-dynamic-rec-container {display:inline-block;vertical-align:top;min-width:50px;width:100.0%;box-sizing:border-box;-moz-box-sizing:border-box;}
+                                .ob-widget .ob-unit.ob-rec-brandName,
+                                .ob-widget .ob-unit.ob-rec-brandLogo-container,
+                                .ob-widget .ob-rec-brandLogoAndName {display:inline-block;}
+                                .ob-widget .ob-rec-brandLogo {width:auto;height:auto;}
+                                .ob-widget .ob-rec-brandName {vertical-align:bottom;}
+                                .ob-widget .ob-unit.ob-rec-brandName {vertical-align:super;}
+                                .ob-widget .ob-widget-items-container {direction: ltr;}
+                                .ob-widget .ob-dynamic-rec-container {margin-left:0;}
+                                .ob-widget .ob-dynamic-rec-container ~ .ob-dynamic-rec-container {margin:0 0 0 2.3%; }
+                                .ob-widget .ob-widget-header {direction:ltr; font-weight:bold;}
+                                .ob-widget .ob-unit {display:block;}
+                                .ob-widget .ob-rec-text {max-height:63.0px;overflow:hidden;font-weight:bold;}
+                                .ob-widget .ob-rec-source {}
+                                .ob-widget .ob-rec-date {font-weight:bold;}
                                 /* dynamic customized css */
-                                .AR_3.ob-strip-layout .ob-widget-header {font-family:inherit;font-size:21px;color:#333;padding-bottom:15px;padding-top:0px;}
-                                .AR_3.ob-strip-layout .ob-dynamic-rec-container {max-width:300px;}
-                                .AR_3.ob-strip-layout .ob-rec-text {font-family:inherit;color:#0093de;padding:5px 0 0px;text-align:left;line-height:1.5;font-size:14px;}
-                                .AR_3.ob-strip-layout .ob-rec-text:hover {color:#337ab7;}
-                                .AR_3.ob-strip-layout .ob-rec-source {font-family:inherit;color:#869aab;padding:0px 0 5px;text-align:left;font-size:12px;}
-                                .AR_3.ob-strip-layout .ob-rec-date {font-family:inherit;color:black;padding:0px 0 0px;text-align:left;font-size:12px;}
-                                .AR_3.ob-strip-layout .ob-rec-author {font-family:inherit;color:black;padding:0px 0 0px;text-align:left;font-size:12px;}
-                                .AR_3.ob-strip-layout .ob-rec-description {font-family:inherit;color:black;padding:0px 0 0px;text-align:left;font-size:12px;}
-                                .AR_3.ob-strip-layout .ob-rec-brandName {font-family:inherit;padding:5px 0 0px;line-height:1.5;font-size:13px;font-weight:400;}
-                                .AR_3.ob-strip-layout .ob-rec-brandLogo {width:20px;height:20px;}
+                                .ob-strip-layout .ob-widget-header {font-family:inherit;font-size:21px;color:#333;padding-bottom:15px;padding-top:0px;}
+                                .ob-strip-layout .ob-dynamic-rec-container {max-width:300px;}
+                                .ob-strip-layout .ob-rec-text {font-family:inherit;color:#0093de;padding:5px 0 0px;text-align:left;line-height:1.5;font-size:14px;}
+                                .ob-strip-layout .ob-rec-text:hover {color:#337ab7;}
+                                .ob-strip-layout .ob-rec-source {font-family:inherit;color:#869aab;padding:0px 0 5px;text-align:left;font-size:12px;}
+                                .ob-strip-layout .ob-rec-date {font-family:inherit;color:black;padding:0px 0 0px;text-align:left;font-size:12px;}
+                                .ob-strip-layout .ob-rec-author {font-family:inherit;color:black;padding:0px 0 0px;text-align:left;font-size:12px;}
+                                .ob-strip-layout .ob-rec-description {font-family:inherit;color:black;padding:0px 0 0px;text-align:left;font-size:12px;}
+                                .ob-strip-layout .ob-rec-brandName {font-family:inherit;padding:5px 0 0px;line-height:1.5;font-size:13px;font-weight:400;}
+                                .ob-strip-layout .ob-rec-brandLogo {width:20px;height:20px;}
                             </style>
-                            <style type="text/css" class="ob-custom-css">
-                            </style>
-                            <div class="ob-widget-section ob-first">
-                                <div class="ob-widget-header">BÀI VIẾT HAY</div>
+                            <div class="ob-widget-section ob-first" style="padding-top:15px">
+                                <div class="ob-widget-header">PHẦN MỀM NỔI BẬT</div>
                                 <ul class="ob-widget-items-container">
                                     <li class="ob-dynamic-rec-container ob-recIdx-0 ob-p" data-pos="0">
-                                        <a class="ob-dynamic-rec-link" onclick="" href="https://cpi.mooseroots.com/stories/15691/cost-of-beer-then-and-now?utm_medium=cm&amp;utm_source=outbrain&amp;utm_campaign=i3.cm.ob.dt.11000" onmousedown="this.href = 'http://paid.outbrain.com/network/redir?p=bQzuTAmLyjfz9zY8UVBWTCLooHXvwPBDeTkrdPZx2VFIZPyt2WRRn7ng5TxFNQFUBrDnx-T8pu9FJoWabd6k0dQZPUldelvneRLAmqwLSEZODFKfse6EGSpWsgH4Bkss91rWBL9d7XgqTaOG2Pg8A2u6CDCtwJVL7_Z2GMQ_HOMlp7DpZBVYHiunsShbiiRLJshiX9VzvsBRb6BYIKWZq8EcKH54excKaTz4Y_-xbFGNl4mYUBAonOGcoEErzu9Rjt9XLRHnzY63zVmSpnF2tzJoEcOZkbMph4eWDu2TlBmPdmjxuWpv0qened4TKfG8GX6TkPDQVII26_Y-mfETYGLXGArPD19bejEUiS1O5AzIDzzjC2wCljttZyoew_63mrizQ33fnX-n3GvUtbEXV1JMFWg30mSSp5HvTXW5XFtxS21UJnqLQzpuMG3P-8d3UOa4lyrWJxJ3GydW7wIEVviDcaNaqB8g4jcPFcmhdYjWs2VA0pk7bOx2H_qp3kmPIOFCqNCor1J23xclnJ5YReqN0ouWl1ChY0KIO5uMxyDeeDKpj_ALHOoXxNso_-22ZUeCrfpKImlQbTQBlqJeMkhuVbxHeWaswD408EVZnT1zAXaYYDopy9mEQkR6sdQtEcDXRIvEEirVb6FjjpENUwRK7yMu-7LYYPqoA2_mz2_KjvIIiPMKt27GLgL9I7x5W2nkkJL0HJuxbojB9urHNKRaFq4GCvok9UlfLY7-J32hhqwZAXrgzuW1v7Pe3ToKnwtl3dJ2PYSCT8INXNahakD3i85GBIAWpMux7Ag2f1FlnGCAxs-A8yMbHwMCecoS&amp;c=7714b2ea&amp;v=3';
-                                           " target="_blank" rel="nofollow">
+                                        <a class="ob-dynamic-rec-link" href="#">
                                             <span class="ob-unit ob-rec-image-container" data-type="Image">
                                                 <div class="ob-image-ratio"></div>
-                                                <img class="ob-rec-image ob-show" src="http://images.outbrain.com/Imaginarium/api/uuid/61850290851ef8b318804b162e801f17cea6c95e5ca8ca9bc585577eb7b08e15/300/161/1.0" onload="this.className += ' ob-show'" alt="The Cost of a Beer Every Year Since 1952" title="The Cost of a Beer Every Year Since 1952" onerror="OBR.extern.imageError(this)">
+                                                <img class="ob-rec-image ob-show" src="<?= Yii::$app->request->baseUrl; ?>img/zalo-cho-mobile.jpg" onload="this.className += ' ob-show'" alt="The Cost of a Beer Every Year Since 1952" title="The Cost of a Beer Every Year Since 1952" onerror="OBR.extern.imageError(this)">
                                             </span>
-                                            <span class="ob-unit ob-rec-text" data-type="Title" title="The Cost of a Beer Every Year Since 1952">The Cost of a Beer Every Year Since 1952</span>      <span class="ob-unit ob-rec-source" data-type="Source">Consumer Price Index (CPI) - Inflation Calculator and Rates</span>
+                                            <span class="ob-unit ob-rec-text" data-type="Title" title="The Cost of a Beer Every Year Since 1952">Tải zalo cho ios và android phiên bản mới nhất</span>
+											<span class="ob-unit ob-rec-source" data-type="Source">Zalo là phần mềm mạng xã hội cho phép bạn chia sẻ hình ảnh & status với bạn bè</span>
                                         </a>
                                     </li>
                                 </ul>

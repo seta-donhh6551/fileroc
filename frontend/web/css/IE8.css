@@ -1,0 +1,114 @@
+﻿/* collection of hacks, tweaks, fixes and black magic spells to make the page looks acceptable in IE7/IE8 */
+
+.tab-headers .tab-header.active
+{
+    border-right: 2px solid #D4DADF!important;
+    border-left: 2px solid #D4DADF!important;
+    margin-left: 0px!important;
+    margin-right: 0px!important;
+}
+
+#categories .category {
+    *width: 124px !important;
+}
+
+#categories li {
+    *width: 181px !important;
+    *float: left;
+}
+
+#category-navigation {
+    margin-left: 0;
+}
+
+#category-popular-software {
+    margin-left: 0;
+}
+
+#related-software .related-program-entry {
+    *width: 224px !important;
+}
+
+#language-switch {
+    z-index: 1;
+}
+
+#language-switch .language-current .dropdown-blue {
+    *top: -15px !important;
+}
+
+.program-header-download-link-container {
+    *width: 300px;
+}
+
+.program-header-details {
+    *width: 250px;
+    *position: relative;
+    *top: 5px;
+    *right: 100px;    
+}
+
+#content-program-technical .field-name {
+    *float: left;
+    *clear: left;
+    *display: block;
+}
+
+#content-program-technical .field-value {
+    *display: block;
+    *margin-top: 15px;
+}
+
+/* display: inline-block tricks */
+
+.sprite {
+    *zoom: 1;
+    *display: inline;
+}
+
+#child-programs-list .sprite,
+#program-history-list .sprite
+{
+    *zoom: 1;
+    *display: inline;
+}
+
+#popular-software-list .table-entry .entry-prefix {
+    *zoom: 1;
+    *display: inline;
+}
+
+.breadcrumbs .breadcrumb-entry, .category-breadcrumbs .category-breadcrumb-entry
+{
+    *zoom: 1;
+    *display: inline;
+}
+
+.breadcrumbs .breadcrumb-entry {
+    *margin-right: 10px;
+    *border-right: 1px solid #D4DADF;
+    *padding-right: 10px;
+}
+
+.tab-headers .tab-header {
+    zoom: 1;
+    *display: inline;
+}
+
+.social-buttons > div
+{
+    *zoom: 1;
+    *display: inline;
+}
+
+#related-software .related-program-entry .program-name
+{
+    *zoom: 1;
+    *display: inline;
+}
+
+#techbeat-widget-wide-container .tb_postTitle
+{
+    *zoom: 1;
+    *display: inline;
+}

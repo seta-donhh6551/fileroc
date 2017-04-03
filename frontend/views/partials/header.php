@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?= Yii::$app->request->baseUrl; ?>"><img src="<?= Yii::$app->request->baseUrl; ?>img/new/logo.png" alt="FileHippo - Software that matters" /></a>
+                <a class="navbar-brand" href="<?= Yii::$app->request->baseUrl; ?>"><img src="<?= Yii::$app->request->baseUrl; ?>img/new/logo.png" alt="Freefile - Download phần mềm miễn phí" /></a>
             </div>
             <div class="col-md-9 no-padding">
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -44,14 +44,6 @@
                             </ul>
 							<?php } ?>
                         </li>
-                        <!-- <li class="dropdown language-dropdown">
-                            <a href="#" class="dropdown-toggle no-left-border" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">VN<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="security/" >En</a>
-                                </li>
-                            </ul>
-                        </li> -->
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -76,46 +68,29 @@
     <div class="blue-menu">
         <div class="container container-fh header">
             <div class="logo-holder">
-                <a href="../../index.html" title="Home">
-                    <!-- <img src="/img/new/logo-small.png" alt="FreeFile - Software that matters" /> -->
-                    <img src="<?= Yii::$app->request->baseUrl; ?>img/new/logo-small.png" alt="FileHippo - Software that matters" />
+                <a href="<?= Yii::$app->request->baseUrl; ?>" title="Home">
+                    <img src="<?= Yii::$app->request->baseUrl; ?>img/new/logo-small.png" alt="FreeFile.vn - Tải phần mềm miễn phí" />
                 </a>
             </div>
             <div class="os-options">
                 <ul class="m-options">
-                    <li><a class="m-windows" href="../../index.html">WINDOWS</a></li>
+					<?php $i = 1;foreach($listMenu as $menuItem){ ?>
+                    <li><a class="" href="<?= Yii::$app->request->baseUrl.$menuItem['rewrite']; ?>.html" style=""><?= $menuItem['name']; ?></a></li>
                     <li class="divider"></li>
-                    <li><a class="m-webapps" href="http://filehippo.com/web/web-apps/">WEB APPS</a></li>
-                    <li class="divider"></li>
-                    <li><a class="m-mac" href="http://filehippo.com/mac/">MAC</a></li>
-                    <li class="divider"></li>
-                    <li><a class="m-news" href="http://news.filehippo.com/">NEWS</a></li>
+					<?php if($i == 5){ break; } ?>
+					<?php ++$i; } ?>
                 </ul>
             </div>
             <div class="main-search-container">
-                <!-- <div id="tablet-language-container">
-                    <div class="selected-language">
-                        English <span class="disclosure-arrow-down"></span>
-                    </div>
-                </div> -->
-                <form name="f" action="http://filehippo.com/search">
+                <form name="f" action="<?= Yii::$app->request->baseUrl; ?>tim-kiem.html">
                     <div class="main-search-box">
-                        <input name="q" type="search" id="tablet-search" class="auto-complete-search" />
+                        <input type="search" id="tablet-search" class="auto-complete-search" name="keyword" value="<?= Yii::$app->getRequest()->getQueryParam('keyword') ?>" />
                         <button type="submit" id="tablet-search-button">
-                            <img alt="search" src="http://cache.filehippo.com/img/new/search-button.png" />
+                            <img alt="search" src="<?= Yii::$app->request->baseUrl; ?>img/search-button.png" />
                         </button>
                     </div>
                 </form>
             </div>
-        </div>
-    </div>
-    <!-- language drop down -->
-    <div id="tablet-language-select-box">
-        <div class="language-box">
-            <a href="http://filehippo.com/en/software/security/" class="internal-link" title="English">English</a>
-        </div>
-        <div class="language-box">
-            <a href="http://filehippo.com/de/software/security/" class="internal-link" title="Deutsch">Deutsch</a>
         </div>
     </div>
 </div>
@@ -123,45 +98,30 @@
     <div class="blue-menu">
         <div class="container container-fh">
             <div id="mobile-menu-bar" class="menu-bar">
-                <img src="http://cache.filehippo.com/img/mobile/mob-bars.png" />
+                <img src="<?= Yii::$app->request->baseUrl; ?>img/mob-bars.png" />
             </div>
             <div class="mob-search">
-                <img src="http://cache.filehippo.com/img/mobile/mob-search.png" />
+                <img src="<?= Yii::$app->request->baseUrl; ?>img/mob-search.png" />
             </div>
             <div class="main-logo-container">
-                <a href="../../index.html" title="Home">
+                <a href="<?= Yii::$app->request->baseUrl; ?>" title="Home">
                     <div id="main-logo-mobile">
                     </div>
                 </a>
             </div>
-            <!-- <div class="language-container">
-                <div id="selected-language-mobile">
-                    EN <span class="disclosure-arrow-down"></span>
-                </div>
-            </div> -->
         </div>
     </div>
     <!-- language drop down -->
-    <div class="language-select-box">
-        <div class="language-box">
-            <a href="http://filehippo.com/en/software/security/" class="internal-link" title="English">English</a>
-        </div>
-        <div class="language-box">
-            <a href="http://filehippo.com/de/software/security/" class="internal-link" title="Deutsch">Deutsch</a>
-        </div>
-    </div>
     <div id="mobile-roll-over-search" class="roll-over-search">
-        <form name="f" action="http://filehippo.com/search">
-            <input id="mobile-search-text-box" name="q" placeholder="Search for something..."
-                   type="search" class="auto-complete-search" />
+        <form name="f" action="<?= Yii::$app->request->baseUrl; ?>tim-kiem.html">
+            <input id="mobile-search-text-box" name="keyword" value="<?= Yii::$app->getRequest()->getQueryParam('keyword') ?>" placeholder="Tìm kiếm" type="search" class="auto-complete-search" />
         </form>
     </div>
     <div id="mobile-menu">
         <ul>
-            <li><a class="m-windows" href="../../index.html">WINDOWS</a></li>
-            <li><a class="m-mac" href="http://filehippo.com/mac/">MAC</a></li>
-            <li><a class="m-webapps" href="http://filehippo.com/web/web-apps/">WEB APPS</a></li>
-            <li><a href="http://news.filehippo.com/">NEWS</a></li>
+			<?php foreach($listMenu as $menuItem){ ?>
+            <li><a class="" href="<?= Yii::$app->request->baseUrl.$menuItem['rewrite']; ?>.html"><?= $menuItem['name']; ?></a></li>
+			<?php ++$i; } ?>
         </ul>
     </div>
 </div>
