@@ -135,7 +135,9 @@ $navigator = [
 		</div>
         <div class="popular-soft" style="width:250px;margin-top:20px">
             <h2 style="margin-bottom:5px !important">Facebook</h2>
-            <object style="border:1px solid #DDD; overflow: hidden; width: 250px; height: 300px;"  data="http://www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/hocthietkewebsite&amp;width=250&amp;height=300&amp;connections=10&amp;header=false"></object>
+            <div class="fanpage">
+            	<object style="border:1px solid #DDD; overflow: hidden; width: 250px; height: 300px;"  data="http://www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/hocthietkewebsite&amp;width=250&amp;height=300&amp;connections=10&amp;header=false"></object>
+            </div>
         </div>
 	</div>
 	<div class="cls"></div>

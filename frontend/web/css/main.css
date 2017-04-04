@@ -1422,7 +1422,7 @@ q {
     background-color: #e0001f;
     padding-left: 10px;
     position: absolute;
-    top: 50px;
+    top: 51px;
     left: 0;
     display: none
 }
@@ -1457,7 +1457,7 @@ q {
     display: none;
     height: 45px;
     position: absolute;
-    width: 300px;
+    width: 265px;
     z-index: 100
 }
 #mobile-roll-over-search input {
@@ -4073,9 +4073,11 @@ section {
     #tutorial-right #popular, .popular-soft{
         width: 98% !important;
         margin: 20px 0px 0px 0px !important;
+        position: static;
     }
     #content-main #tutorial-right {
         width: 100%;
+        position: relative;
     }
     #tutorial-content {
         width: 95% !important;
@@ -4294,6 +4296,15 @@ section {
     width: 300px;
 }
 @media (max-width: 767px) {
+    #navigation {
+        width: 100% !important;
+    }
+    .fanpage{
+        text-align: center;
+    }
+    .ads-250 img{
+        width: 100%;
+    }
     .related-total {
         width: 70px;
         text-align: right;
@@ -4341,6 +4352,7 @@ section {
     }
     #tutorial-right {
         width: 100% !important;
+        position: static !important;
     }
     #popular, .popular-soft {
         width: 100% !important;
@@ -4352,10 +4364,17 @@ section {
         float: left;
         width: 100% !important;
     }
+    .tutorial-list .tutol-list-header {
+        width: 100%;
+    }
+    .tutorial-list .tutol-list-header span.tutol-list-title {
+        width: 100%;
+    }
     #content-main #tutorial-content {
         min-height: auto;
         padding: 0px;
         margin: 0px;
+        width: 100%;
     }
     #navigation ul li {
         width: 100%;
@@ -4604,6 +4623,7 @@ section {
         float: left;
         padding: 10px 0px;
         width: 100%;
+        position: static;
     }
     #root-content {
         overflow: hidden;
