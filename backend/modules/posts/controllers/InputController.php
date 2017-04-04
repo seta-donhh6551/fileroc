@@ -28,13 +28,14 @@ class InputController extends MyController
     public function actionIndex($id = null)
     {
         Yii::$app->view->title = 'Thêm mới, sửa bài viết | Free download';
-        
+
         $model = $this->loadModel($id);
         $request = Yii::$app->request;
 
         if($request->isPost && $request->Post('submit'))
         {
             $post = $request->Post('Posts');
+			Utility::debugData($post);
             $autoResize = isset($post['autoResize']) && $post['autoResize'] == 1 ? true : false;
             $model->attributes = $post;
             if ($model->validate())
@@ -80,7 +81,7 @@ class InputController extends MyController
                     $imgIcon->saveAs('../../uploads/icons/'.$baseName);
                     $model->icon = $baseName;
                 }
-
+				
                 $model->rewrite = str_replace(' ','-',Utility::replaceUrl(trim($post['title'])));
                 $model->user_id = Yii::$app->user->getIdentity()->id;
                 

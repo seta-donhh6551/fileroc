@@ -28,6 +28,9 @@ class InputController extends MyController
     {
         Yii::$app->view->title = 'Thêm mới, sửa bài viết | Freefile.vn';
         
+		//get list software related
+		$listSoftware = array();
+		
         $model = new \common\models\Tutorials();
         if($id)
         {
@@ -36,18 +39,21 @@ class InputController extends MyController
             {
                 throw new \yii\web\HttpException(404, 'Bài viết này không tồn tại.');
             }
+			
+			$listSoftware = \common\models\SoftwareRelated::listRelated($id);
         }
         
-         //list categorys
+        //list categorys
         $listCategory = \common\models\Categorytutorial::find()
 						->where(['status' => 1])
 						->all();
-        
+		
         $request = Yii::$app->request;
 
         if($request->isPost && $request->Post('submit'))
         {
             $post = $request->Post('Tutorials');
+
             $autoResize = isset($post['autoResize']) && $post['autoResize'] == 1 ? true : false;
             
             $model->attributes = $post;
@@ -94,11 +100,32 @@ class InputController extends MyController
 				}
                 
                 $model->save();
+				
+				//save relation software
+				if(isset($post['listsoft']))
+				{
+					//delete all software old related
+					\common\models\SoftwareRelated::deleteAllRelation($model->id);
+					
+					foreach($post['listsoft'] as $key => $value)
+					{
+						$softwareRelated = new \common\models\SoftwareRelated();
+						$softwareRelated->post_id = $value;
+						$softwareRelated->tutorial_id = $model->id;
+						$softwareRelated->created_at = new \yii\db\Expression('NOW()');
+						
+						$softwareRelated->save();
+					}
+				}
                 
                 Yii::$app->response->redirect(array('/tutorials'));
             }
         }
 
-        return $this->render('index', ['model' => $model, 'listCate' => $listCategory]);
+        return $this->render('index', [
+			'model' => $model,
+			'listCate' => $listCategory,
+			'listRelated' => $listSoftware
+		]);
     }
 }

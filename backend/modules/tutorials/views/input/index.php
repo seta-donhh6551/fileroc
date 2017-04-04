@@ -6,9 +6,25 @@ use yii\helpers\ArrayHelper;
 ?>
 
 <script type="text/javascript">
-$(document).ready(function(){
+$(document).ready(function()
+{
     var $items = $("ul#menu li a");
     $items.eq(1).addClass("selected_lk");
+	
+	$('#related-soft').keypress(function()
+	{
+		$('#list-soft').html('');
+		var keyword = $(this).val();
+		var listData = '';
+        $.post('<?= Yii::$app->request->baseUrl; ?>/posts/default/search', {keyword:keyword}, function(result){
+			var listSoft = jQuery.parseJSON(result);
+			for(i=0;i<listSoft.length;++i)
+			{
+				listData += '<div><input type="checkbox" name="Tutorials[listsoft][]" value="'+listSoft[i].id+'" />'+listSoft[i].title+'<div>';
+			}
+			$('#list-soft').html(listData);
+        });
+	});
 });
 </script>
 
@@ -121,17 +137,20 @@ $(document).ready(function(){
                             ?>
                             </div>
                         </div>
-                        <div class="form_items">
+							<div class="form_items" style="padding: 10px 0px">
                             <div class="form_items_left">Phần mềm liên quan</div>
                             <div class="form_items_right">
-                                <?php
-//                                    $listData=ArrayHelper::map($listCate,'id','name');
-//                                    echo $form->field($model, 'cate_id')->dropDownList(
-//                                        $listData, ['prompt' => 'Select','class' => 'pulldown']
-//                                    )->label(false)->error(false);
-                                ?>
+								<input type="text" name="related-soft" id="related-soft" size="35" />
                             </div>
                         </div>
+						<div class="form_items" style="padding: 5px 0px 10px 0px">
+							<div class="form_items_left">Chọn</div>
+							<div id="list-soft" class="form_items_right">
+							<?php foreach($listRelated as $related){ ?>
+								<div><input type="checkbox" name="Tutorials[listsoft][]" value="<?php echo $related['post_id']; ?>" checked="checked" /><?= $related['title']; ?></div>
+							<?php } ?>
+							</div>
+						</div>
                         <div class="form_items">
                             <div class="form_items_left">Ảnh thumb</div>
                             <div class="form_items_right">

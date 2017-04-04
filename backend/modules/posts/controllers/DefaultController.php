@@ -20,7 +20,8 @@ use common\components\Utility;
  */
 class DefaultController extends MyController
 {
-
+	public $enableCsrfValidation = false;
+	
     public function actionIndex()
 	{
         Yii::$app->view->title = 'Quản lý bài viết';
@@ -54,7 +55,29 @@ class DefaultController extends MyController
                 ]
         );
     }
-
+	
+	public function actionSearch()
+	{
+		$request = Yii::$app->request;
+		
+		$returnData = [];
+        if($request->isPost && $request->Post('keyword'))
+        {
+            $keyword = $request->Post('keyword');
+			
+            $query = Posts::find();
+			$listSoft = $query->where(['LIKE', 'title', $keyword])->all();
+			
+			foreach($listSoft as $key => $value)
+			{
+				$returnData[$key]['id'] = $value['id'];
+				$returnData[$key]['title'] = $value['title'];		
+			}
+        }
+		
+		return json_encode($returnData);
+	}
+	
     public function actionDelete($id)
 	{
         Yii::$app->view->title = 'Xóa bài viết';
