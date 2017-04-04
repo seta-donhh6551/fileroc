@@ -41,7 +41,11 @@ class SoftwareRelated extends \yii\db\ActiveRecord
 		$query  ->select([
 					'tbl_software_related.post_id',
 					'tbl_software_related.tutorial_id',
-					'tbl_posts.title'
+					'tbl_posts.title',
+					'tbl_posts.rewrite',
+					'tbl_posts.total_down',
+					'tbl_posts.short_info',
+					'tbl_posts.icon',
 				]) 
 				->from(self::tableName())
 				->leftJoin('tbl_posts', 'tbl_posts.id = tbl_software_related.post_id');

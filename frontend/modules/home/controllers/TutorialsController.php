@@ -34,9 +34,13 @@ class TutorialsController extends MyController {
 						->where(['status' => 1])
 						->all();
 		
+		//get list related software
+		$listRelatedSoft = \common\models\SoftwareRelated::listRelated($modelTutorial->id);
+		
 		return $this->render('index', [
             'model' => $modelTutorial,
-			'listCategory' => $listCategory
+			'listCategory' => $listCategory,
+			'listRelatedSoft' => $listRelatedSoft
         ]);
     }
     
