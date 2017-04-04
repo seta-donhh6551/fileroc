@@ -200,27 +200,26 @@ use yii\widgets\ActiveForm;
                                                 <div class="ob-image-ratio"></div>
                                                 <img class="ob-rec-image ob-show" src="<?= Yii::$app->request->baseUrl; ?>img/google-chrome.jpg" onload="this.className += ' ob-show'" alt="Tải google chrome, trình duyệt web miễn phí nhanh nhất từ google" title="Tải google chrome, trình duyệt web miễn phí nhanh nhất từ google">
                                             </span>
-                                            <span class="ob-unit ob-rec-text" data-type="Title" title="NBA Teams are Glad These Guys are Gone">Tải google chrome, trình duyệt web miễn phí nhanh nhất từ google</span>
+                                            <span class="ob-unit ob-rec-text" data-type="Title" title="Tải google chrome, trình duyệt web miễn phí nhanh nhất từ google">Tải google chrome, trình duyệt web miễn phí nhanh nhất từ google</span>
 											<span class="ob-unit ob-rec-source" data-type="Source">Download google chrome | Trình duyệt web miễn phí</span>
                                         </a>
                                     </li>
                                 </ul>
                                 <ul class="ob-widget-items-container ob-multi-row ob-row-3">
                                     <li class="ob-dynamic-rec-container ob-recIdx-3 ob-p" data-pos="2">
-                                        <a class="ob-dynamic-rec-link" onclick="" href="http://basketball-players.pointafter.com/stories/5891/biggest-dead-weight-nba-lance-stephenson-rajon-rondo?utm_medium=cm&amp;utm_source=outbrain&amp;utm_campaign=i3.cm.ob.dt.5891" onmousedown="this.href = 'http://paid.outbrain.com/network/redir?p=gSeShGlBgIENx6tIK-l1nOtzVe3elQpXj9jpvv72aoII86agHrMuMgCVzepHu1qbBkUzr8Hw2WySqgEINwK68NcUb4lki2_n1IVq6RuvmXdaJay2JkgfsnyESyl5IiAOfL6U26Z1NOWfdNq4b07geTqBicHggmbMwjlSK5znMB6ZrrFXIeCbRgFKiSQvsoR5XDfMYHj-YxhnYr8jJ2CBv2ZEgs1oJggLLYJIONWRfLplXxfXiSs4H9Ryf7fj_aT09mlR2bUxzB2hSAsXcf_qeBxkVBUODgo67-8YvAGNRXFlGetQwgapUnLz_-1RD_hiLvjAsPlu6Qxmy6d5S23iSbGn6rvHLrKLUvtsTKTGZheMtB15gKUixdI4yxLa4B-EzEBJ628iju8Ghyahq2OKg0KY_LOFSnUQbzQnpl25lzCEgmfclh1eb7ivCxjyy0kM0Y4U34LT8dxo6XJyZ8PxSt08CMbdN72DldXG_o0jcqmnz7feMw-oaQzb6-mAfPwQck-dSs5RrGdHHYYaq8hdEF3o1ejq9fFjyYGC16_0v49C8oInRQFAR358cSsIOo8hDKdG_Xc4vNQdQhdSNouchWUWrSovgsY85177UR5eOs1jrQ2sg6vva_GxrRs1w6UbEfh9c_GnlcM2BQUQKPf-rrRwfeP-HN2s0YY4ldElm3PboR56e7t8eeQJP2L_RbILoOHXPy9v1zZD6lZPf5P4a2sS1l45sXZS4nYSbxfK_TvE-Y5EZDdZkX8C7uoZ77ZfSZkdmp8mhj4_8eTkSoYGra04jCwM1I2KNJLYK8AvAFr44LQzH35WIt4SBoXbEeXM&amp;c=ad1ca247&amp;v=3';
-                                           " target="_blank" rel="nofollow">
+                                        <a class="ob-dynamic-rec-link" href="#">
                                             <span class="ob-unit ob-rec-image-container" data-type="Image">
                                                 <div class="ob-image-ratio"></div>
-                                                <img class="ob-rec-image ob-show" src="http://images.outbrain.com/Imaginarium/api/uuid/2b0a283e7961a8c6df780d3d498b8ba0d07895259935d9834a3166d05bc30beb/300/161/1.0" onload="this.className += ' ob-show'" alt="NBA Teams are Glad These Guys are Gone" title="NBA Teams are Glad These Guys are Gone" onerror="OBR.extern.imageError(this)">
+                                                <img class="ob-rec-image ob-show" src="<?= Yii::$app->request->baseUrl; ?>img/tao-usb-boot-cai-win.jpg" onload="this.className += ' ob-show'" alt="Cách tạo usb boot cài window 7,8 và 10" title="Cách tạo usb boot cài window 7,8 và 10">
                                             </span>
-                                            <span class="ob-unit ob-rec-text" data-type="Title" title="NBA Teams are Glad These Guys are Gone">NBA Teams are Glad These Guys are Gone</span>      <span class="ob-unit ob-rec-source" data-type="Source">PointAfter | By Graphiq</span>
+                                            <span class="ob-unit ob-rec-text" data-type="Title" title="Cách tạo usb boot cài window 7,8 và 10">Cách tạo usb boot cài window 7,8 và 10</span>
+											<span class="ob-unit ob-rec-source" data-type="Source">Usb boot | Usb hirent boot</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="ob_what ob-hover">
-                                <a href="http://www.outbrain.com/what-is/default/en" rel="nofollow" onclick="OBR.extern.callWhatIs('http://www.outbrain.com/what-is/default/en', '', -1, -1, true, null);
-                                        return false">
+                                <a href="#" rel="nofollow">
                                     Recommended by<span class="ob_logo" title="Outbrain - content marketing"></span>
                                 </a>
                             </div>
