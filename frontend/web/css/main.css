@@ -1666,7 +1666,7 @@ q {
 }
 #footer-mobile .footer-menu {
     width: 320px;
-    padding: 10px 0px;
+    padding: 5px 0px;
 }
 #footer-mobile .left-footer-menu {
     float: left;
@@ -1680,13 +1680,13 @@ q {
 #footer-mobile .footer-menu ul li {
     border-right: 1px solid #0095e0;
     float: left;
-    font-size: 16px;
+    font-size: 13px;
     list-style-type: none;
     margin: 0;
     /* padding: 0 10px; */
     border: none;
     width: 100%;
-    padding: 0px 0px 5px 0px;
+    padding: 0px;
 }
 #footer-mobile .firstmenu {
     padding-left: 0!important
@@ -1710,7 +1710,7 @@ q {
     padding-right: 2px
 }
 #footer-mobile .right-footer-menu ul li {
-    font-size: 16px
+    font-size: 13px
 }
 .sprite {
     background-image: url(../img/commonimages.png);
@@ -4296,6 +4296,20 @@ section {
     width: 300px;
 }
 @media (max-width: 767px) {
+    .footer-container .footer-menu h3 {
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 400;
+        float: left;
+        width: 100%;
+        color: #ffffff;
+        padding-bottom: 5px;
+    }
+    #tutorial-body .tutorial-body img {
+        max-width: 100%;
+        margin-left: 0px;
+        height: auto;
+    }
     #navigation {
         width: 100% !important;
     }
