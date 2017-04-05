@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.4.14
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 05, 2017 at 11:07 AM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 5.6.23
+-- Generation Time: Apr 05, 2017 at 05:56 PM
+-- Server version: 5.6.26
+-- PHP Version: 5.6.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -26,8 +26,8 @@ SET time_zone = "+00:00";
 -- Table structure for table `tbl_category`
 --
 
-CREATE TABLE `tbl_category` (
-  `id` int(11) UNSIGNED NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_category` (
+  `id` int(11) unsigned NOT NULL,
   `name` varchar(150) NOT NULL,
   `rewrite` varchar(150) NOT NULL,
   `keywords` text NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE `tbl_category` (
   `child_id` int(11) DEFAULT '0',
   `parent_id` int(11) NOT NULL DEFAULT '0',
   `status` tinyint(4) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_category`
@@ -103,8 +103,8 @@ INSERT INTO `tbl_category` (`id`, `name`, `rewrite`, `keywords`, `description`, 
 -- Table structure for table `tbl_caterory_tutorial`
 --
 
-CREATE TABLE `tbl_caterory_tutorial` (
-  `id` int(11) UNSIGNED NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_caterory_tutorial` (
+  `id` int(11) unsigned NOT NULL,
   `name` varchar(150) NOT NULL,
   `rewrite` varchar(150) NOT NULL,
   `keywords` text NOT NULL,
@@ -114,7 +114,7 @@ CREATE TABLE `tbl_caterory_tutorial` (
   `icon` varchar(100) NOT NULL,
   `status` tinyint(4) NOT NULL,
   `created_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_caterory_tutorial`
@@ -135,8 +135,8 @@ INSERT INTO `tbl_caterory_tutorial` (`id`, `name`, `rewrite`, `keywords`, `descr
 -- Table structure for table `tbl_posts`
 --
 
-CREATE TABLE `tbl_posts` (
-  `id` int(11) UNSIGNED NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_posts` (
+  `id` int(11) unsigned NOT NULL,
   `title` varchar(255) NOT NULL,
   `rewrite` varchar(255) NOT NULL,
   `author` varchar(50) NOT NULL,
@@ -169,7 +169,7 @@ CREATE TABLE `tbl_posts` (
   `user_id` int(11) NOT NULL,
   `creat_date` datetime NOT NULL,
   `update_date` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_posts`
@@ -188,8 +188,8 @@ INSERT INTO `tbl_posts` (`id`, `title`, `rewrite`, `author`, `author_url`, `keyw
 -- Table structure for table `tbl_reviews`
 --
 
-CREATE TABLE `tbl_reviews` (
-  `id` int(11) UNSIGNED NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_reviews` (
+  `id` int(11) unsigned NOT NULL,
   `name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `title` varchar(255) NOT NULL,
@@ -198,7 +198,7 @@ CREATE TABLE `tbl_reviews` (
   `user_ip` varchar(50) NOT NULL,
   `post_id` int(11) NOT NULL,
   `created_date` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_reviews`
@@ -220,13 +220,13 @@ INSERT INTO `tbl_reviews` (`id`, `name`, `email`, `title`, `review`, `star`, `us
 -- Table structure for table `tbl_software_related`
 --
 
-CREATE TABLE `tbl_software_related` (
-  `id` int(11) UNSIGNED NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_software_related` (
+  `id` int(11) unsigned NOT NULL,
   `post_id` int(11) NOT NULL,
   `tutorial_id` int(11) NOT NULL,
   `created_at` datetime NOT NULL,
   `delete_flag` tinyint(4) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_software_related`
@@ -242,8 +242,8 @@ INSERT INTO `tbl_software_related` (`id`, `post_id`, `tutorial_id`, `created_at`
 -- Table structure for table `tbl_tutorials`
 --
 
-CREATE TABLE `tbl_tutorials` (
-  `id` int(11) UNSIGNED NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_tutorials` (
+  `id` int(11) unsigned NOT NULL,
   `title` varchar(255) NOT NULL,
   `rewrite` varchar(255) NOT NULL,
   `keywords` text NOT NULL,
@@ -257,7 +257,7 @@ CREATE TABLE `tbl_tutorials` (
   `user_id` int(11) NOT NULL,
   `cate_id` int(11) NOT NULL,
   `creat_date` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_tutorials`
@@ -270,7 +270,7 @@ INSERT INTO `tbl_tutorials` (`id`, `title`, `rewrite`, `keywords`, `description`
 (4, 'Cài và sử dụng InnoExtractor giải nén file dữ liệu', 'cai-va-su-dung-innoextractor-giai-nen-file-du-lieu', 'Cài và sử dụng InnoExtractor giải nén file dữ liệu', 'Cài và sử dụng InnoExtractor giải nén file dữ liệu', 123, 'data-extract.jpg', 'InnoExtractor đem đến cho người dùng khả năng giải nén các tập tin dữ liệu hiệu quả với tốc độ cực nhanh. Tuy nhiên để sử dụng được phần mềm này bạn cần cài đặt InnoExtractor đúng cách.', 'InnoExtractor đem đến cho người dùng khả năng giải nén các tập tin dữ liệu hiệu quả với tốc độ cực nhanh. Tuy nhiên để sử dụng được phần mềm này bạn cần cài đặt InnoExtractor đúng cách.', 3, 1, 1, 0, '2017-03-20 16:41:58'),
 (5, 'Khôi phục dữ liệu bằng Active Partition Recovery', 'khoi-phuc-du-lieu-bang-active-partition-recovery', 'Khôi phục dữ liệu bằng Active Partition Recovery', 'Khôi phục dữ liệu bằng Active Partition Recovery', 3, '1382645199_active-partition-recovery-professional.jpg', 'Những dữ liệu lưu trữ trên ổ cứng của máy tính bị mất do rất nhiều nguyên nhân như do người sử dụng vô tình xóa hoặc do virus gây ra… Và Active Partition Recovery chính là giải pháp dành cho bạn lúc này.', 'Những dữ liệu lưu trữ trên ổ cứng của máy tính bị mất do rất nhiều nguyên nhân như do người sử dụng vô tình xóa hoặc do virus gây ra… Và Active Partition Recovery chính là giải pháp dành cho bạn lúc này.<br />\r\n<br />\r\n<img src="https://s-media-cache-ak0.pinimg.com/564x/4e/7d/60/4e7d602ed97b6535f81a851ac3da63a6.jpg" alt="" /><br />\r\n<br />\r\n<div>KHÔI PHỤC DỮ LIỆU BẰNG ACTIVE PARTITION RECOVERY</div>\r\n<div>&#160;</div>\r\n<div>Sau khi tải về, cài đặt trên máy tính và khởi động chương trình ta thực hiện theo các bước sau để tiến hành lấy lại những dữ liệu đã mất: ( Nếu chưa có phần mềm bạn có thể tải phiên bản mới nhất của Active Partition Recovery).</div>\r\n<div>&#160;</div>\r\n<div><strong>Bước 1</strong>: Từ giao diện chính của chương trình bạn nhấn chọn Quick Scan. Chương trình sẽ tiến hành quét bề mặt ổ đĩa cứng của bạn.</div>\r\n<div>&#160;</div>\r\n<div>(Lưu ý: Chương trình còn có chức năng quét sâu hơn là Super Scan, bạn chỉ chọn phương án này nếu khi dùng Quick Scan không có kết quả, vì chức năng Super Scan thực hiện mất rất nhiều thời gian).<br />\r\n<br />\r\n<img src="http://baomoi-photo-2.d.za.zdn.vn/16/05/01/173/19265752/3_218190.jpg" alt="" /><br />\r\n<br />\r\n<strong>Bước 2</strong>: Sau khi chương trình quét bề mặt ổ đĩa kết thúc bạn kiểm tra những dữ liệu nào của đã bị mất và chọn vào vùng dữ liệu dó rồi tiến hành khôi phục lại bằng cách nhấn chọn nút Recover, khi đó chương trình sẽ lấy lại cho bạn những gì mà bạn bị mất.<br />\r\n<br />\r\n<img src="https://s-media-cache-ak0.pinimg.com/736x/3e/e0/b1/3ee0b103b366dc612572cb5141c882b6.jpg" alt="" /></div>', 4, 1, 1, 0, '2017-03-20 17:21:54'),
 (6, 'Cách cài Free PDF Compressor giảm kích thước file PDF', 'cach-cai-free-pdf-compressor-giam-kich-thuoc-file-pdf', 'Cách cài Free PDF Compressor giảm kích thước file PDF', 'Cách cài Free PDF Compressor giảm kích thước file PDF', 0, 'adobe-reader.jpg', 'Phần mềm Free PDF Compressor ra đời giúp bạn nén, làm giảm kích thước các file PDF để dễ dàng lưu trữ hoặc chia sẻ trên mạng Internet. Thông qua bài viết dưới đây của FreeFile.vn bạn sẽ biết cách cài Free PDF Compressor sử dụng hiệu quả nhất trên máy tinh.', 'Phần mềm Free PDF Compressor ra đời giúp bạn nén, làm giảm kích thước các file PDF để dễ dàng lưu trữ hoặc chia sẻ trên mạng Internet. Thông qua bài viết dưới đây của FreeFile.vn bạn sẽ biết cách cài Free PDF Compressor sử dụng hiệu quả nhất trên máy tinh.', 0, 1, 1, 0, '2017-03-20 17:23:46'),
-(7, 'Các cách kiểm tra cấu hình máy tính đơn giản nhất', 'cac-cach-kiem-tra-cau-hinh-may-tinh-don-gian-nhat', 'Xem cấu hình, Cấu hình máy tính, Kiểm tra cấu hình máy tính, Kiểm tra cấu hình laptop', 'Hướng dẫn các cách kiểm tra cấu hình máy tính một cách đơn giản và dễ hiểu nhất. Bạn chỉ cần nhìn hình ảnh và gõ vài dòng lệnh là có thể xem được cấu hình máy tính của bạn.', 1, 'kiem-tra-cau-hinh-pc-laptop.jpg', 'Bạn mới mua một chiếc máy tính mà chưa biết kiểm tra cấu hình như thế nào, có đúng với thông số cấu hình mà bạn đưa ra cho người bán hàng hay không. Bạn muốn <strong>kiểm tra cấu hình máy tính</strong>? hãy làm theo các cách sau.', '<img src="http://freefile.vn/uploaded/kiem-tra-cau-hinh-pc-laptop.jpg" width="450" height="249" alt="Các cách kiểm tra cấu hình máy tính cho PC và Laptop" /><br />\r\n<br />\r\n<div style="text-align: center;"><em>Cách cách kiểm tra cấu hình máy tinh PC và Laptop.</em></div>\r\n<br />\r\nHướng dẫn các cách kiểm tra cấu hình máy tính một cách đơn giản và dễ hiểu nhất. Bạn chỉ cần nhìn hình ảnh và gõ vài dòng lệnh là có thể xem được cấu hình máy tính của bạn.<br />\r\n<br />\r\n<h3>ĐỂ XEM CẤU HÌNH MÁY TÍNH BẠN THỰC HIỆN MỘT TRONG CÁC CÁCH SAU</h3>\r\n<br />\r\n<br />\r\n<h3>1. Dùng lệnh có sẵn trong window để kiểm tra</h3>\r\n<br />\r\n<br />\r\na. <u>Dùng lệnh dxdiag để kiếm tra cấu hình</u><br />\r\n<br />\r\nNhấn tổ hợp phím tắt cửa sổ Windows + R để mở cửa sổ chạy Command line như hình, hoặc nhấn menu start, vào mục tìm kiếm rồi nhập cmd vào.<br />\r\n<img src="http://freefile.vn/uploaded/command-line-window.jpg" width="500" height="287" alt="" /><br />\r\n<br />\r\n<div style="text-align: center;"><em>Nhấn tổ hợp cửa sổ WIndows + R để mở cửa sổ command line</em></div>\r\n<br />\r\nCửa sổ Run hiện lên, bạn nhập vào lệnh <strong>dxdiag</strong> sau đó nhấn Enter, bạn có thể xem ảnh dưới.<br />\r\n<img src="http://freefile.vn/uploaded/run-windows-command.jpg" alt="Cửa sổ chạy Run trong window" /><br />\r\n<br />\r\nSau khi gõ enter thì một cửa sổ confirm hiện lên, nhấn chọn <strong>Yes</strong>. Một cửa sổ hiển thị thông tin hệ thống như sau<br />\r\n<img src="http://freefile.vn/uploaded/kiem-tra-cau-hinh-pc-laptop_1.jpg" alt="Xem cấu hình máy tính, Processor là bộ vi xử lý (chip) và Memory là bộ nhớ ram" width="500" height="303" /><br />\r\n<br />\r\n<div style="text-align: center;"><em>Xem cấu hình máy tính, Processor là bộ vi xử lý (chip) và Memory là bộ nhớ ram.</em></div>\r\n<br />\r\n<u>Như hình trên thì máy tính đang có</u> :<br />\r\n<br />\r\n- <strong>Bộ xử lý (chip) là Core i3-4130 3.40 GHZ</strong><br />\r\n- <strong>Bộ nhớ Ram là ~ 6GB</strong><br />\r\n<br />\r\nĐể xem thông tin về đồ họa, card màn hình thì bạn chọn tab Display, như hình dưới<br />\r\n<img src="http://freefile.vn/uploaded/vga-card-man-hinh-pc-laptop.jpg" alt="Xem card màn hình vga trên PC và Laptop" /><br />\r\n<br />\r\n- Như hình ảnh trên bạn thấy, Máy đang sử dụng có card màn hình là&#160;<br />\r\n<br />\r\n2. Thao tác trên desktop<br />\r\n<br />\r\n<br />\r\n3. Dùng phần mềm kiểm tra', 1, 1, 1, 5, '2017-04-05 11:38:50');
+(7, 'Các cách kiểm tra cấu hình máy tính đơn giản nhất', 'cac-cach-kiem-tra-cau-hinh-may-tinh-don-gian-nhat', 'Xem cấu hình, Cấu hình máy tính, Kiểm tra cấu hình máy tính, Kiểm tra cấu hình laptop', 'Hướng dẫn các cách kiểm tra cấu hình máy tính một cách đơn giản và dễ hiểu nhất. Bạn chỉ cần nhìn hình ảnh và gõ vài dòng lệnh là có thể xem được cấu hình máy tính của bạn.', 1, 'kiem-tra-cau-hinh-pc-laptop.jpg', 'Bạn mới mua một chiếc máy tính mà chưa biết kiểm tra cấu hình như thế nào, có đúng với thông số cấu hình mà bạn đưa ra cho người bán hàng hay không. Bạn muốn <strong>kiểm tra cấu hình máy tính</strong>? hãy làm theo các cách sau.<br type="_moz" />', '<img src="http://freefile.vn/uploaded/kiem-tra-cau-hinh-pc-laptop.jpg" width="450" height="249" alt="Các cách kiểm tra cấu hình máy tính cho PC và Laptop" /><br />\r\n<br />\r\n<div style="text-align: center;"><em>Cách cách kiểm tra cấu hình máy tinh PC và Laptop.</em></div>\r\n<br />\r\nHướng dẫn các cách kiểm tra cấu hình máy tính một cách đơn giản và dễ hiểu nhất. Bạn chỉ cần nhìn hình ảnh và gõ vài dòng lệnh là có thể xem được cấu hình máy tính của bạn.<br />\r\n<br />\r\n<h3>ĐỂ XEM CẤU HÌNH MÁY TÍNH BẠN THỰC HIỆN MỘT TRONG CÁC CÁCH SAU</h3>\r\n<br />\r\n<br />\r\n<h3>1. Dùng lệnh có sẵn trong window để kiểm tra</h3>\r\n<br />\r\n<br />\r\na. <u>Dùng lệnh dxdiag để kiếm tra cấu hình</u><br />\r\n<br />\r\nNhấn tổ hợp phím tắt cửa sổ Windows + R để mở cửa sổ chạy Command line như hình, hoặc nhấn menu start, vào mục tìm kiếm rồi nhập cmd vào.<br />\r\n<img src="http://freefile.vn/uploaded/command-line-window.jpg" width="500" height="287" alt="" /><br />\r\n<br />\r\n<div style="text-align: center;"><em>Nhấn tổ hợp cửa sổ WIndows + R để mở cửa sổ command line</em></div>\r\n<br />\r\nCửa sổ Run hiện lên, bạn nhập vào lệnh <strong>dxdiag</strong> sau đó nhấn Enter, bạn có thể xem ảnh dưới.<br />\r\n<img src="http://freefile.vn/uploaded/run-windows-command.jpg" alt="Cửa sổ chạy Run trong window" /><br />\r\n<br />\r\nSau khi gõ enter thì một cửa sổ confirm hiện lên, nhấn chọn <strong>Yes</strong>. Một cửa sổ hiển thị thông tin hệ thống như sau<br />\r\n<img src="http://freefile.vn/uploaded/kiem-tra-cau-hinh-pc-laptop-dxdiag.jpg" alt="Xem cấu hình máy tính, Processor là bộ vi xử lý (chip) và Memory là bộ nhớ ram" /><br />\r\n<br />\r\n<div style="text-align: center;"><em>Xem cấu hình máy tính, Processor là bộ vi xử lý (chip) và Memory là bộ nhớ ram.</em></div>\r\n<br />\r\n<u>Như hình trên thì máy tính đang có</u> :<br />\r\n<br />\r\n- <strong>Bộ xử lý (chip) là Core i3-2120 3.30 GHZ</strong><br />\r\n- <strong>Bộ nhớ Ram là ~ 6GB</strong><br />\r\n<br />\r\nĐể xem thông tin về đồ họa, card màn hình thì bạn chọn tab Display, như hình dưới<br />\r\n<img src="http://freefile.vn/uploaded/vga-card-man-hinh-pc-laptop.jpg" alt="Xem card màn hình vga trên PC và Laptop" /><br />\r\n<br />\r\n- Như hình ảnh trên bạn thấy, Máy đang sử dụng có card màn hình là&#160;Nvidia Geforce Gtx 1050 có dung lượng 1688MB ~2GB<br />\r\n<br />\r\n<strong>2. Thao tác trên desktop</strong><br />\r\n<br />\r\nTừ màn hình desktop, bạn tìm biểu tượng <strong>My computer</strong> nếu từ windows 7 trở xuống, từ windows 8 trở lên tên biểu tượng là <strong>This Pc</strong>, click chuột phải chọn menu <strong>Properties</strong>.<br />\r\n<img src="http://freefile.vn/uploaded/xem-cau-hinh-pc-windows-properties.jpg" alt="Xem cấu hình máy tính bằng windows properties" /><br />\r\n<br />\r\nCửa sổ chứa thông tin cấu hình của máy tính sẽ hiện ra như sau<br />\r\n<br />\r\n<img src="http://freefile.vn/uploaded/xem-cau-hinh-may-tinh.jpg" alt="Xem cấu hình máy tính từ biểu tượng my computer" /><br />\r\n<br />\r\n<br />\r\nVới cách này thì ta chỉ xem được cấu hình đơn giản như là Chip và Ram, Hệ điều hành máy đang chạy là windows 32 hay 64 bit<br />\r\n<br />\r\n<strong>3. Dùng phần mềm kiểm tra</strong><br />\r\n<br />\r\nVới hai cách trên ta chỉ xem được cấu hình máy đơn giản, muốn xem chi tiết hơn về các thông số khác thì ta nên sử dụng phần mềm để kiểm tra. Có rất nhiều phần mềm có thể kiểm tra được cấu hình phần cứng của máy tính. Dưới đây là một số phần mềm thông dụng', 1, 1, 1, 5, '2017-04-05 11:38:50');
 
 -- --------------------------------------------------------
 
@@ -278,8 +278,8 @@ INSERT INTO `tbl_tutorials` (`id`, `title`, `rewrite`, `keywords`, `description`
 -- Table structure for table `tbl_user`
 --
 
-CREATE TABLE `tbl_user` (
-  `id` int(10) UNSIGNED NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_user` (
+  `id` int(10) unsigned NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `name` varchar(100) NOT NULL,
@@ -287,9 +287,9 @@ CREATE TABLE `tbl_user` (
   `phone` varchar(20) DEFAULT NULL,
   `adress` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `level` int(10) UNSIGNED NOT NULL DEFAULT '2',
+  `level` int(10) unsigned NOT NULL DEFAULT '2',
   `status` int(1) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_user`
@@ -353,37 +353,37 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_category`
 --
 ALTER TABLE `tbl_category`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=54;
 --
 -- AUTO_INCREMENT for table `tbl_caterory_tutorial`
 --
 ALTER TABLE `tbl_caterory_tutorial`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `tbl_posts`
 --
 ALTER TABLE `tbl_posts`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `tbl_reviews`
 --
 ALTER TABLE `tbl_reviews`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `tbl_software_related`
 --
 ALTER TABLE `tbl_software_related`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `tbl_tutorials`
 --
 ALTER TABLE `tbl_tutorials`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
