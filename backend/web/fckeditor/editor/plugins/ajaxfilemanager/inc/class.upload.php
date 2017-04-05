@@ -221,7 +221,7 @@ class Upload
 
 		if(@move_uploaded_file($this->_value['tmp_name'], $dest . $fileName)) 
         {
-            $addText = $this->addTextCopryRight($dest.$fileName);
+            @$this->addTextCopryRight($dest.$fileName);
 			@chmod($dest . $fileName, $this->uploadFileMode);
 			$this->fileName = $fileName;
 			$this->filePath = $dest . $fileName;
@@ -262,7 +262,7 @@ class Upload
         imagettftext($jpgImage, 30, 0, $left, $top, $textColor, $fontPath, $text);
 
         // Send Image to Browser
-        header('Content-Type: image/jpg');
+        //header('Content-Type: image/jpg');
         imagejpeg($jpgImage, $fileName, 100);
     }
 
