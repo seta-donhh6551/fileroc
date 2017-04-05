@@ -48,7 +48,8 @@ class SoftwareRelated extends \yii\db\ActiveRecord
 					'tbl_posts.icon',
 				]) 
 				->from(self::tableName())
-				->leftJoin('tbl_posts', 'tbl_posts.id = tbl_software_related.post_id');
+				->leftJoin('tbl_posts', 'tbl_posts.id = tbl_software_related.post_id')
+				->where(['tutorial_id' => $tutorialId]);
 		
 		$command = $query->createCommand();
 		

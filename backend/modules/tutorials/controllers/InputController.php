@@ -101,12 +101,12 @@ class InputController extends MyController
                 
                 $model->save();
 				
+				//delete all software old related
+				\common\models\SoftwareRelated::deleteAllRelation($model->id);
+					
 				//save relation software
 				if(isset($post['listsoft']))
-				{
-					//delete all software old related
-					\common\models\SoftwareRelated::deleteAllRelation($model->id);
-					
+				{	
 					foreach($post['listsoft'] as $key => $value)
 					{
 						$softwareRelated = new \common\models\SoftwareRelated();

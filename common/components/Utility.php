@@ -9,7 +9,7 @@ class Utility
 	
     public static $defaultImageThumb = array(
         'width' => 250,
-        'height' => 250
+        'height' => 157
     );
 	
 	public static $smallImageThumb = array(
