@@ -20,7 +20,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/'.$model['rewrite'].'-'.$model[
 <script type="text/javascript">
 //right scroll
 $(window).scroll(function () {
-	scrollWindows('#popular', '#techbeat-widget', '#footer-desktop');
+	scrollWindows('.ads-250', '#techbeat-widget', '#footer-desktop');
 });
 $(function(){
     var gallery = $('.tutorial-title a').simpleLightbox({navText:['&lsaquo;','&rsaquo;']});
