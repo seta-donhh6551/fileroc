@@ -35,7 +35,7 @@ class InputController extends MyController
         if($request->isPost && $request->Post('submit'))
         {
             $post = $request->Post('Posts');
-			Utility::debugData($post);
+			//Utility::debugData($post);
             $autoResize = isset($post['autoResize']) && $post['autoResize'] == 1 ? true : false;
             $model->attributes = $post;
             if ($model->validate())
