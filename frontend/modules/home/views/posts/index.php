@@ -258,7 +258,8 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
                 <img src="<?= Yii::$app->request->baseUrl; ?>img/adsense-300x250.gif" />
             </div>
             <?= $this->render('//layouts/popular-download',[
-                'listPost' => $listRelated
+                'listPost' => $listPopular,
+                'title' => 'Phần mềm phổ biến'
             ]);
             ?>
         </div>
