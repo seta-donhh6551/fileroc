@@ -98,12 +98,12 @@
 #reviews{
     margin: 50px 0px;
 }
-#quick-view{width:250px;min-height:200px;background:#333;padding:0px 3px 10px 0px;margin-bottom:15px}
+#quick-view{width:250px;min-height:150px;background:#ddd;padding:0px 3px 10px 0px;margin-bottom:15px}
 #quick-view h2{margin-bottom: 10px !important}
 #quick-view h3{color:#fff;margin-bottom: 10px;border-bottom: 1px solid #DDD;padding-bottom: 5px;margin-top:0px}
 #quick-view ul{list-style-type:none;padding:0px 10px 0px 10px}
-#quick-view ul li{border-bottom: 1px dashed #f2f2f2;margin-bottom: 7px;padding-bottom: 5px}
-#quick-view ul li a{color:#FFF;font-size:12px}
+#quick-view ul li{border-bottom: 1px dashed #000;margin-bottom: 7px;padding-bottom: 5px}
+#quick-view ul li a{color:#000;font-size:12px}
 #tutorial-body,.tutorial-body{font-size:13px;text-align:justify}
 .tutorial-body img{max-width:540px;margin-left: 20px;margin-top:7px}
 .tutorial-body h3{font-size:15px;font-weight:bold}
