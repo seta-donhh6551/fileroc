@@ -128,7 +128,6 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
         <div id="ads-two" style="height:30px">
             <!--img src="<?= Yii::$app->request->baseUrl; ?>img/adsense-300x250-01.gif" width="300" /-->
         </div>
-        ?>
     </div>
 </div>
 <script type="text/javascript">

@@ -98,7 +98,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 					<?= $model->info ?>
 				</div>
 			</div>
-			<div class="detail-content">
+            <div class="detail-content" style="margin-top:20px">
 				<h2>CHỨC NĂNG CHÍNH</h2>
 				<div class="full-content">
 					<?= $model->info_function ?>
@@ -118,6 +118,8 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 					<?= $model->fullcontent ?>
 				</div>
 			</div>
+			<div class="rating-title martop">
+			Hiện có <?= count($listComment); ?> đánh giá từ người dùng
 		</div>
 		<div id="reviews">
 			<h2 style="font-size:18px;color:#F60;margin-bottom:15px;">NGƯỜI DÙNG ĐÁNH GIÁ</h2>
@@ -203,7 +205,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 			</div>
 			<div class="review-form">
 				<div class="review-form-title">
-					<span style="margin-left:10px;line-height:35px;">Đê Lại Bình Luận</span>
+					<span style="margin-left:10px;line-height:35px;">Đánh Giá Phần Mềm</span>
 				</div>
 				<div class="review-form-body">
 					<div class="errors red err-icon" style="display:none;margin-bottom:10px"></div>
@@ -245,7 +247,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 							<div class="cls"></div>
 						</div>
 						<div class="form-items" style="text-align: center">
-							<input type="submit" name="send" value="Send review" />
+							<input type="submit" name="send" value="Gửi đánh giá" />
 						</div>
 					</form>
 				</div>
@@ -268,4 +270,35 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
         </div>
 	</div>
 	<div class="cls"></div>
+</div>
+</div>
+<style type="text/css">
+#downloadbar{border-bottom:1px solid #f9f9f9;background:#666;width:100%;height:60px;position:fixed;bottom:0;left:0;box-shadow:3 3px 0px #ccc;padding-top:6px}
+#download-menu{width:1052px;margin:0px auto}
+#download-menu a{float:left;margin-right: 10px}
+.downloadbar-title{font-size: 18px;font-weight: 700;margin-top: 15px;width: 550px;color:#FFF}
+#download-menu a.download:hover{
+    color: #F00;
+    background: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#fff));
+}
+</style>
+<script type="text/javascript">
+$(window).scroll(function (){
+    var windowTop = $(window).scrollTop();
+    if(windowTop > 300){
+        $('#downloadbar').removeClass('hide');
+        $('#footer-desktop .grey-top').css('background-color','#fff');
+    }else{
+        $('#downloadbar').addClass('hide');
+        $('#footer-desktop .grey-top').css('background-color','#96322d');
+    }
+});
+</script>
+<div id="downloadbar" class="hide">
+    <div id="download-menu">
+        <a href="<?= Yii::$app->request->baseUrl.'download-option/'.$model->rewrite; ?>.html" class="download" style="font-size:18px">Tải Về</a>
+        <div style="padding-top:17px">
+            <h3 class="downloadbar-title">Tải <?= $model->title ?> <em> <?= $model->version ?></em></h3>
+        </div>
+    </div>
 </div>

@@ -13,17 +13,12 @@ $navigator = [
 $navigator[] = ['url' => Yii::getAlias('@web').'/'.$model['rewrite'].'-'.$model['id'],'title' => $model['title']];
 ?>
 <link href="<?= Yii::$app->request->baseUrl; ?>css/detail.css" rel="stylesheet" type="text/css" />
-<link href="http://www.jqueryscript.net/demo/Responsive-Touch-enabled-jQuery-Image-Lightbox-Plugin/dist/simplelightbox.min.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/scroll.js"></script>
-<script type="text/javascript" src="http://www.jqueryscript.net/demo/Responsive-Touch-enabled-jQuery-Image-Lightbox-Plugin/dist/simple-lightbox.min.js"></script>
 <script type="text/javascript">
 //right scroll
 $(window).scroll(function () {
-	scrollWindows('.ads-250', '#techbeat-widget', '#footer-desktop');
-});
-$(function(){
-    var gallery = $('.tutorial-title a').simpleLightbox({navText:['&lsaquo;','&rsaquo;']});
+	scrollWindows('#scroll-ads-menu', '#techbeat-widget', '#footer-desktop');
 });
 document.write('<div id="fb-root"></div>');
 (function(d, s, id) {
@@ -56,8 +51,16 @@ document.write('<div id="fb-root"></div>');
         </div>
 	</div>
 	<div id="tutorial-right">
-        <div class="ads-250">
-            <img src="<?= Yii::$app->request->baseUrl; ?>img/adsense-250x250-en.png"/>
+        <div id="scroll-ads-menu">
+            <div class="ads-250">
+                <img src="<?= Yii::$app->request->baseUrl; ?>img/adsense-250x250-en.png"/>
+            </div>
+            <div id="quick-view">
+                <div class="popular-soft" style="width:250px">
+                <h2>Nội Dung Chính</h2>
+                <ul></ul>
+                </div>
+            </div>
         </div>
         <div id="popular" style="width:250px">
             <?= $this->render('//layouts/related-soft', ['listRelatedSoft' => $listRelatedSoft]); ?>
@@ -134,3 +137,20 @@ document.write('<div id="fb-root"></div>');
 	</div>
 	<div class="cls"></div>
 </div>
+<script type="text/javascript">
+jQuery(function($){
+	$('.tutorial-body').find('h3').each(function (index, element) {
+		var text = $(this).text();
+		$('#quick-view ul').append('<li><a href="#tab'+index+'">'+text+'</a></li>')
+		$(this).attr('id','tab'+index);
+	});
+	$("#quick-view ul li a").click(function() {
+		var id = $(this).attr('href');
+        var topValue = $(id).offset().top;
+		$('html, body').animate({
+			scrollTop: (topValue - 57)
+		}, 1000);
+		return false;
+	});
+});
+</script>
