@@ -278,8 +278,8 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 #download-menu a{float:left;margin-right: 10px}
 .downloadbar-title{font-size: 18px;font-weight: 700;margin-top: 15px;width: 550px;color:#FFF}
 #download-menu a.download:hover{
-    color: #F00;
-    background: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#fff));
+    color: #fff;
+    background: -webkit-gradient(linear,left top,left bottom,from(#f00),to(#f00));
 }
 </style>
 <script type="text/javascript">

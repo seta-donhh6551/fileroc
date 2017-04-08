@@ -72,6 +72,13 @@ class PostsController extends MyController {
                         ->orderBy(['views' => SORT_DESC])
                         ->limit(10)
                         ->all();
+        
+        $listPopular = \common\models\Posts::find()
+                        ->where(['status' => 1])
+                        ->andWhere(['<>','id',$model->id])
+                        ->orderBy(['views' => SORT_DESC])
+                        ->limit(10)
+                        ->all();
 
         Yii::$app->view->title = 'Tùy chọn download '.$model->title.' - Tải '.$model->title.' miễn phí';
 
@@ -83,7 +90,8 @@ class PostsController extends MyController {
 			'infoCate' => $modelCate->findOne(['id' => $model->cate_id]),
 			'subCate' => $modelCate->findOne(['id' => $model->sub_id]),
 			'listPost' => $modelPost->getListPosts(),
-            'listRelated' => $listRelated
+            'listRelated' => $listRelated,
+            'listPopular' => $listPopular
 		]);
     }
 
