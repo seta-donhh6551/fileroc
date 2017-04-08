@@ -13,12 +13,15 @@ $navigator = [
 $navigator[] = ['url' => Yii::getAlias('@web').'/'.$model['rewrite'].'-'.$model['id'],'title' => $model['title']];
 ?>
 <link href="<?= Yii::$app->request->baseUrl; ?>css/detail.css" rel="stylesheet" type="text/css" />
+<link href="<?= Yii::$app->request->baseUrl; ?>css/lightbox.min.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/lightbox-plus-jquery.min.js"></script>
 <script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/scroll.js"></script>
 <script type="text/javascript">
 //right scroll
 $(window).scroll(function () {
 	scrollWindows('#scroll-ads-menu', '#techbeat-widget', '#footer-desktop');
+	scrollWindows('#scroll-left', '#ads-two', '#footer-desktop');
 });
 document.write('<div id="fb-root"></div>');
 (function(d, s, id) {
@@ -151,6 +154,13 @@ jQuery(function($){
 			scrollTop: (topValue - 57)
 		}, 1000);
 		return false;
+	});
+    
+    //find all image and wrap
+    $('.tutorial-body').find('img').each(function (index, element) {
+		var imgUrl = $(this).attr('src');
+        var title = $(this).attr('alt');
+		$(this).wrap('<a class="example-image-link" href="'+imgUrl+'" data-lightbox="tutorials" data-title="'+title+'"></a>');
 	});
 });
 </script>
