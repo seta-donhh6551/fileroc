@@ -83,16 +83,20 @@ $(window).scroll(function () {
 function scrollWindows(Object, elementTo, lastObj){
 	var window_top = $(window).scrollTop();
 	var adsHeight = $(elementTo).offset().top + $(elementTo).height();
-	if (window_top >= adsHeight/2) {
-		$(Object).removeClass("fixed-bot");
-		$(Object).addClass("fixed-top");
-	} else {
-		$(Object).removeClass("fixed-top");
-	}
-	if (window_top + $(Object).height() > $(lastObj).offset().top) {
-		$(Object).removeClass("fixed-top");
-		$(Object).addClass("fixed-bot");
-	}
+    var w = window.innerWidth;
+
+    if (w > 768) {
+    	if (window_top >= adsHeight/2) {
+    		$(Object).removeClass("fixed-bot");
+    		$(Object).addClass("fixed-top");
+    	} else {
+    		$(Object).removeClass("fixed-top");
+    	}
+    	if (window_top + $(Object).height() > $(lastObj).offset().top) {
+    		$(Object).removeClass("fixed-top");
+    		$(Object).addClass("fixed-bot");
+    	}
+    }
 }
 
 //scroll to element
