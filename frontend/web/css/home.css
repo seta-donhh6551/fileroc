@@ -766,9 +766,8 @@ h2 a:hover {
     float: left;
     margin-right: 15px;
     padding-top: 15px;
-    width: 200px;
+    width: 150px;
     /* max-height: 125px; */
-    height:150px;
 }
 .news-counts>div {
     float: left;
@@ -809,6 +808,8 @@ h2 a:hover {
     color: #0093de
 }
 .news-excerpt{
+    width: 560px;
+    float: left;
     text-align: justify
 }
 .news-excerpt a {

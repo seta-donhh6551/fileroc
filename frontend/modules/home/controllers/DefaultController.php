@@ -38,13 +38,13 @@ class DefaultController extends MyController
                     ->all();
         
 		$listSubCategory = $model->getListSubCategory($cateId);
-		
+        
         Yii::$app->view->title = 'Phần mềm dành cho '.$model->name.', Miễn phí download phần mềm';
 
 		return $this->render('index', [
 			'model' => $model,
             'listPupolar' => $listPupolar,
-			'listTutorials' => $this->newTutorials(9),
+			'listTutorials' => $this->newTutorials(7),
 			'listSubCategory' => $listSubCategory
 		]);
 	}

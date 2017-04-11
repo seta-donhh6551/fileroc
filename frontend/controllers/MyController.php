@@ -27,7 +27,7 @@ class MyController extends Controller
         $modelTutorial = new \common\models\Tutorials();
 		$listTutorials = $modelTutorial->find()
             ->where(['status' => 1])
-            ->orderBy(['id' => 'desc'])
+            ->orderBy(['id' => SORT_DESC])
             ->limit($limit)
             ->all();
         

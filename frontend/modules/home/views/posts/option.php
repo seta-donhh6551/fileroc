@@ -96,8 +96,8 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
             <div class="related bortop martop">
                 <h2>PHẦN MỀM TƯƠNG TỰ</h2>
                 <div class="related-soft">
-                    <?php if(isset($listPost)){ ?>
-                    <?php foreach($listPost as $postItem){ ?>
+                    <?php if(isset($listRelated)){ ?>
+                    <?php foreach($listRelated as $postItem){ ?>
                     <div class="related-item">
                         <div class="related-img">
                             <a href="<?= Yii::$app->request->baseUrl.'download/'.$postItem['rewrite']; ?>.html"><img src="<?= Yii::getAlias('@web'); ?>/uploads/icons/<?= $postItem['icon'] ?>" alt="Download <?= $postItem['title'] ?>" /></a>
