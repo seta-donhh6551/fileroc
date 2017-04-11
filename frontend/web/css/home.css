@@ -796,6 +796,7 @@ h2 a:hover {
 }
 .news-data {
     clear: both;
+    padding-bottom: 7px;
     margin-top: 20px
 }
 .news-data:first-of-type {
