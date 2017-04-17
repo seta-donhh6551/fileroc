@@ -458,7 +458,7 @@ a.review {
     width: 1px;
 }
 .fixed-top{padding-top:15px;position:fixed;top:50px;z-index:99;}
-.fixed-bot{position:fixed;bottom:26px;z-index:99;}
+.fixed-bot{position:fixed;bottom:100px;z-index:99;}
 .form-items{clear:left;padding:2px 0px}
 .form-items label{display:block;width:150px;float:left;font-weight:normal}
 .red{color:#F00}

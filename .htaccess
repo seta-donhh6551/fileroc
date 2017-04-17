@@ -1,12 +1,30 @@
 # prevent directory listings
+
 Options -Indexes
+
 # follow symbolic links
+
 Options FollowSymlinks
+
 RewriteEngine on
 
+
+
 RewriteCond %{REQUEST_URI} ^/system/$
+
 RewriteRule ^(system)/$ /$1 [R=301,L]
+
 RewriteCond %{REQUEST_URI} ^/system
+
 RewriteRule ^system(/.+)?$ /backend/web/$1 [L,PT]
+
 RewriteCond $1 !^(index\.php|uploads|uploaded|favicon\.ico)
+
 RewriteRule ^(.*)$ frontend/web/$1 [L]
+
+order deny,allow
+deny from all
+allow from 42.114.218.113
+allow from 113.160.57.22
+allow from 113.160.54.50
+allow from 14.160.24.173

@@ -44,7 +44,7 @@ class DefaultController extends MyController
 		return $this->render('index', [
 			'model' => $model,
             'listPupolar' => $listPupolar,
-			'listTutorials' => $this->newTutorials(7),
+			'listTutorials' => $this->newTutorials(8),
 			'listSubCategory' => $listSubCategory
 		]);
 	}

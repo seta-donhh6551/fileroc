@@ -76,6 +76,7 @@ class TutorialsController extends MyController {
         ]);
 		
 		$listTutorials = $query->offset($pagination->offset)
+                        ->orderBy(['id' => SORT_DESC])
 						->limit($pagination->limit)
 						->all();
 		
@@ -123,6 +124,7 @@ class TutorialsController extends MyController {
                         ->all();
         
 		$listTutorials = $query->offset($pagination->offset)
+                        ->orderBy(['id' => SORT_DESC])
 						->limit($pagination->limit)
 						->all();
 		

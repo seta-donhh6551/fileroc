@@ -1016,6 +1016,13 @@ h2 {
 #navigation ul li:last-child:after{
     display: none
 }
+code{
+    width: 100%;
+    padding: 10px;
+    display: block;
+    color: #f30 !important;
+    border: 1px solid #ddd;
+}
 .category-breadcrumb-entry h1{
     font-size: 21px;
     margin: 0px 0px 15px 0px

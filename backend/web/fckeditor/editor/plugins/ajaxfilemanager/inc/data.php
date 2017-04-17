@@ -1,8 +1,6 @@
 <pre>Array
 (
-    [currentFolderPath] => ../../../../../../uploaded/
-    [new_folder] => tutorials
 )
 </pre>
 
-07/Apr/2017 10:11:55
+09/Apr/2017 16:31:19
