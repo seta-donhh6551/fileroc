@@ -118,7 +118,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
     <div id="right-page">
         <div id="scroll-right">
             <div id="topads">
-                <img src="<?= Yii::$app->request->baseUrl; ?>img/adsense-300x250.gif" />
+                <img src="<?= Yii::$app->request->baseUrl; ?>img/adsense-300x250.gif" alt="Quảng cáo" />
             </div>
             <?= $this->render('//layouts/popular-download',[
                 'listPost' => $listPopular,

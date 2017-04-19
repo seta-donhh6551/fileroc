@@ -1,6 +1,6 @@
 <div id="scroll-right">
 	<div id="topads">
-		<img src="<?= Yii::$app->request->baseUrl; ?>img/adsense-300x250.gif" />
+		<img src="<?= Yii::$app->request->baseUrl; ?>img/adsense-300x250.gif" alt="Quảng cáo" />
 	</div>
 	<div id="popular">
 		<h2>Popular Download</h2>

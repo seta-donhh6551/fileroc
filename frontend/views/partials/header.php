@@ -86,7 +86,7 @@
                     <div class="main-search-box">
                         <input type="search" id="tablet-search" class="auto-complete-search" name="keyword" value="<?= Yii::$app->getRequest()->getQueryParam('keyword') ?>" />
                         <button type="submit" id="tablet-search-button">
-                            <img alt="search" src="<?= Yii::$app->request->baseUrl; ?>img/search-button.png" />
+                            <img src="<?= Yii::$app->request->baseUrl; ?>img/search-button.png" alt="Tìm kiếm"/>
                         </button>
                     </div>
                 </form>
@@ -98,10 +98,10 @@
     <div class="blue-menu">
         <div class="container container-fh">
             <div id="mobile-menu-bar" class="menu-bar">
-                <img src="<?= Yii::$app->request->baseUrl; ?>img/mob-bars.png" />
+                <img src="<?= Yii::$app->request->baseUrl; ?>img/mob-bars.png" alt="Menu" />
             </div>
             <div class="mob-search">
-                <img src="<?= Yii::$app->request->baseUrl; ?>img/mob-search.png" />
+                <img src="<?= Yii::$app->request->baseUrl; ?>img/mob-search.png" alt="Tìm kiếm" />
             </div>
             <div class="main-logo-container">
                 <a href="<?= Yii::$app->request->baseUrl; ?>" title="Home">

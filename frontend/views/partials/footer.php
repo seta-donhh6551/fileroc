@@ -38,10 +38,10 @@
                 </div>
                 <div class="copy">
                     <ul class="social">                         
-                        <li><a title="Google +" class="gg" target="_blank" rel="publisher" href="$">google+ FreeFile.vn</a></li>     
-                        <li><a rel="nofollow" href="#" target="_bank" class="rss">RSS</a></li>      
-                        <li><a rel="nofollow" href="#" target="_blank" class="lki">LinkedIn</a></li>   
-                        <li><a class="fb" rel="nofollow" title="Facebook page" target="_blank" href="https://www.facebook.com/caotung1992">Facebook</a></li>      
+                        <li><a title="Google +" class="gg" target="blank" rel="publisher" href="$">google+ FreeFile.vn</a></li>     
+                        <li><a rel="nofollow" href="#" target="blank" class="rss">RSS</a></li>      
+                        <li><a rel="nofollow" href="#" target="blank" class="lki">LinkedIn</a></li>   
+                        <li><a class="fb" rel="nofollow" title="Facebook page" target="blank" href="https://www.facebook.com/caotung1992">Facebook</a></li>      
                     </ul>
                 </div>
             </div>
@@ -88,10 +88,10 @@
                 </div>
                 <div class="copy">
                     <ul class="social">                         
-                        <li><a title="Google +" class="gg" target="_blank" rel="publisher" href="#8">google+ FreeFile.vn</a></li>     
-                        <li><a rel="nofollow" href="#" target="_bank" class="rss">RSS</a></li>      
-                        <li><a rel="nofollow" href="#" target="_blank" class="lki">LinkedIn</a></li>   
-                        <li><a class="fb" rel="nofollow" title="Facebook page" target="_blank" href="https://www.facebook.com/caotung1992">Facebook</a></li>      
+                        <li><a title="Google +" class="gg" target="blank" rel="publisher" href="#8">google+ FreeFile.vn</a></li>     
+                        <li><a rel="nofollow" href="#" target="blank" class="rss">RSS</a></li>      
+                        <li><a rel="nofollow" href="#" target="blank" class="lki">LinkedIn</a></li>   
+                        <li><a class="fb" rel="nofollow" title="Facebook page" target="blank" href="https://www.facebook.com/caotung1992">Facebook</a></li>      
                     </ul>
                 </div>
             </div>
@@ -138,10 +138,10 @@
                 </div>
                 <div class="copy">
                     <ul class="social">                         
-                        <li><a title="Google +" class="gg" target="_blank" rel="publisher" href="https://plus.google.com/110749430077828635378">google+ FreeFile.Vn</a></li>     
-                        <li><a rel="nofollow" href="#" target="_bank" class="rss">RSS</a></li>      
-                        <li><a rel="nofollow" href="#" target="_blank" class="lki">LinkedIn</a></li>   
-                        <li><a class="fb" rel="nofollow" title="Facebook page" target="_blank" href="https://www.facebook.com/caotung1992">Facebook</a></li>      
+                        <li><a title="Google +" class="gg" target="blank" rel="publisher" href="https://plus.google.com/110749430077828635378">google+ FreeFile.Vn</a></li>     
+                        <li><a rel="nofollow" href="#" target="blank" class="rss">RSS</a></li>      
+                        <li><a rel="nofollow" href="#" target="blank" class="lki">LinkedIn</a></li>   
+                        <li><a class="fb" rel="nofollow" title="Facebook page" target="blank" href="https://www.facebook.com/caotung1992">Facebook</a></li>      
                     </ul>
                 </div>
             </div>
