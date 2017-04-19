@@ -25,8 +25,8 @@ AppAsset::register($this);
         
         <!-- stylesheet -->
         <link href="<?= Yii::$app->request->baseUrl; ?>css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?= Yii::$app->request->baseUrl; ?>css/jquery-ui.min.css" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+        <ink href="<?= Yii::$app->request->baseUrl; ?>css/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
         
         <link href="<?= Yii::$app->request->baseUrl; ?>css/main.css" rel="stylesheet" type="text/css" />
         <link href="<?= Yii::$app->request->baseUrl; ?>css/home.css" rel="stylesheet" type="text/css" />
@@ -42,7 +42,7 @@ AppAsset::register($this);
         <![endif]-->
 
         <!-- jQuery -->
-        <script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/px.js"></script>
+        <!--script type="text/javascript" src="<?= Yii::$app->request->baseUrl; ?>js/px.js"></script-->
     </head>
     
     <body class="en">
