@@ -28,14 +28,22 @@ class InputController extends MyController
     public function actionIndex($id = null)
     {
         Yii::$app->view->title = 'Thêm mới, sửa bài viết | Free download';
-
+		
         $model = $this->loadModel($id);
         $request = Yii::$app->request;
-
+		
+		$listTagRelated = [];
+		$listTutorials = [];
+		if($id)
+		{
+			$listTagRelated = \common\models\Tags::listRelated($id, 1);
+			$listTutorials = \common\models\SoftwareRelated::listRelated($id, 1);
+		}
+		
         if($request->isPost && $request->Post('submit'))
         {
             $post = $request->Post('Posts');
-			//Utility::debugData($post);
+			
             $autoResize = isset($post['autoResize']) && $post['autoResize'] == 1 ? true : false;
             $model->attributes = $post;
             if ($model->validate())
@@ -92,6 +100,26 @@ class InputController extends MyController
                 
 				$model->update_date = new \yii\db\Expression('NOW()');
                 $model->save();
+				
+				//save tags
+				if(isset($post['tags']) && $post['tags'] != null)
+				{	
+					//delete all tags old related
+					\common\models\Tags::deleteAllRelation($model->id, 1);
+					
+					$listTags = explode(',', $post['tags']);
+					foreach($listTags as $key => $value)
+					{
+						$tagModel = new \common\models\Tags();
+						$tagModel->name = trim($value);
+						$tagModel->rewrite = str_replace(' ','-', Utility::replaceUrl(trim($value)));
+						$tagModel->relation_id = $model->id;
+						$tagModel->type = 1;
+						$tagModel->created_at = new \yii\db\Expression('NOW()');
+						
+						$tagModel->save();
+					}
+				}
                 
                 Yii::$app->response->redirect(array('/posts'));
             }
@@ -101,7 +129,11 @@ class InputController extends MyController
         $cateModel = new \common\models\Category();
         $listCategory = $cateModel->getListCategory();
 
-        return $this->render('index', ['model'=>$model,'listCate'=>$listCategory]);
+        return $this->render('index', [
+			'model' => $model,
+			'listCate' => $listCategory,
+			'listTagRelated' => $listTagRelated
+		]);
     }
 
 	/*

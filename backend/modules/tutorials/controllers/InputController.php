@@ -30,10 +30,10 @@ class InputController extends MyController
         
 		//get list software related
 		$listSoftware = array();
+		$listTagRelated = array();
 		
         $model = new \common\models\Tutorials();
-        if($id)
-        {
+        if($id){
             $model = \common\models\Tutorials::findOne($id);
             if(empty($model))
             {
@@ -41,6 +41,7 @@ class InputController extends MyController
             }
 			
 			$listSoftware = \common\models\SoftwareRelated::listRelated($id);
+			$listTagRelated = \common\models\Tags::listRelated($id);
         }
         
         //list categorys
@@ -53,7 +54,7 @@ class InputController extends MyController
         if($request->isPost && $request->Post('submit'))
         {
             $post = $request->Post('Tutorials');
-
+			
             $autoResize = isset($post['autoResize']) && $post['autoResize'] == 1 ? true : false;
             
             $model->attributes = $post;
@@ -100,13 +101,13 @@ class InputController extends MyController
 				}
                 
                 $model->save();
-				
-				//delete all software old related
-				\common\models\SoftwareRelated::deleteAllRelation($model->id);
 					
 				//save relation software
 				if(isset($post['listsoft']))
 				{	
+					//delete all software old related
+					\common\models\SoftwareRelated::deleteAllRelation($model->id);
+					
 					foreach($post['listsoft'] as $key => $value)
 					{
 						$softwareRelated = new \common\models\SoftwareRelated();
@@ -117,6 +118,26 @@ class InputController extends MyController
 						$softwareRelated->save();
 					}
 				}
+				
+				//save tags
+				if(isset($post['tags']) && $post['tags'] != null)
+				{	
+					//delete all tags old related
+					\common\models\Tags::deleteAllRelation($model->id, 0);
+					
+					$listTags = explode(',', $post['tags']);
+					foreach($listTags as $key => $value)
+					{
+						$tagModel = new \common\models\Tags();
+						$tagModel->name = trim($value);
+						$tagModel->rewrite = str_replace(' ','-',Utility::replaceUrl(trim($value)));
+						$tagModel->relation_id = $model->id;
+						$tagModel->type = 0;
+						$tagModel->created_at = new \yii\db\Expression('NOW()');
+						
+						$tagModel->save();
+					}
+				}
                 
                 Yii::$app->response->redirect(array('/tutorials'));
             }
@@ -125,7 +146,8 @@ class InputController extends MyController
         return $this->render('index', [
 			'model' => $model,
 			'listCate' => $listCategory,
-			'listRelated' => $listSoftware
+			'listRelated' => $listSoftware,
+			'listTagRelated' => $listTagRelated
 		]);
     }
 }

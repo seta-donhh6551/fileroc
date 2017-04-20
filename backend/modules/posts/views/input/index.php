@@ -190,6 +190,19 @@ $(document).ready(function(){
                                 <?= Html::activeTextInput($model, 'short_info', ['size' => 50]); ?>
                             </div>
                         </div>
+						<div class="form_items" style="padding: 10px 0px">
+                            <div class="form_items_left">Thẻ tags</div>
+                            <div class="form_items_right">
+								<?php
+								$listTags = '';
+								foreach($listTagRelated as $tags){
+									$listTags .= $tags['name'].', ';
+								}
+								$listTags = trim($listTags, ', ');
+								?>
+								<textarea name="Posts[tags]" cols="50" rows="4" placeholder="Free chat, Xem video, Trình duyệt web"><?= $listTags; ?></textarea>
+                            </div>
+                        </div>
 						<div class="form_items">
                             <div class="form_items_left">Mô tả ngắn</div>
                             <div class="form_items_right">
@@ -233,6 +246,20 @@ $(document).ready(function(){
                            ?>  
                             </div>
                         </div>
+						<div class="form_items" style="padding: 10px 0px">
+                            <div class="form_items_left">Bài viết liên quan</div>
+                            <div class="form_items_right">
+								<input type="text" name="related-tutorial" id="related-tutorial" size="35" />
+                            </div>
+                        </div>
+						<div class="form_items" style="padding: 5px 0px 10px 0px">
+							<div class="form_items_left">Chọn</div>
+							<div id="list-soft" class="form_items_right">
+							<?php foreach($listRelated as $related){ ?>
+								<div><input type="checkbox" name="Posts[tutorials][]" value="<?php echo $related['post_id']; ?>" checked="checked" /><?= $related['title']; ?></div>
+							<?php } ?>
+							</div>
+						</div>
                         <div class="form_items">
                             <div class="form_items_left">Ảnh Icon</div>
                             <div class="form_items_right">

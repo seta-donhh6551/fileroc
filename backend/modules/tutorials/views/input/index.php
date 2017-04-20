@@ -137,7 +137,20 @@ $(document).ready(function()
                             ?>
                             </div>
                         </div>
-							<div class="form_items" style="padding: 10px 0px">
+						<div class="form_items" style="padding: 10px 0px">
+                            <div class="form_items_left">Thẻ tags</div>
+                            <div class="form_items_right">
+								<?php
+								$listTags = '';
+								foreach($listTagRelated as $tags){
+									$listTags .= $tags['name'].', ';
+								}
+								$listTags = trim($listTags, ', ');
+								?>
+								<textarea name="Tutorials[tags]" cols="50" rows="4" placeholder="Free chat, Xem video, Trình duyệt web"><?= $listTags; ?></textarea>
+                            </div>
+                        </div>
+						<div class="form_items" style="padding: 10px 0px">
                             <div class="form_items_left">Phần mềm liên quan</div>
                             <div class="form_items_right">
 								<input type="text" name="related-soft" id="related-soft" size="35" />

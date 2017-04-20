@@ -35,7 +35,7 @@ class SoftwareRelated extends \yii\db\ActiveRecord
         ];
     }
 	
-	public static function listRelated($tutorialId)
+	public static function listRelated($tutorialId, $type = 0)
 	{
 		$query = new \yii\db\Query;
 		$query  ->select([
@@ -49,18 +49,24 @@ class SoftwareRelated extends \yii\db\ActiveRecord
 				]) 
 				->from(self::tableName())
 				->leftJoin('tbl_posts', 'tbl_posts.id = tbl_software_related.post_id')
-				->where(['tutorial_id' => $tutorialId]);
+				->where([
+					'tutorial_id' => $tutorialId,
+					'type' => $type
+				]);
 		
 		$command = $query->createCommand();
 		
 		return $command->queryAll();
 	}
 	
-	public static function deleteAllRelation($tutorialId)
+	public static function deleteAllRelation($tutorialId, $type = 0)
 	{
 		$query = new \yii\db\Query;
 		$query	->createCommand()
-				->delete(self::tableName(), ['tutorial_id' => $tutorialId])
+				->delete(self::tableName(), [
+					'tutorial_id' => $tutorialId,
+					'type' => $type
+				])
 				->execute();
 	}
 	
