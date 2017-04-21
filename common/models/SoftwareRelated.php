@@ -82,9 +82,15 @@ class SoftwareRelated extends \yii\db\ActiveRecord
 	
 	public static function deleteAllRelation($id, $type = 0)
 	{
-        $delType = ['tutorial_id' => $id];
+        $delType = [
+			'tutorial_id' => $id,
+			'type' => 0
+		];
         if($type == 1){
-            $delType = ['post_id' => $id];
+            $delType = [
+				'post_id' => $id,
+				'type' => 1
+			];
         }
 		$query = new \yii\db\Query;
 		$query	->createCommand()

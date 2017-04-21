@@ -104,10 +104,11 @@ class InputController extends MyController
 					
 				//save relation software
                 //delete all software old related
-                \common\models\SoftwareRelated::deleteAllRelation($model->id, 1);
+                \common\models\SoftwareRelated::deleteAllRelation($model->id, 0);
 				if(isset($post['listsoft']))
-				{	
-					foreach($post['listsoft'] as $key => $value)
+				{
+					$listSoft = array_unique($post['listsoft']);
+					foreach($listSoft as $key => $value)
 					{
 						$softwareRelated = new \common\models\SoftwareRelated();
 						$softwareRelated->post_id = $value;
@@ -124,7 +125,8 @@ class InputController extends MyController
 				if(isset($post['tags']) && $post['tags'] != null)
 				{	
 					$listTags = explode(',', $post['tags']);
-					foreach($listTags as $key => $value)
+					$listAllTags = array_unique($listTags);
+					foreach($listAllTags as $key => $value)
 					{
 						$tagModel = new \common\models\Tags();
 						$tagModel->name = trim($value);

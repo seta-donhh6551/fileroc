@@ -10,8 +10,11 @@ $(document).ready(function(){
     var $items = $("ul#menu li a");
     $items.eq(1).addClass("selected_lk");
     
-    $('#related-tutorial').keypress(function()
+    $('#related-tutorial').keyup(function()
 	{
+		$('#show-list-tutorial').html('');
+        $('#list-tutorial-selected').removeClass('hide');
+        $('#show-list-soft').removeClass('hide');
 		var keyword = $(this).val();
 		var listData = '';
         $.post('<?= Yii::$app->request->baseUrl; ?>/tutorials/default/search', {keyword:keyword}, function(result){
@@ -263,15 +266,20 @@ $(document).ready(function(){
 						<div class="form_items" style="padding: 10px 0px">
                             <div class="form_items_left">Bài viết liên quan</div>
                             <div class="form_items_right">
-								<input type="text" name="related-tutorial" id="related-tutorial" size="35" />
+								<input type="text" name="related-soft" id="related-soft" size="35" />
                             </div>
                         </div>
-                        <div id="list-tutorial-selected" class="form_items" style="padding: 5px 0px 10px 0px">
-							<div class="form_items_left">Chọn</div>
-							<div id="list-soft" class="form_items_right">
+                            <div id="list-tutorial-selected" class="form_items <?php if(empty($listRelated)){ echo 'hide';} ?>" style="padding: 5px 0px 10px 0px">
+							<div class="form_items_left">Đã chọn</div>
+							<div id="selected-tutorial" class="form_items_right">
 							<?php foreach($listRelated as $related){ ?>
-								<div><input type="checkbox" name="Posts[tutorials][]" value="<?php echo $related['post_id']; ?>" checked="checked" /><?= $related['title']; ?></div>
+                                <div class="selected-item"><input type="checkbox" name="Posts[tutorials][]" value="<?php echo $related['post_id']; ?>" checked="checked" /><span><?= $related['title']; ?></span></div>
 							<?php } ?>
+							</div>
+						</div>
+                            <div id="show-list-tutorial" class="form_items hide" style="padding: 5px 0px 10px 0px">
+							<div class="form_items_left">Chọn bài viết</div>
+							<div id="list-soft" class="form_items_right">
 							</div>
 						</div>
                         <div class="form_items">
