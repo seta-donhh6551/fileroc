@@ -103,11 +103,10 @@ class InputController extends MyController
                 $model->save();
 					
 				//save relation software
+                //delete all software old related
+                \common\models\SoftwareRelated::deleteAllRelation($model->id, 1);
 				if(isset($post['listsoft']))
 				{	
-					//delete all software old related
-					\common\models\SoftwareRelated::deleteAllRelation($model->id);
-					
 					foreach($post['listsoft'] as $key => $value)
 					{
 						$softwareRelated = new \common\models\SoftwareRelated();
@@ -120,11 +119,10 @@ class InputController extends MyController
 				}
 				
 				//save tags
+                //delete all tags old related
+                \common\models\Tags::deleteAllRelation($model->id, 0);
 				if(isset($post['tags']) && $post['tags'] != null)
 				{	
-					//delete all tags old related
-					\common\models\Tags::deleteAllRelation($model->id, 0);
-					
 					$listTags = explode(',', $post['tags']);
 					foreach($listTags as $key => $value)
 					{

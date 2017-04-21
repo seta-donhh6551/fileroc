@@ -30,7 +30,7 @@ class DefaultController extends MyController
 
 {
 
-
+    public $enableCsrfValidation = false;
 
     public function actionIndex()
 
@@ -100,7 +100,28 @@ class DefaultController extends MyController
 
     }
 
+    public function actionSearch()
+	{
+		$request = Yii::$app->request;
 
+		$returnData = [];
+        if($request->isPost && $request->Post('keyword'))
+        {
+            $keyword = $request->Post('keyword');
+            
+            $query = \common\models\Tutorials::find();
+			$listTutorials = $query->where(['LIKE', 'title', $keyword])->all();
+
+			foreach($listTutorials as $key => $value)
+			{
+				$returnData[$key]['id'] = $value['id'];
+				$returnData[$key]['title'] = $value['title'];		
+			}
+        }
+
+		return json_encode($returnData);
+
+	}
 
     public function actionDelete($id)
 

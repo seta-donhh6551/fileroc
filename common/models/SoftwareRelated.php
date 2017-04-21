@@ -35,7 +35,7 @@ class SoftwareRelated extends \yii\db\ActiveRecord
         ];
     }
 	
-	public static function listRelated($tutorialId, $type = 0)
+	public static function listRelated($tutorialId)
 	{
 		$query = new \yii\db\Query;
 		$query  ->select([
@@ -45,13 +45,34 @@ class SoftwareRelated extends \yii\db\ActiveRecord
 					'tbl_posts.rewrite',
 					'tbl_posts.total_down',
 					'tbl_posts.short_info',
-					'tbl_posts.icon',
+					'tbl_posts.icon'
 				]) 
 				->from(self::tableName())
 				->leftJoin('tbl_posts', 'tbl_posts.id = tbl_software_related.post_id')
 				->where([
-					'tutorial_id' => $tutorialId,
-					'type' => $type
+					'tbl_software_related.tutorial_id' => $tutorialId,
+				]);
+		
+		$command = $query->createCommand();
+		
+		return $command->queryAll();
+	}
+    
+    public static function listTutorialsRelated($postId)
+	{
+		$query = new \yii\db\Query;
+		$query  ->select([
+					'tbl_software_related.post_id',
+					'tbl_software_related.tutorial_id',
+					'tbl_tutorials.title',
+					'tbl_tutorials.rewrite',
+					'tbl_tutorials.views',
+					'tbl_tutorials.thumb'
+				]) 
+				->from(self::tableName())
+				->leftJoin('tbl_tutorials', 'tbl_tutorials.id = tbl_software_related.tutorial_id')
+				->where([
+					'tbl_software_related.post_id' => $postId,
 				]);
 		
 		$command = $query->createCommand();
@@ -59,14 +80,15 @@ class SoftwareRelated extends \yii\db\ActiveRecord
 		return $command->queryAll();
 	}
 	
-	public static function deleteAllRelation($tutorialId, $type = 0)
+	public static function deleteAllRelation($id, $type = 0)
 	{
+        $delType = ['tutorial_id' => $id];
+        if($type == 1){
+            $delType = ['post_id' => $id];
+        }
 		$query = new \yii\db\Query;
 		$query	->createCommand()
-				->delete(self::tableName(), [
-					'tutorial_id' => $tutorialId,
-					'type' => $type
-				])
+				->delete(self::tableName(), $delType)
 				->execute();
 	}
 	

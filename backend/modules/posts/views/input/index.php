@@ -9,6 +9,20 @@ use yii\helpers\ArrayHelper;
 $(document).ready(function(){
     var $items = $("ul#menu li a");
     $items.eq(1).addClass("selected_lk");
+    
+    $('#related-tutorial').keypress(function()
+	{
+		var keyword = $(this).val();
+		var listData = '';
+        $.post('<?= Yii::$app->request->baseUrl; ?>/tutorials/default/search', {keyword:keyword}, function(result){
+			var listTutorials = jQuery.parseJSON(result);
+			for(i=0;i<listTutorials.length;++i)
+			{
+				listData += '<div><input type="checkbox" name="Tutorials[listsoft][]" value="'+listTutorials[i].id+'" />'+listTutorials[i].title+'<div>';
+			}
+			$('#list-soft').append(listData);
+        });
+	});
 });
 </script>
 
@@ -252,7 +266,7 @@ $(document).ready(function(){
 								<input type="text" name="related-tutorial" id="related-tutorial" size="35" />
                             </div>
                         </div>
-						<div class="form_items" style="padding: 5px 0px 10px 0px">
+                        <div id="list-tutorial-selected" class="form_items" style="padding: 5px 0px 10px 0px">
 							<div class="form_items_left">Chọn</div>
 							<div id="list-soft" class="form_items_right">
 							<?php foreach($listRelated as $related){ ?>

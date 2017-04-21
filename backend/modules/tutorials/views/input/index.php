@@ -11,20 +11,35 @@ $(document).ready(function()
     var $items = $("ul#menu li a");
     $items.eq(1).addClass("selected_lk");
 	
-	$('#related-soft').keypress(function()
+	$('#related-soft').keyup(function()
 	{
 		$('#list-soft').html('');
+        $('#list-soft-selected').removeClass('hide');
+        $('#show-list-soft').removeClass('hide');
 		var keyword = $(this).val();
 		var listData = '';
         $.post('<?= Yii::$app->request->baseUrl; ?>/posts/default/search', {keyword:keyword}, function(result){
 			var listSoft = jQuery.parseJSON(result);
 			for(i=0;i<listSoft.length;++i)
 			{
-				listData += '<div><input type="checkbox" name="Tutorials[listsoft][]" value="'+listSoft[i].id+'" />'+listSoft[i].title+'<div>';
+				listData += '<div class="softitem"><input type="checkbox" name="itemsoft" value="'+listSoft[i].id+'" /><span>'+listSoft[i].title+'</span><div>';
 			}
 			$('#list-soft').html(listData);
         });
 	});
+    
+    $(document).on('click', '.softitem input', function(){
+        var id = $(this).val();
+        var text = $(this).next().text();
+        var append = '<div class="selected-item"><input type="checkbox" name="Tutorials[listsoft][]" value="'+id+'" checked="checked">'+text+'</div>';
+        $('#selected-soft').append(append);
+        return false;
+    });
+    
+    $(document).on('click', '.selected-item', function(){
+        $(this).remove();
+    });
+    
 });
 </script>
 
@@ -156,12 +171,17 @@ $(document).ready(function()
 								<input type="text" name="related-soft" id="related-soft" size="35" />
                             </div>
                         </div>
-						<div class="form_items" style="padding: 5px 0px 10px 0px">
-							<div class="form_items_left">Chọn</div>
-							<div id="list-soft" class="form_items_right">
+                            <div id="list-soft-selected" class="form_items <?php if(empty($listRelated)){ echo 'hide';} ?>" style="padding: 5px 0px 10px 0px">
+							<div class="form_items_left">Đã chọn</div>
+							<div id="selected-soft" class="form_items_right">
 							<?php foreach($listRelated as $related){ ?>
-								<div><input type="checkbox" name="Tutorials[listsoft][]" value="<?php echo $related['post_id']; ?>" checked="checked" /><?= $related['title']; ?></div>
+                                <div class="selected-item"><input type="checkbox" name="Tutorials[listsoft][]" value="<?php echo $related['post_id']; ?>" checked="checked" /><span><?= $related['title']; ?></span></div>
 							<?php } ?>
+							</div>
+						</div>
+                            <div id="show-list-soft" class="form_items hide" style="padding: 5px 0px 10px 0px">
+							<div class="form_items_left">Những phần mềm liên quan</div>
+							<div id="list-soft" class="form_items_right">
 							</div>
 						</div>
                         <div class="form_items">

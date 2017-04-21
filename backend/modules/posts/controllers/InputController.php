@@ -37,7 +37,7 @@ class InputController extends MyController
 		if($id)
 		{
 			$listTagRelated = \common\models\Tags::listRelated($id, 1);
-			$listTutorials = \common\models\SoftwareRelated::listRelated($id, 1);
+			$listTutorials = \common\models\SoftwareRelated::listTutorialsRelated($id);
 		}
 		
         if($request->isPost && $request->Post('submit'))
@@ -100,6 +100,23 @@ class InputController extends MyController
                 
 				$model->update_date = new \yii\db\Expression('NOW()');
                 $model->save();
+                
+                //save relation tutorials
+				if(isset($post['tutorials']))
+				{	
+					//delete all software old related
+					\common\models\SoftwareRelated::deleteAllRelation($model->id, 0);
+					
+					foreach($post['tutorials'] as $key => $value)
+					{
+						$softwareRelated = new \common\models\SoftwareRelated();
+						$softwareRelated->post_id = $value;
+						$softwareRelated->tutorial_id = $model->id;
+						$softwareRelated->created_at = new \yii\db\Expression('NOW()');
+						
+						$softwareRelated->save();
+					}
+				}
 				
 				//save tags
 				if(isset($post['tags']) && $post['tags'] != null)
@@ -132,6 +149,7 @@ class InputController extends MyController
         return $this->render('index', [
 			'model' => $model,
 			'listCate' => $listCategory,
+            'listRelated' => $listTutorials,
 			'listTagRelated' => $listTagRelated
 		]);
     }
