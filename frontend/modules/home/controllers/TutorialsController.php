@@ -148,4 +148,36 @@ class TutorialsController extends MyController {
             'listPopular' => $listPopular
         ]);
     }
+    
+    public function actionTags($rewrite)
+	{
+		$model = \common\models\Category::findOne(['id' => $this->defaultCate]);
+		if(!$model){
+            throw new \yii\web\HttpException(404, 'The requested item could not be found.');
+		}
+		
+		$listTags = \common\models\Tags::getListPostByTag($rewrite);
+        if(!$listTags){
+           throw new \yii\web\HttpException(404, 'The requested item could not be found.'); 
+        }
+        
+		$listPopular = \common\models\Posts::find()
+                        ->where(['status' => 1])
+                        ->orderBy(['views' => SORT_DESC])
+                        ->limit(5)
+                        ->all();
+		
+        $listCategory = \common\models\Categorytutorial::find()
+						->where(['status' => 1])
+						->all();
+        
+		Yii::$app->view->title = $listTags[0]['name'].' - Thủ thuật hướng dẫn';
+        
+        return $this->render('search', [
+            'listTags' => $listTags,
+            'listCategory' => $listCategory,
+			'listTutorials' => $listTags,
+            'listPopular' => $listPopular
+        ]);
+    }
 }

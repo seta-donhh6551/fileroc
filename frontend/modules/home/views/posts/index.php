@@ -283,6 +283,9 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 }
 </style>
 <script type="text/javascript">
+$(document).ready(function(){
+    $("#popular").css('margin','20px 0px 0px 0px');
+});
 $(window).scroll(function (){
     var windowTop = $(window).scrollTop();
     if(windowTop > 300){

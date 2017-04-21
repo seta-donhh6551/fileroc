@@ -65,6 +65,32 @@ class Tags extends \yii\db\ActiveRecord
 		return $command->queryAll();
 	}
 	
+    public static function getListPostByTag($tagName)
+	{
+		$query = new \yii\db\Query;
+		$query  ->select([
+					'tbl_tags.id',
+					'tbl_tags.name',
+                    'tbl_tags.rewrite',
+                    'tbl_tutorials.id',
+					'tbl_tutorials.title',
+					'tbl_tutorials.rewrite',
+                    'tbl_tutorials.thumb',
+                    'tbl_tutorials.info',
+				]) 
+				->from(self::tableName())
+				->leftJoin('tbl_tutorials', 'tbl_tutorials.id = tbl_tags.relation_id')
+				->where([
+					'tbl_tags.rewrite' => $tagName,
+                    'tbl_tags.type' => 0
+				])
+                ->groupBy(['tbl_tags.id']);
+		
+		$command = $query->createCommand();
+		
+		return $command->queryAll();
+	}
+    
 	public static function deleteAllRelation($relationId, $type = 0)
 	{
 		$query = new \yii\db\Query;
