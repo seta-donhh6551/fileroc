@@ -111,8 +111,9 @@ class InputController extends MyController
 					foreach($listTutorialRelation as $key => $value)
 					{
 						$softwareRelated = new \common\models\SoftwareRelated();
-						$softwareRelated->post_id = $value;
-						$softwareRelated->tutorial_id = $model->id;
+						$softwareRelated->post_id = $model->id;
+						$softwareRelated->tutorial_id = $value;
+                        $softwareRelated->type = 1;
 						$softwareRelated->created_at = new \yii\db\Expression('NOW()');
 						
 						$softwareRelated->save();

@@ -12,20 +12,32 @@ $(document).ready(function(){
     
     $('#related-tutorial').keyup(function()
 	{
-		$('#show-list-tutorial').html('');
+		$('#list-tutorials').html('');
         $('#list-tutorial-selected').removeClass('hide');
-        $('#show-list-soft').removeClass('hide');
+        $('#show-list-tutorial').removeClass('hide');
 		var keyword = $(this).val();
 		var listData = '';
         $.post('<?= Yii::$app->request->baseUrl; ?>/tutorials/default/search', {keyword:keyword}, function(result){
 			var listTutorials = jQuery.parseJSON(result);
 			for(i=0;i<listTutorials.length;++i)
 			{
-				listData += '<div><input type="checkbox" name="Tutorials[listsoft][]" value="'+listTutorials[i].id+'" />'+listTutorials[i].title+'<div>';
+				listData += '<div class="tutorialitem"><input type="checkbox" name="itemtutorial" value="'+listTutorials[i].id+'" /><span>'+listTutorials[i].title+'</span><div>';
 			}
-			$('#list-soft').append(listData);
+			$('#list-tutorials').html(listData);
         });
 	});
+    
+    $(document).on('click', '.tutorialitem input', function(){
+        var id = $(this).val();
+        var text = $(this).next().text();
+        var append = '<div class="selected-item"><input type="checkbox" name="Posts[tutorials][]" value="'+id+'" checked="checked">'+text+'</div>';
+        $('#selected-tutorial').append(append);
+        return false;
+    });
+    
+    $(document).on('click', '.selected-item', function(){
+        $(this).remove();
+    });
 });
 </script>
 
@@ -266,20 +278,20 @@ $(document).ready(function(){
 						<div class="form_items" style="padding: 10px 0px">
                             <div class="form_items_left">Bài viết liên quan</div>
                             <div class="form_items_right">
-								<input type="text" name="related-soft" id="related-soft" size="35" />
+								<input type="text" name="related-tutorial" id="related-tutorial" size="35" />
                             </div>
                         </div>
                             <div id="list-tutorial-selected" class="form_items <?php if(empty($listRelated)){ echo 'hide';} ?>" style="padding: 5px 0px 10px 0px">
 							<div class="form_items_left">Đã chọn</div>
 							<div id="selected-tutorial" class="form_items_right">
 							<?php foreach($listRelated as $related){ ?>
-                                <div class="selected-item"><input type="checkbox" name="Posts[tutorials][]" value="<?php echo $related['post_id']; ?>" checked="checked" /><span><?= $related['title']; ?></span></div>
+                                <div class="selected-item"><input type="checkbox" name="Posts[tutorials][]" value="<?php echo $related['tutorial_id']; ?>" checked="checked" /><span><?= $related['title']; ?></span></div>
 							<?php } ?>
 							</div>
 						</div>
                             <div id="show-list-tutorial" class="form_items hide" style="padding: 5px 0px 10px 0px">
 							<div class="form_items_left">Chọn bài viết</div>
-							<div id="list-soft" class="form_items_right">
+							<div id="list-tutorials" class="form_items_right">
 							</div>
 						</div>
                         <div class="form_items">

@@ -12,7 +12,7 @@ class TutorialsController extends MyController {
     public $defaultCate = 4;
 
     public function actionIndex($rewrite, $id)
-	{
+	{        
 		$model = \common\models\Category::findOne(['id' => $this->defaultCate]);
 		if(!$model){
             throw new \yii\web\HttpException(404, 'The requested item could not be found.');
@@ -33,19 +33,27 @@ class TutorialsController extends MyController {
 		$listCategory = \common\models\Categorytutorial::find()
 						->where(['status' => 1])
 						->all();
+        
+        $listTags = \common\models\Tags::find()
+                    ->where([
+                        'relation_id' => $modelTutorial->id,
+                        'type' => 0
+                    ])
+                    ->all();
 		
 		//get list related software
-		$listRelatedSoft = \common\models\SoftwareRelated::listRelated($modelTutorial->id);
+		$listRelatedSoft = \common\models\SoftwareRelated::listRelated($modelTutorial->id);        
 		
 		return $this->render('index', [
             'model' => $modelTutorial,
 			'listCategory' => $listCategory,
-			'listRelatedSoft' => $listRelatedSoft
+			'listRelatedSoft' => $listRelatedSoft,
+            'listTags' => $listTags
         ]);
     }
     
 	public function actionList()
-	{  
+	{
 		$model = \common\models\Category::findOne(['id' => $this->defaultCate]);
 		if(!$model){
             throw new \yii\web\HttpException(404, 'The requested item could not be found.');
@@ -90,7 +98,7 @@ class TutorialsController extends MyController {
 	}
 	
     public function actionCategory($rewrite)
-	{   
+	{
 		$model = \common\models\Category::findOne(['id' => $this->defaultCate]);
 		if(!$model){
             throw new \yii\web\HttpException(404, 'The requested item could not be found.');

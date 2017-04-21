@@ -1,5 +1,4 @@
 <?php
-
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -44,10 +43,42 @@ document.write('<div id="fb-root"></div>');
             <div class="tutorial-description">
                 <?= $model->info ?>
             </div>
-            <div class="tutorial-body">
+            <div class="tutorial-body" style="padding-bottom:10px">
                 <?= $model->fullcontent ?>
             </div>
-            <div style="margin:10px 0px 30px 0px;border-bottom:1px solid #DDD;"></div>
+            <div class="border-line"></div>
+            <?php if(isset($listTags) && $listTags != null){ ?>
+            <div class="list-tags-related">
+                <h3>Tìm thêm</h3>
+                <div class="list-tags">
+                    <ul>
+                    <?php foreach($listTags as $tags){ ?>
+                        <li><a href="<?= Yii::$app->request->baseUrl.'tim-kiem/'.$tags['rewrite']; ?>.html"><?= $tags['name']; ?></a></li>
+                    <?php } ?>
+                    </ul>
+                    <div class="cls"></div>
+                </div>
+            </div>
+            <div class="border-line"></div>
+            <?php } ?>
+            <?php if(isset($listRelatedSoft) && $listRelatedSoft != null){ ?>
+            <div class="list-tags-related">
+                <h3>Phần mềm liên quan</h3>
+                <div class="list-tags" style="padding-left:0px">
+                    <ul class="related-soft">
+                    <?php foreach($listRelatedSoft as $soft){ ?>
+                        <li>
+                            <img src="<?= Yii::getAlias('@web'); ?>/uploads/icons/<?= $soft['icon'] ?>" alt="Download <?= $soft['title'] ?>" />
+                            <a href="<?= Yii::$app->request->baseUrl.'download/'.$soft['rewrite']; ?>.html"><?= $soft['title']; ?></a> - 
+                            <span><?= $soft['short_info']; ?></span>
+                        </li>
+                    <?php } ?>
+                    </ul>
+                    <div class="cls"></div>
+                </div>
+            </div>
+            <div class="border-line"></div>
+            <?php } ?>
             <div id="commentfa">
             	<div class="fb-comments" data-href="<?php echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" data-width="540" data-num-posts="100"></div>
             </div>
