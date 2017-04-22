@@ -77,6 +77,7 @@ class Tags extends \yii\db\ActiveRecord
 					'tbl_tutorials.rewrite',
                     'tbl_tutorials.thumb',
                     'tbl_tutorials.info',
+                    'tbl_tutorials.creat_date',
 				]) 
 				->from(self::tableName())
 				->leftJoin('tbl_tutorials', 'tbl_tutorials.id = tbl_tags.relation_id')

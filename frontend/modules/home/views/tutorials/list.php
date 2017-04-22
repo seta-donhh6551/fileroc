@@ -37,7 +37,7 @@ $navigator = [
 								<h3><?= $tutorial['title']; ?></h3>
 							</span>
 						</a>
-						<div class="tutol-list-details">New Softwares - 9.42MB - <span class="trial" style="float:none">License </span></div>
+                        <div class="tutol-list-details">Freefile.vn - <?= date('d-m-Y H:i', strtotime($tutorial['creat_date'])); ?> - <span class="free" style="float:none">License </span></div>
 						<div class="tutol-list-info">
 							<?= $tutorial['info']; ?>
 						</div>

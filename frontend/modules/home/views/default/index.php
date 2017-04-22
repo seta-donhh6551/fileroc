@@ -66,8 +66,8 @@ use yii\widgets\ActiveForm;
                                     </a>
                                     <div class="news-counts">
                                         <div class="news-name">
-                                            <img src="<?= Yii::$app->request->baseUrl; ?>img/icon-user.png" alt="haanhdon" width="27" />
-                                            <span style="text-transform:lowercase">haanhdon</span>
+                                            <img src="<?= Yii::$app->request->baseUrl; ?>img/icon-user.png" alt="freefile.vn" width="27" />
+                                            <span style="text-transform:lowercase">freefile.vn</span>
                                         </div>
                                         <div class="news-dates">
                                             <img src="<?= Yii::$app->request->baseUrl; ?>img/news-date.png" alt="Thời gian" />1 giờ
