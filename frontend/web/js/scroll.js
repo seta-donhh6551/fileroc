@@ -77,7 +77,7 @@ scrolltotop.init()
 
 //right scroll
 $(window).scroll(function () {
-	//scrollWindows('#scroll-right', '#ads-two', '#footer-desktop');
+	scrollWindows('#scroll-right', '#ads-two', '#footer-desktop');
 });
 
 function scrollWindows(Object, elementTo, lastObj){

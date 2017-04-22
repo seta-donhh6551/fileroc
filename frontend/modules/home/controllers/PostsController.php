@@ -39,6 +39,12 @@ class PostsController extends MyController {
                         ->limit(10)
                         ->all();
         
+        $listTags = \common\models\Tags::find()
+                    ->where(['relation_id' => $model->id,'type' => 1])
+                    ->all();
+        
+        $listTutorials = \common\models\SoftwareRelated::listTutorialsRelated($model->id);
+        
         Yii::$app->view->title = 'Download '.$model->title;
 		
 		$listComment = \common\models\Reviews::findAll(['post_id' => $model->id]);
@@ -50,7 +56,9 @@ class PostsController extends MyController {
 			'listPost' => $modelPost->getListPosts(),
 			'listComment' => $listComment,
             'listRelated' => $listRelated,
-            'listPopular' => $listPopular
+            'listPopular' => $listPopular,
+            'listTags' => $listTags,
+            'listTutorials' => $listTutorials
 		]);
     }
 

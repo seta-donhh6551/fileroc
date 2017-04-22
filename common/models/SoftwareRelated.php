@@ -67,10 +67,13 @@ class SoftwareRelated extends \yii\db\ActiveRecord
 					'tbl_tutorials.title',
 					'tbl_tutorials.rewrite',
 					'tbl_tutorials.views',
-					'tbl_tutorials.thumb'
+					'tbl_tutorials.thumb',
+                    'tbl_tutorials.info',
+                    'tbl_user.name'
 				]) 
 				->from(self::tableName())
 				->leftJoin('tbl_tutorials', 'tbl_tutorials.id = tbl_software_related.tutorial_id')
+                ->leftJoin('tbl_user', 'tbl_user.id = tbl_tutorials.user_id')
 				->where([
 					'tbl_software_related.post_id' => $postId,
 				]);

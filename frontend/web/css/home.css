@@ -2,6 +2,8 @@
 .list-tags-related h3{font-weight:bold;font-size:17px;color:blue}
 .list-tags{padding:10px 20px}
 .list-tags ul{padding:0px;margin:0px}
+.post-tags ul li{float:left;margin-right:30px;list-style-type:circle}
+.list-tags-related h2{font-size: 18px;text-transform:uppercase}
 .list-tags ul.related-soft{list-style-type:none;}
 .list-tags ul.related-soft img{margin-right: 7px}
 .border-line{margin:10px 0px;border-bottom:1px solid #DDD;}

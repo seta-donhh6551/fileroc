@@ -112,12 +112,56 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 				</div>
 			</div>
 			<?php } ?>
-			<div class="manual" style="margin-top:30px">
+			<div class="manual" style="margin-top:30px;padding-bottom:30px">
 				<h2>HƯỚNG DẪN CÀI ĐẶT</h2>
 				<div class="full-content">
 					<?= $model->fullcontent ?>
 				</div>
 			</div>
+            <div class="border-line"></div>
+            <?php if(isset($listTags) && $listTags != null){ ?>
+            <div class="list-tags-related">
+                <h2>Tìm thêm</h2>
+                <div class="list-tags post-tags">
+                    <ul>
+                    <?php foreach($listTags as $tags){ ?>
+                        <li><a href="<?= Yii::$app->request->baseUrl.'phan-mem/'.$tags['rewrite']; ?>.html"><?= $tags['name']; ?></a></li>
+                    <?php } ?>
+                    </ul>
+                    <div class="cls"></div>
+                </div>
+            </div>
+            <div class="border-line"></div>
+            <?php } ?>
+            <?php if(isset($listTutorials) && $listTutorials != null){ ?>
+            <div class="list-tags-related" style="padding-top:10px">
+                <h2>Bài viết liên quan</h2>
+                <div class="tutorial-body">
+                <?php foreach($listTutorials as $tutorial){ ?>
+                    <div class="tutorial-list">
+                        <div class="tutol-list-header" style="width:100%">
+                            <a href="<?= Yii::$app->request->baseUrl.$tutorial['rewrite'].'-'.$tutorial['tutorial_id']; ?>.html" title="<?= $tutorial['title']; ?>" class="internal-link">
+                                <img src="<?= Yii::$app->request->baseUrl.'uploads/thumb/'.$tutorial['thumb']; ?>" alt="<?= $tutorial['title']; ?>" style="width:120px" />
+                                <span class="tutol-list-title">
+                                    <h3><?= $tutorial['title']; ?></h3>
+                                </span>
+                            </a>
+                            <div class="tutol-list-details"><?= $tutorial['name'].' - '.$tutorial['views']; ?></div>
+                            <div class="tutol-list-info">
+                                <?= $tutorial['info']; ?>
+                            </div>
+                            <div class="tutol-list-more">
+                                <a href="<?= Yii::$app->request->baseUrl.$tutorial['rewrite'].'-'.$tutorial['tutorial_id']; ?>.html" class="green program-entry-download-link button-link">
+                                Chi Tiết</a>
+                            </div>
+                            <div style="clear:both"></div>
+                        </div>
+                     </div>
+                <?php } ?>
+                </div>
+            </div>
+            <div class="border-line"></div>
+            <?php } ?>
 			<div class="rating-title martop">
 			Hiện có <?= count($listComment); ?> đánh giá từ người dùng
 		</div>
