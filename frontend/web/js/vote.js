@@ -5,14 +5,13 @@ jQuery(document).ready(function($){
     $('#number-star').val(3);
     object.click(function(){
         number = $(this).attr("role");
-		alert(number);
         width  = number*16;
         switch(number){
-            case "1" : text = "Terrible"; break;
-            case "2" : text = "Poor"; break;
-            case "3" : text = "Average"; break;
-            case "4" : text = "Very good"; break;
-            case "5" : text = "Excellent"; break;
+            case "1" : text = "Tồi tệ"; break;
+            case "2" : text = "Kém"; break;
+            case "3" : text = "Tạm được"; break;
+            case "4" : text = "Rất tốt"; break;
+            case "5" : text = "Tuyệt vời"; break;
             default  : text = ""; break;
         }
         $('#number-star').val(number);
@@ -52,7 +51,7 @@ jQuery(document).ready(function($){
        setTimeout(function(){
         $.post(window.location.origin+'/home/posts/review', {name:name, email:email, title:title, review:review, star:star, post_id:post_id}, function(result){
             if(result == 'voted'){
-                error.addClass('err-icon').show().html('Bạn đã đánh giá sản phẩm này rồi!');
+                error.addClass('err-icon').show().html('Bạn đã đánh giá phần mềm này rồi!');
                 return false;
             }
             if(result == 'true'){

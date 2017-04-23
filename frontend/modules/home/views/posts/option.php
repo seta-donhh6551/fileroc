@@ -134,6 +134,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
 </div>
 <script type="text/javascript">
 $(document).ready(function(){
+    $("#popular").css('margin','20px 0px 0px 0px');
 	$('a.download-small').click(function(){
 		var post_id = $(this).attr('data-id');
 		if(post_id == ''){

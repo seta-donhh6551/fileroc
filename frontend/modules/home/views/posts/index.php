@@ -121,7 +121,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
             <div class="border-line"></div>
             <?php if(isset($listTags) && $listTags != null){ ?>
             <div class="list-tags-related">
-                <h2>Tìm thêm</h2>
+                <h2 style="margin-bottom:0px;color:blue;font-size:14px">Tìm thêm</h2>
                 <div class="list-tags post-tags">
                     <ul>
                     <?php foreach($listTags as $tags){ ?>
