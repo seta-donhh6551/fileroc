@@ -103,12 +103,13 @@ class PostsController extends MyController {
 		]);
     }
 
-	public function actionSecurity(){
-
+	public function actionSecurity()
+    {
 		$request = Yii::$app->request;
 
 		$modelPost = new \common\models\Posts();
-		if($request->isPost && $request->Post('post_id')){
+		if($request->isPost && $request->Post('post_id'))
+        {
 			$postId = $request->Post('post_id');
 			$modelPost->setTotalDownload($postId);
 			return 'true';
@@ -117,11 +118,14 @@ class PostsController extends MyController {
 		return 'false';
 	}
 
-	public function actionReview(){
+	public function actionReview()
+    {
 		$request = Yii::$app->request;
-		if($request->isPost && $request->Post('star')){
+		if($request->isPost && $request->Post('star'))
+        {
 			$userIp = \common\components\Utility::getUserIp();
 			$postId = $request->Post('post_id');
+            
 			$model = new \common\models\Reviews();
 			$model->star   = $request->Post('star');
 			$model->post_id = $request->Post('post_id');
@@ -131,13 +135,16 @@ class PostsController extends MyController {
 			$model->review = htmlspecialchars($request->Post('review'));
 			$model->user_ip = $userIp;
 			$model->created_date = new \yii\db\Expression('NOW()');
+            
 			//check has been voted
 			$listReview = $model->getListReviewByIp($userIp, $postId);
-			if(count($listReview) > 0){
+			if(count($listReview) > 0)
+            {
 				return 'voted';
 			}
 
-			if($model->save(false)){
+			if($model->save(false))
+            {
 				return 'true';
 			}
 

@@ -56,6 +56,7 @@ return [
                 '/huong-dan.html' => 'home/tutorials/list',
 				'/thu-thuat/<rewrite:[a-zA-Z0-9_-]+>.html' => 'home/tutorials/category',
                 '/tim-kiem/<rewrite:[a-zA-Z0-9_-]+>.html' => 'home/tutorials/tags',
+                '/phan-mem/<rewrite:[a-zA-Z0-9_-]+>.html' => 'home/category/tags',
                 '/<rewrite:[a-zA-Z0-9_-]+>/<slug:tai-nhieu-nhat>.html' => 'home/popular/index',
                 '/<rewrite:[a-zA-Z0-9_-]+>/<slug:moi-cap-nhat>.html' => 'home/popular/index',
                 '/<rewrite:[a-zA-Z0-9_-]+>-<id:[0-9]+>.html' => 'home/tutorials/index',

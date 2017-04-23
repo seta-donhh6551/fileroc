@@ -156,7 +156,7 @@ class TutorialsController extends MyController {
             throw new \yii\web\HttpException(404, 'The requested item could not be found.');
 		}
 		
-		$listTags = \common\models\Tags::getListPostByTag($rewrite);
+		$listTags = \common\models\Tags::getListTutorialsByTag($rewrite);
         if(!$listTags){
            throw new \yii\web\HttpException(404, 'The requested item could not be found.'); 
         }

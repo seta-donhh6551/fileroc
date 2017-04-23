@@ -9,42 +9,47 @@ use frontend\controllers\MyController;
 class CategoryController extends MyController
 {
     public $enableCsrfValidation = false;
+    public $defaultCate = 4;
 
-    public function actionIndex($rewrite)
+    public function actionTags($rewrite)
     {
-        $model = \common\models\Category::findOne(['rewrite'=>$rewrite]);
-        if (!$model){
+        $model = \common\models\Category::findOne(['id' => $this->defaultCate]);
+		if(!$model){
             throw new \yii\web\HttpException(404, 'The requested item could not be found.');
-        }
-
-        $cateId = $model->id;
-        $modelPost = new \common\models\Posts();
-
+		}
+		
+        //set active menu on header
+		$this->activeMenu = $model;
 		$this->infoConfig = ['keywords' => $model->keywords, 'description' => $model->description];
-
-		$listSubCategory = $model->getListSubCategory($cateId);
-
-        Yii::$app->view->title = $model->name.', Free download';
-
-        $limit = 10;
-        $request = Yii::$app->request;
-
-		$listPost = $modelPost->getListPosts(array(), $limit, null, $cateId);
-
-		return $this->render('/default/index', [
-			'model' => $model,
-			'listPost' => $listPost,
-			'listAllPost' => $listPost,
-			'subCategory' => [
-				'listMenu' => $listSubCategory,
-				'titleMenu' => $model->name,
-				'rewrite' => $model->rewrite
-			]
-		]);
+        
+		$listTags = \common\models\Tags::getListPostByTag($rewrite);
+        if(!$listTags){
+           throw new \yii\web\HttpException(404, 'The requested item could not be found.'); 
+        }
+        
+		$listPopular = \common\models\Posts::find()
+                        ->where(['status' => 1])
+                        ->orderBy(['views' => SORT_DESC])
+                        ->limit(5)
+                        ->all();
+		
+        $listCategory = \common\models\Categorytutorial::find()
+						->where(['status' => 1])
+						->all();
+        
+		Yii::$app->view->title = $listTags[0]['name'].' - Tải phần mềm miễn phí';
+        
+        return $this->render('tags', [
+            'model' => $model,
+            'listTags' => $listTags,
+            'listCategory' => $listCategory,
+			'listTutorials' => $listTags,
+            'listPopular' => $listPopular
+        ]);
     }
 
 	public function actionSubcate($slug, $rewrite)
-    {   
+    {
         $model = \common\models\Category::findOne(['rewrite' => $rewrite, 'type' => 1]);
         if(!$model){
             throw new \yii\web\HttpException(404, 'The requested item could not be found.');

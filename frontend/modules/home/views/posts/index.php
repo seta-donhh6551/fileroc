@@ -146,7 +146,7 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
                                     <h3><?= $tutorial['title']; ?></h3>
                                 </span>
                             </a>
-                            <div class="tutol-list-details"><?= $tutorial['name'].' - '.$tutorial['views']; ?></div>
+                            <div class="tutol-list-details" style="color:#fff"><?= $tutorial['name'].' - '.$tutorial['views']; ?></div>
                             <div class="tutol-list-info">
                                 <?= $tutorial['info']; ?>
                             </div>
@@ -162,9 +162,6 @@ $navigator[] = ['url' => Yii::getAlias('@web').'/download/'.$model->rewrite,'tit
             </div>
             <div class="border-line"></div>
             <?php } ?>
-			<div class="rating-title martop">
-			Hiện có <?= count($listComment); ?> đánh giá từ người dùng
-		</div>
 		<div id="reviews">
 			<h2 style="font-size:18px;color:#F60;margin-bottom:15px;">NGƯỜI DÙNG ĐÁNH GIÁ</h2>
 			<div class="rating-title martop">

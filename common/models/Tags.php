@@ -65,7 +65,7 @@ class Tags extends \yii\db\ActiveRecord
 		return $command->queryAll();
 	}
 	
-    public static function getListPostByTag($tagName)
+    public static function getListTutorialsByTag($tagName)
 	{
 		$query = new \yii\db\Query;
 		$query  ->select([
@@ -84,6 +84,38 @@ class Tags extends \yii\db\ActiveRecord
 				->where([
 					'tbl_tags.rewrite' => $tagName,
                     'tbl_tags.type' => 0
+				])
+                ->groupBy(['tbl_tags.id']);
+		
+		$command = $query->createCommand();
+		
+		return $command->queryAll();
+	}
+    
+    public static function getListPostByTag($tagName)
+	{
+		$query = new \yii\db\Query;
+		$query  ->select([
+					'tbl_tags.id',
+					'tbl_tags.name',
+                    'tbl_tags.rewrite',
+                    'tbl_posts.id',
+                    'tbl_posts.rewrite as soft_rewrite',
+					'tbl_posts.title',
+					'tbl_posts.author',
+                    'tbl_posts.filesize',
+                    'tbl_posts.type',
+                    'tbl_posts.short_intro',
+                    'tbl_posts.thumb',
+                    'tbl_posts.info',
+                    'tbl_posts.short_info',
+                    'tbl_posts.icon'
+				]) 
+				->from(self::tableName())
+				->leftJoin('tbl_posts', 'tbl_posts.id = tbl_tags.relation_id')
+				->where([
+					'tbl_tags.rewrite' => $tagName,
+                    'tbl_tags.type' => 1
 				])
                 ->groupBy(['tbl_tags.id']);
 		
